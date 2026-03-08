@@ -1,0 +1,6659 @@
+[
+  {
+    "title_en": "Graduation",
+    "title_vi": "Tốt Nghiệp",
+    "description_en": "You graduated with $100.",
+    "description_vi": "Cầm $100 rời trường cấp 3.",
+    "conditions": {
+      "min_age": 18,
+      "max_age": 18
+    },
+    "choices": [
+      {
+        "content_en": "College Loan",
+        "content_vi": "Vay học Đại Học",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "In debt.",
+            "message_vi": "Trở thành sinh viên nợ nần.",
+            "stat_changes": {
+              "money": -50,
+              "happiness": 10
+            },
+            "set_flags": {
+              "college": true
+            },
+            "next_event_title_en": "Frat Party"
+          }
+        ]
+      },
+      {
+        "content_en": "Factory Work",
+        "content_vi": "Làm công nhân",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Hard labor.",
+            "message_vi": "Tháng ngày lao động chân tay.",
+            "stat_changes": {
+              "money": 100,
+              "happiness": -10
+            },
+            "set_flags": {
+              "labor": true
+            },
+            "next_event_title_en": "Workplace Accident"
+          }
+        ]
+      },
+      {
+        "content_en": "Trade Guild ($50)",
+        "content_vi": "Học nghề điện nước ($50)",
+        "display_conditions": {
+          "min_money": 50
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Apprentice.",
+            "message_vi": "Làm thợ đụng.",
+            "stat_changes": {
+              "money": -50,
+              "happiness": 5
+            },
+            "set_flags": {
+              "trade": true
+            },
+            "next_event_title_en": "Plumbing Gig"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Frat Party",
+    "title_vi": "Tiệc Tùng Đại Học",
+    "description_en": "Seniors invite you to drink.",
+    "description_vi": "Các anh khóa trên rủ nhậu.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Party hard ($20)",
+        "content_vi": "Bao chầu nhậu ($20)",
+        "display_conditions": {
+          "min_money": 20
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Hungover.",
+            "message_vi": "Say khướt.",
+            "stat_changes": {
+              "money": -20,
+              "happiness": 20,
+              "health": -10
+            },
+            "set_flags": {},
+            "next_event_title_en": "Finals Week"
+          }
+        ]
+      },
+      {
+        "content_en": "Stay and study",
+        "content_vi": "Ở lại thư viện học",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Boring but smart.",
+            "message_vi": "Chăm chỉ.",
+            "stat_changes": {
+              "happiness": -5
+            },
+            "set_flags": {
+              "nerd": true
+            },
+            "next_event_title_en": "Finals Week"
+          }
+        ]
+      },
+      {
+        "content_en": "Drink and drive",
+        "content_vi": "Say rượu lái xe",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Crashed.",
+            "message_vi": "Tông vô gầm cầu.",
+            "stat_changes": {
+              "health": -40,
+              "happiness": -30
+            },
+            "set_flags": {},
+            "next_event_title_en": "Finals Week"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Finals Week",
+    "title_vi": "Tuần Lễ Thi Cử",
+    "description_en": "Exams tomorrow.",
+    "description_vi": "Sáng mai thi rồi.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Study all night",
+        "content_vi": "Thức trắng học",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Got an A!",
+            "message_vi": "Được điểm A!",
+            "stat_changes": {
+              "happiness": 15,
+              "health": -10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Cheat",
+        "content_vi": "Quay cóp",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Got away.",
+            "message_vi": "Trót lọt.",
+            "stat_changes": {
+              "happiness": 20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Nerd magic",
+        "content_vi": "Dùng kiến thức đã cày",
+        "display_conditions": {
+          "requires_flags": [
+            "nerd"
+          ]
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Easy pass.",
+            "message_vi": "Thi như đi chơi.",
+            "stat_changes": {
+              "happiness": 20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Probation",
+    "title_vi": "Đình Chỉ Học",
+    "description_en": "You face expulsion.",
+    "description_vi": "Đối mặt án đuổi học.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Beg for mercy",
+        "content_vi": "Quỳ xin tha",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Expelled.",
+            "message_vi": "Bị đuổi thẳng cổ.",
+            "stat_changes": {
+              "happiness": -40
+            },
+            "set_flags": {
+              "college": false
+            },
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Drop out gracefully",
+        "content_vi": "Tự rút hồ sơ",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Lost future.",
+            "message_vi": "Mất tương lai.",
+            "stat_changes": {
+              "happiness": -20
+            },
+            "set_flags": {
+              "college": false
+            },
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Bribe Dean ($200)",
+        "content_vi": "Lo lót thầy ($200)",
+        "display_conditions": {
+          "min_money": 200
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Corrupt.",
+            "message_vi": "Giữ được ghế.",
+            "stat_changes": {
+              "money": -200,
+              "happiness": -10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Workplace Accident",
+    "title_vi": "Tai Nạn Lao Động",
+    "description_en": "Machine broke.",
+    "description_vi": "Máy chập điện nổ.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Save coworker",
+        "content_vi": "Cứu đồng nghiệp",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Hero, but injured.",
+            "message_vi": "Anh hùng nhưng bị thương.",
+            "stat_changes": {
+              "health": -20,
+              "happiness": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": "Settlement"
+          }
+        ]
+      },
+      {
+        "content_en": "Run away",
+        "content_vi": "Bỏ chạy",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Coworker died.",
+            "message_vi": "Bạn đồng nghiệp mất mạng. Tội lỗi bám theo.",
+            "stat_changes": {
+              "happiness": -50
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Extinguish fire ($10)",
+        "content_vi": "Mua bình cứu hỏa ($10)",
+        "display_conditions": {
+          "min_money": 10
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Stopped it.",
+            "message_vi": "Dập tắt đám cháy.",
+            "stat_changes": {
+              "money": -10,
+              "happiness": 20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Settlement",
+    "title_vi": "Đền Bù Tai Nạn",
+    "description_en": "HR offers a deal.",
+    "description_vi": "Công ty gạ đền bù.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Take cash ($300)",
+        "content_vi": "Nhận tiền ỉm đi ($300)",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Sold out.",
+            "message_vi": "Bán đứng đồng nghiệp.",
+            "stat_changes": {
+              "money": 300,
+              "happiness": -10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Sue them",
+        "content_vi": "Đâm đơn kiện",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 30,
+            "message_en": "Won!",
+            "message_vi": "Thắng kiện tỷ phú!",
+            "stat_changes": {
+              "money": 1000,
+              "happiness": 50
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Accept nothing",
+        "content_vi": "Không lấy tiền",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Stood on morals.",
+            "message_vi": "Trọng danh dự.",
+            "stat_changes": {
+              "happiness": 20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Plumbing Gig",
+    "title_vi": "Hợp Đồng Điện Nước",
+    "description_en": "Fixing a mansion.",
+    "description_vi": "Sửa nhà cho đại gia.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Overcharge",
+        "content_vi": "Bóp giá gấp 3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "He paid!",
+            "message_vi": "Lão giàu ngu ngốc đã trả.",
+            "stat_changes": {
+              "money": 150
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Honest work",
+        "content_vi": "Làm ăn lương thiện",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Good tip.",
+            "message_vi": "Được bo đậm.",
+            "stat_changes": {
+              "money": 40,
+              "happiness": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Steal watch",
+        "content_vi": "Trộm đồng hồ Rolex",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 80,
+            "message_en": "Cameras caught you!",
+            "message_vi": "Bị camera quay lại!",
+            "stat_changes": {
+              "happiness": -40
+            },
+            "set_flags": {},
+            "next_event_title_en": "Jail"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Jail",
+    "title_vi": "Ngồi Tù",
+    "description_en": "You got arrested.",
+    "description_vi": "Bạn rũ tù.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Bail out ($150)",
+        "content_vi": "Bảo lãnh ($150)",
+        "display_conditions": {
+          "min_money": 150
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Free.",
+            "message_vi": "Được thả.",
+            "stat_changes": {
+              "money": -150
+            },
+            "set_flags": {
+              "criminal": true
+            },
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Serve time",
+        "content_vi": "Chấp hành án",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Trauma.",
+            "message_vi": "Sống cực khổ.",
+            "stat_changes": {
+              "happiness": -30,
+              "health": -20
+            },
+            "set_flags": {
+              "criminal": true
+            },
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Start prison riot",
+        "content_vi": "Gây bạo động",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Stabbed.",
+            "message_vi": "Bị đâm trọng thương.",
+            "stat_changes": {
+              "health": -50,
+              "happiness": -30
+            },
+            "set_flags": {
+              "criminal": true
+            },
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Parole Meeting",
+    "title_vi": "Gặp sĩ quan quản chế",
+    "description_en": "Checking in.",
+    "description_vi": "Đến ngày trình diện.",
+    "conditions": {
+      "requires_flags": [
+        "criminal"
+      ],
+      "min_age": 20,
+      "max_age": 40
+    },
+    "choices": [
+      {
+        "content_en": "Bribe him ($100)",
+        "content_vi": "Đút lót ($100)",
+        "display_conditions": {
+          "min_money": 100
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Ignored.",
+            "message_vi": "Thoát án.",
+            "stat_changes": {
+              "money": -100
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Flee state",
+        "content_vi": "Bỏ trốn khỏi bang",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Fugitive.",
+            "message_vi": "Tội phạm truy nã.",
+            "stat_changes": {
+              "happiness": -50
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Pass drug test",
+        "content_vi": "Khai báo thành khẩn",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Clean.",
+            "message_vi": "Lương thiện.",
+            "stat_changes": {
+              "happiness": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Scam Call",
+    "title_vi": "Cuộc Gọi Lừa Đảo",
+    "description_en": "Robot says you owe IRS.",
+    "description_vi": "Báo nợ thuế nhà nước.",
+    "conditions": {
+      "min_age": 18,
+      "max_age": 80
+    },
+    "choices": [
+      {
+        "content_en": "Pay ($100)",
+        "content_vi": "Lo sợ nộp tiền ($100)",
+        "display_conditions": {
+          "min_money": 100
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Scammed.",
+            "message_vi": "Bị lừa.",
+            "stat_changes": {
+              "money": -100,
+              "happiness": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Hang up",
+        "content_vi": "Tắt máy",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Safe.",
+            "message_vi": "An toàn.",
+            "stat_changes": {},
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Prank them",
+        "content_vi": "Trêu lại",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Funny.",
+            "message_vi": "Cười sảng.",
+            "stat_changes": {
+              "happiness": 15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Tinder Date",
+    "title_vi": "Hẹn Hò Mạng",
+    "description_en": "Meeting someone.",
+    "description_vi": "Buổi hẹn ảo.",
+    "conditions": {
+      "min_age": 18,
+      "max_age": 35
+    },
+    "choices": [
+      {
+        "content_en": "Pay for dinner ($40)",
+        "content_vi": "Bao ăn ($40)",
+        "display_conditions": {
+          "min_money": 40
+        },
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "Success!",
+            "message_vi": "Thành công!",
+            "stat_changes": {
+              "money": -40,
+              "happiness": 20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Split bill",
+        "content_vi": "Cưa đôi hóa đơn",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Respect.",
+            "message_vi": "Tôn trọng bình đẳng.",
+            "stat_changes": {
+              "money": -10,
+              "happiness": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Dine and dash",
+        "content_vi": "Ăn quỵt chạy trốn",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Trashy.",
+            "message_vi": "Nhân cách thối nát.",
+            "stat_changes": {
+              "happiness": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Dengue Fever",
+    "title_vi": "Sốt Xuất Huyết",
+    "description_en": "Mosquito bit you.",
+    "description_vi": "Bị muỗi vằn cắn.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Hospital ($100)",
+        "content_vi": "Nằm viện ($100)",
+        "display_conditions": {
+          "min_money": 100
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Cured.",
+            "message_vi": "Khỏi nhanh.",
+            "stat_changes": {
+              "money": -100,
+              "health": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Cheap meds ($10)",
+        "content_vi": "Thuốc tây lề đường ($10)",
+        "display_conditions": {
+          "min_money": 10
+        },
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Passed.",
+            "message_vi": "Khỏi.",
+            "stat_changes": {
+              "money": -10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Sleep it off",
+        "content_vi": "Tự khỏi",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 10,
+            "message_en": "Strong immune.",
+            "message_vi": "Đề kháng tốt.",
+            "stat_changes": {},
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Found Wallet",
+    "title_vi": "Phát Hiện Ví Rơi",
+    "description_en": "Inside: $200.",
+    "description_vi": "Có $200 bên trong.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Keep it",
+        "content_vi": "Đút túi",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Guilty pocket.",
+            "message_vi": "Có tiền nảy lòng tham.",
+            "stat_changes": {
+              "money": 200,
+              "happiness": -10
+            },
+            "set_flags": {
+              "bad_karma": true
+            },
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Return it",
+        "content_vi": "Trả lại nguyên vẹn",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Reward!",
+            "message_vi": "Hậu tạ $50.",
+            "stat_changes": {
+              "money": 50,
+              "happiness": 20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Police",
+        "content_vi": "Khai báo",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Good citizen.",
+            "message_vi": "Công dân tốt.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Pyramid Scheme",
+    "title_vi": "Khởi Nghiệp Đa Cấp",
+    "description_en": "Friend pitches you.",
+    "description_vi": "Bạn mời làm giàu nhanh.",
+    "conditions": {
+      "min_age": 18,
+      "max_age": 40
+    },
+    "choices": [
+      {
+        "content_en": "Invest ($200)",
+        "content_vi": "Làm gói Hội Viên ($200)",
+        "display_conditions": {
+          "min_money": 200
+        },
+        "outcomes": [
+          {
+            "probability": 10,
+            "message_en": "Profit.",
+            "message_vi": "Lùa gà.",
+            "stat_changes": {
+              "money": 400,
+              "happiness": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Decline",
+        "content_vi": "Từ chối",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Dodged bullet.",
+            "message_vi": "Né đạn.",
+            "stat_changes": {},
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Curse them",
+        "content_vi": "Chửi bạn đa cấp",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Lost a friend.",
+            "message_vi": "Mất bạn.",
+            "stat_changes": {
+              "happiness": -5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Gym Membership",
+    "title_vi": "Tập Thể Hình",
+    "description_en": "Get fit.",
+    "description_vi": "Cải thiện vóc dáng.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "1-Year Pass ($150)",
+        "content_vi": "Đóng 1 năm ($150)",
+        "display_conditions": {
+          "min_money": 150
+        },
+        "outcomes": [
+          {
+            "probability": 30,
+            "message_en": "Buffed!",
+            "message_vi": "Lên cơ.",
+            "stat_changes": {
+              "money": -150,
+              "health": 25,
+              "happiness": 15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Park run",
+        "content_vi": "Chạy công viên",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Free cardio.",
+            "message_vi": "Khỏe miễn phí.",
+            "stat_changes": {
+              "health": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Order pizza",
+        "content_vi": "Nằm ăn Pizza",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Fat.",
+            "message_vi": "Béo bụng.",
+            "stat_changes": {
+              "money": -15,
+              "health": -5,
+              "happiness": 5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Office Interview",
+    "title_vi": "Phỏng vấn công sở",
+    "description_en": "Desk job.",
+    "description_vi": "Việc làm bàn giấy.",
+    "conditions": {
+      "requires_flags": [
+        "college"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Buy suit ($50)",
+        "content_vi": "Mua vest ($50)",
+        "display_conditions": {
+          "min_money": 50
+        },
+        "outcomes": [
+          {
+            "probability": 90,
+            "message_en": "Hired.",
+            "message_vi": "Nhận việc.",
+            "stat_changes": {
+              "money": -50,
+              "happiness": 20
+            },
+            "set_flags": {
+              "corp": true
+            },
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Regular clothes",
+        "content_vi": "Mặc đồ nhầu nhĩ",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 10,
+            "message_en": "Hired.",
+            "message_vi": "Ăn hên.",
+            "stat_changes": {
+              "happiness": 10
+            },
+            "set_flags": {
+              "corp": true
+            },
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Fake CV",
+        "content_vi": "Làm giả CV",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Fooled them.",
+            "message_vi": "Lừa sếp.",
+            "stat_changes": {
+              "happiness": 20
+            },
+            "set_flags": {
+              "corp": true
+            },
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Credit Thief",
+    "title_vi": "Đồng nghiệp sân si",
+    "description_en": "They stole your work.",
+    "description_vi": "Giật cúp dự án.",
+    "conditions": {
+      "requires_flags": [
+        "corp"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Yell publicly",
+        "content_vi": "Chửi thẳng phòng",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 30,
+            "message_en": "Revenge.",
+            "message_vi": "Hả dạ.",
+            "stat_changes": {
+              "happiness": 20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "HR report",
+        "content_vi": "Báo HR",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Ignored.",
+            "message_vi": "Kệ.",
+            "stat_changes": {
+              "happiness": -10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Revenge",
+        "content_vi": "Trả thù ngầm",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "They got fired.",
+            "message_vi": "Tuyệt vời.",
+            "stat_changes": {
+              "happiness": 30
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Manager Role",
+    "title_vi": "Lên Chức Quản Lý",
+    "description_en": "Boss is retiring.",
+    "description_vi": "Sếp nghỉ hưu.",
+    "conditions": {
+      "requires_flags": [
+        "corp"
+      ],
+      "min_age": 28
+    },
+    "choices": [
+      {
+        "content_en": "Work 80hrs",
+        "content_vi": "Cày 80 tiếng/tuần",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 80,
+            "message_en": "Promoted!",
+            "message_vi": "Thăng chức!",
+            "stat_changes": {
+              "money": 200,
+              "happiness": 15,
+              "health": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Bribe boss ($150)",
+        "content_vi": "Tặng quà sếp ($150)",
+        "display_conditions": {
+          "min_money": 150
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Promoted.",
+            "message_vi": "Ghế của bạn.",
+            "stat_changes": {
+              "money": 150,
+              "happiness": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Don't care",
+        "content_vi": "Ngồi chơi",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Chill.",
+            "message_vi": "Thoải mái.",
+            "stat_changes": {
+              "health": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Wedding Bells",
+    "title_vi": "Kết Hôn",
+    "description_en": "You found the one.",
+    "description_vi": "Tìm thấy bến đỗ.",
+    "conditions": {
+      "min_age": 25,
+      "max_age": 40,
+      "excludes_flags": [
+        "married"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Big wedding ($1000)",
+        "content_vi": "Đám lớn ($1000)",
+        "display_conditions": {
+          "min_money": 1000
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Magical.",
+            "message_vi": "Tuyệt trần.",
+            "stat_changes": {
+              "money": -1000,
+              "happiness": 50
+            },
+            "set_flags": {
+              "married": true
+            },
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Courthouse ($50)",
+        "content_vi": "Ký giấy thú nhận ($50)",
+        "display_conditions": {
+          "min_money": 50
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Sweet.",
+            "message_vi": "Đậm tình.",
+            "stat_changes": {
+              "money": -50,
+              "happiness": 30
+            },
+            "set_flags": {
+              "married": true
+            },
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Stay single",
+        "content_vi": "Ế là chân lý",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Rich & Lonely.",
+            "message_vi": "Giàu và cô đơn.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Sick Child",
+    "title_vi": "Con Ốm Nặng",
+    "description_en": "104F fever.",
+    "description_vi": "Sốt vĩ đại.",
+    "conditions": {
+      "requires_flags": [
+        "married"
+      ],
+      "min_age": 28
+    },
+    "choices": [
+      {
+        "content_en": "ER ($400)",
+        "content_vi": "Cấp cứu Viện Nhi ($400)",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Saved.",
+            "message_vi": "Cứu được.",
+            "stat_changes": {
+              "money": -400,
+              "happiness": 10,
+              "health": -10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Home remedy",
+        "content_vi": "Vuốt trán",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 20,
+            "message_en": "Survived.",
+            "message_vi": "Tự khỏi.",
+            "stat_changes": {
+              "happiness": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Pray",
+        "content_vi": "Cầu nguyện",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Worse.",
+            "message_vi": "Tệ đi.",
+            "stat_changes": {
+              "happiness": -30
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Crypto Crash",
+    "title_vi": "Vỡ Trận Số Số",
+    "description_en": "Coin dropped 90%.",
+    "description_vi": "Coin tàn lụi.",
+    "conditions": {
+      "min_age": 25
+    },
+    "choices": [
+      {
+        "content_en": "Sell loss",
+        "content_vi": "Cắt thịt",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Lost savings.",
+            "message_vi": "Bay tiết kiệm.",
+            "stat_changes": {
+              "money": -80,
+              "happiness": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Average down ($200)",
+        "content_vi": "Bắt đáy ($200)",
+        "display_conditions": {
+          "min_money": 200
+        },
+        "outcomes": [
+          {
+            "probability": 5,
+            "message_en": "To the moon!",
+            "message_vi": "Lãi tỷ giá!",
+            "stat_changes": {
+              "money": 2000,
+              "happiness": 50
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Uninstall app",
+        "content_vi": "Xóa app khóc",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Ignored.",
+            "message_vi": "Nhắm mắt làm ngơ.",
+            "stat_changes": {
+              "happiness": -10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Midlife Crisis",
+    "title_vi": "Bức Tranh Tuổi Tác",
+    "description_en": "Wrinkles.",
+    "description_vi": "Già rồi.",
+    "conditions": {
+      "min_age": 45,
+      "max_age": 55
+    },
+    "choices": [
+      {
+        "content_en": "Botox ($300)",
+        "content_vi": "Tiêm cơ mặt ($300)",
+        "display_conditions": {
+          "min_money": 300
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Young again.",
+            "message_vi": "Thịt sống lại.",
+            "stat_changes": {
+              "money": -300,
+              "happiness": 30
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Accept it",
+        "content_vi": "Ngồi thiền",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Zen.",
+            "message_vi": "Thả trôi cõi tục.",
+            "stat_changes": {
+              "happiness": 20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Divorce run",
+        "content_vi": "Ly dị phượt",
+        "display_conditions": {
+          "requires_flags": [
+            "married"
+          ]
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Rebellious.",
+            "message_vi": "Hồi xuân rực cháy.",
+            "stat_changes": {
+              "money": -1000,
+              "happiness": 20
+            },
+            "set_flags": {
+              "married": false
+            },
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Heart Attack",
+    "title_vi": "Đột Quỵ",
+    "description_en": "Chest pain.",
+    "description_vi": "Nhói tim.",
+    "conditions": {
+      "min_age": 48,
+      "max_age": 70
+    },
+    "choices": [
+      {
+        "content_en": "Ambulance ($1500)",
+        "content_vi": "Xe 115 ($1500)",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Debt but alive.",
+            "message_vi": "Sống tiếp mà nợ.",
+            "stat_changes": {
+              "money": -1500,
+              "health": 30
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Drive yourself",
+        "content_vi": "Lái tay",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 20,
+            "message_en": "Made it.",
+            "message_vi": "Kịp.",
+            "stat_changes": {
+              "money": -500,
+              "health": 20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Ignore",
+        "content_vi": "Ngủ tiếp",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 10,
+            "message_en": "Heartburn.",
+            "message_vi": "Đau dạ dày mạo danh.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Retirement",
+    "title_vi": "Hưu Trí",
+    "description_en": "Time to rest.",
+    "description_vi": "Dừng bước.",
+    "conditions": {
+      "min_age": 65,
+      "max_age": 68,
+      "excludes_flags": [
+        "retired"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Full stop",
+        "content_vi": "Cáo lão",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Fixed income.",
+            "message_vi": "Lương cố định.",
+            "stat_changes": {
+              "money": 100,
+              "happiness": 30,
+              "health": 10
+            },
+            "set_flags": {
+              "retired": true
+            },
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Wal-Mart greeter",
+        "content_vi": "Gác cổng siêu thị",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Aching bones.",
+            "message_vi": "Bạc tóc đau xương.",
+            "stat_changes": {
+              "money": 200,
+              "health": -15
+            },
+            "set_flags": {
+              "retired": true
+            },
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Gamble pension",
+        "content_vi": "Đánh bạc hưu",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Lost it all.",
+            "message_vi": "Gỡ xịt.",
+            "stat_changes": {
+              "happiness": -80,
+              "money": -50
+            },
+            "set_flags": {
+              "retired": true
+            },
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Arthritis",
+    "title_vi": "Đau Khớp",
+    "description_en": "Bones hurt.",
+    "description_vi": "Cốt nhức.",
+    "conditions": {
+      "min_age": 60
+    },
+    "choices": [
+      {
+        "content_en": "Therapy ($200)",
+        "content_vi": "Trị liệu ($200)",
+        "display_conditions": {
+          "min_money": 200
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Better.",
+            "message_vi": "Suôn sẻ.",
+            "stat_changes": {
+              "money": -200,
+              "health": 20,
+              "happiness": 15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Cheap pills ($30)",
+        "content_vi": "Thuốc lậu ($30)",
+        "display_conditions": {
+          "min_money": 30
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Kidney fail.",
+            "message_vi": "Vỡ thận.",
+            "stat_changes": {
+              "money": -30,
+              "health": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Suffer",
+        "content_vi": "Khóc ròng",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Sad.",
+            "message_vi": "Đau đớn tật nguyền.",
+            "stat_changes": {
+              "happiness": -30,
+              "health": -10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Grandkids",
+    "title_vi": "Cháu Ngoại",
+    "description_en": "They visit.",
+    "description_vi": "Lũ trẻ tới đòi đồ.",
+    "conditions": {
+      "requires_flags": [
+        "married"
+      ],
+      "min_age": 60
+    },
+    "choices": [
+      {
+        "content_en": "Give $100",
+        "content_vi": "Xì lì xì ($100)",
+        "display_conditions": {
+          "min_money": 100
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Love.",
+            "message_vi": "Ông bà mười điểm.",
+            "stat_changes": {
+              "money": -100,
+              "happiness": 40
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Bake cake",
+        "content_vi": "Nướng bánh",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Joy.",
+            "message_vi": "Vui mồm.",
+            "stat_changes": {
+              "happiness": 20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Yell",
+        "content_vi": "Chửi đuổi",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Alone.",
+            "message_vi": "Cô quạnh tăm tối.",
+            "stat_changes": {
+              "happiness": -50
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Traffic Jam",
+    "title_vi": "Kẹt Xe Kẹt Lối",
+    "description_en": "Stuck in gridlock.",
+    "description_vi": "Nhích từng milimet.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Listen to music",
+        "content_vi": "Mở nhạc quẩy trong xe",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Relaxed.",
+            "message_vi": "Tâm hồn thanh tịnh.",
+            "stat_changes": {
+              "happiness": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Honk horn",
+        "content_vi": "Bóp còi inh ỏi",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Got yelled at.",
+            "message_vi": "Bị người kế bên chửi sấp mặt.",
+            "stat_changes": {
+              "happiness": -10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Drive on sidewalk",
+        "content_vi": "Leo vỉa hè",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Bypassed it.",
+            "message_vi": "Thoát lẹ.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          },
+          {
+            "probability": 50,
+            "message_en": "Ticket.",
+            "message_vi": "Bị phạt tĩnh túc.",
+            "stat_changes": {
+              "money": -50,
+              "happiness": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Leaky Faucet",
+    "title_vi": "Vòi Nước Chảy Lách Tách",
+    "description_en": "Drip drip.",
+    "description_vi": "Tốn tiền điện.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Call plumber ($40)",
+        "content_vi": "Gọi thợ nước ($40)",
+        "display_conditions": {
+          "min_money": 40
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Fixed.",
+            "message_vi": "Êm ru.",
+            "stat_changes": {
+              "money": -40,
+              "happiness": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "DIY",
+        "content_vi": "Tự lấy cờ lê vặn",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Did it!",
+            "message_vi": "Sửa ngon lành.",
+            "stat_changes": {
+              "happiness": 15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          },
+          {
+            "probability": 50,
+            "message_en": "Flooded.",
+            "message_vi": "Làm gãy ống nước ngập nhà.",
+            "stat_changes": {
+              "money": -100,
+              "happiness": -30
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Put bucket",
+        "content_vi": "Kê xô hứng nước",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Annoying.",
+            "message_vi": "Tiếng nước nhỏ giọt gây mất ngủ.",
+            "stat_changes": {
+              "happiness": -10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Power Outage",
+    "title_vi": "Cúp Điện",
+    "description_en": "Total darkness.",
+    "description_vi": "Đang phim hay.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Candles",
+        "content_vi": "Thắp nến lãng mạn",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Cozy.",
+            "message_vi": "Ấm áp.",
+            "stat_changes": {
+              "happiness": 15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Complain",
+        "content_vi": "Chửi đổng tổng đài",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Sweaty.",
+            "message_vi": "Nóng nực ướt đẫm mồ hôi.",
+            "stat_changes": {
+              "health": -5,
+              "happiness": -15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Go to Cafe ($10)",
+        "content_vi": "Ra quán trốn nóng ($10)",
+        "display_conditions": {
+          "min_money": 10
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Cool AC.",
+            "message_vi": "Mát lạnh có máy lạnh.",
+            "stat_changes": {
+              "money": -10,
+              "happiness": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Stubbed Toe",
+    "title_vi": "Vấp Ngón Chân",
+    "description_en": "Pain.",
+    "description_vi": "Bật cả móng.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Ice it",
+        "content_vi": "Chườm đá",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Better.",
+            "message_vi": "Đỡ sưng tím.",
+            "stat_changes": {
+              "health": 5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Scream",
+        "content_vi": "La hét đau đớn",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Throbbing.",
+            "message_vi": "Tuyệt vọng.",
+            "stat_changes": {
+              "happiness": -10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Kick the table",
+        "content_vi": "Đá cái bàn lại",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Broke toe.",
+            "message_vi": "Gãy luôn ngón chân.",
+            "stat_changes": {
+              "health": -20,
+              "happiness": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Bad Coffee",
+    "title_vi": "Ly Cà Phê Chua Lét",
+    "description_en": "Tastes burnt.",
+    "description_vi": "Kém chất lượng.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Drink it",
+        "content_vi": "Cắn răng uống",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Gross.",
+            "message_vi": "Bụng cồn cào.",
+            "stat_changes": {
+              "health": -5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Throw away",
+        "content_vi": "Vứt sọt rác",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Wasted money.",
+            "message_vi": "Tiếc tiền.",
+            "stat_changes": {
+              "money": -5,
+              "happiness": -5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Ask for remake",
+        "content_vi": "Bắt pha lại",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Better.",
+            "message_vi": "Được ly ngon.",
+            "stat_changes": {
+              "happiness": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          },
+          {
+            "probability": 50,
+            "message_en": "Spit in it.",
+            "message_vi": "Nhân viên nhổ nước bọt vô.",
+            "stat_changes": {
+              "health": -15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Lost Wallet",
+    "title_vi": "Rơi Ví Ở Chợ",
+    "description_en": "Can not find it.",
+    "description_vi": "Không cánh bay đi.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Cancel cards",
+        "content_vi": "Khóa thẻ ngân hàng",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Safe but sad.",
+            "message_vi": "An toàn nhưng buồn.",
+            "stat_changes": {
+              "happiness": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Retrace steps",
+        "content_vi": "Chạy đi tìm lại",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 20,
+            "message_en": "Found it!",
+            "message_vi": "May quá tìm thấy.",
+            "stat_changes": {
+              "happiness": 30
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          },
+          {
+            "probability": 80,
+            "message_en": "Exhausted.",
+            "message_vi": "Mệt lả mà không thấy.",
+            "stat_changes": {
+              "health": -10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Cry",
+        "content_vi": "Tuyệt vọng khóc",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Lost $50.",
+            "message_vi": "Mất sạch giấy tờ.",
+            "stat_changes": {
+              "money": -50,
+              "happiness": -30
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Speeding Ticket",
+    "title_vi": "Camera Phạt Nguội",
+    "description_en": "Flash went off.",
+    "description_vi": "Ăn flash trắng xóa.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Pay ticket ($150)",
+        "content_vi": "Đóng phạt nguội ($150)",
+        "display_conditions": {
+          "min_money": 150
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Painful.",
+            "message_vi": "Đau ví quá.",
+            "stat_changes": {
+              "money": -150
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Bribe ($50)",
+        "content_vi": "Đút lót kẹp giấy ($50)",
+        "display_conditions": {
+          "min_money": 50
+        },
+        "outcomes": [
+          {
+            "probability": 20,
+            "message_en": "Worked.",
+            "message_vi": "Tai qua nạn khỏi.",
+            "stat_changes": {
+              "money": -50,
+              "happiness": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          },
+          {
+            "probability": 80,
+            "message_en": "Arrested.",
+            "message_vi": "Bị phạt gấp đôi.",
+            "stat_changes": {
+              "money": -300,
+              "happiness": -40
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Run away",
+        "content_vi": "Rồ ga bỏ chạy",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Felony.",
+            "message_vi": "Truy nã.",
+            "stat_changes": {
+              "happiness": -50
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Rain without Umbrella",
+    "title_vi": "Mưa Đá Bất Chợt",
+    "description_en": "Soaked.",
+    "description_vi": "Ướt sũng như võ đê.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Run fast",
+        "content_vi": "Chạy thục mạng",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Dry.",
+            "message_vi": "Thoát ướt.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          },
+          {
+            "probability": 50,
+            "message_en": "Slipped.",
+            "message_vi": "Trượt té sấp mặt.",
+            "stat_changes": {
+              "health": -15,
+              "happiness": -10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Walk slowly",
+        "content_vi": "Tắm mưa lãng mạn",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Got sick.",
+            "message_vi": "Cảm lạnh sụt sùi.",
+            "stat_changes": {
+              "health": -10,
+              "happiness": 5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Buy umbrella ($10)",
+        "content_vi": "Mua ô che vội ($10)",
+        "display_conditions": {
+          "min_money": 10
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Dry.",
+            "message_vi": "Tốn tiền nhưng khô.",
+            "stat_changes": {
+              "money": -10,
+              "happiness": 5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Rude Cashier",
+    "title_vi": "Thu Ngân Kém Duyên",
+    "description_en": "Rolled eyes.",
+    "description_vi": "Lườm rách mặt.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Smile",
+        "content_vi": "Mỉm cười hiền hậu",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Bigger person.",
+            "message_vi": "Bao dung độ lượng.",
+            "stat_changes": {
+              "happiness": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Insult them back",
+        "content_vi": "Chửi lại sấp mặt",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Escalated.",
+            "message_vi": "Đánh nhau giữa chợ.",
+            "stat_changes": {
+              "health": -10,
+              "happiness": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Ask manager",
+        "content_vi": "Gọi quản lý",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Karen move.",
+            "message_vi": "Đuổi việc thu ngân.",
+            "stat_changes": {
+              "happiness": -15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Bird Poop",
+    "title_vi": "Phân Chim Nổi Giận",
+    "description_en": "On your shirt.",
+    "description_vi": "Vào đúng áo xịn.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Wash in bathroom",
+        "content_vi": "Chạy vào toilet xối",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Wet shirt.",
+            "message_vi": "Áo ướt sũng nhưng bớt bẩn.",
+            "stat_changes": {
+              "happiness": -5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Buy new shirt ($30)",
+        "content_vi": "Mua gấp áo mới ($30)",
+        "display_conditions": {
+          "min_money": 30
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Looking fresh.",
+            "message_vi": "Tốn tiền nhưng đẹp trai lại.",
+            "stat_changes": {
+              "money": -30,
+              "happiness": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Leave it",
+        "content_vi": "Tự hào mặc tiếp",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Gross.",
+            "message_vi": "Ai cũng xa lánh.",
+            "stat_changes": {
+              "happiness": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Phone Broke",
+    "title_vi": "Bể Kính Điện Thoại",
+    "description_en": "Spiderweb screen.",
+    "description_vi": "Màn hình sọc dưa.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Fix screen ($80)",
+        "content_vi": "Ép kính ($80)",
+        "display_conditions": {
+          "min_money": 80
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Good as new.",
+            "message_vi": "Mượt mà.",
+            "stat_changes": {
+              "money": -80,
+              "happiness": 15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Buy new case",
+        "content_vi": "Lấy ốp lưng che",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Still shattered.",
+            "message_vi": "Cắt đứt tay.",
+            "stat_changes": {
+              "health": -5,
+              "happiness": -10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Ignore",
+        "content_vi": "Kệ nứt",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Sad.",
+            "message_vi": "Vuốt đau tay.",
+            "stat_changes": {
+              "happiness": -15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Found $20",
+    "title_vi": "Lụm 20 Đô",
+    "description_en": "In winter coat.",
+    "description_vi": "Túi áo mùa đông.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Keep it",
+        "content_vi": "Bỏ túi",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Nice.",
+            "message_vi": "Mua trà sữa.",
+            "stat_changes": {
+              "money": 20,
+              "happiness": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Donate",
+        "content_vi": "Cho ăn xin",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Good deed.",
+            "message_vi": "Tâm thanh thản.",
+            "stat_changes": {
+              "happiness": 20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Buy lottery",
+        "content_vi": "Mua vietlott",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 5,
+            "message_en": "Jackpot!",
+            "message_vi": "Trúng lớn!",
+            "stat_changes": {
+              "money": 500,
+              "happiness": 50
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          },
+          {
+            "probability": 95,
+            "message_en": "Lost.",
+            "message_vi": "Biết ngay.",
+            "stat_changes": {
+              "happiness": -5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Cut in Line",
+    "title_vi": "Bị Chen Hàng",
+    "description_en": "At grocery store.",
+    "description_vi": "Đứa kia đứng chen lấn ngay trước mặt.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Say nothing",
+        "content_vi": "Nhịn cho lành",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Pushover.",
+            "message_vi": "Ấm ức.",
+            "stat_changes": {
+              "happiness": -10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Tap their shoulder",
+        "content_vi": "Nhắc nhở nhẹ",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "They moved.",
+            "message_vi": "Họ xin lỗi nhường.",
+            "stat_changes": {
+              "happiness": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          },
+          {
+            "probability": 50,
+            "message_en": "Cursed at you.",
+            "message_vi": "Bị họ chửi lại.",
+            "stat_changes": {
+              "happiness": -15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Cut back",
+        "content_vi": "Chen lên lại",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Petty.",
+            "message_vi": "Trẻ con.",
+            "stat_changes": {
+              "happiness": -5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Loud Neighbors",
+    "title_vi": "Tiếng Trẻ Ồn Ào",
+    "description_en": "Music at 3AM.",
+    "description_vi": "Hát karaoke nhạc chế.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Call police",
+        "content_vi": "Gọi công an phường",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Quiet.",
+            "message_vi": "Yên tĩnh lại.",
+            "stat_changes": {
+              "happiness": 15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Earplugs",
+        "content_vi": "Nhét bông gòn",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Slept poorly.",
+            "message_vi": "Ngủ chập chờn.",
+            "stat_changes": {
+              "health": -5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Knock on door",
+        "content_vi": "Đập cửa làm căng",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Apologized.",
+            "message_vi": "Họ xin lỗi.",
+            "stat_changes": {
+              "happiness": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          },
+          {
+            "probability": 50,
+            "message_en": "Punched you.",
+            "message_vi": "Ăn một đấm.",
+            "stat_changes": {
+              "health": -20,
+              "happiness": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Bad Haircut",
+    "title_vi": "Thợ Cắt Tóc Dở",
+    "description_en": "Too short.",
+    "description_vi": "Trọc lóc xà lam.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Wear a hat",
+        "content_vi": "Đội nón len",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Hidden.",
+            "message_vi": "Che giấu sự thật.",
+            "stat_changes": {
+              "happiness": -5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Shave head",
+        "content_vi": "Cạo trọc luôn",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Edgy.",
+            "message_vi": "Ngầu phết.",
+            "stat_changes": {
+              "happiness": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Complain",
+        "content_vi": "Bắt đền thợ",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "No refund.",
+            "message_vi": "Nó chửi cho lịm.",
+            "stat_changes": {
+              "happiness": -15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Paper Cut",
+    "title_vi": "Đứt Tay Xước Giấy",
+    "description_en": "Hurts a lot.",
+    "description_vi": "Đau rát dã man.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Band-aid",
+        "content_vi": "Dán băng cá nhân",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Healed.",
+            "message_vi": "Ổn.",
+            "stat_changes": {
+              "health": 2
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Suck on it",
+        "content_vi": "Mút máu",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Metallic taste.",
+            "message_vi": "Vị rỉ sét.",
+            "stat_changes": {
+              "happiness": -5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Alcohol prep",
+        "content_vi": "Đổ cồn 90 độ",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Spicy!",
+            "message_vi": "Xót thấu trời!",
+            "stat_changes": {
+              "health": -5,
+              "happiness": -10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Forgot Password",
+    "title_vi": "Quên Mật Khẩu iCloud",
+    "description_en": "Locked out.",
+    "description_vi": "Bị khoá vĩnh viễn.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Reset it",
+        "content_vi": "Bấm Quên Mật Khẩu",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Time wasted.",
+            "message_vi": "Tốn thời gian.",
+            "stat_changes": {
+              "happiness": -5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Create new account",
+        "content_vi": "Tạo acc clone mới",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Lost data.",
+            "message_vi": "Mất sạch dữ liệu.",
+            "stat_changes": {
+              "happiness": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Guess 10 times",
+        "content_vi": "Thử mò 10 lần",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 10,
+            "message_en": "In!",
+            "message_vi": "Vào được!",
+            "stat_changes": {
+              "happiness": 20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          },
+          {
+            "probability": 90,
+            "message_en": "Locked out.",
+            "message_vi": "Khóa tài khoản vĩnh viễn.",
+            "stat_changes": {
+              "happiness": -30
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Burned Dinner",
+    "title_vi": "Cháy Nồi Cá Kho",
+    "description_en": "Smoke alarm.",
+    "description_vi": "Chuông cháy ríu rít.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Order Pizza ($15)",
+        "content_vi": "Thuê Grabfood ($15)",
+        "display_conditions": {
+          "min_money": 15
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Yum.",
+            "message_vi": "Ngon miệng lại.",
+            "stat_changes": {
+              "money": -15,
+              "happiness": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Scrape off black",
+        "content_vi": "Cạo phần khét ăn",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Cancerous.",
+            "message_vi": "Ung thư dạ dày.",
+            "stat_changes": {
+              "health": -10,
+              "happiness": -10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Sleep hungry",
+        "content_vi": "Uống nước lọc đi ngủ",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Starving.",
+            "message_vi": "Bụng lép kẹp.",
+            "stat_changes": {
+              "health": -5,
+              "happiness": -15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Free Donut",
+    "title_vi": "Được Tặng Bánh",
+    "description_en": "At the office.",
+    "description_vi": "Bánh miễn phí công ty.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Eat it",
+        "content_vi": "Nhai ngấu nghiến",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Sweet.",
+            "message_vi": "Ngọt ngào.",
+            "stat_changes": {
+              "happiness": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Give it away",
+        "content_vi": "Tặng đồng nghiệp",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Nice.",
+            "message_vi": "Tạo mối quan hệ.",
+            "stat_changes": {
+              "happiness": 15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Diet",
+        "content_vi": "Tiết chế không ăn",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Willpower.",
+            "message_vi": "Ý chí kiên cường.",
+            "stat_changes": {
+              "health": 5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Bus Delayed",
+    "title_vi": "Xe Bus Huỷ Chuyến",
+    "description_en": "Late for work.",
+    "description_vi": "Trễ giờ chấm công.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Grab ride ($20)",
+        "content_vi": "Gọi Grab ($20)",
+        "display_conditions": {
+          "min_money": 20
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "On time.",
+            "message_vi": "Kịp giờ.",
+            "stat_changes": {
+              "money": -20,
+              "happiness": 5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Wait 1 hour",
+        "content_vi": "Đợi thêm tiếng nữa",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Late.",
+            "message_vi": "Bị sếp mắng.",
+            "stat_changes": {
+              "happiness": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Walk 3 miles",
+        "content_vi": "Cuốc bộ 5 cây số",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Exhausted.",
+            "message_vi": "Thở hồng hộc.",
+            "stat_changes": {
+              "health": -15,
+              "happiness": -10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Dog Barking",
+    "title_vi": "Chó Hàng Xóm Sủa",
+    "description_en": "Never stops.",
+    "description_vi": "Gào thét cắn gấu.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Throw ball",
+        "content_vi": "Quăng banh cho nó",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Distracted.",
+            "message_vi": "Nó im lặng chơi.",
+            "stat_changes": {
+              "happiness": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Ignore",
+        "content_vi": "Bịt tai",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Headache.",
+            "message_vi": "Nhức đầu muốn nổ não.",
+            "stat_changes": {
+              "happiness": -15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Yell at dog",
+        "content_vi": "Sủa thi với nó",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Weirdo.",
+            "message_vi": "Hàng xóm nhìn bực.",
+            "stat_changes": {
+              "happiness": -10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Mosquito in Room",
+    "title_vi": "Muỗi Bay Vèo Vèo",
+    "description_en": "Can not sleep.",
+    "description_vi": "Mất ngủ điêu đứng.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Hunt it",
+        "content_vi": "Cầm vợt điện rình",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Got it!",
+            "message_vi": "Nổ lách tách.",
+            "stat_changes": {
+              "happiness": 15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          },
+          {
+            "probability": 50,
+            "message_en": "Lost sleep.",
+            "message_vi": "Thức trắng đêm.",
+            "stat_changes": {
+              "health": -10,
+              "happiness": -15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Spray bug spray",
+        "content_vi": "Xịt muỗi vô tội vạ",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Toxic.",
+            "message_vi": "Ngạt thở chết.",
+            "stat_changes": {
+              "health": -15,
+              "happiness": -10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Hide under blanket",
+        "content_vi": "Trùm chăn kín bưng",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Sweaty.",
+            "message_vi": "Nóng nực ướt sũng.",
+            "stat_changes": {
+              "health": -5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Toilet Clogged",
+    "title_vi": "Tắc Bồn Cầu",
+    "description_en": "Water rising.",
+    "description_vi": "Nước trào lênh láng.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Plunger",
+        "content_vi": "Lấy cây thụt liên tục",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Cleared.",
+            "message_vi": "Thông thoáng.",
+            "stat_changes": {
+              "happiness": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          },
+          {
+            "probability": 30,
+            "message_en": "Splashed.",
+            "message_vi": "Bắn vào mặt.",
+            "stat_changes": {
+              "health": -10,
+              "happiness": -30
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Chemicals ($10)",
+        "content_vi": "Mua nước thông cống ($10)",
+        "display_conditions": {
+          "min_money": 10
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Dissolved.",
+            "message_vi": "Sạch sẽ.",
+            "stat_changes": {
+              "money": -10,
+              "happiness": 15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Leave it",
+        "content_vi": "Chạy qua nhà hàng xóm đi",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Smelly.",
+            "message_vi": "Nhà hôi rình.",
+            "stat_changes": {
+              "happiness": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Out of Toilet Paper",
+    "title_vi": "Hết Giấy Vệ Sinh",
+    "description_en": "Oh no.",
+    "description_vi": "Thảm kịch nhân gian.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Use water",
+        "content_vi": "Dùng vòi xịt",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Clean.",
+            "message_vi": "Sạch hơn giấy.",
+            "stat_changes": {
+              "health": 5,
+              "happiness": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Use hand towel",
+        "content_vi": "Dùng khăn mặt lau",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Ruined.",
+            "message_vi": "Phải vất cái khăn.",
+            "stat_changes": {
+              "money": -10,
+              "happiness": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Waddle to store",
+        "content_vi": "Nhồng nhộng chạy đi mua",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Trauma.",
+            "message_vi": "Nhục nhã nhút nhát.",
+            "stat_changes": {
+              "happiness": -30
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Stepped in Puddle",
+    "title_vi": "Đạp Trúng Ổ Gà",
+    "description_en": "Wet sock.",
+    "description_vi": "Vũng nước bùn đen.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Change socks",
+        "content_vi": "Về thay tất",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Annoying.",
+            "message_vi": "Phiền phức.",
+            "stat_changes": {
+              "happiness": -5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Walk in squishy shoes",
+        "content_vi": "Chịu ướt đi tiếp",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Foot fungus.",
+            "message_vi": "Nấm bàn chân.",
+            "stat_changes": {
+              "health": -10,
+              "happiness": -15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Cry",
+        "content_vi": "Khóc hu hu",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Why me.",
+            "message_vi": "Tủi thân tột độ.",
+            "stat_changes": {
+              "happiness": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Spilled Soup",
+    "title_vi": "Lật Đổ Bát Canh",
+    "description_en": "On laptop.",
+    "description_vi": "Súp tôm phung phí.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Clean it",
+        "content_vi": "Lau dọn 1 tiếng",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Tired.",
+            "message_vi": "Mệt lả.",
+            "stat_changes": {
+              "happiness": -10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Lick it",
+        "content_vi": "Liếm bàn phím",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Weird.",
+            "message_vi": "Điện giật tê lưỡi.",
+            "stat_changes": {
+              "health": -5,
+              "happiness": -10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Laptop ruined",
+        "content_vi": "Quăng cmn laptop",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "RIP Apple.",
+            "message_vi": "Bay $1500.",
+            "stat_changes": {
+              "money": -500,
+              "happiness": -40
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Lost Keys",
+    "title_vi": "Quên Chìa Khóa Nhà",
+    "description_en": "Locked out.",
+    "description_vi": "Ngồi bẹp ngoài thềm.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Locksmith ($100)",
+        "content_vi": "Thợ sửa khóa ($100)",
+        "display_conditions": {
+          "min_money": 100
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "In.",
+            "message_vi": "Mở được.",
+            "stat_changes": {
+              "money": -100
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Break window",
+        "content_vi": "Lấy gạch ném kính",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Cut hand.",
+            "message_vi": "Đứt tay tét máu.",
+            "stat_changes": {
+              "money": -200,
+              "health": -20,
+              "happiness": -30
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Sleep outside",
+        "content_vi": "Ngủ ngoài hè",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Cold.",
+            "message_vi": "Cảm lạnh run cầm cập.",
+            "stat_changes": {
+              "health": -15,
+              "happiness": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Dentist Bill",
+    "title_vi": "Phí Chỉnh Nha",
+    "description_en": "Surprise fee.",
+    "description_vi": "Hóa đơn khủng.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Pay up ($300)",
+        "content_vi": "Trút hầu bao ($300)",
+        "display_conditions": {
+          "min_money": 300
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Clean teeth.",
+            "message_vi": "Răng sạch bong.",
+            "stat_changes": {
+              "money": -300,
+              "health": 15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Run out",
+        "content_vi": "Bỏ chạy giật bill",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Arrested.",
+            "message_vi": "Bị tóm.",
+            "stat_changes": {
+              "happiness": -50
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Argue",
+        "content_vi": "Cãi tay đôi với nha sĩ",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Blacklisted.",
+            "message_vi": "Ban vĩnh viễn.",
+            "stat_changes": {
+              "happiness": -10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Food Poisoning",
+    "title_vi": "Ngộ Độc Trà Sữa",
+    "description_en": "Tummy ache.",
+    "description_vi": "Ông tào gọi tên.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Hospital ($150)",
+        "content_vi": "Cấp cứu ($150)",
+        "display_conditions": {
+          "min_money": 150
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "IV Fluids.",
+            "message_vi": "Truyền nước sống lại.",
+            "stat_changes": {
+              "money": -150,
+              "health": 20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Drink water",
+        "content_vi": "Uống oresol",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Survived.",
+            "message_vi": "Tự khỏi.",
+            "stat_changes": {
+              "health": 5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          },
+          {
+            "probability": 50,
+            "message_en": "Vomiting.",
+            "message_vi": "Ói mửa lết lết.",
+            "stat_changes": {
+              "health": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Eat more",
+        "content_vi": "Ăn nhồi thêm",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Died.",
+            "message_vi": "Thủ phạm ngu dốt.",
+            "stat_changes": {
+              "health": -80,
+              "happiness": -50
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Wrong Number",
+    "title_vi": "Người Lạ Gọi Điện",
+    "description_en": "Woke you up.",
+    "description_vi": "Chào buổi sáng sai người.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Polite",
+        "content_vi": "Lịch sự giải thích",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Hang up.",
+            "message_vi": "Cúp máy an lành.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Play along",
+        "content_vi": "Đổi giọng trêu chọc",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Hilarious.",
+            "message_vi": "Cười đau bụng.",
+            "stat_changes": {
+              "happiness": 15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Curse them",
+        "content_vi": "Chửi thề xối xả",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "They cursed back.",
+            "message_vi": "Khẩu chiến căng thẳng.",
+            "stat_changes": {
+              "happiness": -15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Pimple",
+    "title_vi": "Mụn Trứng Cá Chà Bá",
+    "description_en": "On your nose.",
+    "description_vi": "Bóng lộn giữa trán.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Pop it",
+        "content_vi": "Nặn luôn",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Satisfying.",
+            "message_vi": "Phê.",
+            "stat_changes": {
+              "happiness": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          },
+          {
+            "probability": 50,
+            "message_en": "Infected.",
+            "message_vi": "Sưng vù nhiễm trùng.",
+            "stat_changes": {
+              "health": -10,
+              "happiness": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Cream ($10)",
+        "content_vi": "Kem trị mụn ($10)",
+        "display_conditions": {
+          "min_money": 10
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Cleared up.",
+            "message_vi": "Lặn nhẹ nhàng.",
+            "stat_changes": {
+              "money": -10,
+              "happiness": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Leave it",
+        "content_vi": "Kệ nó",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Insecure.",
+            "message_vi": "Mặc cảm.",
+            "stat_changes": {
+              "happiness": -5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Zipper Broke",
+    "title_vi": "Hư Khóa Kéo Quần",
+    "description_en": "Very embarrassing.",
+    "description_vi": "Tọt ra ngoài hết.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Safety pin",
+        "content_vi": "Dùng kim băng",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Fixed.",
+            "message_vi": "Xử lý khéo.",
+            "stat_changes": {
+              "happiness": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Jacket tied",
+        "content_vi": "Cột áo khoác quanh hông",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Fashion.",
+            "message_vi": "Phong cách lạ.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Go home",
+        "content_vi": "Trốn về nhà",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Missed work.",
+            "message_vi": "Bị trừ lương.",
+            "stat_changes": {
+              "money": -20,
+              "happiness": -10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Coffee Burn",
+    "title_vi": "Bỏng Môi Cà Phê",
+    "description_en": "Hot liquid.",
+    "description_vi": "Cà phê sôi sục.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Ice",
+        "content_vi": "Ngậm đá",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Soothed.",
+            "message_vi": "Dịu hẳn.",
+            "stat_changes": {
+              "health": 5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Cry",
+        "content_vi": "Rớt nước mắt",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Stings.",
+            "message_vi": "Đau lè lưỡi.",
+            "stat_changes": {
+              "happiness": -10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Sue Starbucks",
+        "content_vi": "Kiện hãng cà phê",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Lost case.",
+            "message_vi": "Luật sư thua kiện.",
+            "stat_changes": {
+              "money": -100,
+              "happiness": -30
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Hit Head",
+    "title_vi": "Đụng Trúng Cửa Cấp Cứu",
+    "description_en": "Low clearance.",
+    "description_vi": "U một cục to đùng.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Rest",
+        "content_vi": "Nằm vuốt cục u",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Aching.",
+            "message_vi": "Đau buốt óc.",
+            "stat_changes": {
+              "health": -5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Hospital ($100)",
+        "content_vi": "Chụp MRI ($100)",
+        "display_conditions": {
+          "min_money": 100
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Concussion clear.",
+            "message_vi": "An tâm không chấn thương.",
+            "stat_changes": {
+              "money": -100,
+              "happiness": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Keep walking",
+        "content_vi": "Tỉnh rụi đi tiếp",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Dizzy.",
+            "message_vi": "Chóng mặt ngã đập thêm cái nữa.",
+            "stat_changes": {
+              "health": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Ant Invasion",
+    "title_vi": "Đàn Kiến Dọn Tổ",
+    "description_en": "In the kitchen.",
+    "description_vi": "Bò đặc đen nghẹt.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Bug spray ($10)",
+        "content_vi": "Bình xịt kiến ($10)",
+        "display_conditions": {
+          "min_money": 10
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Dead ants.",
+            "message_vi": "Chất độc hiệu quả.",
+            "stat_changes": {
+              "money": -10,
+              "happiness": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Vinegar",
+        "content_vi": "Chà giấm",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Smelly.",
+            "message_vi": "Nhà bốc mùi giấm nhưng ruồi kiến đi hết.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Coexist",
+        "content_vi": "Sống chung",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Ants in bed.",
+            "message_vi": "Kiến cắn khắp người thủng da.",
+            "stat_changes": {
+              "health": -10,
+              "happiness": -30
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Expired Milk",
+    "title_vi": "Sữa Tươi Lên Men",
+    "description_en": "Sour taste.",
+    "description_vi": "Buồn nôn.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Spit it",
+        "content_vi": "Nhổ ra ngay",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Gross.",
+            "message_vi": "Kinh tởm.",
+            "stat_changes": {
+              "happiness": -5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Drink it all",
+        "content_vi": "Cố nuốt",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Bathroom.",
+            "message_vi": "Tiêu chảy tàn bạo.",
+            "stat_changes": {
+              "health": -20,
+              "happiness": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Bake with it",
+        "content_vi": "Tận dụng làm bánh",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Stomach ache.",
+            "message_vi": "Ông táo chửi rủa.",
+            "stat_changes": {
+              "health": -10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Lost Earbud",
+    "title_vi": "Rớt Tai Nghe Đáy Cống",
+    "description_en": "One channel only.",
+    "description_vi": "Mất cái bên trái.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Buy replacement ($50)",
+        "content_vi": "Mua cái lẻ ($50)",
+        "display_conditions": {
+          "min_money": 50
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Complete.",
+            "message_vi": "Full 1 cặp lại.",
+            "stat_changes": {
+              "money": -50,
+              "happiness": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Listen Mono",
+        "content_vi": "Sài 1 bên",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Annoying.",
+            "message_vi": "Cảm giác lép vế.",
+            "stat_changes": {
+              "happiness": -15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Throw other away",
+        "content_vi": "Vứt luôn bên kia",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Rage quit.",
+            "message_vi": "Tức giận ném thùng rác.",
+            "stat_changes": {
+              "happiness": -30
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Dead Battery",
+    "title_vi": "Hư Bình Ắc Quy",
+    "description_en": "Car will not start.",
+    "description_vi": "Đề không nổ máy.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Call tow truck ($80)",
+        "content_vi": "Gọi xe cứu hộ ($80)",
+        "display_conditions": {
+          "min_money": 80
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Started.",
+            "message_vi": "Nổ máy.",
+            "stat_changes": {
+              "money": -80,
+              "happiness": 5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Wait for jump",
+        "content_vi": "Đứng xin câu bình",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Helper.",
+            "message_vi": "Một người tốt giúp.",
+            "stat_changes": {
+              "happiness": 20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          },
+          {
+            "probability": 50,
+            "message_en": "Robbed.",
+            "message_vi": "Bị giang hồ xin đểu.",
+            "stat_changes": {
+              "money": -100,
+              "happiness": -40
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Walk to work",
+        "content_vi": "Lết bộ",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Sweaty.",
+            "message_vi": "Đổ mồ hôi ướt sũng giày.",
+            "stat_changes": {
+              "health": -15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Torn Shoe",
+    "title_vi": "Hở Mõm Giày Da",
+    "description_en": "Flapping sole.",
+    "description_vi": "Xứt cmn đế.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Superglue",
+        "content_vi": "Dùng keo 502",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Fixed.",
+            "message_vi": "Dính chặt như mới.",
+            "stat_changes": {
+              "happiness": 15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Buy new shoes ($60)",
+        "content_vi": "Mua giày mới ($60)",
+        "display_conditions": {
+          "min_money": 60
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Stylin.",
+            "message_vi": "Giày mới tự tin.",
+            "stat_changes": {
+              "money": -60,
+              "happiness": 20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Flap around",
+        "content_vi": "Đi lết lết",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Tripped.",
+            "message_vi": "Vấp ngã dập mũi.",
+            "stat_changes": {
+              "health": -20,
+              "happiness": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Internet Down",
+    "title_vi": "Mất Mạng Cáp Quang",
+    "description_en": "No wifi.",
+    "description_vi": "Chơi khủng long nhảy.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Read a book",
+        "content_vi": "Gốc đọc cuốn sách",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Smart.",
+            "message_vi": "Mở mang trí tuệ.",
+            "stat_changes": {
+              "happiness": 20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Reset router",
+        "content_vi": "Đập liên hồi cục phát Wifi",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Broke it.",
+            "message_vi": "Hỏng luôn mạch điện.",
+            "stat_changes": {
+              "money": -50,
+              "happiness": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Data roaming ($20)",
+        "content_vi": "Đăng ký 4G gói khủng ($20)",
+        "display_conditions": {
+          "min_money": 20
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Connected.",
+            "message_vi": "Sống lại ảo.",
+            "stat_changes": {
+              "money": -20,
+              "happiness": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Scratched Car",
+    "title_vi": "Bị Quẹt Xước Sơn",
+    "description_en": "Parking lot ding.",
+    "description_vi": "Trầy mảng to.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Buff it out ($40)",
+        "content_vi": "Đem đánh bóng ($40)",
+        "display_conditions": {
+          "min_money": 40
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Shiny.",
+            "message_vi": "Bóng loáng.",
+            "stat_changes": {
+              "money": -40,
+              "happiness": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Paint it yourself",
+        "content_vi": "Tự lấy sơn móng tay quẹt",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Looks ugly.",
+            "message_vi": "Tởm lợm.",
+            "stat_changes": {
+              "happiness": -15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Cry inside it",
+        "content_vi": "Khóc hu hu rờ vết xước",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Value dropped.",
+            "message_vi": "Mất giá cái xe.",
+            "stat_changes": {
+              "money": -100,
+              "happiness": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Smelly Coworker",
+    "title_vi": "Mùi Mồ Hôi Cánh",
+    "description_en": "Hard to focus.",
+    "description_vi": "Mùi thâm canh kinh khủng.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Gift deodorant ($10)",
+        "content_vi": "Tặng chai xịt nách ($10)",
+        "display_conditions": {
+          "min_money": 10
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Hint taken.",
+            "message_vi": "Họ ngượng và dùng.",
+            "stat_changes": {
+              "money": -10,
+              "happiness": 20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Hold breath",
+        "content_vi": "Nín thở",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Passed out.",
+            "message_vi": "Ngất vì thiếu oxi.",
+            "stat_changes": {
+              "health": -10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Complain HR",
+        "content_vi": "Báo HR",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Drama.",
+            "message_vi": "Thành lùm xùm trong công ty.",
+            "stat_changes": {
+              "happiness": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Cold Shower",
+    "title_vi": "Tắm Nước Đóng Băng",
+    "description_en": "No hot water.",
+    "description_vi": "Máy nước nóng chết.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Scream",
+        "content_vi": "Gồng mình la hét tắm cho nhanh",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Awake.",
+            "message_vi": "Tỉnh như sáo phốc.",
+            "stat_changes": {
+              "health": 5,
+              "happiness": -10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Skip shower",
+        "content_vi": "Ở dơ 1 bữa",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Smelly.",
+            "message_vi": "Lên cty hôi rình.",
+            "stat_changes": {
+              "happiness": -15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Fix heater ($150)",
+        "content_vi": "Kêu thợ máy nước nóng ($150)",
+        "display_conditions": {
+          "min_money": 150
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Warm.",
+            "message_vi": "Ấm áp.",
+            "stat_changes": {
+              "money": -150,
+              "happiness": 15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Alarm Didn't Ring",
+    "title_vi": "Báo Thức Bị Chết",
+    "description_en": "Slept in.",
+    "description_vi": "Mất luôn buổi sáng.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Speed to work",
+        "content_vi": "Phóng bạt mạng đi làm",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Made it.",
+            "message_vi": "Kịp quẹt thẻ.",
+            "stat_changes": {
+              "happiness": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          },
+          {
+            "probability": 50,
+            "message_en": "Crashed.",
+            "message_vi": "Đụng cô gánh hàng rong.",
+            "stat_changes": {
+              "money": -100,
+              "health": -20,
+              "happiness": -40
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Call in sick",
+        "content_vi": "Cúp làm báo ốm",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Fired.",
+            "message_vi": "Bị đuổi vì nói dối.",
+            "stat_changes": {
+              "money": -200,
+              "happiness": -50
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Accept fate",
+        "content_vi": "Tà tà đi muộn",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Docked pay.",
+            "message_vi": "Trừ nửa ngày lương.",
+            "stat_changes": {
+              "money": -30,
+              "happiness": -10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Bitten by Dog",
+    "title_vi": "Chó Dại Vô Cớ Cắn",
+    "description_en": "Needs rabies shot.",
+    "description_vi": "Phải tiêm 5 mũi huyết thanh.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Hospital rabies ($200)",
+        "content_vi": "Đi chích 5 mũi dại ($200)",
+        "display_conditions": {
+          "min_money": 200
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Safe.",
+            "message_vi": "An toàn không sợ chó cắn hên xui.",
+            "stat_changes": {
+              "money": -200,
+              "health": 15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Bandage it",
+        "content_vi": "Băng vết thương",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Scabbed.",
+            "message_vi": "Lành lặn.",
+            "stat_changes": {
+              "health": 5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          },
+          {
+            "probability": 50,
+            "message_en": "Infected.",
+            "message_vi": "Sưng phồng nhiễm khuẩn.",
+            "stat_changes": {
+              "health": -30
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Bite dog back",
+        "content_vi": "Cắn lại con chó",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Crazy.",
+            "message_vi": "Hàng xóm báo công an.",
+            "stat_changes": {
+              "happiness": -30
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Got Roasted",
+    "title_vi": "Bị Trẻ Trâu Chửi",
+    "description_en": "Online argument.",
+    "description_vi": "Dân mạng húc.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Roast back",
+        "content_vi": "Chửi thề liên thanh trả đũa",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Won.",
+            "message_vi": "Bắt nó câm họng.",
+            "stat_changes": {
+              "happiness": 30
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          },
+          {
+            "probability": 50,
+            "message_en": "Banned.",
+            "message_vi": "Bị khóa mõm Facebook.",
+            "stat_changes": {
+              "happiness": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Log off",
+        "content_vi": "Off mạng",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Peace.",
+            "message_vi": "Bình yên vô sự.",
+            "stat_changes": {
+              "happiness": 15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Cry",
+        "content_vi": "Tuyệt vọng report",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Pathetic.",
+            "message_vi": "Đáng thương.",
+            "stat_changes": {
+              "happiness": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Dry Cleaning Ruined",
+    "title_vi": "Tiệm Giặt Làm Hư Đồ",
+    "description_en": "Shrunk sweater.",
+    "description_vi": "Áo len co rút.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Demand refund",
+        "content_vi": "Bắt đền tiền gấp 10",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Got money.",
+            "message_vi": "Lấy lại $100.",
+            "stat_changes": {
+              "money": 100,
+              "happiness": 20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          },
+          {
+            "probability": 50,
+            "message_en": "Kicked out.",
+            "message_vi": "Bảo vệ đuổi.",
+            "stat_changes": {
+              "happiness": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Wear tiny shirt",
+        "content_vi": "Mặc luôn cái nịt len",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Tight.",
+            "message_vi": "Rách phẹt một đường.",
+            "stat_changes": {
+              "happiness": -15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Leave it",
+        "content_vi": "Cắn răng vứt bỏ",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Lost $50.",
+            "message_vi": "Tiếc 50 đô cái áo.",
+            "stat_changes": {
+              "money": -50,
+              "happiness": -10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Towed Car",
+    "title_vi": "Xe Bị Cẩu Đi",
+    "description_en": "Parked illegally.",
+    "description_vi": "Sơ hở là mất.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Pay impound ($200)",
+        "content_vi": "Nộp phạt lấy xe ($200)",
+        "display_conditions": {
+          "min_money": 200
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Got car.",
+            "message_vi": "Có xe chạy tiếp.",
+            "stat_changes": {
+              "money": -200,
+              "happiness": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Abandon it",
+        "content_vi": "Bỏ xe luôn",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "No car.",
+            "message_vi": "Mất phương tiện.",
+            "stat_changes": {
+              "money": -1000,
+              "happiness": -50
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Fight the guard",
+        "content_vi": "Đánh người trông bãi",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Jail.",
+            "message_vi": "Ăn cơm tù.",
+            "stat_changes": {
+              "money": -500,
+              "happiness": -80
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Bank Fee",
+    "title_vi": "Phí Duy Trì Thẻ Ảo",
+    "description_en": "Overdraft.",
+    "description_vi": "Bào từ xu lẻ.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Call bank",
+        "content_vi": "Kêu gào tổng đài khóc mướn",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Waived fee.",
+            "message_vi": "Được miễn phí lần này.",
+            "stat_changes": {
+              "money": 20,
+              "happiness": 20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          },
+          {
+            "probability": 50,
+            "message_en": "Rejected.",
+            "message_vi": "Trơ trẽn cúp máy.",
+            "stat_changes": {
+              "happiness": -15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Pay it",
+        "content_vi": "Cắn răng trừ tiền",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Broke.",
+            "message_vi": "Hụt bớt một bữa ăn.",
+            "stat_changes": {
+              "money": -20,
+              "happiness": -10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Cancel account",
+        "content_vi": "Hủy mở thẻ",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Hassle.",
+            "message_vi": "Rất phiền vì phải đổi đủ app.",
+            "stat_changes": {
+              "happiness": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Stolen Bike",
+    "title_vi": "Bay Mất Xe Đạp",
+    "description_en": "Cut the lock.",
+    "description_vi": "Trộm cắt khoá xịn.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Walk",
+        "content_vi": "Kéo cày cuốc bộ",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Healthy.",
+            "message_vi": "Khỏe đùi.",
+            "stat_changes": {
+              "health": 20,
+              "happiness": -10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Buy new ($100)",
+        "content_vi": "Mua xe độp mới ($100)",
+        "display_conditions": {
+          "min_money": 100
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Mobile.",
+            "message_vi": "Có phương tiện đi lại.",
+            "stat_changes": {
+              "money": -100,
+              "happiness": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Steal one",
+        "content_vi": "Trộm lại chiếc khác",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Arrested.",
+            "message_vi": "Bị công phu đánh thừa sống thiếu chết.",
+            "stat_changes": {
+              "health": -40,
+              "happiness": -50
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Bad Weather",
+    "title_vi": "Áp Thấp Nhiệt Đới",
+    "description_en": "Canceled plans.",
+    "description_vi": "Ngập lụt quanh nhà.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Movie marathon",
+        "content_vi": "Trùm chăn xem Cày phim",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Relaxing.",
+            "message_vi": "Quá đã.",
+            "stat_changes": {
+              "happiness": 25
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Go out anyway",
+        "content_vi": "Quyết đè gió vượt bão",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Sick.",
+            "message_vi": "Trúng gió méo miệng.",
+            "stat_changes": {
+              "health": -20,
+              "happiness": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Order food ($30)",
+        "content_vi": "Grab Food đắt mùa bão ($30)",
+        "display_conditions": {
+          "min_money": 30
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Tasty.",
+            "message_vi": "Thỏa cơn đói.",
+            "stat_changes": {
+              "money": -30,
+              "happiness": 15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Unexpected Guest",
+    "title_vi": "Khách Không Mời Tới",
+    "description_en": "Mother in law.",
+    "description_vi": "Mẹ chồng đến bất thình lình.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Order takeout ($40)",
+        "content_vi": "Bao ăn sập sàn ($40)",
+        "display_conditions": {
+          "min_money": 40
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Good host.",
+            "message_vi": "Gia chủ hào phóng.",
+            "stat_changes": {
+              "money": -40,
+              "happiness": 20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Pretend not home",
+        "content_vi": "Chui vào tủ trốn",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "They peeked.",
+            "message_vi": "Họ rình qua khe cửa cười.",
+            "stat_changes": {
+              "happiness": -30
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Cook whatever",
+        "content_vi": "Lôi đồ thừa cho ăn",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "They puked.",
+            "message_vi": "Nôn mửa vào mặt.",
+            "stat_changes": {
+              "health": -10,
+              "happiness": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Coughing Fit",
+    "title_vi": "Ho Sặc Sụa Tê Tái",
+    "description_en": "During a movie.",
+    "description_vi": "Phim đang đoạn cảm động.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Drink water",
+        "content_vi": "Nốc cạn chai nước",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Soothed.",
+            "message_vi": "Đỡ.",
+            "stat_changes": {
+              "health": 5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Leave theater",
+        "content_vi": "Lao ra ngoài khạc",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Missed ending.",
+            "message_vi": "Mất nửa bộ phim.",
+            "stat_changes": {
+              "happiness": -15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Hold it in",
+        "content_vi": "Ráng gồng nín ho",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Exploded.",
+            "message_vi": "Phụt trào hết ra áo.",
+            "stat_changes": {
+              "happiness": -30
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Sneezed on",
+    "title_vi": "Bị Hắt Xì Vô Cổ",
+    "description_en": "Gross.",
+    "description_vi": "Nước bọt bay tung tóe.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Wash face",
+        "content_vi": "Chạy giặt tay mặt mũi xà bông",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Clean.",
+            "message_vi": "May quá sạch.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Punch them",
+        "content_vi": "Đấm vỡ mồm đứa hắt xì",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Assault.",
+            "message_vi": "Bị gô cổ lên đồn.",
+            "stat_changes": {
+              "money": -200,
+              "happiness": -40
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Catch cold",
+        "content_vi": "Gồng mình",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Sick.",
+            "message_vi": "Dính cúm siêu vi lây sang.",
+            "stat_changes": {
+              "health": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Broke a Plate",
+    "title_vi": "Bể Cái Dĩa Cổ",
+    "description_en": "Glass everywhere.",
+    "description_vi": "Miễng văng tứ tung.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Sweep careful",
+        "content_vi": "Cất chổi hót cẩn thận",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Safe.",
+            "message_vi": "Sạch.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Step forward",
+        "content_vi": "Dẫm mẹ lên miễng vỡ",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Bleeding.",
+            "message_vi": "Máu lênh láng chân.",
+            "stat_changes": {
+              "health": -30,
+              "happiness": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Buy whole set ($50)",
+        "content_vi": "Mua luôn set mới ($50)",
+        "display_conditions": {
+          "min_money": 50
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Fancy.",
+            "message_vi": "Chén dĩa mới tuyệt.",
+            "stat_changes": {
+              "money": -50,
+              "happiness": 20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Burnt Tongue",
+    "title_vi": "Bỏng Lưỡi Ăn Cơm",
+    "description_en": "Pizza too hot.",
+    "description_vi": "Tái cmn mét.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Ice water",
+        "content_vi": "Ngậm đá cục lớn",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Numb.",
+            "message_vi": "Đỡ hơn.",
+            "stat_changes": {
+              "health": 5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Eat anyway",
+        "content_vi": "Cắn răng nhai phồng mồm",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Teary eyes.",
+            "message_vi": "Rớt nước mắt tủi thân.",
+            "stat_changes": {
+              "happiness": -15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Spit it",
+        "content_vi": "Nhổ phẹt ra",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Ruined meal.",
+            "message_vi": "Hư mâm đồ xịn.",
+            "stat_changes": {
+              "money": -10,
+              "happiness": -10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Lost the Game",
+    "title_vi": "Thua Cược Liên Minh",
+    "description_en": "Demoted.",
+    "description_vi": "Rớt rank đồng.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Try again",
+        "content_vi": "Reset máy đập rank lại",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Won!",
+            "message_vi": "Chuỗi thắng thần thánh.",
+            "stat_changes": {
+              "happiness": 30
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          },
+          {
+            "probability": 50,
+            "message_en": "Derank.",
+            "message_vi": "Tụt sạch rank xuống đồng đát.",
+            "stat_changes": {
+              "happiness": -40
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Break keyboard ($40)",
+        "content_vi": "Đập nát bàn phím cơ ($40)",
+        "display_conditions": {
+          "min_money": 40
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Rage.",
+            "message_vi": "Giải tỏa nhưng tốn tiền.",
+            "stat_changes": {
+              "money": -40,
+              "happiness": -10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Rage quit",
+        "content_vi": "Sập mẹ nguồn ngủ",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Depressed.",
+            "message_vi": "Buồn rười rượi.",
+            "stat_changes": {
+              "happiness": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Cat Threw Up",
+    "title_vi": "Mèo Ọe Phân Trắng",
+    "description_en": "On the carpet.",
+    "description_vi": "Sàn nhà toàn tởm.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Clean it",
+        "content_vi": "Kê khăn hót phân chua",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Smelly hands.",
+            "message_vi": "Mùi kinh hoàng.",
+            "stat_changes": {
+              "happiness": -10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Vet trip ($60)",
+        "content_vi": "Bế đi bác sĩ liền ($60)",
+        "display_conditions": {
+          "min_money": 60
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Cat is safe.",
+            "message_vi": "Bé ngoan khỏe.",
+            "stat_changes": {
+              "money": -60,
+              "happiness": 20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Leave it",
+        "content_vi": "Lấy sách đè lên trốn tránh",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Moldy.",
+            "message_vi": "Thối um cái nhà.",
+            "stat_changes": {
+              "health": -10,
+              "happiness": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "No Parking",
+    "title_vi": "Xui Xẻo Không Chỗ Đậu",
+    "description_en": "Driven in circles.",
+    "description_vi": "Đi lòng vòng 1 tiếng.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Valet ($20)",
+        "content_vi": "Bo bảo vệ dắt đi ($20)",
+        "display_conditions": {
+          "min_money": 20
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Easy.",
+            "message_vi": "Có chỗ ngon.",
+            "stat_changes": {
+              "money": -20,
+              "happiness": 15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Circle 1 hour",
+        "content_vi": "Lượn 1 tiếng đồng hồ",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Angry.",
+            "message_vi": "Tức chết.",
+            "stat_changes": {
+              "happiness": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Park illegal",
+        "content_vi": "Để đại mép cấm báo cháy",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Towed.",
+            "message_vi": "Bị cẩu xe mất tích.",
+            "stat_changes": {
+              "money": -200,
+              "happiness": -50
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Late Delivery",
+    "title_vi": "Giao Hàng Bom Trễ",
+    "description_en": "Hungry.",
+    "description_vi": "Đói đứt ruột.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Tip large ($10)",
+        "content_vi": "Cho tài xế 10 đô kêu họ chạy từ từ ($10)",
+        "display_conditions": {
+          "min_money": 10
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Kindness.",
+            "message_vi": "Làm việc tốt.",
+            "stat_changes": {
+              "money": -10,
+              "happiness": 25
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Yell at driver",
+        "content_vi": "Chửi tài xế sâm sập",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Spit in food.",
+            "message_vi": "Nó nhổ thẳng vào suất cơm.",
+            "stat_changes": {
+              "health": -20,
+              "happiness": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Cancel",
+        "content_vi": "Hủy đơn mắng vốn Shopee",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Starve.",
+            "message_vi": "Ngất xỉu vì đói.",
+            "stat_changes": {
+              "health": -10,
+              "happiness": -15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Spooky Noise",
+    "title_vi": "Tiếng Động Ma Quái",
+    "description_en": "In the attic.",
+    "description_vi": "Sàn gỗ rên thảm thiết.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Check it",
+        "content_vi": "Cầm chổi lên ban công đi tra soát",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Just rat.",
+            "message_vi": "Con chuột.",
+            "stat_changes": {
+              "happiness": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          },
+          {
+            "probability": 50,
+            "message_en": "Robber!",
+            "message_vi": "Trộm! Chạy té vía.",
+            "stat_changes": {
+              "happiness": -40
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Hide in blanket",
+        "content_vi": "Trùm chăn chôn thân",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Safe.",
+            "message_vi": "Mình tự tin thoát vong.",
+            "stat_changes": {
+              "happiness": -5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Call police",
+        "content_vi": "Phím công an 113",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "False alarm.",
+            "message_vi": "Công an phạt tiền tội báo ảo.",
+            "stat_changes": {
+              "money": -100,
+              "happiness": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Itchy Sweater",
+    "title_vi": "Áo Len Ngứa Ngáy",
+    "description_en": "Can not stop scratching.",
+    "description_vi": "Mẩn đỏ cả ngực.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Change shirt",
+        "content_vi": "Chạy vô WC thay lẹ",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Better.",
+            "message_vi": "Thoải mái.",
+            "stat_changes": {
+              "happiness": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Scratch",
+        "content_vi": "Gãi tróc cả da chảy máu hồng",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Bleeding.",
+            "message_vi": "Vết thương hở lạnh buốt.",
+            "stat_changes": {
+              "health": -15,
+              "happiness": -10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Tear it ($30)",
+        "content_vi": "Kéo đứt tan nát vứt xọt rác ($30)",
+        "display_conditions": {
+          "min_money": 30
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Freedom.",
+            "message_vi": "Giải cứu cơ thể tốn tiền.",
+            "stat_changes": {
+              "money": -30,
+              "happiness": 20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Lost Bet",
+    "title_vi": "Kèo Trái Thua Cược",
+    "description_en": "Owe money.",
+    "description_vi": "Mất tiền ngu.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Pay up ($50)",
+        "content_vi": "Xì sòng ($50)",
+        "display_conditions": {
+          "min_money": 50
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Honor.",
+            "message_vi": "Biết giữ lời.",
+            "stat_changes": {
+              "money": -50,
+              "happiness": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Double down",
+        "content_vi": "Đánh kèo gấp máu",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 10,
+            "message_en": "Won big!",
+            "message_vi": "Gỡ lại x5!",
+            "stat_changes": {
+              "money": 250,
+              "happiness": 50
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          },
+          {
+            "probability": 90,
+            "message_en": "Bankrupt.",
+            "message_vi": "Sạt nghiệp bán nhà.",
+            "stat_changes": {
+              "money": -500,
+              "happiness": -50
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Run away",
+        "content_vi": "Trốn biệt tích không đưa tiền",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Beaten.",
+            "message_vi": "Giang hồ vác dao đòi chặt tay.",
+            "stat_changes": {
+              "health": -40,
+              "happiness": -40
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Free VIP Ticket",
+    "title_vi": "Rớt Vé VIP",
+    "description_en": "For a concert.",
+    "description_vi": "Hàng xịn không lấy tiền.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Go enjoy",
+        "content_vi": "Trải nghiệm sang chảnh đứ đừ",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Amazing night.",
+            "message_vi": "Say mê âm nhạc chóp đỉnh.",
+            "stat_changes": {
+              "happiness": 50
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Sell online",
+        "content_vi": "Đăng lướt phe vé lấy chênh hời",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Rich.",
+            "message_vi": "Lụm $200 dễ.",
+            "stat_changes": {
+              "money": 200,
+              "happiness": 20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          },
+          {
+            "probability": 50,
+            "message_en": "Scammed.",
+            "message_vi": "Thằng mua dụ bấm mã xong chặn.",
+            "stat_changes": {
+              "happiness": -30
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Give friend",
+        "content_vi": "Bao thằng bạn thân mỏ hỗn",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Bro time.",
+            "message_vi": "Anh em tốt.",
+            "stat_changes": {
+              "happiness": 30
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Found a Ring",
+    "title_vi": "Nhặt Nhẫn Vàng",
+    "description_en": "Shiny.",
+    "description_vi": "Lấp lánh 4 số 9.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Sell it",
+        "content_vi": "Đem ra PNJ bán đứt",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Cash.",
+            "message_vi": "Có vàng.",
+            "stat_changes": {
+              "money": 300,
+              "happiness": -10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Police",
+        "content_vi": "Báo cảnh quan xử",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Honest.",
+            "message_vi": "Liêm chính.",
+            "stat_changes": {
+              "happiness": 15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Propose",
+        "content_vi": "Đem thẳng đi làm nhẫn cầu hôn free",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "She loved it.",
+            "message_vi": "Nàng gật đầu lia lịa.",
+            "stat_changes": {
+              "happiness": 60
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Stranded",
+    "title_vi": "Xe Hết Xăng Giữa Đồng",
+    "description_en": "Out of gas.",
+    "description_vi": "Mù mịt đêm khuya.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Hitchhike",
+        "content_vi": "Vẫy tay xin quá giang",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Ride hom.",
+            "message_vi": "Gặp chú dễ thương cho về.",
+            "stat_changes": {
+              "happiness": 20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          },
+          {
+            "probability": 50,
+            "message_en": "Murderer.",
+            "message_vi": "Gặp sát nhân bị chém mẻ cằm.",
+            "stat_changes": {
+              "health": -50,
+              "happiness": -50
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Tow gas ($100)",
+        "content_vi": "App cứu hộ gọi rót xăng ($100)",
+        "display_conditions": {
+          "min_money": 100
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Fixed.",
+            "message_vi": "Xong.",
+            "stat_changes": {
+              "money": -100,
+              "happiness": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Walk 10 miles",
+        "content_vi": "Lết lết qua chục quả đồi",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Blisters.",
+            "message_vi": "Toạc chân héo hon.",
+            "stat_changes": {
+              "health": -20,
+              "happiness": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Mystery Charge",
+    "title_vi": "Trừ Tiền Vô Lý",
+    "description_en": "Subscription.",
+    "description_vi": "Tự động gia hạn Netflix.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Call bank",
+        "content_vi": "Làm hung làm dữ với nhân viên thẻ",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Refunded.",
+            "message_vi": "Tới công chuyện là họ trả tiền.",
+            "stat_changes": {
+              "money": 50,
+              "happiness": 20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Ignore",
+        "content_vi": "Kệ cứ làm màu",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Subscribed.",
+            "message_vi": "Truy thu hàng năm.",
+            "stat_changes": {
+              "money": -50,
+              "happiness": -10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Cancel card",
+        "content_vi": "Khóa dẹp gãy thẻ",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Hassle.",
+            "message_vi": "Khó mua đồ.",
+            "stat_changes": {
+              "happiness": -15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Torn Pants",
+    "title_vi": "Rách Đáy Quần Ngay Mông",
+    "description_en": "Ripped seam.",
+    "description_vi": "Toạc đường chỉ nhạy cảm.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Tape it",
+        "content_vi": "Lấy băng dính dán quần",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Sticky.",
+            "message_vi": "Mồ hôi đọng buồn cười.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Buy pants ($40)",
+        "content_vi": "Chạy lẹ ra Zara lựm quần xịn ($40)",
+        "display_conditions": {
+          "min_money": 40
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Stylish.",
+            "message_vi": "Tăng điểm hào quang.",
+            "stat_changes": {
+              "money": -40,
+              "happiness": 20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Walk proud",
+        "content_vi": "Cởi mở tư tưởng kệ khoe đùi",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Arrested.",
+            "message_vi": "Bảo vệ đuổi vì khiếm nhã.",
+            "stat_changes": {
+              "happiness": -40
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Dropped Phone in Toilet",
+    "title_vi": "Rớt Điện Thoại Vào Bồn Cầu",
+    "description_en": "Plop.",
+    "description_vi": "Thúi ình.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Rice bag",
+        "content_vi": "Chùi qua nhét vô thùng gạo",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Worked.",
+            "message_vi": "Sống vãi cả chưởng.",
+            "stat_changes": {
+              "happiness": 25
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          },
+          {
+            "probability": 50,
+            "message_en": "Dead.",
+            "message_vi": "Mainboard cháy đen.",
+            "stat_changes": {
+              "money": -500,
+              "happiness": -50
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Buy new ($500)",
+        "content_vi": "Mượn nợ quẹt iPhone mới ($500)",
+        "display_conditions": {
+          "min_money": 500
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Broke.",
+            "message_vi": "Đẹp nhưng nợ trầm trọng.",
+            "stat_changes": {
+              "money": -500,
+              "happiness": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Bare hands",
+        "content_vi": "Thò tay không xuống móc vớt cớt",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Gross.",
+            "message_vi": "Bốc mùi cức cả ngày.",
+            "stat_changes": {
+              "health": -10,
+              "happiness": -30
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Stubborn Jar",
+    "title_vi": "Nắp Hũ Chặt Cứng",
+    "description_en": "Can not open.",
+    "description_vi": "Chai mắm vặn muốn gãy tay.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Bang on counter",
+        "content_vi": "Đập rột rột vô mép bàn đồn sức",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Open.",
+            "message_vi": "Mở.",
+            "stat_changes": {
+              "happiness": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          },
+          {
+            "probability": 50,
+            "message_en": "Glass Everywhere.",
+            "message_vi": "Ban toang miểng vỡ tung tóe mặt mũi.",
+            "stat_changes": {
+              "health": -30,
+              "happiness": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Hot water",
+        "content_vi": "Ngâm rã nhiệt dãn nở",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Smart.",
+            "message_vi": "Trí tuệ dân gian cất bước.",
+            "stat_changes": {
+              "happiness": 15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Order out ($15)",
+        "content_vi": "Hủy dẹp order đồ ăn cmnl ($15)",
+        "display_conditions": {
+          "min_money": 15
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Yum.",
+            "message_vi": "Ngấy ngán nhưng lười.",
+            "stat_changes": {
+              "money": -15,
+              "happiness": 5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Pigeon Attack",
+    "title_vi": "Chim Bồ Câu Nổi Điên",
+    "description_en": "Swooped down.",
+    "description_vi": "Xà xuống cắp đồ.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Run",
+        "content_vi": "Co giò chạy thẳng bạt mạng",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Safe.",
+            "message_vi": "Ú tim hú hồn.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Fight back",
+        "content_vi": "Bức tung lông chúng nó",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Pecked.",
+            "message_vi": "Nó mổ bay thịt trán.",
+            "stat_changes": {
+              "health": -15,
+              "happiness": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Give bread",
+        "content_vi": "Rải bánh mỳ dụ dỗ",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Snow White.",
+            "message_vi": "Như công chúa Bạch Tuyết.",
+            "stat_changes": {
+              "happiness": 25
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Melted Ice Cream",
+    "title_vi": "Kem Chảy Nước Hết",
+    "description_en": "Sticky hands.",
+    "description_vi": "Ruồi bu kiến đậu.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Lick fast",
+        "content_vi": "Ngoạm cực độ điên cuồng",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Brain freeze.",
+            "message_vi": "Buốt họng liệt răng.",
+            "stat_changes": {
+              "health": -5,
+              "happiness": 5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Throw away",
+        "content_vi": "Quăng cmn rác",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Sad.",
+            "message_vi": "Kéo tụt mood.",
+            "stat_changes": {
+              "happiness": -10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Clean hands",
+        "content_vi": "Lấy khăn ướt lau tươm tất",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Sanitary.",
+            "message_vi": "Sạch.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Tripped in Public",
+    "title_vi": "Tép Bậc Thang Nhục",
+    "description_en": "Everyone saw.",
+    "description_vi": "Mọi người cười bò.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Laugh it off",
+        "content_vi": "Cười xòa đứng lên mạnh mẽ",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Charming.",
+            "message_vi": "Ghi điểm trong mắt cô gái lạ.",
+            "stat_changes": {
+              "happiness": 25
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Stay down",
+        "content_vi": "Nằm ăn vạ cmn luôn giữa đám đông",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Weird.",
+            "message_vi": "Họ tưởng bị điên.",
+            "stat_changes": {
+              "happiness": -30
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Yell at rock",
+        "content_vi": "Quay lại chửi thề viên đá",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Karen.",
+            "message_vi": "Thằng điên chính hiệu.",
+            "stat_changes": {
+              "happiness": -15
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Bird Hit Window",
+    "title_vi": "Chim Tông Kính Oẳng",
+    "description_en": "Loud thud.",
+    "description_vi": "Cú đập giật mình.",
+    "conditions": null,
+    "choices": [
+      {
+        "content_en": "Bury it",
+        "content_vi": "Ra nhặt chôn mồ tử tế tâm linh",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Sad but good.",
+            "message_vi": "Trọn tình.",
+            "stat_changes": {
+              "happiness": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Eat it",
+        "content_vi": "Đem vặt lông luộc ăn",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Disease.",
+            "message_vi": "Trúng virus cúm gia cầm.",
+            "stat_changes": {
+              "health": -50,
+              "happiness": -20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      },
+      {
+        "content_en": "Ignore",
+        "content_vi": "Kéo rèm giả mù",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Smells later.",
+            "message_vi": "Vài hôm sau nó sình thối rình bọ.",
+            "stat_changes": {
+              "happiness": -25
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          }
+        ]
+      }
+    ]
+  }
+]

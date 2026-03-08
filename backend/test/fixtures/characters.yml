@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  age: 1
+  money: 1
+  health: 1
+  happiness: 1
+
+two:
+  age: 1
+  money: 1
+  health: 1
+  happiness: 1

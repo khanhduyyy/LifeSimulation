@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  choice: one
+  probability: 1
+  message: MyText
+  stat_changes: 
+
+two:
+  choice: two
+  probability: 1
+  message: MyText
+  stat_changes: 

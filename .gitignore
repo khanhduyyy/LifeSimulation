@@ -1,0 +1,49 @@
+# Root ignored files
+.agent/
+.gemini/
+.env
+
+# ==================================
+# FRONTEND (React / Vite)
+# ==================================
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/*.local
+
+# Editor directories and files
+frontend/.vscode/*
+!frontend/.vscode/extensions.json
+frontend/.idea
+frontend/*.suo
+frontend/*.ntvs*
+frontend/*.njsproj
+frontend/*.sln
+frontend/*.sw?
+
+# ==================================
+# BACKEND (Ruby on Rails)
+# ==================================
+backend/.bundle
+backend/db/*.sqlite3
+backend/db/*.sqlite3-journal
+backend/log/*
+backend/tmp/*
+!backend/log/.keep
+!backend/tmp/.keep
+backend/storage/*
+!backend/storage/.keep
+backend/public/system
+backend/public/assets
+backend/.env
+backend/.env.*
+backend/coverage/
+backend/spec/tmp
+
+# Ignore master key for decrypting credentials and more.
+backend/config/master.key
+backend/config/credentials/production.key
+
+# Ignore Mac OS / Windows files
+.DS_Store
+Thumbs.db
