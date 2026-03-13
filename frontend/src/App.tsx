@@ -96,6 +96,46 @@ function StatsBar({ character }: { character: Character }) {
   );
 }
 
+/* ===== COMPONENT: StatusPanel ===== */
+function StatusPanel({ character }: { character: Character }) {
+  const flags = character.flags as Record<string, unknown> | undefined;
+  if (!flags) return null;
+
+  // Life stage label
+  const age = character.age;
+  const stageName =
+    age < 18 ? '🧒 Tuổi Thơ' :
+    age < 22 ? '🎓 Đại Học' :
+    age < 30 ? '💼 Đi Làm' :
+    age < 40 ? '💑 Gia Đình' :
+    age < 60 ? '👨‍👩‍👦 Nuôi Con' : '🏖️ Nghỉ Hưu';
+
+  const isMarried = !!flags['is_married'];
+  const childrenCount = Number(flags['children_count'] ?? 0);
+  const jobTitle = flags['job_title'] as string | undefined;
+  const isRetired = !!flags['is_retired'];
+
+  const items = [];
+  if (jobTitle && !isRetired) items.push(`💼 ${jobTitle}`);
+  if (isRetired) items.push('🏖️ Đã nghỉ hưu');
+  if (isMarried) items.push('💍 Đã kết hôn');
+  if (!isMarried && flags['is_single']) items.push('🧍 Độc thân');
+  if (childrenCount > 0) items.push(`👶 ${childrenCount} con`);
+
+  if (items.length === 0) return null;
+
+  return (
+    <div className="status-panel">
+      <div className="status-panel__stage">{stageName}</div>
+      <div className="status-panel__tags">
+        {items.map((item, i) => (
+          <span key={i} className="status-panel__tag">{item}</span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 /* ===== COMPONENT: StartScreen ===== */
 function StartScreen({ onStart }: { onStart: () => void }) {
   const { t } = useI18n();
@@ -435,6 +475,7 @@ function App() {
         <div className="game-screen">
           <div className="container">
             <StatsBar character={character} />
+            <StatusPanel character={character} />
             {phase === 'event' && currentEvent && (
               <EventView
                 event={currentEvent}

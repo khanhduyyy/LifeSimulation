@@ -1,0 +1,350 @@
+[
+  {
+    "title_en": "First Day at the Office",
+    "title_vi": "Ngày Đầu Tiên Ở Văn Phòng",
+    "description_en": "Your first morning at your new office job. Everyone seems busy and important.",
+    "description_vi": "Buổi sáng đầu tiên tại công việc văn phòng mới. Mọi người trông bận rộn và quan trọng.",
+    "conditions": {
+      "min_age": 18, "max_age": 29,
+      "requires_flags": ["job_office"]
+    },
+    "choices": [
+      {
+        "content_en": "Introduce yourself to the whole team",
+        "content_vi": "Tự giới thiệu với cả nhóm",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 70, "message_en": "Great first impression! Your manager noticed your confidence.", "message_vi": "Ấn tượng đầu tiên tốt! Sếp nhận ra sự tự tin của bạn.", "stat_changes": { "happiness": 10 }, "set_flags": {} },
+          { "probability": 30, "message_en": "A little awkward, but people warmed up eventually.", "message_vi": "Hơi lúng túng, nhưng mọi người dần quen.", "stat_changes": { "happiness": 3 }, "set_flags": {} }
+        ]
+      },
+      {
+        "content_en": "Keep your head down and learn the ropes",
+        "content_vi": "Im lặng và học hỏi từ từ",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 80, "message_en": "You absorbed everything quickly. Manager is pleased with your work.", "message_vi": "Bạn tiếp thu nhanh. Sếp hài lòng với công việc của bạn.", "stat_changes": { "happiness": 5 }, "set_flags": {} },
+          { "probability": 20, "message_en": "Too quiet. Others overlooked you for the first project.", "message_vi": "Quá im lặng. Người khác bỏ qua bạn trong dự án đầu tiên.", "stat_changes": { "happiness": -5 }, "set_flags": {} }
+        ]
+      },
+      {
+        "content_en": "Ask to join the most challenging project",
+        "content_vi": "Xin tham gia dự án khó nhất",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 50, "message_en": "Bold move! They said yes. High pressure, high reward.", "message_vi": "Táo bạo! Họ đồng ý. Áp lực cao, phần thưởng cao.", "stat_changes": { "happiness": 15, "health": -5 }, "set_flags": {} },
+          { "probability": 50, "message_en": "Too soon. They asked you to settle in first.", "message_vi": "Còn sớm. Họ yêu cầu bạn làm quen trước.", "stat_changes": { "happiness": -3 }, "set_flags": {} }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "First Day at the Factory",
+    "title_vi": "Ngày Đầu Tiên Tại Nhà Máy",
+    "description_en": "The factory floor is loud and hot. Your shift foreman is a tough old veteran.",
+    "description_vi": "Xưởng nhà máy ồn ào và nóng bức. Tổ trưởng ca là một cựu binh khắt khe.",
+    "conditions": {
+      "min_age": 18, "max_age": 29,
+      "requires_flags": ["job_manual"]
+    },
+    "choices": [
+      {
+        "content_en": "Work hard and impress the foreman",
+        "content_vi": "Làm việc chăm chỉ, gây ấn tượng với tổ trưởng",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 65, "message_en": "Foreman respects your hustle. Extra overtime pay this week.", "message_vi": "Tổ trưởng tôn trọng sự chăm chỉ của bạn. Thêm tiền tăng ca tuần này.", "stat_changes": { "money": 20, "happiness": 8, "health": -5 }, "set_flags": {} },
+          { "probability": 35, "message_en": "You nearly collapsed from the heat. Need to pace yourself.", "message_vi": "Bạn suýt ngã vì nóng. Cần điều chỉnh nhịp độ làm việc.", "stat_changes": { "health": -10, "happiness": -5 }, "set_flags": {} }
+        ]
+      },
+      {
+        "content_en": "Form alliances with coworkers",
+        "content_vi": "Kết thân với đồng nghiệp",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 70, "message_en": "Your coworkers cover for you. The job feels more bearable.", "message_vi": "Đồng nghiệp che chắn cho bạn. Công việc cảm thấy dễ chịu hơn.", "stat_changes": { "happiness": 12 }, "set_flags": {} },
+          { "probability": 30, "message_en": "Some workers are territorial. You got the worst shifts.", "message_vi": "Một số công nhân rất territorial. Bạn nhận ca tệ nhất.", "stat_changes": { "happiness": -8, "health": -3 }, "set_flags": {} }
+        ]
+      },
+      {
+        "content_en": "File a complaint about safety conditions",
+        "content_vi": "Khiếu nại về điều kiện an toàn",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 40, "message_en": "A safety inspection was triggered. Conditions improved.", "message_vi": "Cuộc thanh tra an toàn được kích hoạt. Điều kiện được cải thiện.", "stat_changes": { "happiness": 10, "health": 5 }, "set_flags": {} },
+          { "probability": 60, "message_en": "Management retaliated. You're on the bad shift for months.", "message_vi": "Ban quản lý trả đũa. Bạn bị xếp ca tệ suốt mấy tháng.", "stat_changes": { "happiness": -12, "health": -5 }, "set_flags": {} }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Career Crossroads",
+    "title_vi": "Ngã Tư Sự Nghiệp",
+    "description_en": "You've been working odds jobs. It's time to pick a real career direction.",
+    "description_vi": "Bạn đã làm đủ thứ việc vặt. Đã đến lúc chọn hướng sự nghiệp thực sự.",
+    "conditions": {
+      "min_age": 18, "max_age": 29,
+      "excludes_flags": ["job_office", "job_manual", "job_business", "is_employed"]
+    },
+    "choices": [
+      {
+        "content_en": "Look for an office job",
+        "content_vi": "Tìm việc văn phòng",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 70, "message_en": "Found a data entry position. Stable pay, comfortable work.", "message_vi": "Tìm được vị trí nhập liệu. Lương ổn, công việc thoải mái.", "stat_changes": { "money": 55, "happiness": 8 }, "set_flags": { "job_office": true, "job_title": "Office Staff", "is_employed": true } },
+          { "probability": 30, "message_en": "No luck yet. You'll keep trying next month.", "message_vi": "Chưa có tin tốt. Bạn sẽ tiếp tục cố gắng tháng sau.", "stat_changes": { "happiness": -5 }, "set_flags": {} }
+        ]
+      },
+      {
+        "content_en": "Take manual labor work",
+        "content_vi": "Nhận việc lao động chân tay",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 90, "message_en": "Hired on a construction crew. Good pay for hard work.", "message_vi": "Được nhận vào tổ xây dựng. Lương tốt cho công việc vất vả.", "stat_changes": { "money": 65, "health": -5, "happiness": -3 }, "set_flags": { "job_manual": true, "job_title": "Construction Worker", "is_employed": true } },
+          { "probability": 10, "message_en": "Crew was full. Asked to come back next week.", "message_vi": "Tổ đã đủ người. Được yêu cầu quay lại tuần sau.", "stat_changes": { "happiness": -8 }, "set_flags": {} }
+        ]
+      },
+      {
+        "content_en": "Start a small business",
+        "content_vi": "Khởi nghiệp kinh doanh nhỏ",
+        "display_conditions": { "min_money": 50 },
+        "outcomes": [
+          { "probability": 55, "message_en": "Your small venture is picking up steam!", "message_vi": "Việc kinh doanh nhỏ của bạn đang khởi sắc!", "stat_changes": { "money": -50, "happiness": 20 }, "set_flags": { "job_business": true, "job_title": "Self-Employed", "is_employed": true } },
+          { "probability": 45, "message_en": "Lost the investment. Back to job searching.", "message_vi": "Mất vốn đầu tư. Quay lại tìm việc.", "stat_changes": { "money": -50, "happiness": -15 }, "set_flags": {} }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Performance Review",
+    "title_vi": "Đánh Giá Hiệu Suất",
+    "description_en": "Your annual performance review is today. Your manager calls you into the office.",
+    "description_vi": "Cuộc đánh giá hiệu suất hàng năm là hôm nay. Sếp gọi bạn vào phòng.",
+    "conditions": {
+      "min_age": 22, "max_age": 29,
+      "requires_flags": ["job_office"]
+    },
+    "choices": [
+      {
+        "content_en": "Present your achievements confidently",
+        "content_vi": "Tự tin trình bày thành tích của mình",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 65, "message_en": "Received a raise! Your hard work was recognized.", "message_vi": "Được tăng lương! Nỗ lực của bạn được ghi nhận.", "stat_changes": { "money": 50, "happiness": 20 }, "set_flags": {} },
+          { "probability": 35, "message_en": "Good feedback but no raise yet. 'Next quarter.'", "message_vi": "Phản hồi tốt nhưng chưa tăng lương. 'Quý sau nhé.'", "stat_changes": { "happiness": -5 }, "set_flags": {} }
+        ]
+      },
+      {
+        "content_en": "Request a promotion quietly",
+        "content_vi": "Khẽ đề xuất thăng chức",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 40, "message_en": "Promoted to senior associate! Pay bump and new title.", "message_vi": "Thăng lên chuyên viên cao cấp! Tăng lương và chức danh mới.", "stat_changes": { "money": 80, "happiness": 25 }, "set_flags": { "job_office_senior": true } },
+          { "probability": 60, "message_en": "Promotion denied. Not ready yet, they say.", "message_vi": "Từ chối thăng chức. Họ nói chưa sẵn sàng.", "stat_changes": { "happiness": -10 }, "set_flags": {} }
+        ]
+      },
+      {
+        "content_en": "Accept whatever they offer",
+        "content_vi": "Chấp nhận bất cứ thứ gì họ đề nghị",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 70, "message_en": "Small cost-of-living raise. It is what it is.", "message_vi": "Tăng lương nhỏ theo sinh hoạt. Thế là có vậy thôi.", "stat_changes": { "money": 20, "happiness": 2 }, "set_flags": {} },
+          { "probability": 30, "message_en": "No raise at all this year. Inflation is eating your savings.", "message_vi": "Không tăng lương năm nay. Lạm phát đang ăn mòn khoản tiết kiệm.", "stat_changes": { "happiness": -8 }, "set_flags": {} }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Workplace Accident",
+    "title_vi": "Tai Nạn Lao Động",
+    "description_en": "A piece of machinery malfunctioned during your shift. You narrowly avoided it.",
+    "description_vi": "Một máy móc bị trục trặc trong ca của bạn. Bạn vừa mới thoát khỏi.",
+    "conditions": {
+      "min_age": 18, "max_age": 29,
+      "requires_flags": ["job_manual"]
+    },
+    "choices": [
+      {
+        "content_en": "Report the incident immediately",
+        "content_vi": "Báo cáo sự cố ngay lập tức",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 60, "message_en": "Workplace investigation launched. You received compensation.", "message_vi": "Điều tra nơi làm việc được mở. Bạn nhận được bồi thường.", "stat_changes": { "money": 50, "happiness": 5 }, "set_flags": {} },
+          { "probability": 40, "message_en": "Reported but dismissed. You're labeled as a troublemaker.", "message_vi": "Báo cáo nhưng bị bác bỏ. Bạn bị coi là kẻ gây rối.", "stat_changes": { "happiness": -10 }, "set_flags": {} }
+        ]
+      },
+      {
+        "content_en": "Shake it off and keep working",
+        "content_vi": "Tự mình vượt qua và tiếp tục làm",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 50, "message_en": "Pushed through. Tough as nails reputation.", "message_vi": "Vượt qua. Tiếng tăm cứng rắn như đinh.", "stat_changes": { "health": -5, "happiness": 5 }, "set_flags": {} },
+          { "probability": 50, "message_en": "The injury got worse over time. Medical bills piling up.", "message_vi": "Chấn thương ngày càng tệ hơn. Hóa đơn y tế chồng chất.", "stat_changes": { "health": -15, "money": -40, "happiness": -10 }, "set_flags": {} }
+        ]
+      },
+      {
+        "content_en": "Take sick leave and see a doctor",
+        "content_vi": "Xin nghỉ bệnh và đi khám bác sĩ",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 80, "message_en": "Doctor cleared you. Proper rest and recovery.", "message_vi": "Bác sĩ cho phép bạn trở lại. Nghỉ ngơi và hồi phục đúng cách.", "stat_changes": { "money": -20, "health": 10 }, "set_flags": {} },
+          { "probability": 20, "message_en": "Took too long. Lost some wages. Recovered though.", "message_vi": "Nghỉ quá lâu. Mất một phần lương. Nhưng đã hồi phục.", "stat_changes": { "money": -40, "health": 8, "happiness": -5 }, "set_flags": {} }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Office Politics",
+    "title_vi": "Chính Trường Công Sở",
+    "description_en": "A colleague is taking credit for your work and getting ahead because of it.",
+    "description_vi": "Một đồng nghiệp đang nhận công của bạn và nhờ đó mà tiến bộ.",
+    "conditions": {
+      "min_age": 22, "max_age": 29,
+      "requires_flags": ["job_office"]
+    },
+    "choices": [
+      {
+        "content_en": "Confront them directly",
+        "content_vi": "Đối mặt trực tiếp với họ",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 50, "message_en": "They backed down. You regained credit for your work.", "message_vi": "Họ lùi bước. Bạn lấy lại công nhận cho công việc của mình.", "stat_changes": { "happiness": 15 }, "set_flags": {} },
+          { "probability": 50, "message_en": "Conflict escalated. HR got involved. Uncomfortable at work now.", "message_vi": "Xung đột leo thang. HR vào cuộc. Không thoải mái tại nơi làm việc.", "stat_changes": { "happiness": -15 }, "set_flags": {} }
+        ]
+      },
+      {
+        "content_en": "Document everything and report to HR",
+        "content_vi": "Ghi lại tất cả và báo cáo HR",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 65, "message_en": "HR handled it professionally. Colleague received a formal warning.", "message_vi": "HR xử lý chuyên nghiệp. Đồng nghiệp bị cảnh cáo chính thức.", "stat_changes": { "happiness": 12 }, "set_flags": {} },
+          { "probability": 35, "message_en": "HR didn't act. You've learned the ugly truth about office politics.", "message_vi": "HR không hành động. Bạn học được sự thật xấu xa về chính trường công sở.", "stat_changes": { "happiness": -8 }, "set_flags": {} }
+        ]
+      },
+      {
+        "content_en": "Outshine them silently with better work",
+        "content_vi": "Lặng lẽ vượt qua bằng công việc tốt hơn",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 70, "message_en": "Your quality of work speaks for itself. Management took notice.", "message_vi": "Chất lượng công việc của bạn tự nói lên. Ban quản lý nhận thấy.", "stat_changes": { "happiness": 10 }, "set_flags": {} },
+          { "probability": 30, "message_en": "They kept at it. Your mental health is suffering.", "message_vi": "Họ vẫn cứ tiếp tục. Sức khỏe tâm thần của bạn đang bị ảnh hưởng.", "stat_changes": { "happiness": -12, "health": -5 }, "set_flags": {} }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Switching Jobs",
+    "title_vi": "Chuyển Việc",
+    "description_en": "You've been offered a better position at a competing company.",
+    "description_vi": "Bạn được đề nghị vị trí tốt hơn tại một công ty đối thủ.",
+    "conditions": {
+      "min_age": 22, "max_age": 29,
+      "requires_flags": ["job_office"]
+    },
+    "choices": [
+      {
+        "content_en": "Take the new job",
+        "content_vi": "Nhận công việc mới",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 70, "message_en": "New company, new salary, new opportunities!", "message_vi": "Công ty mới, lương mới, cơ hội mới!", "stat_changes": { "money": 60, "happiness": 15 }, "set_flags": {} },
+          { "probability": 30, "message_en": "New job's culture is terrible. Regret setting in.", "message_vi": "Văn hóa công ty mới rất tệ. Ân hận bắt đầu xuất hiện.", "stat_changes": { "money": 30, "happiness": -10 }, "set_flags": {} }
+        ]
+      },
+      {
+        "content_en": "Use the offer to negotiate a raise here",
+        "content_vi": "Dùng đề nghị để thương lượng tăng lương ở đây",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 55, "message_en": "They matched the offer! You stay with a raise.", "message_vi": "Họ đáp ứng! Bạn ở lại với mức lương cao hơn.", "stat_changes": { "money": 40, "happiness": 12 }, "set_flags": {} },
+          { "probability": 45, "message_en": "They called your bluff. Awkward, but you stayed.", "message_vi": "Họ gọi thẳng. Awkward, nhưng bạn vẫn ở lại.", "stat_changes": { "happiness": -5 }, "set_flags": {} }
+        ]
+      },
+      {
+        "content_en": "Decline and stay loyal",
+        "content_vi": "Từ chối và ở lại trung thành",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 100, "message_en": "Your loyalty was noted. A small appreciation bonus appeared.", "message_vi": "Sự trung thành của bạn được ghi nhận. Một khoản thưởng nhỏ xuất hiện.", "stat_changes": { "money": 20, "happiness": 5 }, "set_flags": {} }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Promotion at the Factory",
+    "title_vi": "Thăng Chức Tại Nhà Máy",
+    "description_en": "Your foreman retires and the plant manager offers you his position.",
+    "description_vi": "Tổ trưởng của bạn nghỉ hưu và giám đốc nhà máy đề nghị bạn vị trí đó.",
+    "conditions": {
+      "min_age": 22, "max_age": 29,
+      "requires_flags": ["job_manual"]
+    },
+    "choices": [
+      {
+        "content_en": "Accept the foreman role",
+        "content_vi": "Chấp nhận vai trò tổ trưởng",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 70, "message_en": "Promoted to foreman. More pay, more responsibility.", "message_vi": "Được thăng thành tổ trưởng. Lương cao hơn, trách nhiệm cao hơn.", "stat_changes": { "money": 50, "happiness": 15 }, "set_flags": {} },
+          { "probability": 30, "message_en": "Promoted but the team resents you. Hard transition.", "message_vi": "Được thăng nhưng tổ bạn oán bạn. Giai đoạn chuyển đổi khó khăn.", "stat_changes": { "money": 40, "happiness": -5 }, "set_flags": {} }
+        ]
+      },
+      {
+        "content_en": "Decline and look for better work elsewhere",
+        "content_vi": "Từ chối và tìm việc tốt hơn ở nơi khác",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 55, "message_en": "Found a higher-paying construction job.", "message_vi": "Tìm được việc xây dựng có lương cao hơn.", "stat_changes": { "money": 70, "happiness": 10, "health": -5 }, "set_flags": {} },
+          { "probability": 45, "message_en": "Jobless for 2 months. Savings took a hit.", "message_vi": "Thất nghiệp 2 tháng. Tiền tiết kiệm bị ảnh hưởng.", "stat_changes": { "money": -40, "happiness": -15 }, "set_flags": {} }
+        ]
+      },
+      {
+        "content_en": "Negotiate better pay before accepting",
+        "content_vi": "Thương lượng mức lương tốt hơn trước khi nhận",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 60, "message_en": "They agreed to your terms. Win-win!", "message_vi": "Họ đồng ý với điều kiện của bạn. Cả hai đều thắng!", "stat_changes": { "money": 70, "happiness": 20 }, "set_flags": {} },
+          { "probability": 40, "message_en": "Negotiation failed. They gave the role to someone else.", "message_vi": "Thương lượng thất bại. Họ giao vị trí cho người khác.", "stat_changes": { "happiness": -10 }, "set_flags": {} }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Side Hustle",
+    "title_vi": "Công Việc Phụ",
+    "description_en": "You have skills outside of work. Maybe a side hustle could earn extra income?",
+    "description_vi": "Bạn có kỹ năng ngoài công việc chính. Có thể một việc phụ sẽ kiếm thêm thu nhập?",
+    "conditions": {
+      "min_age": 18, "max_age": 29
+    },
+    "choices": [
+      {
+        "content_en": "Start freelancing on weekends",
+        "content_vi": "Làm freelance vào cuối tuần",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 60, "message_en": "Freelance brings in an extra $50 this month.", "message_vi": "Freelance mang về thêm $50 tháng này.", "stat_changes": { "money": 50, "happiness": 10, "health": -3 }, "set_flags": {} },
+          { "probability": 40, "message_en": "Burnout. You can't do it all. Must choose.", "message_vi": "Kiệt sức. Bạn không thể làm tất cả. Phải chọn.", "stat_changes": { "health": -10, "happiness": -8 }, "set_flags": {} }
+        ]
+      },
+      {
+        "content_en": "Sell handmade goods online",
+        "content_vi": "Bán đồ thủ công online",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 50, "message_en": "Your products sell out! Hobby turned into profit.", "message_vi": "Sản phẩm của bạn bán hết! Sở thích trở thành lợi nhuận.", "stat_changes": { "money": 40, "happiness": 15 }, "set_flags": {} },
+          { "probability": 50, "message_en": "Shipped products. Barely covered costs.", "message_vi": "Đã giao hàng. Vừa đủ bù chi phí.", "stat_changes": { "money": 10, "happiness": -3 }, "set_flags": {} }
+        ]
+      },
+      {
+        "content_en": "Ignore it. Your main job is enough.",
+        "content_vi": "Bỏ qua. Công việc chính là đủ rồi.",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 100, "message_en": "Work-life balance maintained. No extra income though.", "message_vi": "Cân bằng công việc và cuộc sống được duy trì. Nhưng không có thêm thu nhập.", "stat_changes": { "happiness": 5 }, "set_flags": {} }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,250 @@
+[
+  {
+    "title_en": "Retirement Day",
+    "title_vi": "Ngày Nghỉ Hưu",
+    "description_en": "After decades of work, your employer throws a farewell party. What a journey it's been.",
+    "description_vi": "Sau nhiều thập kỷ làm việc, công ty tổ chức tiệc tiễn bạn. Thật là một hành trình dài.",
+    "conditions": { "min_age": 60, "max_age": 65, "requires_flags": ["is_employed"] },
+    "choices": [
+      {
+        "content_en": "Retire gracefully",
+        "content_vi": "Nghỉ hưu nhẹ nhàng",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 100, "message_en": "You retired with dignity. Pension starts next month.", "message_vi": "Bạn nghỉ hưu một cách xứng đáng. Lương hưu bắt đầu tháng tới.", "stat_changes": { "happiness": 25 }, "set_flags": { "is_employed": false, "is_retired": true } }
+        ]
+      },
+      {
+        "content_en": "Work a few more years",
+        "content_vi": "Làm thêm vài năm nữa",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 70, "message_en": "Stayed on as a senior consultant. Better pension later.", "message_vi": "Ở lại làm tư vấn cấp cao. Lương hưu tốt hơn sau này.", "stat_changes": { "money": 60, "happiness": 5, "health": -5 }, "set_flags": {} },
+          { "probability": 30, "message_en": "Health gave out. Forced to retire anyway.", "message_vi": "Sức khỏe không cho phép. Bị buộc phải nghỉ hưu sớm dù sao.", "stat_changes": { "happiness": -10, "health": -10 }, "set_flags": { "is_employed": false, "is_retired": true } }
+        ]
+      },
+      {
+        "content_en": "Start a small business instead ($100)",
+        "content_vi": "Thay vào đó mở kinh doanh nhỏ ($100)",
+        "display_conditions": { "min_money": 100 },
+        "outcomes": [
+          { "probability": 50, "message_en": "Your small business thrives! A new chapter of success.", "message_vi": "Kinh doanh nhỏ của bạn phát triển! Một chương mới của thành công.", "stat_changes": { "money": -100, "happiness": 30 }, "set_flags": { "is_employed": false, "is_retired": false, "job_business": true } },
+          { "probability": 50, "message_en": "Business struggled. Lost the investment. Rest now.", "message_vi": "Kinh doanh gặp khó khăn. Mất vốn đầu tư. Nghỉ ngơi đi thôi.", "stat_changes": { "money": -100, "happiness": -15 }, "set_flags": { "is_employed": false, "is_retired": true } }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Starting Retirement",
+    "title_vi": "Bắt Đầu Cuộc Đời Nghỉ Hưu",
+    "description_en": "You were never employed, or circumstances led you here. Retirement has arrived.",
+    "description_vi": "Bạn chưa bao giờ có việc làm ổn định, hoặc hoàn cảnh đã dẫn bạn đến đây. Tuổi nghỉ hưu đã đến.",
+    "conditions": { "min_age": 60, "max_age": 70, "excludes_flags": ["is_employed", "is_retired"] },
+    "choices": [
+      {
+        "content_en": "Embrace the quiet life",
+        "content_vi": "Chấp nhận cuộc sống yên tĩnh",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 100, "message_en": "Simple pleasures fill your days. Contentment found.", "message_vi": "Những niềm vui giản dị lấp đầy những ngày của bạn. Tìm thấy sự mãn nguyện.", "stat_changes": { "happiness": 15 }, "set_flags": { "is_retired": true } }
+        ]
+      },
+      {
+        "content_en": "Look for part-time work",
+        "content_vi": "Tìm việc bán thời gian",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 60, "message_en": "Found a casual gig. A little income helps.", "message_vi": "Tìm được việc ngắn hạn. Một ít thu nhập có ích.", "stat_changes": { "money": 30, "happiness": 10 }, "set_flags": { "is_retired": true } },
+          { "probability": 40, "message_en": "Too old for most openings. Rest was the only option.", "message_vi": "Quá tuổi cho hầu hết vị trí. Nghỉ ngơi là lựa chọn duy nhất.", "stat_changes": { "happiness": -5 }, "set_flags": { "is_retired": true } }
+        ]
+      },
+      {
+        "content_en": "Volunteer in the community",
+        "content_vi": "Tình nguyện trong cộng đồng",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 90, "message_en": "Giving back feels wonderful. Purpose found in retirement.", "message_vi": "Cho đi cảm thấy tuyệt vời. Tìm thấy mục đích khi nghỉ hưu.", "stat_changes": { "happiness": 20, "health": 5 }, "set_flags": { "is_retired": true } },
+          { "probability": 10, "message_en": "Volunteering was tiring but heart-warming.", "message_vi": "Tình nguyện mệt nhưng ấm lòng.", "stat_changes": { "happiness": 8, "health": -3 }, "set_flags": { "is_retired": true } }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Children Visit for the Holidays",
+    "title_vi": "Con Cái Về Thăm Dịp Lễ",
+    "description_en": "The house is full again. Your children visit with their own families.",
+    "description_vi": "Ngôi nhà lại đầy ắp. Con cái về thăm cùng với gia đình của chúng.",
+    "conditions": { "min_age": 60, "max_age": 80, "requires_flags": ["has_child"] },
+    "choices": [
+      {
+        "content_en": "Cook a big family feast",
+        "content_vi": "Nấu một bữa tiệc gia đình lớn",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 80, "message_en": "Best family reunion ever. Your grandchildren adore you.", "message_vi": "Buổi họp mặt gia đình tuyệt nhất. Các cháu của bạn yêu quý bạn.", "stat_changes": { "happiness": 30, "money": -20 }, "set_flags": {} },
+          { "probability": 20, "message_en": "An old argument resurfaced at dinner. You resolved it quickly.", "message_vi": "Một tranh cãi cũ bùng lên trong bữa ăn. Bạn giải quyết nhanh chóng.", "stat_changes": { "happiness": 10, "money": -20 }, "set_flags": {} }
+        ]
+      },
+      {
+        "content_en": "Let the kids organize everything",
+        "content_vi": "Để bọn trẻ tự tổ chức tất cả",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 70, "message_en": "They handled it perfectly! You just relaxed and enjoyed.", "message_vi": "Chúng xử lý hoàn hảo! Bạn chỉ thư giãn và tận hưởng.", "stat_changes": { "happiness": 20 }, "set_flags": {} },
+          { "probability": 30, "message_en": "Total chaos, but heartwarming nonetheless.", "message_vi": "Hoàn toàn hỗn loạn, nhưng vẫn làm ấm lòng.", "stat_changes": { "happiness": 10 }, "set_flags": {} }
+        ]
+      },
+      {
+        "content_en": "Go on a trip with the whole family",
+        "content_vi": "Đi du lịch cùng cả gia đình",
+        "display_conditions": { "min_money": 80 },
+        "outcomes": [
+          { "probability": 90, "message_en": "Unforgettable family trip! Memories that'll last forever.", "message_vi": "Chuyến du lịch gia đình không thể quên! Ký ức sẽ mãi mãi.", "stat_changes": { "money": -80, "happiness": 35, "health": 5 }, "set_flags": {} },
+          { "probability": 10, "message_en": "Trip had its bumps but the togetherness made it worthwhile.", "message_vi": "Chuyến đi có trục trặc nhưng sự đoàn kết làm nó xứng đáng.", "stat_changes": { "money": -80, "happiness": 15 }, "set_flags": {} }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Peaceful Golden Years",
+    "title_vi": "Những Năm Tháng Vàng Bình Yên",
+    "description_en": "No children, and that's okay. You've built a peaceful and fulfilling life of your own.",
+    "description_vi": "Không con cái, và điều đó ổn thôi. Bạn đã xây dựng cuộc sống bình yên và viên mãn của riêng mình.",
+    "conditions": { "min_age": 60, "max_age": 80, "excludes_flags": ["has_child"] },
+    "choices": [
+      {
+        "content_en": "Travel solo to a dream destination",
+        "content_vi": "Du lịch một mình đến điểm đến trong mơ",
+        "display_conditions": { "min_money": 70 },
+        "outcomes": [
+          { "probability": 85, "message_en": "The trip of a lifetime. No compromises, pure joy.", "message_vi": "Chuyến đi của cả đời. Không thỏa hiệp, chỉ thuần túy vui vẻ.", "stat_changes": { "money": -70, "happiness": 35, "health": 5 }, "set_flags": {} },
+          { "probability": 15, "message_en": "Lost your luggage but found adventure.", "message_vi": "Mất hành lý nhưng tìm thấy cuộc phiêu lưu.", "stat_changes": { "money": -70, "happiness": 20 }, "set_flags": {} }
+        ]
+      },
+      {
+        "content_en": "Join a senior social club",
+        "content_vi": "Tham gia câu lạc bộ người cao tuổi",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 80, "message_en": "Found wonderful new friends at this stage of life.", "message_vi": "Tìm được những người bạn mới tuyệt vời ở giai đoạn này của cuộc đời.", "stat_changes": { "happiness": 25, "health": 5 }, "set_flags": {} },
+          { "probability": 20, "message_en": "Events were fun but schedules didn't always match.", "message_vi": "Các sự kiện vui nhưng lịch trình không phải lúc nào cũng khớp.", "stat_changes": { "happiness": 10 }, "set_flags": {} }
+        ]
+      },
+      {
+        "content_en": "Write your memoirs",
+        "content_vi": "Viết hồi ký của bạn",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 90, "message_en": "Your story is complete. A unique life, fully lived.", "message_vi": "Câu chuyện của bạn đã hoàn chỉnh. Một cuộc đời độc đáo, sống trọn vẹn.", "stat_changes": { "happiness": 28 }, "set_flags": {} },
+          { "probability": 10, "message_en": "Some chapters were hard to write. But therapeutic.", "message_vi": "Một số chương khó viết. Nhưng rất trị liệu.", "stat_changes": { "happiness": 12 }, "set_flags": {} }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Pension Windfall",
+    "title_vi": "Khoản Lương Hưu Bất Ngờ",
+    "description_en": "Your pension fund has done extremely well this year. The payout is bigger than expected.",
+    "description_vi": "Quỹ hưu trí của bạn làm rất tốt năm nay. Khoản chi trả lớn hơn dự kiến.",
+    "conditions": { "min_age": 60, "max_age": 80 },
+    "choices": [
+      {
+        "content_en": "Splurge on something you always wanted",
+        "content_vi": "Mua thứ bạn luôn muốn",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 90, "message_en": "You finally bought it! No regrets at this age.", "message_vi": "Cuối cùng bạn mua được rồi! Không tiếc nuối ở tuổi này.", "stat_changes": { "money": -60, "happiness": 30 }, "set_flags": {} },
+          { "probability": 10, "message_en": "Bought it, but it wasn't as fulfilling as imagined.", "message_vi": "Đã mua, nhưng không thỏa mãn như tưởng tượng.", "stat_changes": { "money": -60, "happiness": 10 }, "set_flags": {} }
+        ]
+      },
+      {
+        "content_en": "Save it for medical emergencies",
+        "content_vi": "Tiết kiệm cho trường hợp khẩn cấp y tế",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 100, "message_en": "Financial security in retirement. Peace of mind is priceless.", "message_vi": "An toàn tài chính lúc về hưu. Sự bình yên trong tâm trí vô giá.", "stat_changes": { "money": 80, "happiness": 10 }, "set_flags": {} }
+        ]
+      },
+      {
+        "content_en": "Give some to your children",
+        "content_vi": "Cho con cái một phần",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 80, "message_en": "Your children were overjoyed. A lasting legacy.", "message_vi": "Con cái của bạn vui mừng khôn tả. Một di sản lâu dài.", "stat_changes": { "money": -50, "happiness": 35 }, "set_flags": {} },
+          { "probability": 20, "message_en": "Children appreciated it, though money can't buy everything.", "message_vi": "Con cái trân trọng, dù tiền không mua được mọi thứ.", "stat_changes": { "money": -50, "happiness": 15 }, "set_flags": {} }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Health Scare in Retirement",
+    "title_vi": "Biến Cố Sức Khỏe Khi Nghỉ Hưu",
+    "description_en": "You wake up with chest pain one morning. Time to take it seriously.",
+    "description_vi": "Bạn thức dậy với cơn đau ngực một buổi sáng. Đã đến lúc phải nghiêm túc đối mặt.",
+    "conditions": { "min_age": 60, "max_age": 85 },
+    "choices": [
+      {
+        "content_en": "Go to the doctor immediately",
+        "content_vi": "Đi khám bác sĩ ngay lập tức",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 70, "message_en": "Minor issue caught early. Medication and rest prescribed.", "message_vi": "Vấn đề nhỏ được phát hiện sớm. Được kê thuốc và nghỉ ngơi.", "stat_changes": { "money": -30, "health": 8 }, "set_flags": {} },
+          { "probability": 30, "message_en": "Major heart issue. Surgery required. Expensive recovery.", "message_vi": "Vấn đề tim mạch nghiêm trọng. Cần phẫu thuật. Hồi phục tốn kém.", "stat_changes": { "money": -100, "health": -15, "happiness": -20 }, "set_flags": {} }
+        ]
+      },
+      {
+        "content_en": "Ignore it, it's probably nothing",
+        "content_vi": "Bỏ qua, có lẽ không có gì cả",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 30, "message_en": "Pain went away. Just indigestion, thankfully.", "message_vi": "Cơn đau qua đi. May mắn chỉ là khó tiêu.", "stat_changes": {}, "set_flags": {} },
+          { "probability": 70, "message_en": "Had a heart attack later that week. Intensive care hospitalization.", "message_vi": "Bị đau tim vào cuối tuần đó. Nhập viện cấp cứu tích cực.", "stat_changes": { "health": -30, "money": -120, "happiness": -25 }, "set_flags": {} }
+        ]
+      },
+      {
+        "content_en": "Use health insurance ($10 copay)",
+        "content_vi": "Dùng bảo hiểm y tế ($10 đồng chi trả)",
+        "display_conditions": { "min_money": 10 },
+        "outcomes": [
+          { "probability": 80, "message_en": "Insurance covered most of it. Clean bill of health.", "message_vi": "Bảo hiểm chi trả phần lớn. Sức khỏe tốt.", "stat_changes": { "money": -10, "health": 12, "happiness": 8 }, "set_flags": {} },
+          { "probability": 20, "message_en": "Serious condition found. Treatment begins immediately.", "message_vi": "Phát hiện bệnh nghiêm trọng. Điều trị bắt đầu ngay lập tức.", "stat_changes": { "money": -40, "health": -8, "happiness": -10 }, "set_flags": {} }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Looking Back at Life",
+    "title_vi": "Nhìn Lại Cuộc Đời",
+    "description_en": "Sitting in your garden, you reflect on the life you've lived. The good, the hard, all of it.",
+    "description_vi": "Ngồi trong vườn nhà, bạn suy ngẫm về cuộc đời đã sống. Những điều tốt đẹp, những điều khó khăn, tất cả.",
+    "conditions": { "min_age": 65, "max_age": 90 },
+    "choices": [
+      {
+        "content_en": "Write your memoirs",
+        "content_vi": "Viết hồi ký của bạn",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 80, "message_en": "Your story is complete. Everyone who reads it is moved.", "message_vi": "Câu chuyện của bạn đã hoàn chỉnh. Ai đọc cũng xúc động.", "stat_changes": { "happiness": 30 }, "set_flags": {} },
+          { "probability": 20, "message_en": "Some chapters were hard to write. But therapeutic.", "message_vi": "Một số chương khó viết. Nhưng rất trị liệu.", "stat_changes": { "happiness": 15 }, "set_flags": {} }
+        ]
+      },
+      {
+        "content_en": "Volunteer in the community",
+        "content_vi": "Tình nguyện trong cộng đồng",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 90, "message_en": "Giving back fills your heart. Purpose found in retirement.", "message_vi": "Cho đi làm trái tim bạn đầy ắp. Tìm thấy mục đích khi về hưu.", "stat_changes": { "happiness": 25, "health": 5 }, "set_flags": {} },
+          { "probability": 10, "message_en": "Physically tiring but spiritually rewarding.", "message_vi": "Mệt về thể chất nhưng bổ ích về tinh thần.", "stat_changes": { "happiness": 10, "health": -3 }, "set_flags": {} }
+        ]
+      },
+      {
+        "content_en": "Simply rest and enjoy the peace",
+        "content_vi": "Đơn giản là nghỉ ngơi và tận hưởng sự bình yên",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 100, "message_en": "Total contentment. You've earned this rest.", "message_vi": "Hoàn toàn mãn nguyện. Bạn đã xứng đáng với sự nghỉ ngơi này.", "stat_changes": { "happiness": 20, "health": 5 }, "set_flags": {} }
+        ]
+      }
+    ]
+  }
+]

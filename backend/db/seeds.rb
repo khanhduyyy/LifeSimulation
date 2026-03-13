@@ -5,15 +5,21 @@ require 'json'
 puts "Clearing DB..."
 Outcome.delete_all; Choice.delete_all; Event.delete_all; Character.delete_all
 
-file_path = Rails.root.join('db', 'events.json')
-unless File.exist?(file_path)
-  puts "No db/events.json found. Please run your backup or create one."
+events_dir = Rails.root.join('db', 'events')
+unless Dir.exist?(events_dir)
+  puts "No db/events directory found."
   exit
 end
 
-events_data = JSON.parse(File.read(file_path))
+json_files = Dir[events_dir.join('*.json')]
+events_data = []
 
-puts "Starting database insertions from db/events.json..."
+json_files.each do |file|
+  data = JSON.parse(File.read(file))
+  events_data.concat(data)
+end
+
+puts "Starting database insertions from #{json_files.size} JSON files..."
 events_data.each do |data|
   e = Event.create!(
     title_en: data['title_en'], title_vi: data['title_vi'],
@@ -59,4 +65,4 @@ events_data.each do |data|
   end
 end
 
-puts "Done! Seeded EXACTLY #{Event.count} tightly coupled events from JSON!"
+puts "Done! Seeded EXACTLY #{Event.count} tightly coupled events from #{json_files.size} stage files!"

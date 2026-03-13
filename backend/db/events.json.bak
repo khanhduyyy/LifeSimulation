@@ -15,12 +15,25 @@
         "display_conditions": null,
         "outcomes": [
           {
-            "probability": 100,
+            "probability": 60,
             "message_en": "In debt.",
             "message_vi": "Trở thành sinh viên nợ nần.",
             "stat_changes": {
               "money": -50,
               "happiness": 10
+            },
+            "set_flags": {
+              "college": true
+            },
+            "next_event_title_en": "Frat Party"
+          },
+          {
+            "probability": 40,
+            "message_en": "You got a partial scholarship!",
+            "message_vi": "Bạn nhận được học bổng bán phần!",
+            "stat_changes": {
+              "money": -10,
+              "happiness": 30
             },
             "set_flags": {
               "college": true
@@ -35,12 +48,25 @@
         "display_conditions": null,
         "outcomes": [
           {
-            "probability": 100,
+            "probability": 70,
             "message_en": "Hard labor.",
             "message_vi": "Tháng ngày lao động chân tay.",
             "stat_changes": {
               "money": 100,
               "happiness": -10
+            },
+            "set_flags": {
+              "labor": true
+            },
+            "next_event_title_en": "Workplace Accident"
+          },
+          {
+            "probability": 30,
+            "message_en": "Promoted to shift manager quickly.",
+            "message_vi": "Sớm được thăng chức quản lý ca.",
+            "stat_changes": {
+              "money": 150,
+              "happiness": 5
             },
             "set_flags": {
               "labor": true
@@ -57,12 +83,25 @@
         },
         "outcomes": [
           {
-            "probability": 100,
+            "probability": 60,
             "message_en": "Apprentice.",
             "message_vi": "Làm thợ đụng.",
             "stat_changes": {
               "money": -50,
               "happiness": 5
+            },
+            "set_flags": {
+              "trade": true
+            },
+            "next_event_title_en": "Plumbing Gig"
+          },
+          {
+            "probability": 40,
+            "message_en": "Master took you under their wing.",
+            "message_vi": "Sư phụ tận tình chỉ dạy.",
+            "stat_changes": {
+              "money": -30,
+              "happiness": 20
             },
             "set_flags": {
               "trade": true
@@ -88,13 +127,24 @@
         },
         "outcomes": [
           {
-            "probability": 100,
+            "probability": 60,
             "message_en": "Hungover.",
             "message_vi": "Say khướt.",
             "stat_changes": {
               "money": -20,
               "happiness": 20,
               "health": -10
+            },
+            "set_flags": {},
+            "next_event_title_en": "Finals Week"
+          },
+          {
+            "probability": 40,
+            "message_en": "Made some great new friends.",
+            "message_vi": "Kết bạn được với nhiều anh em tốt.",
+            "stat_changes": {
+              "money": -20,
+              "happiness": 35
             },
             "set_flags": {},
             "next_event_title_en": "Finals Week"
@@ -107,11 +157,23 @@
         "display_conditions": null,
         "outcomes": [
           {
-            "probability": 100,
+            "probability": 60,
             "message_en": "Boring but smart.",
             "message_vi": "Chăm chỉ.",
             "stat_changes": {
               "happiness": -5
+            },
+            "set_flags": {
+              "nerd": true
+            },
+            "next_event_title_en": "Finals Week"
+          },
+          {
+            "probability": 40,
+            "message_en": "You felt extremely lonely looking at their Instagrams.",
+            "message_vi": "Tủi thân khi xem story Instagram của bạn bè.",
+            "stat_changes": {
+              "happiness": -15
             },
             "set_flags": {
               "nerd": true
@@ -126,12 +188,23 @@
         "display_conditions": null,
         "outcomes": [
           {
-            "probability": 100,
+            "probability": 60,
             "message_en": "Crashed.",
             "message_vi": "Tông vô gầm cầu.",
             "stat_changes": {
               "health": -40,
               "happiness": -30
+            },
+            "set_flags": {},
+            "next_event_title_en": "Finals Week"
+          },
+          {
+            "probability": 40,
+            "message_en": "Pulled over by the cops.",
+            "message_vi": "Bị công an tuýt còi.",
+            "stat_changes": {
+              "money": -150,
+              "happiness": -40
             },
             "set_flags": {},
             "next_event_title_en": "Finals Week"
@@ -162,6 +235,17 @@
             },
             "set_flags": {},
             "next_event_title_en": null
+          },
+          {
+            "probability": 30,
+            "message_en": "Slept through the alarm.",
+            "message_vi": "Ngủ quên giờ thi do thức khuya.",
+            "stat_changes": {
+              "happiness": -30,
+              "health": -5
+            },
+            "set_flags": {},
+            "next_event_title_en": null
           }
         ]
       },
@@ -179,6 +263,16 @@
             },
             "set_flags": {},
             "next_event_title_en": null
+          },
+          {
+            "probability": 50,
+            "message_en": "Caught by the proctor.",
+            "message_vi": "Bị giám thị tóm gọn.",
+            "stat_changes": {
+              "happiness": -40
+            },
+            "set_flags": {},
+            "next_event_title_en": "Probation"
           }
         ]
       },
@@ -218,7 +312,7 @@
         "display_conditions": null,
         "outcomes": [
           {
-            "probability": 100,
+            "probability": 70,
             "message_en": "Expelled.",
             "message_vi": "Bị đuổi thẳng cổ.",
             "stat_changes": {
@@ -226,6 +320,18 @@
             },
             "set_flags": {
               "college": false
+            },
+            "next_event_title_en": null
+          },
+          {
+            "probability": 30,
+            "message_en": "They gave you one last chance.",
+            "message_vi": "Được cho thêm một cơ hội cuối.",
+            "stat_changes": {
+              "happiness": 10
+            },
+            "set_flags": {
+              "college": true
             },
             "next_event_title_en": null
           }
@@ -237,11 +343,23 @@
         "display_conditions": null,
         "outcomes": [
           {
-            "probability": 100,
+            "probability": 60,
             "message_en": "Lost future.",
             "message_vi": "Mất tương lai.",
             "stat_changes": {
               "happiness": -20
+            },
+            "set_flags": {
+              "college": false
+            },
+            "next_event_title_en": null
+          },
+          {
+            "probability": 40,
+            "message_en": "Felt remarkably free.",
+            "message_vi": "Cảm thấy tự do hơn bao giờ hết.",
+            "stat_changes": {
+              "happiness": 20
             },
             "set_flags": {
               "college": false
@@ -258,7 +376,7 @@
         },
         "outcomes": [
           {
-            "probability": 100,
+            "probability": 50,
             "message_en": "Corrupt.",
             "message_vi": "Giữ được ghế.",
             "stat_changes": {
@@ -266,6 +384,19 @@
               "happiness": -10
             },
             "set_flags": {},
+            "next_event_title_en": null
+          },
+          {
+            "probability": 50,
+            "message_en": "Dean took the money and expelled you anyway.",
+            "message_vi": "Thầy nhận tiền xong vẫn đuổi.",
+            "stat_changes": {
+              "money": -200,
+              "happiness": -50
+            },
+            "set_flags": {
+              "college": false
+            },
             "next_event_title_en": null
           }
         ]
@@ -285,12 +416,23 @@
         "display_conditions": null,
         "outcomes": [
           {
-            "probability": 100,
+            "probability": 60,
             "message_en": "Hero, but injured.",
             "message_vi": "Anh hùng nhưng bị thương.",
             "stat_changes": {
               "health": -20,
               "happiness": 10
+            },
+            "set_flags": {},
+            "next_event_title_en": "Settlement"
+          },
+          {
+            "probability": 40,
+            "message_en": "You both got out unscathed!",
+            "message_vi": "Cả hai đều an toàn ra ngoài!",
+            "stat_changes": {
+              "health": -5,
+              "happiness": 30
             },
             "set_flags": {},
             "next_event_title_en": "Settlement"
@@ -303,11 +445,21 @@
         "display_conditions": null,
         "outcomes": [
           {
-            "probability": 100,
+            "probability": 80,
             "message_en": "Coworker died.",
             "message_vi": "Bạn đồng nghiệp mất mạng. Tội lỗi bám theo.",
             "stat_changes": {
               "happiness": -50
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          },
+          {
+            "probability": 20,
+            "message_en": "Someone else saved them.",
+            "message_vi": "Có người khác tới cứu họ kịp.",
+            "stat_changes": {
+              "happiness": -10
             },
             "set_flags": {},
             "next_event_title_en": null
@@ -322,12 +474,24 @@
         },
         "outcomes": [
           {
-            "probability": 100,
+            "probability": 70,
             "message_en": "Stopped it.",
             "message_vi": "Dập tắt đám cháy.",
             "stat_changes": {
               "money": -10,
               "happiness": 20
+            },
+            "set_flags": {},
+            "next_event_title_en": null
+          },
+          {
+            "probability": 30,
+            "message_en": "Fire extinguisher was empty!",
+            "message_vi": "Bình cứu hỏa hết hạn!",
+            "stat_changes": {
+              "money": -10,
+              "health": -15,
+              "happiness": -10
             },
             "set_flags": {},
             "next_event_title_en": null
@@ -5211,14 +5375,14 @@
   },
   {
     "title_en": "Coughing Fit",
-    "title_vi": "Ho Sặc Sụa Tê Tái",
+    "title_vi": "Cơn ho kéo đến",
     "description_en": "During a movie.",
     "description_vi": "Phim đang đoạn cảm động.",
     "conditions": null,
     "choices": [
       {
         "content_en": "Drink water",
-        "content_vi": "Nốc cạn chai nước",
+        "content_vi": "Uống nước",
         "display_conditions": null,
         "outcomes": [
           {
@@ -5235,7 +5399,7 @@
       },
       {
         "content_en": "Leave theater",
-        "content_vi": "Lao ra ngoài khạc",
+        "content_vi": "Rời khỏi rạp phim",
         "display_conditions": null,
         "outcomes": [
           {
@@ -5252,13 +5416,13 @@
       },
       {
         "content_en": "Hold it in",
-        "content_vi": "Ráng gồng nín ho",
+        "content_vi": "Ráng kìm cơn ho",
         "display_conditions": null,
         "outcomes": [
           {
             "probability": 100,
             "message_en": "Exploded.",
-            "message_vi": "Phụt trào hết ra áo.",
+            "message_vi": "Trào hết ra áo.",
             "stat_changes": {
               "happiness": -30
             },
@@ -5273,12 +5437,12 @@
     "title_en": "Sneezed on",
     "title_vi": "Bị Hắt Xì Vô Cổ",
     "description_en": "Gross.",
-    "description_vi": "Nước bọt bay tung tóe.",
+    "description_vi": "Hắt xì vô cổ.",
     "conditions": null,
     "choices": [
       {
         "content_en": "Wash face",
-        "content_vi": "Chạy giặt tay mặt mũi xà bông",
+        "content_vi": "Rửa mặt",
         "display_conditions": null,
         "outcomes": [
           {

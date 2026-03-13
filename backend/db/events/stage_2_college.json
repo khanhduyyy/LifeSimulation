@@ -1,0 +1,731 @@
+[
+  {
+    "title_en": "College Orientation",
+    "title_vi": "Tuần Định Hướng Đại Học",
+    "description_en": "It's your first week at university. The campus is huge and overwhelming.",
+    "description_vi": "Đây là tuần đầu tiên ở đại học. Khuôn viên trường rộng lớn và choáng ngợp.",
+    "conditions": {
+      "min_age": 18,
+      "max_age": 21,
+      "requires_flags": [
+        "is_student"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Join every club you can",
+        "content_vi": "Gia nhập mọi câu lạc bộ có thể",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "You made tons of friends and found your crowd.",
+            "message_vi": "Bạn kết nhiều bạn bè và tìm được nhóm của mình.",
+            "stat_changes": {
+              "happiness": 15
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 30,
+            "message_en": "Overcommitted and burned out in a month.",
+            "message_vi": "Nhận quá nhiều và kiệt sức sau 1 tháng.",
+            "stat_changes": {
+              "happiness": -5,
+              "health": -5
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Focus only on academics",
+        "content_vi": "Chỉ tập trung vào việc học",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 80,
+            "message_en": "Top of your class from day one. Lonely but disciplined.",
+            "message_vi": "Đứng đầu lớp ngay từ đầu. Cô đơn nhưng kỷ luật.",
+            "stat_changes": {
+              "happiness": -5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 20,
+            "message_en": "The workload is heavier than high school. You struggle.",
+            "message_vi": "Khối lượng bài tập nặng hơn cấp 3. Bạn vật lộn.",
+            "stat_changes": {
+              "happiness": -10,
+              "health": -5
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Party hard for the first month",
+        "content_vi": "Tiệc tùng thả ga tháng đầu",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Best time of your life... until mid-terms hit.",
+            "message_vi": "Thời gian tuyệt nhất cuộc đời... cho đến kỳ thi giữa kỳ.",
+            "stat_changes": {
+              "happiness": 20,
+              "health": -5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 50,
+            "message_en": "Wasted the first month. Academic probation warning.",
+            "message_vi": "Bỏ phí tháng đầu. Bị cảnh báo học vụ.",
+            "stat_changes": {
+              "happiness": 5,
+              "health": -5,
+              "money": -10
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Campus Part-Time Job",
+    "title_vi": "Làm Thêm Trong Trường",
+    "description_en": "You're running low on money. There's a part-time job opening at the campus cafeteria.",
+    "description_vi": "Tiền bạn đang cạn dần. Có vị trí làm thêm tại căng tin trường.",
+    "conditions": {
+      "min_age": 18,
+      "max_age": 21,
+      "requires_flags": [
+        "is_student"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Take the cafeteria job",
+        "content_vi": "Nhận việc căng tin",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Earned $30 this month. Tired but financially stable.",
+            "message_vi": "Kiếm được $30 tháng này. Mệt nhưng ổn định tài chính.",
+            "stat_changes": {
+              "money": 30,
+              "happiness": -3
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 30,
+            "message_en": "Hard to balance with studies. Grades slipping.",
+            "message_vi": "Khó cân bằng với việc học. Điểm số đang giảm.",
+            "stat_changes": {
+              "money": 20,
+              "happiness": -8,
+              "health": -5
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Tutor other students",
+        "content_vi": "Dạy kèm sinh viên khác",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "Good tutoring gig. Flexible schedule, decent pay.",
+            "message_vi": "Việc dạy kèm tốt. Lịch linh hoạt, lương ổn.",
+            "stat_changes": {
+              "money": 40,
+              "happiness": 5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 40,
+            "message_en": "Students didn't show up consistently. Earned less.",
+            "message_vi": "Học sinh không đến thường xuyên. Thu nhập ít hơn.",
+            "stat_changes": {
+              "money": 15
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Ask family for financial support",
+        "content_vi": "Xin gia đình hỗ trợ tài chính",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Family sent you $40. Relief!",
+            "message_vi": "Gia đình gửi cho bạn $40. Nhẹ nhõm!",
+            "stat_changes": {
+              "money": 40,
+              "happiness": 5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 30,
+            "message_en": "Family is struggling too. Only got $10.",
+            "message_vi": "Gia đình cũng đang khó khăn. Chỉ nhận được $10.",
+            "stat_changes": {
+              "money": 10,
+              "happiness": -10
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Difficult Professor",
+    "title_vi": "Giáo Sư Khó Tính",
+    "description_en": "Your professor is notorious for failing students. Your grade depends on a final project.",
+    "description_vi": "Giáo sư của bạn nổi tiếng với việc làm sinh viên trượt môn. Điểm số của bạn phụ thuộc vào bài thi cuối kỳ.",
+    "conditions": {
+      "min_age": 18,
+      "max_age": 21,
+      "requires_flags": [
+        "is_student"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Work on project with a study group",
+        "content_vi": "Làm bài tập nhóm với nhóm học",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 75,
+            "message_en": "Group effort paid off. High marks!",
+            "message_vi": "Nỗ lực nhóm có kết quả. Điểm cao!",
+            "stat_changes": {
+              "happiness": 12
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 25,
+            "message_en": "Group fell apart at the last minute. You barely passed.",
+            "message_vi": "Nhóm tan rã vào phút chót. Bạn vừa vặn qua.",
+            "stat_changes": {
+              "happiness": -8
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Work on it alone, double down",
+        "content_vi": "Làm một mình, dồn hết sức",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 55,
+            "message_en": "Your independent research impressed the professor.",
+            "message_vi": "Nghiên cứu độc lập của bạn gây ấn tượng với giáo sư.",
+            "stat_changes": {
+              "happiness": 15,
+              "health": -5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 45,
+            "message_en": "Sleepless nights, but only average results.",
+            "message_vi": "Nhiều đêm thức trắng nhưng chỉ đạt kết quả trung bình.",
+            "stat_changes": {
+              "happiness": -5,
+              "health": -10
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Complain to the dean's office",
+        "content_vi": "Khiếu nại lên phòng hiệu trưởng",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 30,
+            "message_en": "Dean intervened! Professor lightened up slightly.",
+            "message_vi": "Hiệu trưởng can thiệp! Giáo sư nhẹ tay hơn một chút.",
+            "stat_changes": {
+              "happiness": 10
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 70,
+            "message_en": "Dean sided with professor. Now he's even harder on you.",
+            "message_vi": "Hiệu trưởng về phe giáo sư. Bây giờ ông ấy càng khó với bạn hơn.",
+            "stat_changes": {
+              "happiness": -15
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "College Romance",
+    "title_vi": "Tình Yêu Đại Học",
+    "description_en": "You've caught feelings for someone in your literature class.",
+    "description_vi": "Bạn đã rung động với một người trong lớp văn học.",
+    "conditions": {
+      "min_age": 18,
+      "max_age": 21,
+      "requires_flags": [
+        "is_student"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Ask them out",
+        "content_vi": "Rủ họ đi chơi",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "You started dating! Happy days ahead.",
+            "message_vi": "Bạn đã bắt đầu hẹn hò! Những ngày hạnh phúc phía trước.",
+            "stat_changes": {
+              "happiness": 20
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 40,
+            "message_en": "Rejected kindly. Awkward seeing them in class now.",
+            "message_vi": "Bị từ chối nhẹ nhàng. Giờ gặp nhau trong lớp thật awkward.",
+            "stat_changes": {
+              "happiness": -12
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Focus on friendship first",
+        "content_vi": "Tập trung vào tình bạn trước",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Friendship blossomed into something more.",
+            "message_vi": "Tình bạn nở thành điều gì đó hơn thế.",
+            "stat_changes": {
+              "happiness": 15
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 50,
+            "message_en": "They started dating someone else. In the friend zone forever.",
+            "message_vi": "Họ bắt đầu hẹn hò với người khác. Mãi trong vùng bạn bè.",
+            "stat_changes": {
+              "happiness": -8
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Prioritize studies over dating",
+        "content_vi": "Ưu tiên học hành hơn tình cảm",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Nothing romantic happened, but your GPA is enviable.",
+            "message_vi": "Không có gì lãng mạn xảy ra, nhưng GPA của bạn đáng ngưỡng mộ.",
+            "stat_changes": {
+              "happiness": -3
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Internship Opportunity",
+    "title_vi": "Cơ Hội Thực Tập",
+    "description_en": "A company is offering an unpaid internship that could open doors.",
+    "description_vi": "Một công ty đang cung cấp kỳ thực tập không lương, nhưng có thể mở ra nhiều cánh cửa.",
+    "conditions": {
+      "min_age": 18,
+      "max_age": 21,
+      "requires_flags": [
+        "is_student"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Accept the internship",
+        "content_vi": "Chấp nhận thực tập",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Great experience! They offered you a job after graduation.",
+            "message_vi": "Kinh nghiệm tuyệt vời! Họ hứa tuyển dụng bạn sau khi tốt nghiệp.",
+            "stat_changes": {
+              "happiness": 15,
+              "health": -3
+            },
+            "set_flags": {
+              "has_internship": true
+            }
+          },
+          {
+            "probability": 30,
+            "message_en": "Worked hard for free. At least you have a line on your resume.",
+            "message_vi": "Làm việc chăm chỉ không công. Ít nhất bạn có thêm dòng vào CV.",
+            "stat_changes": {
+              "happiness": -5
+            },
+            "set_flags": {
+              "has_internship": true
+            }
+          }
+        ]
+      },
+      {
+        "content_en": "Decline, focus on studying",
+        "content_vi": "Từ chối, tập trung học",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Strong grades, but less practical experience.",
+            "message_vi": "Điểm số tốt, nhưng ít kinh nghiệm thực tế.",
+            "stat_changes": {
+              "happiness": 3
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Look for a paid internship instead",
+        "content_vi": "Tìm thực tập có lương thay thế",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 40,
+            "message_en": "Found one! Paid internship that covers expenses.",
+            "message_vi": "Tìm được rồi! Thực tập có lương, đủ trang trải.",
+            "stat_changes": {
+              "money": 50,
+              "happiness": 20
+            },
+            "set_flags": {
+              "has_internship": true
+            }
+          },
+          {
+            "probability": 60,
+            "message_en": "No paid internship found. Missed the original offer.",
+            "message_vi": "Không tìm được thực tập có lương. Bỏ lỡ cơ hội ban đầu.",
+            "stat_changes": {
+              "happiness": -10
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Graduation Day: What's Next?",
+    "title_vi": "Tốt Nghiệp Đại Học: Tiếp Theo Là Gì?",
+    "description_en": "You've graduated from university at 22. A new chapter begins.",
+    "description_vi": "Bạn tốt nghiệp đại học năm 22 tuổi. Một chương mới bắt đầu.",
+    "conditions": {
+      "min_age": 22,
+      "max_age": 22,
+      "requires_flags": [
+        "is_student"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Start working immediately",
+        "content_vi": "Đi làm ngay lập tức",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Time to enter the workforce. Your degree gives you a head start.",
+            "message_vi": "Đã đến lúc bước vào thị trường lao động. Bằng cấp của bạn tạo lợi thế tốt.",
+            "stat_changes": {
+              "happiness": 10
+            },
+            "set_flags": {
+              "has_degree": true,
+              "is_student": false,
+              "path_work_graduate": true
+            },
+            "next_event_title_en": "First Job Hunt"
+          }
+        ]
+      },
+      {
+        "content_en": "Apply for a Master's degree ($80)",
+        "content_vi": "Nộp hồ sơ Cao học ($80)",
+        "display_conditions": {
+          "min_money": 80
+        },
+        "outcomes": [
+          {
+            "probability": 75,
+            "message_en": "Accepted! Two more years of studying, but a brighter future.",
+            "message_vi": "Được nhận! Thêm hai năm học, nhưng tương lai sáng hơn.",
+            "stat_changes": {
+              "money": -80,
+              "happiness": 15
+            },
+            "set_flags": {
+              "has_degree": true,
+              "path_masters": true,
+              "is_student": true
+            },
+            "next_event_title_en": "Graduate School Life"
+          },
+          {
+            "probability": 25,
+            "message_en": "Not accepted. The application fee is gone. Time to find a job.",
+            "message_vi": "Không được nhận. Phí xét tuyển đã mất. Đến lúc đi tìm việc.",
+            "stat_changes": {
+              "money": -80,
+              "happiness": -15
+            },
+            "set_flags": {
+              "has_degree": true,
+              "is_student": false,
+              "path_work_graduate": true
+            },
+            "next_event_title_en": "First Job Hunt"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Graduate School Life",
+    "title_vi": "Cuộc Sống Cao Học",
+    "description_en": "Graduate school is intense. Research, thesis, seminars — all at once.",
+    "description_vi": "Cao học vô cùng căng thẳng. Nghiên cứu, luận văn, hội thảo — tất cả cùng lúc.",
+    "conditions": {
+      "min_age": 22,
+      "max_age": 23,
+      "requires_flags": [
+        "path_masters"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Dive deep into research",
+        "content_vi": "Đi sâu vào nghiên cứu",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 65,
+            "message_en": "Your thesis is a masterpiece. Professors are impressed.",
+            "message_vi": "Luận văn của bạn xuất sắc. Giáo sư rất ấn tượng.",
+            "stat_changes": {
+              "happiness": 10,
+              "health": -5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 35,
+            "message_en": "Your research hit a dead end. Need to restart the chapter.",
+            "message_vi": "Nghiên cứu của bạn đi vào ngõ cụt. Phải viết lại chương.",
+            "stat_changes": {
+              "happiness": -10,
+              "health": -8
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Balance research with teaching assistant work",
+        "content_vi": "Cân bằng nghiên cứu với trợ giảng",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Got paid as a TA and progressed steadily.",
+            "message_vi": "Được trả lương khi trợ giảng và tiến độ đều đặn.",
+            "stat_changes": {
+              "money": 40,
+              "happiness": 5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 30,
+            "message_en": "Teaching drained time from thesis. Behind schedule.",
+            "message_vi": "Dạy học chiếm mất thời gian luận văn. Bị chậm tiến độ.",
+            "stat_changes": {
+              "money": 20,
+              "happiness": -5,
+              "health": -5
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Drop out and get a job",
+        "content_vi": "Bỏ học và đi làm",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Enough academia. The real world is calling.",
+            "message_vi": "Đã đủ trường lớp. Thế giới thực đang gọi.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "set_flags": {
+              "has_degree": true,
+              "path_masters": false,
+              "is_student": false,
+              "path_work_graduate": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "First Job Hunt",
+    "title_vi": "Tìm Việc Làm Đầu Tiên",
+    "description_en": "Resume in hand, you're searching for your first real job.",
+    "description_vi": "Cầm CV trên tay, bạn đang tìm kiếm công việc thực sự đầu tiên.",
+    "conditions": {
+      "min_age": 18,
+      "max_age": 24,
+      "requires_flags": [
+        "path_work_early"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Apply for office/clerical work",
+        "content_vi": "Xin việc văn phòng/thư ký",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 55,
+            "message_en": "Landed a clerk position. Low pay, but stable and indoor work.",
+            "message_vi": "Có việc thư ký. Lương thấp, nhưng ổn định và làm trong nhà.",
+            "stat_changes": {
+              "money": 60,
+              "happiness": 5
+            },
+            "set_flags": {
+              "job_office": true,
+              "job_title": "Clerk",
+              "is_employed": true
+            }
+          },
+          {
+            "probability": 45,
+            "message_en": "Rejected everywhere. No degree hurts your chances.",
+            "message_vi": "Bị từ chối mọi nơi. Không có bằng cấp ảnh hưởng cơ hội của bạn.",
+            "stat_changes": {
+              "happiness": -15
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Apply for manual/labor work",
+        "content_vi": "Xin việc lao động/chân tay",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 85,
+            "message_en": "Got hired at a factory. Hard work, higher base pay.",
+            "message_vi": "Được tuyển vào nhà máy. Vất vả, nhưng lương cao hơn.",
+            "stat_changes": {
+              "money": 70,
+              "health": -5,
+              "happiness": -5
+            },
+            "set_flags": {
+              "job_manual": true,
+              "job_title": "Factory Worker",
+              "is_employed": true
+            }
+          },
+          {
+            "probability": 15,
+            "message_en": "Even the factory is full. You freelance odd jobs for now.",
+            "message_vi": "Ngay cả nhà máy cũng đã đầy người. Bạn tạm thời làm việc vặt.",
+            "stat_changes": {
+              "money": 30,
+              "happiness": -10
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Start a small street food stall",
+        "content_vi": "Mở quầy bán đồ ăn vỉa hè nhỏ",
+        "display_conditions": {
+          "min_money": 40
+        },
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "People love your food! Business is growing.",
+            "message_vi": "Mọi người thích đồ ăn của bạn! Kinh doanh đang lên.",
+            "stat_changes": {
+              "money": 80,
+              "happiness": 15
+            },
+            "set_flags": {
+              "job_business": true,
+              "job_title": "Street Food Vendor",
+              "is_employed": true
+            }
+          },
+          {
+            "probability": 50,
+            "message_en": "Tough competition. You barely break even.",
+            "message_vi": "Cạnh tranh gay gắt. Bạn gần như hòa vốn.",
+            "stat_changes": {
+              "money": -20,
+              "happiness": -10
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  }
+]

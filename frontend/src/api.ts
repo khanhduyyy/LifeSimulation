@@ -1,7 +1,7 @@
 import { Character, Event, SelectResult } from './types';
 
-const API_BASE = 'http://127.0.0.1:3000/api/v1';
-const ADMIN_BASE = 'http://127.0.0.1:3000/admin';
+const API_BASE = '/api/v1';
+const ADMIN_BASE = '/api/admin';
 
 async function handleResponse<T>(response: Response): Promise<T> {
   if (!response.ok) {

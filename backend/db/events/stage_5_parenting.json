@@ -1,0 +1,213 @@
+[
+  {
+    "title_en": "Child's School Problem",
+    "title_vi": "Vấn Đề Học Hành Của Con",
+    "description_en": "Your child's teacher calls to say they're having academic trouble.",
+    "description_vi": "Giáo viên của con bạn gọi điện nói con đang gặp khó khăn trong học tập.",
+    "conditions": { "min_age": 40, "max_age": 59, "requires_flags": ["has_child"] },
+    "choices": [
+      {
+        "content_en": "Hire a private tutor ($30)",
+        "content_vi": "Thuê gia sư riêng ($30)",
+        "display_conditions": { "min_money": 30 },
+        "outcomes": [
+          { "probability": 80, "message_en": "Your child's grades improved dramatically!", "message_vi": "Điểm số của con bạn cải thiện đáng kể!", "stat_changes": { "money": -30, "happiness": 15 }, "set_flags": {} },
+          { "probability": 20, "message_en": "The tutor helped, but slowly. Patience is key.", "message_vi": "Gia sư có ích, nhưng chậm. Kiên nhẫn là chìa khóa.", "stat_changes": { "money": -30, "happiness": 5 }, "set_flags": {} }
+        ]
+      },
+      {
+        "content_en": "Help them yourself every evening",
+        "content_vi": "Tự mình giúp con mỗi tối",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 65, "message_en": "Quality time with your child AND better grades. Win-win.", "message_vi": "Thời gian chất lượng với con VÀ điểm số tốt hơn. Cả hai đều thắng.", "stat_changes": { "happiness": 20 }, "set_flags": {} },
+          { "probability": 35, "message_en": "Tensions rose during study sessions. But you're both trying.", "message_vi": "Căng thẳng trong buổi học. Nhưng cả hai đều đang cố gắng.", "stat_changes": { "happiness": -5 }, "set_flags": {} }
+        ]
+      },
+      {
+        "content_en": "Let the school handle it",
+        "content_vi": "Để nhà trường xử lý",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 50, "message_en": "School's support program kicked in. Child is catching up.", "message_vi": "Chương trình hỗ trợ của trường bắt đầu. Con đang bắt kịp.", "stat_changes": { "happiness": 5 }, "set_flags": {} },
+          { "probability": 50, "message_en": "Nothing changed. They fell further behind.", "message_vi": "Không có gì thay đổi. Con ngày càng tụt hậu.", "stat_changes": { "happiness": -10 }, "set_flags": {} }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Buying a House",
+    "title_vi": "Mua Nhà",
+    "description_en": "You've saved enough to consider buying property. This is a major life milestone.",
+    "description_vi": "Bạn đã tiết kiệm đủ để cân nhắc mua bất động sản. Đây là cột mốc lớn trong cuộc đời.",
+    "conditions": { "min_age": 40, "max_age": 59 },
+    "choices": [
+      {
+        "content_en": "Buy a house now ($200 down payment)",
+        "content_vi": "Mua nhà ngay ($200 tiền đặt cọc)",
+        "display_conditions": { "min_money": 200 },
+        "outcomes": [
+          { "probability": 70, "message_en": "You own your home! No more rent. Wealth building begins.", "message_vi": "Bạn sở hữu nhà! Không còn tiền thuê. Bắt đầu xây dựng tài sản.", "stat_changes": { "money": -200, "happiness": 30 }, "set_flags": { "owns_house": true } },
+          { "probability": 30, "message_en": "Mortgage approved but high interest rate. Long road ahead.", "message_vi": "Được duyệt thế chấp nhưng lãi suất cao. Còn đường dài phía trước.", "stat_changes": { "money": -200, "happiness": 15 }, "set_flags": { "owns_house": true } }
+        ]
+      },
+      {
+        "content_en": "Keep renting and invest the money",
+        "content_vi": "Tiếp tục thuê nhà và đầu tư tiền",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 55, "message_en": "Smart investments paid off this year.", "message_vi": "Đầu tư thông minh có kết quả năm nay.", "stat_changes": { "money": 60, "happiness": 10 }, "set_flags": {} },
+          { "probability": 45, "message_en": "Market dipped. Investments lost value temporarily.", "message_vi": "Thị trường giảm. Đầu tư mất giá trị tạm thời.", "stat_changes": { "money": -30, "happiness": -10 }, "set_flags": {} }
+        ]
+      },
+      {
+        "content_en": "Not financially ready yet",
+        "content_vi": "Tài chính chưa sẵn sàng",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 100, "message_en": "Patience. You'll revisit when the time is right.", "message_vi": "Kiên nhẫn. Bạn sẽ xem xét lại khi thời điểm thích hợp.", "stat_changes": { "happiness": -3 }, "set_flags": {} }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Buying a Car",
+    "title_vi": "Mua Xe",
+    "description_en": "The daily commute is exhausting. A car would make life much easier.",
+    "description_vi": "Hành trình hàng ngày thật vất vả. Một chiếc xe sẽ làm cuộc sống dễ dàng hơn nhiều.",
+    "conditions": { "min_age": 40, "max_age": 59, "excludes_flags": ["owns_car"] },
+    "choices": [
+      {
+        "content_en": "Buy a reliable used car ($100)",
+        "content_vi": "Mua xe cũ đáng tin cậy ($100)",
+        "display_conditions": { "min_money": 100 },
+        "outcomes": [
+          { "probability": 75, "message_en": "Great car! Practical and cost-effective.", "message_vi": "Xe tốt! Thực tế và tiết kiệm chi phí.", "stat_changes": { "money": -100, "happiness": 20 }, "set_flags": { "owns_car": true } },
+          { "probability": 25, "message_en": "The car broke down the first week. Repair costs extra.", "message_vi": "Xe hỏng ngay tuần đầu. Tốn thêm tiền sửa chữa.", "stat_changes": { "money": -130, "happiness": -5 }, "set_flags": { "owns_car": true } }
+        ]
+      },
+      {
+        "content_en": "Buy a brand new car on installment ($50/year)",
+        "content_vi": "Mua xe mới theo kỳ ($50/năm)",
+        "display_conditions": { "min_money": 50 },
+        "outcomes": [
+          { "probability": 100, "message_en": "Shiny new car! Monthly payments, but worth the comfort.", "message_vi": "Xe mới sáng bóng! Trả góp hàng tháng, nhưng xứng với sự tiện nghi.", "stat_changes": { "money": -50, "happiness": 25 }, "set_flags": { "owns_car": true } }
+        ]
+      },
+      {
+        "content_en": "Continue with public transport",
+        "content_vi": "Tiếp tục dùng giao thông công cộng",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 100, "message_en": "Eco-friendly and cheaper. Just less comfortable.", "message_vi": "Thân thiện môi trường và rẻ hơn. Chỉ là kém thoải mái hơn.", "stat_changes": { "happiness": -3 }, "set_flags": {} }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Midlife Reflection",
+    "title_vi": "Suy Nghĩ Tuổi Trung Niên",
+    "description_en": "In your 50s, you sit down and think about whether your life has gone the way you hoped.",
+    "description_vi": "Ở tuổi 50, bạn ngồi xuống và suy ngẫm liệu cuộc đời có đi đúng hướng bạn mong không.",
+    "conditions": { "min_age": 50, "max_age": 59 },
+    "choices": [
+      {
+        "content_en": "Embrace where life has taken you",
+        "content_vi": "Chấp nhận con đường cuộc đời đã đưa bạn đến",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 80, "message_en": "Gratitude filled your heart. Life has been rich.", "message_vi": "Lòng biết ơn tràn ngập trái tim bạn. Cuộc đời thật phong phú.", "stat_changes": { "happiness": 20 }, "set_flags": {} },
+          { "probability": 20, "message_en": "Some regrets, but you choose to move forward.", "message_vi": "Có chút tiếc nuối, nhưng bạn chọn tiếp tục.", "stat_changes": { "happiness": 5 }, "set_flags": {} }
+        ]
+      },
+      {
+        "content_en": "Make a big change — new hobby or new goal",
+        "content_vi": "Thay đổi lớn — sở thích mới hoặc mục tiêu mới",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 70, "message_en": "Midlife discovery! This new chapter energizes you.", "message_vi": "Khám phá tuổi trung niên! Chương mới này tiếp thêm năng lượng cho bạn.", "stat_changes": { "happiness": 25, "health": 5 }, "set_flags": {} },
+          { "probability": 30, "message_en": "The change was hard. But growth never comes easy.", "message_vi": "Sự thay đổi rất khó khăn. Nhưng sự trưởng thành không bao giờ dễ dàng.", "stat_changes": { "happiness": 8, "health": -3 }, "set_flags": {} }
+        ]
+      },
+      {
+        "content_en": "Take a health-focused retreat",
+        "content_vi": "Đi nghỉ dưỡng tập trung vào sức khỏe",
+        "display_conditions": { "min_money": 50 },
+        "outcomes": [
+          { "probability": 90, "message_en": "Body and mind recharged. You feel younger.", "message_vi": "Thể chất và tinh thần được nạp năng lượng. Bạn cảm thấy trẻ hơn.", "stat_changes": { "money": -50, "health": 15, "happiness": 15 }, "set_flags": {} },
+          { "probability": 10, "message_en": "Retreat was relaxing but didn't solve deeper issues.", "message_vi": "Kỳ nghỉ thư giãn nhưng không giải quyết được vấn đề sâu hơn.", "stat_changes": { "money": -50, "happiness": 5 }, "set_flags": {} }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Child Leaves for University",
+    "title_vi": "Con Rời Nhà Đi Đại Học",
+    "description_en": "Your child got into university. It's time to say goodbye to the everyday chaos.",
+    "description_vi": "Con bạn vào được đại học. Đã đến lúc nói lời tạm biệt với sự hỗn độn hàng ngày.",
+    "conditions": { "min_age": 50, "max_age": 59, "requires_flags": ["has_child"] },
+    "choices": [
+      {
+        "content_en": "Support them financially ($60)",
+        "content_vi": "Hỗ trợ tài chính cho con ($60)",
+        "display_conditions": { "min_money": 60 },
+        "outcomes": [
+          { "probability": 100, "message_en": "You helped launch their future. Proud parent moment.", "message_vi": "Bạn giúp con khởi đầu tương lai. Khoảnh khắc tự hào của cha mẹ.", "stat_changes": { "money": -60, "happiness": 20 }, "set_flags": {} }
+        ]
+      },
+      {
+        "content_en": "Encourage them to be independent",
+        "content_vi": "Khuyến khích con tự lo",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 60, "message_en": "They managed fine. Resilient kid!", "message_vi": "Con xoay sở ổn. Đứa con kiên cường!", "stat_changes": { "happiness": 10 }, "set_flags": {} },
+          { "probability": 40, "message_en": "They struggled financially. You helped out a bit.", "message_vi": "Con gặp khó khăn tài chính. Bạn đã giúp một chút.", "stat_changes": { "happiness": -5, "money": -30 }, "set_flags": {} }
+        ]
+      },
+      {
+        "content_en": "Feel the bittersweet empty nest",
+        "content_vi": "Cảm nhận sự trống vắng vừa buồn vừa vui",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 100, "message_en": "The house is quiet now. You miss them, but they're thriving.", "message_vi": "Ngôi nhà giờ im lặng. Bạn nhớ con, nhưng con đang phát triển tốt.", "stat_changes": { "happiness": -5 }, "set_flags": {} }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Health Checkup at 50",
+    "title_vi": "Khám Sức Khỏe Năm 50 Tuổi",
+    "description_en": "Your doctor says it's time for a comprehensive health checkup.",
+    "description_vi": "Bác sĩ của bạn nói đã đến lúc khám sức khỏe toàn diện.",
+    "conditions": { "min_age": 40, "max_age": 59 },
+    "choices": [
+      {
+        "content_en": "Do the full health checkup ($20)",
+        "content_vi": "Làm kiểm tra sức khỏe đầy đủ ($20)",
+        "display_conditions": { "min_money": 20 },
+        "outcomes": [
+          { "probability": 70, "message_en": "Everything normal! Healthy lifestyle is paying off.", "message_vi": "Mọi thứ bình thường! Lối sống lành mạnh đang có kết quả.", "stat_changes": { "money": -20, "health": 10, "happiness": 10 }, "set_flags": {} },
+          { "probability": 30, "message_en": "Found some issues early. Treatment starts before it worsens.", "message_vi": "Phát hiện một số vấn đề sớm. Bắt đầu điều trị trước khi trầm trọng.", "stat_changes": { "money": -50, "health": -5, "happiness": -10 }, "set_flags": {} }
+        ]
+      },
+      {
+        "content_en": "Skip it, you feel fine",
+        "content_vi": "Bỏ qua, bạn cảm thấy ổn",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 40, "message_en": "Dodged a bullet. No symptoms at all.", "message_vi": "Tránh được nguy hiểm. Không có triệu chứng gì cả.", "stat_changes": {}, "set_flags": {} },
+          { "probability": 60, "message_en": "Ignored a growing issue. Emergency room later this year.", "message_vi": "Bỏ qua vấn đề đang phát triển. Vào cấp cứu sau đó trong năm.", "stat_changes": { "health": -20, "money": -60, "happiness": -15 }, "set_flags": {} }
+        ]
+      },
+      {
+        "content_en": "Start exercising more instead",
+        "content_vi": "Bắt đầu tập thể dục nhiều hơn",
+        "display_conditions": null,
+        "outcomes": [
+          { "probability": 70, "message_en": "Running every morning. You feel 10 years younger.", "message_vi": "Chạy bộ mỗi sáng. Bạn cảm thấy trẻ hơn 10 tuổi.", "stat_changes": { "health": 12, "happiness": 8 }, "set_flags": {} },
+          { "probability": 30, "message_en": "Overdid it. Pulled a muscle. Rest for two weeks.", "message_vi": "Tập quá sức. Bị căng cơ. Nghỉ hai tuần.", "stat_changes": { "health": -5, "happiness": -5 }, "set_flags": {} }
+        ]
+      }
+    ]
+  }
+]
