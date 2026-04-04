@@ -1,7 +1,7 @@
 import { useState, useCallback } from 'react';
 import './index.css';
 import { api } from './api';
-import { Character, Event as GameEvent, SelectResult, GamePhase, Choice } from './types';
+import { Character, Event as GameEvent, SelectResult, GamePhase, Choice, TurnSummaryItem } from './types';
 import { useI18n, Lang } from './i18n';
 
 /* ===== HELPER: Pick translated text from _en/_vi fields ===== */
@@ -97,30 +97,53 @@ function StatsBar({ character }: { character: Character }) {
 }
 
 /* ===== COMPONENT: StatusPanel ===== */
+/* ===== Job Title Translations ===== */
+const jobTitleViMap: Record<string, string> = {
+  'Junior Analyst': 'Nhân viên Phân tích',
+  'Technician': 'Kỹ thuật viên',
+  'Consultant': 'Tư vấn viên',
+  'Office Staff': 'Nhân viên Văn phòng',
+  'Construction Worker': 'Công nhân Xây dựng',
+  'Self-Employed': 'Tự kinh doanh',
+  'Factory Worker': 'Công nhân Nhà máy',
+  'Clerk': 'Nhân viên Bán hàng',
+  'Street Food Vendor': 'Bán hàng rong',
+  'Senior Analyst': 'Chuyên viên Phân tích',
+  'Manager': 'Quản lý',
+  'Researcher': 'Nghiên cứu viên',
+};
+
 function StatusPanel({ character }: { character: Character }) {
+  const { lang } = useI18n();
   const flags = character.flags as Record<string, unknown> | undefined;
   if (!flags) return null;
 
   // Life stage label
   const age = character.age;
   const stageName =
-    age < 18 ? '🧒 Tuổi Thơ' :
-    age < 22 ? '🎓 Đại Học' :
-    age < 30 ? '💼 Đi Làm' :
-    age < 40 ? '💑 Gia Đình' :
-    age < 60 ? '👨‍👩‍👦 Nuôi Con' : '🏖️ Nghỉ Hưu';
+    age < 18 ? (lang === 'vi' ? '🧒 Tuổi Thơ' : '🧒 Childhood') :
+    age < 22 ? (lang === 'vi' ? '🎓 Đại Học' : '🎓 College') :
+    age < 30 ? (lang === 'vi' ? '💼 Đi Làm' : '💼 Career') :
+    age < 40 ? (lang === 'vi' ? '💑 Gia Đình' : '💑 Family') :
+    age < 60 ? (lang === 'vi' ? '👨‍👩‍👦 Nuôi Con' : '👨‍👩‍👦 Parenting') :
+    (lang === 'vi' ? '🏖️ Nghỉ Hưu' : '🏖️ Retirement');
 
   const isMarried = !!flags['is_married'];
   const childrenCount = Number(flags['children_count'] ?? 0);
   const jobTitle = flags['job_title'] as string | undefined;
   const isRetired = !!flags['is_retired'];
 
+  // Translate job title
+  const displayJobTitle = jobTitle
+    ? (lang === 'vi' ? (jobTitleViMap[jobTitle] || jobTitle) : jobTitle)
+    : undefined;
+
   const items = [];
-  if (jobTitle && !isRetired) items.push(`💼 ${jobTitle}`);
-  if (isRetired) items.push('🏖️ Đã nghỉ hưu');
-  if (isMarried) items.push('💍 Đã kết hôn');
-  if (!isMarried && flags['is_single']) items.push('🧍 Độc thân');
-  if (childrenCount > 0) items.push(`👶 ${childrenCount} con`);
+  if (displayJobTitle && !isRetired) items.push(`💼 ${displayJobTitle}`);
+  if (isRetired) items.push(lang === 'vi' ? '🏖️ Đã nghỉ hưu' : '🏖️ Retired');
+  if (isMarried) items.push(lang === 'vi' ? '💍 Đã kết hôn' : '💍 Married');
+  if (!isMarried && flags['is_single']) items.push(lang === 'vi' ? '🧍 Độc thân' : '🧍 Single');
+  if (childrenCount > 0) items.push(`👶 ${childrenCount} ${lang === 'vi' ? 'con' : (childrenCount > 1 ? 'children' : 'child')}`);
 
   if (items.length === 0) return null;
 
@@ -333,6 +356,58 @@ function GameOverScreen({
   );
 }
 
+/* ===== COMPONENT: TurnSummaryPopup ===== */
+function TurnSummaryPopup({
+  items,
+  character,
+  onDismiss,
+}: {
+  items: TurnSummaryItem[];
+  character: Character;
+  onDismiss: () => void;
+}) {
+  const { lang } = useI18n();
+
+  const statEmoji: Record<string, string> = {
+    health: '❤️',
+    money: '💰',
+    happiness: '😊',
+  };
+
+  return (
+    <div className="game-screen">
+      <div className="container">
+        <StatsBar character={character} />
+        <StatusPanel character={character} />
+        <div className="event-card">
+          <h2 className="event-card__title">
+            {lang === 'vi' ? `📊 Tổng kết năm (Tuổi ${character.age})` : `📊 Year Summary (Age ${character.age})`}
+          </h2>
+          <div className="turn-summary-list">
+            {items.map((item, i) => (
+              <div
+                key={i}
+                className={`turn-summary-item ${item.value >= 0 ? 'turn-summary-item--positive' : 'turn-summary-item--negative'}`}
+              >
+                <span className="turn-summary-item__icon">{statEmoji[item.stat] || '📌'}</span>
+                <span className="turn-summary-item__text">
+                  {lang === 'vi' ? item.message_vi : item.message_en}
+                </span>
+                <span className="turn-summary-item__value">
+                  {item.value >= 0 ? `+${item.value}` : item.value}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <button className="continue-btn" onClick={onDismiss} id="summary-continue-btn">
+          {lang === 'vi' ? 'Tiếp tục ▸' : 'Continue ▸'}
+        </button>
+      </div>
+    </div>
+  );
+}
+
 /* ===== MAIN APP ===== */
 function App() {
   const { t } = useI18n();
@@ -342,6 +417,7 @@ function App() {
   const [result, setResult] = useState<SelectResult | null>(null);
   const [loading, setLoading] = useState(false);
   const [rolling, setRolling] = useState(false);
+  const [turnSummary, setTurnSummary] = useState<TurnSummaryItem[]>([]);
   const [error, setError] = useState<string | null>(null);
 
   const clearError = () => setError(null);
@@ -393,9 +469,11 @@ function App() {
     try {
       setLoading(true);
       clearError();
-      const updatedCharacter = await api.updateCharacter(character.id, {
+      const response = await api.updateCharacter(character.id, {
         age: character.age + 1,
       });
+      const updatedCharacter = response.character;
+      const summary = response.turn_summary || [];
       setCharacter(updatedCharacter);
 
       // Check if health hit 0 from degradation
@@ -422,12 +500,41 @@ function App() {
         return;
       }
 
-      // Branching: if outcome had next_event_id, load that event
+      // Show turn summary popup if there are items
+      if (summary.length > 0) {
+        setTurnSummary(summary);
+        setPhase('turn_summary');
+        return;
+      }
+
+      // Otherwise load next event directly
       const nextEventId = result.outcome.next_event_id;
       try {
         const event = await api.getEvent(updatedCharacter.id, nextEventId || undefined);
         setCurrentEvent(event);
         setResult(null);
+        setPhase('event');
+      } catch {
+        setPhase('gameover');
+      }
+    } catch (err: any) {
+      setError(err.message || t.errorContinue);
+    } finally {
+      setLoading(false);
+    }
+  }, [character, result, t]);
+
+  const handleDismissSummary = useCallback(async () => {
+    if (!character || !result) return;
+    try {
+      setLoading(true);
+      clearError();
+      const nextEventId = result.outcome.next_event_id;
+      try {
+        const event = await api.getEvent(character.id, nextEventId || undefined);
+        setCurrentEvent(event);
+        setResult(null);
+        setTurnSummary([]);
         setPhase('event');
       } catch {
         setPhase('gameover');
@@ -493,6 +600,15 @@ function App() {
             )}
           </div>
         </div>
+      )}
+
+      {/* Turn Summary Popup */}
+      {phase === 'turn_summary' && character && turnSummary.length > 0 && (
+        <TurnSummaryPopup
+          items={turnSummary}
+          character={character}
+          onDismiss={handleDismissSummary}
+        />
       )}
 
       {/* Game Over */}

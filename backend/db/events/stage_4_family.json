@@ -4,15 +4,46 @@
     "title_vi": "Câu Hỏi Về Hôn Nhân",
     "description_en": "You're in your 30s, stable at work. Friends and family keep bringing up marriage.",
     "description_vi": "Bạn đã ngoài 30, ổn định công việc. Bạn bè và gia đình cứ nhắc đến chuyện kết hôn.",
-    "conditions": { "min_age": 30, "max_age": 40, "excludes_flags": ["is_married", "is_single"] },
+    "conditions": {
+      "min_age": 30,
+      "max_age": 40,
+      "excludes_flags": [
+        "is_married",
+        "is_single"
+      ]
+    },
     "choices": [
       {
         "content_en": "Propose to your long-time partner ($150 ring)",
         "content_vi": "Cầu hôn người yêu lâu năm ($150 nhẫn)",
-        "display_conditions": { "min_money": 150 },
+        "display_conditions": {
+          "min_money": 150
+        },
         "outcomes": [
-          { "probability": 90, "message_en": "They said yes! The wedding was beautiful but expensive.", "message_vi": "Họ đồng ý! Đám cưới thật đẹp nhưng tốn kém.", "stat_changes": { "money": -150, "happiness": 30 }, "set_flags": { "is_married": true } },
-          { "probability": 10, "message_en": "They said no. Devastating, but life goes on.", "message_vi": "Họ nói không. Thật đau lòng, nhưng cuộc đời vẫn tiếp tục.", "stat_changes": { "money": -150, "happiness": -30 }, "set_flags": { "is_single": true } }
+          {
+            "probability": 90,
+            "message_en": "They said yes! The wedding was beautiful but expensive.",
+            "message_vi": "Họ đồng ý! Đám cưới thật đẹp nhưng tốn kém.",
+            "stat_changes": {
+              "money": -150,
+              "happiness": 15
+            },
+            "set_flags": {
+              "is_married": true
+            }
+          },
+          {
+            "probability": 10,
+            "message_en": "They said no. Devastating, but life goes on.",
+            "message_vi": "Họ nói không. Thật đau lòng, nhưng cuộc đời vẫn tiếp tục.",
+            "stat_changes": {
+              "money": -150,
+              "happiness": -45
+            },
+            "set_flags": {
+              "is_single": true
+            }
+          }
         ]
       },
       {
@@ -20,7 +51,17 @@
         "content_vi": "Chọn sống độc thân",
         "display_conditions": null,
         "outcomes": [
-          { "probability": 100, "message_en": "Freedom is yours. No wedding costs, no compromises.", "message_vi": "Tự do là của bạn. Không có chi phí đám cưới, không có sự nhượng bộ.", "stat_changes": { "happiness": 5 }, "set_flags": { "is_single": true } }
+          {
+            "probability": 100,
+            "message_en": "Freedom is yours. No wedding costs, no compromises.",
+            "message_vi": "Tự do là của bạn. Không có chi phí đám cưới, không có sự nhượng bộ.",
+            "stat_changes": {
+              "happiness": 3
+            },
+            "set_flags": {
+              "is_single": true
+            }
+          }
         ]
       },
       {
@@ -28,8 +69,28 @@
         "content_vi": "Đi hẹn hò và xem sao",
         "display_conditions": null,
         "outcomes": [
-          { "probability": 50, "message_en": "Met someone special! Things are getting serious.", "message_vi": "Gặp được người đặc biệt! Mọi thứ đang trở nên nghiêm túc.", "stat_changes": { "happiness": 15, "money": -20 }, "set_flags": {} },
-          { "probability": 50, "message_en": "Dating is expensive and draining. Nothing clicked.", "message_vi": "Hẹn hò tốn kém và mệt mỏi. Không ai phù hợp.", "stat_changes": { "happiness": -5, "money": -30 }, "set_flags": { "is_single": true } }
+          {
+            "probability": 50,
+            "message_en": "Met someone special! Things are getting serious.",
+            "message_vi": "Gặp được người đặc biệt! Mọi thứ đang trở nên nghiêm túc.",
+            "stat_changes": {
+              "happiness": 8,
+              "money": -20
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 50,
+            "message_en": "Dating is expensive and draining. Nothing clicked.",
+            "message_vi": "Hẹn hò tốn kém và mệt mỏi. Không ai phù hợp.",
+            "stat_changes": {
+              "happiness": -8,
+              "money": -30
+            },
+            "set_flags": {
+              "is_single": true
+            }
+          }
         ]
       }
     ]
@@ -39,15 +100,41 @@
     "title_vi": "Lên Kế Hoạch Đám Cưới",
     "description_en": "The big day is approaching. There are endless choices to make.",
     "description_vi": "Ngày trọng đại đang đến gần. Có vô số quyết định cần đưa ra.",
-    "conditions": { "min_age": 30, "max_age": 40, "requires_flags": ["is_married"] },
+    "conditions": {
+      "min_age": 30,
+      "max_age": 40,
+      "requires_flags": [
+        "is_married"
+      ]
+    },
     "choices": [
       {
         "content_en": "Have a big traditional wedding ($200)",
         "content_vi": "Tổ chức đám cưới truyền thống lớn ($200)",
-        "display_conditions": { "min_money": 200 },
+        "display_conditions": {
+          "min_money": 200
+        },
         "outcomes": [
-          { "probability": 80, "message_en": "A magical night everyone will remember.", "message_vi": "Một đêm kỳ diệu mà mọi người sẽ nhớ mãi.", "stat_changes": { "money": -200, "happiness": 25 }, "set_flags": {} },
-          { "probability": 20, "message_en": "Something went wrong at the venue. Still a great memory though.", "message_vi": "Có sự cố tại địa điểm. Nhưng vẫn là ký ức tuyệt vời.", "stat_changes": { "money": -200, "happiness": 10 }, "set_flags": {} }
+          {
+            "probability": 80,
+            "message_en": "A magical night everyone will remember.",
+            "message_vi": "Một đêm kỳ diệu mà mọi người sẽ nhớ mãi.",
+            "stat_changes": {
+              "money": -200,
+              "happiness": 13
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 20,
+            "message_en": "Something went wrong at the venue. Still a great memory though.",
+            "message_vi": "Có sự cố tại địa điểm. Nhưng vẫn là ký ức tuyệt vời.",
+            "stat_changes": {
+              "money": -200,
+              "happiness": 5
+            },
+            "set_flags": {}
+          }
         ]
       },
       {
@@ -55,7 +142,16 @@
         "content_vi": "Lễ cưới đơn giản tại sân nhà ($50)",
         "display_conditions": null,
         "outcomes": [
-          { "probability": 100, "message_en": "Intimate and perfect. Everyone loved it.", "message_vi": "Thân mật và hoàn hảo. Mọi người đều yêu thích.", "stat_changes": { "money": -50, "happiness": 20 }, "set_flags": {} }
+          {
+            "probability": 100,
+            "message_en": "Intimate and perfect. Everyone loved it.",
+            "message_vi": "Thân mật và hoàn hảo. Mọi người đều yêu thích.",
+            "stat_changes": {
+              "money": -50,
+              "happiness": 10
+            },
+            "set_flags": {}
+          }
         ]
       },
       {
@@ -63,8 +159,26 @@
         "content_vi": "Trốn đi cưới ở nước ngoài ($80)",
         "display_conditions": null,
         "outcomes": [
-          { "probability": 70, "message_en": "Best adventure ever! Family was upset but came around.", "message_vi": "Cuộc phiêu lưu tuyệt nhất! Gia đình buồn nhưng sau đó chấp nhận.", "stat_changes": { "money": -80, "happiness": 30 }, "set_flags": {} },
-          { "probability": 30, "message_en": "Family feud started over not being invited.", "message_vi": "Gia đình bắt hòa vì không được mời.", "stat_changes": { "money": -80, "happiness": 5 }, "set_flags": {} }
+          {
+            "probability": 70,
+            "message_en": "Best adventure ever! Family was upset but came around.",
+            "message_vi": "Cuộc phiêu lưu tuyệt nhất! Gia đình buồn nhưng sau đó chấp nhận.",
+            "stat_changes": {
+              "money": -80,
+              "happiness": 15
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 30,
+            "message_en": "Family feud started over not being invited.",
+            "message_vi": "Gia đình bắt hòa vì không được mời.",
+            "stat_changes": {
+              "money": -80,
+              "happiness": 3
+            },
+            "set_flags": {}
+          }
         ]
       }
     ]
@@ -74,15 +188,49 @@
     "title_vi": "Có Em Bé",
     "description_en": "You and your spouse decide to start a family. The pregnancy test is positive!",
     "description_vi": "Bạn và vợ/chồng quyết định lập gia đình. Que thử thai dương tính!",
-    "conditions": { "min_age": 30, "max_age": 40, "requires_flags": ["is_married"], "excludes_flags": ["has_child"] },
+    "conditions": {
+      "min_age": 30,
+      "max_age": 40,
+      "requires_flags": [
+        "is_married"
+      ],
+      "excludes_flags": [
+        "has_child"
+      ]
+    },
     "choices": [
       {
         "content_en": "Embrace it with full excitement",
         "content_vi": "Đón nhận với tất cả sự phấn khích",
         "display_conditions": null,
         "outcomes": [
-          { "probability": 85, "message_en": "A healthy baby! Your life has a new beautiful purpose.", "message_vi": "Một em bé khỏe mạnh! Cuộc đời bạn có thêm mục đích tươi đẹp.", "stat_changes": { "happiness": 30, "money": -50 }, "set_flags": { "has_child": true, "children_count": 1 } },
-          { "probability": 15, "message_en": "Complications during birth. Everyone is okay, but exhausting.", "message_vi": "Biến chứng trong khi sinh. Mọi người đều ổn, nhưng kiệt sức.", "stat_changes": { "happiness": 15, "money": -80, "health": -5 }, "set_flags": { "has_child": true, "children_count": 1 } }
+          {
+            "probability": 85,
+            "message_en": "A healthy baby! Your life has a new beautiful purpose.",
+            "message_vi": "Một em bé khỏe mạnh! Cuộc đời bạn có thêm mục đích tươi đẹp.",
+            "stat_changes": {
+              "happiness": 15,
+              "money": -50
+            },
+            "set_flags": {
+              "has_child": true,
+              "children_count": 1
+            }
+          },
+          {
+            "probability": 15,
+            "message_en": "Complications during birth. Everyone is okay, but exhausting.",
+            "message_vi": "Biến chứng trong khi sinh. Mọi người đều ổn, nhưng kiệt sức.",
+            "stat_changes": {
+              "happiness": 8,
+              "money": -80,
+              "health": -5
+            },
+            "set_flags": {
+              "has_child": true,
+              "children_count": 1
+            }
+          }
         ]
       },
       {
@@ -90,7 +238,20 @@
         "content_vi": "Cảm thấy choáng ngợp nhưng cố gắng",
         "display_conditions": null,
         "outcomes": [
-          { "probability": 100, "message_en": "New parent anxiety is real, but love overcomes everything.", "message_vi": "Nỗi lo của cha mẹ mới là có thật, nhưng tình yêu vượt qua tất cả.", "stat_changes": { "happiness": 20, "money": -50, "health": -5 }, "set_flags": { "has_child": true, "children_count": 1 } }
+          {
+            "probability": 100,
+            "message_en": "New parent anxiety is real, but love overcomes everything.",
+            "message_vi": "Nỗi lo của cha mẹ mới là có thật, nhưng tình yêu vượt qua tất cả.",
+            "stat_changes": {
+              "happiness": 10,
+              "money": -50,
+              "health": -5
+            },
+            "set_flags": {
+              "has_child": true,
+              "children_count": 1
+            }
+          }
         ]
       },
       {
@@ -98,7 +259,15 @@
         "content_vi": "Hoãn lại, tập trung vào sự nghiệp",
         "display_conditions": null,
         "outcomes": [
-          { "probability": 100, "message_en": "Agreed to wait. Career is going strong.", "message_vi": "Đồng ý chờ đợi. Sự nghiệp đang phát triển tốt.", "stat_changes": { "happiness": -5 }, "set_flags": {} }
+          {
+            "probability": 100,
+            "message_en": "Agreed to wait. Career is going strong.",
+            "message_vi": "Đồng ý chờ đợi. Sự nghiệp đang phát triển tốt.",
+            "stat_changes": {
+              "happiness": -8
+            },
+            "set_flags": {}
+          }
         ]
       }
     ]
@@ -108,15 +277,44 @@
     "title_vi": "Sinh Con Thứ Hai?",
     "description_en": "With one child at home, your spouse asks about having another.",
     "description_vi": "Với một đứa con ở nhà, vợ/chồng bạn hỏi về việc sinh thêm.",
-    "conditions": { "min_age": 30, "max_age": 40, "requires_flags": ["has_child", "is_married"] },
+    "conditions": {
+      "min_age": 30,
+      "max_age": 40,
+      "requires_flags": [
+        "has_child",
+        "is_married"
+      ]
+    },
     "choices": [
       {
         "content_en": "Yes, let's have another!",
         "content_vi": "Có, sinh thêm đi!",
         "display_conditions": null,
         "outcomes": [
-          { "probability": 80, "message_en": "Twins! Double the joy, double the cost.", "message_vi": "Sinh đôi! Niềm vui gấp đôi, chi phí gấp đôi.", "stat_changes": { "happiness": 25, "money": -80 }, "set_flags": { "children_count": 3 } },
-          { "probability": 20, "message_en": "Another healthy child arrives. The house is full of life.", "message_vi": "Thêm một đứa con khỏe mạnh chào đời. Ngôi nhà tràn đầy sức sống.", "stat_changes": { "happiness": 20, "money": -50 }, "set_flags": { "children_count": 2 } }
+          {
+            "probability": 80,
+            "message_en": "Twins! Double the joy, double the cost.",
+            "message_vi": "Sinh đôi! Niềm vui gấp đôi, chi phí gấp đôi.",
+            "stat_changes": {
+              "happiness": 13,
+              "money": -80
+            },
+            "set_flags": {
+              "children_count": 3
+            }
+          },
+          {
+            "probability": 20,
+            "message_en": "Another healthy child arrives. The house is full of life.",
+            "message_vi": "Thêm một đứa con khỏe mạnh chào đời. Ngôi nhà tràn đầy sức sống.",
+            "stat_changes": {
+              "happiness": 10,
+              "money": -50
+            },
+            "set_flags": {
+              "children_count": 2
+            }
+          }
         ]
       },
       {
@@ -124,7 +322,15 @@
         "content_vi": "Một đứa là đủ với chúng tôi",
         "display_conditions": null,
         "outcomes": [
-          { "probability": 100, "message_en": "One beloved child it is. You can focus your resources.", "message_vi": "Một đứa con yêu quý là đủ. Bạn có thể tập trung nguồn lực.", "stat_changes": { "happiness": 5 }, "set_flags": {} }
+          {
+            "probability": 100,
+            "message_en": "One beloved child it is. You can focus your resources.",
+            "message_vi": "Một đứa con yêu quý là đủ. Bạn có thể tập trung nguồn lực.",
+            "stat_changes": {
+              "happiness": 3
+            },
+            "set_flags": {}
+          }
         ]
       },
       {
@@ -132,7 +338,13 @@
         "content_vi": "Tài chính chưa cho phép lúc này",
         "display_conditions": null,
         "outcomes": [
-          { "probability": 100, "message_en": "Responsible choice. You'll revisit later.", "message_vi": "Quyết định có trách nhiệm. Bạn sẽ xem lại sau.", "stat_changes": {}, "set_flags": {} }
+          {
+            "probability": 100,
+            "message_en": "Responsible choice. You'll revisit later.",
+            "message_vi": "Quyết định có trách nhiệm. Bạn sẽ xem lại sau.",
+            "stat_changes": {},
+            "set_flags": {}
+          }
         ]
       }
     ]
@@ -142,15 +354,42 @@
     "title_vi": "Cuộc Sống Độc Thân",
     "description_en": "You're single and free. Your friends with families sometimes envy your freedom.",
     "description_vi": "Bạn độc thân và tự do. Những người bạn có gia đình đôi khi gau vì sự tự do của bạn.",
-    "conditions": { "min_age": 30, "max_age": 40, "requires_flags": ["is_single"] },
+    "conditions": {
+      "min_age": 30,
+      "max_age": 40,
+      "requires_flags": [
+        "is_single"
+      ]
+    },
     "choices": [
       {
         "content_en": "Travel somewhere new",
         "content_vi": "Du lịch đến nơi mới",
-        "display_conditions": { "min_money": 60 },
+        "display_conditions": {
+          "min_money": 60
+        },
         "outcomes": [
-          { "probability": 80, "message_en": "An amazing solo trip. You came back refreshed.", "message_vi": "Một chuyến đi một mình tuyệt vời. Bạn trở về đầy năng lượng.", "stat_changes": { "money": -60, "happiness": 25, "health": 5 }, "set_flags": {} },
-          { "probability": 20, "message_en": "Travel was lonely at times, but broadened your view.", "message_vi": "Du lịch đôi khi cô đơn, nhưng mở rộng tầm nhìn của bạn.", "stat_changes": { "money": -60, "happiness": 10 }, "set_flags": {} }
+          {
+            "probability": 80,
+            "message_en": "An amazing solo trip. You came back refreshed.",
+            "message_vi": "Một chuyến đi một mình tuyệt vời. Bạn trở về đầy năng lượng.",
+            "stat_changes": {
+              "money": -60,
+              "happiness": 13,
+              "health": 5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 20,
+            "message_en": "Travel was lonely at times, but broadened your view.",
+            "message_vi": "Du lịch đôi khi cô đơn, nhưng mở rộng tầm nhìn của bạn.",
+            "stat_changes": {
+              "money": -60,
+              "happiness": 5
+            },
+            "set_flags": {}
+          }
         ]
       },
       {
@@ -158,8 +397,27 @@
         "content_vi": "Dồn hết tâm huyết vào công việc",
         "display_conditions": null,
         "outcomes": [
-          { "probability": 65, "message_en": "Career is thriving. Promotion secured.", "message_vi": "Sự nghiệp đang phát triển mạnh. Thăng chức rồi.", "stat_changes": { "money": 70, "happiness": 8 }, "set_flags": {} },
-          { "probability": 35, "message_en": "Workaholic tendencies taking a toll on health.", "message_vi": "Nghiện công việc đang ảnh hưởng đến sức khỏe.", "stat_changes": { "money": 40, "happiness": -10, "health": -10 }, "set_flags": {} }
+          {
+            "probability": 65,
+            "message_en": "Career is thriving. Promotion secured.",
+            "message_vi": "Sự nghiệp đang phát triển mạnh. Thăng chức rồi.",
+            "stat_changes": {
+              "money": 70,
+              "happiness": 4
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 35,
+            "message_en": "Workaholic tendencies taking a toll on health.",
+            "message_vi": "Nghiện công việc đang ảnh hưởng đến sức khỏe.",
+            "stat_changes": {
+              "money": 40,
+              "happiness": -15,
+              "health": -10
+            },
+            "set_flags": {}
+          }
         ]
       },
       {
@@ -167,7 +425,16 @@
         "content_vi": "Học một sở thích mới",
         "display_conditions": null,
         "outcomes": [
-          { "probability": 100, "message_en": "Found a passion project. Life feels full and meaningful.", "message_vi": "Tìm thấy dự án đam mê. Cuộc sống cảm thấy phong phú và có ý nghĩa.", "stat_changes": { "happiness": 18, "health": 5 }, "set_flags": {} }
+          {
+            "probability": 100,
+            "message_en": "Found a passion project. Life feels full and meaningful.",
+            "message_vi": "Tìm thấy dự án đam mê. Cuộc sống cảm thấy phong phú và có ý nghĩa.",
+            "stat_changes": {
+              "happiness": 9,
+              "health": 5
+            },
+            "set_flags": {}
+          }
         ]
       }
     ]
@@ -177,15 +444,41 @@
     "title_vi": "Rắc Rối Hôn Nhân",
     "description_en": "Work stress has been taking a toll on your relationship. Arguments are more frequent.",
     "description_vi": "Căng thẳng công việc đã ảnh hưởng đến mối quan hệ. Tranh cãi ngày càng nhiều hơn.",
-    "conditions": { "min_age": 30, "max_age": 40, "requires_flags": ["is_married"] },
+    "conditions": {
+      "min_age": 30,
+      "max_age": 40,
+      "requires_flags": [
+        "is_married"
+      ]
+    },
     "choices": [
       {
         "content_en": "Seek couples counseling ($40)",
         "content_vi": "Tìm đến tư vấn cặp đôi ($40)",
-        "display_conditions": { "min_money": 40 },
+        "display_conditions": {
+          "min_money": 40
+        },
         "outcomes": [
-          { "probability": 70, "message_en": "Counseling helped. You both grew closer.", "message_vi": "Tư vấn có ích. Cả hai gần nhau hơn.", "stat_changes": { "money": -40, "happiness": 20 }, "set_flags": {} },
-          { "probability": 30, "message_en": "Counseling revealed deeper incompatibilities.", "message_vi": "Tư vấn tiết lộ những bất tương thích sâu sắc hơn.", "stat_changes": { "money": -40, "happiness": -10 }, "set_flags": {} }
+          {
+            "probability": 70,
+            "message_en": "Counseling helped. You both grew closer.",
+            "message_vi": "Tư vấn có ích. Cả hai gần nhau hơn.",
+            "stat_changes": {
+              "money": -40,
+              "happiness": 10
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 30,
+            "message_en": "Counseling revealed deeper incompatibilities.",
+            "message_vi": "Tư vấn tiết lộ những bất tương thích sâu sắc hơn.",
+            "stat_changes": {
+              "money": -40,
+              "happiness": -15
+            },
+            "set_flags": {}
+          }
         ]
       },
       {
@@ -193,8 +486,24 @@
         "content_vi": "Nói chuyện thẳng thắn với nhau",
         "display_conditions": null,
         "outcomes": [
-          { "probability": 60, "message_en": "A heart-to-heart talk solved most issues.", "message_vi": "Một cuộc trò chuyện thẳng thắn giải quyết hầu hết vấn đề.", "stat_changes": { "happiness": 15 }, "set_flags": {} },
-          { "probability": 40, "message_en": "Talk didn't help. Tension remains.", "message_vi": "Trò chuyện không giúp được. Căng thẳng vẫn còn.", "stat_changes": { "happiness": -8 }, "set_flags": {} }
+          {
+            "probability": 60,
+            "message_en": "A heart-to-heart talk solved most issues.",
+            "message_vi": "Một cuộc trò chuyện thẳng thắn giải quyết hầu hết vấn đề.",
+            "stat_changes": {
+              "happiness": 8
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 40,
+            "message_en": "Talk didn't help. Tension remains.",
+            "message_vi": "Trò chuyện không giúp được. Căng thẳng vẫn còn.",
+            "stat_changes": {
+              "happiness": -12
+            },
+            "set_flags": {}
+          }
         ]
       },
       {
@@ -202,8 +511,25 @@
         "content_vi": "Bỏ qua và hy vọng nó tự qua",
         "display_conditions": null,
         "outcomes": [
-          { "probability": 30, "message_en": "Things somehow calmed down on their own.", "message_vi": "Mọi thứ tự nhiên lắng xuống.", "stat_changes": { "happiness": 3 }, "set_flags": {} },
-          { "probability": 70, "message_en": "Resentment built up. Things are worse now.", "message_vi": "Sự oán giận tích lũy. Mọi thứ tệ hơn bây giờ.", "stat_changes": { "happiness": -15, "health": -5 }, "set_flags": {} }
+          {
+            "probability": 30,
+            "message_en": "Things somehow calmed down on their own.",
+            "message_vi": "Mọi thứ tự nhiên lắng xuống.",
+            "stat_changes": {
+              "happiness": 2
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 70,
+            "message_en": "Resentment built up. Things are worse now.",
+            "message_vi": "Sự oán giận tích lũy. Mọi thứ tệ hơn bây giờ.",
+            "stat_changes": {
+              "happiness": -23,
+              "health": -5
+            },
+            "set_flags": {}
+          }
         ]
       }
     ]
@@ -213,15 +539,38 @@
     "title_vi": "Khủng Hoảng Cân Bằng Công Việc-Cuộc Sống",
     "description_en": "You're working late every night. Someone says they barely see you.",
     "description_vi": "Bạn làm thêm giờ mỗi đêm. Mọi người nói họ hiếm khi thấy bạn.",
-    "conditions": { "min_age": 30, "max_age": 40, "requires_flags": ["is_employed"] },
+    "conditions": {
+      "min_age": 30,
+      "max_age": 40,
+      "requires_flags": [
+        "is_employed"
+      ]
+    },
     "choices": [
       {
         "content_en": "Set strict working hours",
         "content_vi": "Đặt giờ làm việc cố định",
         "display_conditions": null,
         "outcomes": [
-          { "probability": 70, "message_en": "Better balance achieved. Life quality improved.", "message_vi": "Cân bằng tốt hơn. Chất lượng cuộc sống được cải thiện.", "stat_changes": { "happiness": 15 }, "set_flags": {} },
-          { "probability": 30, "message_en": "Boss was unhappy. Small pay cut for reduced hours.", "message_vi": "Sếp không vui. Bị giảm lương nhỏ vì giảm giờ làm.", "stat_changes": { "money": -20, "happiness": 8 }, "set_flags": {} }
+          {
+            "probability": 70,
+            "message_en": "Better balance achieved. Life quality improved.",
+            "message_vi": "Cân bằng tốt hơn. Chất lượng cuộc sống được cải thiện.",
+            "stat_changes": {
+              "happiness": 8
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 30,
+            "message_en": "Boss was unhappy. Small pay cut for reduced hours.",
+            "message_vi": "Sếp không vui. Bị giảm lương nhỏ vì giảm giờ làm.",
+            "stat_changes": {
+              "money": -20,
+              "happiness": 4
+            },
+            "set_flags": {}
+          }
         ]
       },
       {
@@ -229,8 +578,28 @@
         "content_vi": "Cố lên — dự án lớn gần xong rồi",
         "display_conditions": null,
         "outcomes": [
-          { "probability": 60, "message_en": "Project finished. Big bonus. But months passed alone.", "message_vi": "Dự án xong. Thưởng lớn. Nhưng đã mất nhiều tháng.", "stat_changes": { "money": 80, "happiness": -10, "health": -8 }, "set_flags": {} },
-          { "probability": 40, "message_en": "Burned out. Health and happiness both suffered.", "message_vi": "Kiệt sức. Cả sức khỏe và hạnh phúc đều bị ảnh hưởng.", "stat_changes": { "money": 20, "happiness": -20, "health": -15 }, "set_flags": {} }
+          {
+            "probability": 60,
+            "message_en": "Project finished. Big bonus. But months passed alone.",
+            "message_vi": "Dự án xong. Thưởng lớn. Nhưng đã mất nhiều tháng.",
+            "stat_changes": {
+              "money": 80,
+              "happiness": -15,
+              "health": -8
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 40,
+            "message_en": "Burned out. Health and happiness both suffered.",
+            "message_vi": "Kiệt sức. Cả sức khỏe và hạnh phúc đều bị ảnh hưởng.",
+            "stat_changes": {
+              "money": 20,
+              "happiness": -30,
+              "health": -15
+            },
+            "set_flags": {}
+          }
         ]
       },
       {
@@ -238,7 +607,1344 @@
         "content_vi": "Xin nghỉ một tuần",
         "display_conditions": null,
         "outcomes": [
-          { "probability": 100, "message_en": "Best decision ever. Recharged and reconnected.", "message_vi": "Quyết định tốt nhất. Nạp điện lại và gắn kết trở lại.", "stat_changes": { "happiness": 20, "money": -10 }, "set_flags": {} }
+          {
+            "probability": 100,
+            "message_en": "Best decision ever. Recharged and reconnected.",
+            "message_vi": "Quyết định tốt nhất. Nạp điện lại và gắn kết trở lại.",
+            "stat_changes": {
+              "happiness": 10,
+              "money": -10
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Career Advancement Opportunity",
+    "title_vi": "Cơ Hội Thăng Tiến",
+    "description_en": "A senior position just opened up at your company. You're one of the candidates.",
+    "description_vi": "Một vị trí cấp cao vừa mở tại công ty. Bạn là một trong những ứng viên.",
+    "conditions": {
+      "min_age": 30,
+      "max_age": 40,
+      "requires_flags": [
+        "is_employed"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Campaign hard for the promotion",
+        "content_vi": "Nỗ lực vận động thăng chức",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "Promoted! Salary increase and new responsibilities.",
+            "message_vi": "Thăng chức! Tăng lương và trách nhiệm mới.",
+            "stat_changes": {
+              "money": 80,
+              "happiness": 13
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 40,
+            "message_en": "Passed over. Colleague got the role instead.",
+            "message_vi": "Bị bỏ qua. Đồng nghiệp nhận vị trí.",
+            "stat_changes": {
+              "happiness": -18
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Apply to competitor companies",
+        "content_vi": "Ứng tuyển vào công ty đối thủ",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 55,
+            "message_en": "Got a senior role at a better company!",
+            "message_vi": "Nhận vị trí cao hơn tại công ty tốt hơn!",
+            "stat_changes": {
+              "money": 100,
+              "happiness": 10
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 45,
+            "message_en": "No offers. Current company found out. Awkward.",
+            "message_vi": "Không có lời mời. Công ty hiện tại phát hiện. Kỳ cục.",
+            "stat_changes": {
+              "happiness": -15
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Stay in current role — less stress",
+        "content_vi": "Ở lại vị trí hiện tại — ít áp lực hơn",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Comfortable and stable. No regrets.",
+            "message_vi": "Thoải mái và ổn định. Không hối tiếc.",
+            "stat_changes": {
+              "happiness": 3,
+              "money": 20
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Mid-30s Health Checkup",
+    "title_vi": "Khám Sức Khỏe Tuổi 30",
+    "description_en": "Doctor recommends annual health checkups now that you're in your 30s.",
+    "description_vi": "Bác sĩ khuyên khám sức khỏe hàng năm vì bạn đã ngoài 30.",
+    "conditions": {
+      "min_age": 30,
+      "max_age": 40
+    },
+    "choices": [
+      {
+        "content_en": "Full comprehensive checkup ($30)",
+        "content_vi": "Khám tổng quát toàn diện ($30)",
+        "display_conditions": {
+          "min_money": 30
+        },
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Clean bill of health! Keep it up.",
+            "message_vi": "Sức khỏe tốt! Tiếp tục phát huy.",
+            "stat_changes": {
+              "money": -30,
+              "health": 8,
+              "happiness": 5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 30,
+            "message_en": "Cholesterol slightly high. Diet change recommended.",
+            "message_vi": "Cholesterol hơi cao. Cần thay đổi chế độ ăn.",
+            "stat_changes": {
+              "money": -30,
+              "health": 3,
+              "happiness": -8
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Start a fitness routine",
+        "content_vi": "Bắt đầu tập luyện đều đặn",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 75,
+            "message_en": "Running every morning! Energy levels soaring.",
+            "message_vi": "Chạy bộ mỗi sáng! Năng lượng tràn đầy.",
+            "stat_changes": {
+              "health": 12,
+              "happiness": 4
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 25,
+            "message_en": "Knee injury from overtraining.",
+            "message_vi": "Chấn thương đầu gối vì tập quá sức.",
+            "stat_changes": {
+              "health": -8,
+              "happiness": -8
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Too busy, skip it this year",
+        "content_vi": "Quá bận, năm nay bỏ qua",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Skipped again. Hope nothing's going wrong silently.",
+            "message_vi": "Lại bỏ qua. Hy vọng không có gì xảy ra.",
+            "stat_changes": {
+              "health": -3
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Investment Opportunity",
+    "title_vi": "Cơ Hội Đầu Tư",
+    "description_en": "A friend pitches you a real estate investment. Sounds good but risky.",
+    "description_vi": "Bạn bè giới thiệu cơ hội đầu tư bất động sản. Nghe có vẻ tốt nhưng rủi ro.",
+    "conditions": {
+      "min_age": 30,
+      "max_age": 40
+    },
+    "choices": [
+      {
+        "content_en": "Invest heavily ($100)",
+        "content_vi": "Đầu tư mạnh ($100)",
+        "display_conditions": {
+          "min_money": 100
+        },
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Property value doubled! Excellent return.",
+            "message_vi": "Giá trị bất động sản gấp đôi! Lợi nhuận tuyệt vời.",
+            "stat_changes": {
+              "money": 100,
+              "happiness": 13
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 50,
+            "message_en": "Market crashed. Lost most of the investment.",
+            "message_vi": "Thị trường sụp. Mất phần lớn khoản đầu tư.",
+            "stat_changes": {
+              "money": -80,
+              "happiness": -30
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Invest a small amount ($40)",
+        "content_vi": "Đầu tư nhỏ ($40)",
+        "display_conditions": {
+          "min_money": 40
+        },
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "Modest but solid return.",
+            "message_vi": "Lợi nhuận khiêm tốn nhưng vững chắc.",
+            "stat_changes": {
+              "money": 20,
+              "happiness": 5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 40,
+            "message_en": "Small loss. Nothing devastating.",
+            "message_vi": "Lỗ nhỏ. Không quá nghiêm trọng.",
+            "stat_changes": {
+              "money": -20,
+              "happiness": -8
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Pass — too risky",
+        "content_vi": "Bỏ qua — rủi ro quá lớn",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Played it safe. Sometimes boring is smart.",
+            "message_vi": "Chơi an toàn. Đôi khi nhàm chán là thông minh.",
+            "stat_changes": {
+              "happiness": 2
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Adopting a Pet",
+    "title_vi": "Nhận Nuôi Thú Cưng",
+    "description_en": "You pass by an animal shelter and see a dog looking right at you.",
+    "description_vi": "Bạn đi ngang qua trại cứu hộ động vật và thấy một chú chó nhìn thẳng vào bạn.",
+    "conditions": {
+      "min_age": 30,
+      "max_age": 40
+    },
+    "choices": [
+      {
+        "content_en": "Adopt the dog ($15 supplies)",
+        "content_vi": "Nhận nuôi chú chó ($15 đồ dùng)",
+        "display_conditions": {
+          "min_money": 15
+        },
+        "outcomes": [
+          {
+            "probability": 85,
+            "message_en": "Best friend ever! Unconditional love every day.",
+            "message_vi": "Người bạn tốt nhất! Tình yêu vô điều kiện mỗi ngày.",
+            "stat_changes": {
+              "money": -15,
+              "happiness": 10,
+              "health": 5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 15,
+            "message_en": "Dog chewed up your shoes. Worth it though.",
+            "message_vi": "Chó cắn hỏng giày. Nhưng vẫn đáng.",
+            "stat_changes": {
+              "money": -25,
+              "happiness": 6
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Volunteer at the shelter instead",
+        "content_vi": "Tình nguyện tại trại cứu hộ",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Meaningful work! Feel good doing something for animals.",
+            "message_vi": "Công việc ý nghĩa! Cảm thấy tốt khi giúp động vật.",
+            "stat_changes": {
+              "happiness": 6
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Not ready for a pet yet",
+        "content_vi": "Chưa sẵn sàng nuôi thú cưng",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Maybe someday. That face still haunts you.",
+            "message_vi": "Có lẽ một ngày nào đó. Khuôn mặt đó vẫn ám ảnh bạn.",
+            "stat_changes": {
+              "happiness": -3
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Buying a Home",
+    "title_vi": "Mua Nhà",
+    "description_en": "You've saved enough and found a nice house. Time to become a homeowner?",
+    "description_vi": "Bạn đã tiết kiệm đủ và tìm được một ngôi nhà đẹp. Có nên mua nhà?",
+    "conditions": {
+      "min_age": 30,
+      "max_age": 40,
+      "excludes_flags": [
+        "owns_house"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Buy the house ($200 down)",
+        "content_vi": "Mua nhà ($200 đặt cọc)",
+        "display_conditions": {
+          "min_money": 200
+        },
+        "outcomes": [
+          {
+            "probability": 80,
+            "message_en": "Homeowner! A place to call your own.",
+            "message_vi": "Chủ nhà! Một nơi gọi là của mình.",
+            "stat_changes": {
+              "money": -200,
+              "happiness": 15
+            },
+            "set_flags": {
+              "owns_house": true
+            }
+          },
+          {
+            "probability": 20,
+            "message_en": "House needs unexpected repairs. Extra costs.",
+            "message_vi": "Nhà cần sửa chữa bất ngờ. Chi phí thêm.",
+            "stat_changes": {
+              "money": -250,
+              "happiness": 8
+            },
+            "set_flags": {
+              "owns_house": true
+            }
+          }
+        ]
+      },
+      {
+        "content_en": "Keep renting, save more first",
+        "content_vi": "Tiếp tục thuê, tiết kiệm thêm",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Renting is fine for now. No maintenance headaches.",
+            "message_vi": "Thuê nhà cũng ổn. Không phải lo bảo trì.",
+            "stat_changes": {
+              "happiness": -5
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Look for a cheaper apartment to buy",
+        "content_vi": "Tìm căn hộ rẻ hơn để mua",
+        "display_conditions": {
+          "min_money": 120
+        },
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Small but cozy apartment. It's yours!",
+            "message_vi": "Căn hộ nhỏ nhưng ấm cúng. Nó là của bạn!",
+            "stat_changes": {
+              "money": -120,
+              "happiness": 10
+            },
+            "set_flags": {
+              "owns_house": true
+            }
+          },
+          {
+            "probability": 30,
+            "message_en": "Outbid by another buyer. So close.",
+            "message_vi": "Bị người khác trả giá cao hơn. Gần lắm.",
+            "stat_changes": {
+              "happiness": -12
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Anniversary Celebration",
+    "title_vi": "Kỷ Niệm Ngày Cưới",
+    "description_en": "Your wedding anniversary is coming up. Plan something special?",
+    "description_vi": "Ngày kỷ niệm cưới sắp đến. Lên kế hoạch gì đặc biệt không?",
+    "conditions": {
+      "min_age": 31,
+      "max_age": 40,
+      "requires_flags": [
+        "is_married"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Romantic dinner at a fancy restaurant ($30)",
+        "content_vi": "Bữa tối lãng mạn tại nhà hàng sang ($30)",
+        "display_conditions": {
+          "min_money": 30
+        },
+        "outcomes": [
+          {
+            "probability": 85,
+            "message_en": "Perfect evening! Love reignited.",
+            "message_vi": "Buổi tối hoàn hảo! Tình yêu rực cháy trở lại.",
+            "stat_changes": {
+              "money": -30,
+              "happiness": 10
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 15,
+            "message_en": "Restaurant was too noisy. Still a nice effort.",
+            "message_vi": "Nhà hàng quá ồn. Nhưng vẫn là nỗ lực tốt.",
+            "stat_changes": {
+              "money": -30,
+              "happiness": 4
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Cook a homemade dinner",
+        "content_vi": "Tự nấu bữa tối tại nhà",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Intimate and heartfelt. Spouse loved it.",
+            "message_vi": "Thân mật và chân thành. Vợ/chồng rất thích.",
+            "stat_changes": {
+              "happiness": 9
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 30,
+            "message_en": "Burned the food. Ordered pizza. Still laughed together.",
+            "message_vi": "Cháy đồ ăn. Gọi pizza. Vẫn cùng nhau cười.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Forget about it (oops)",
+        "content_vi": "Quên mất (oops)",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Spouse is hurt. Major guilt trip.",
+            "message_vi": "Vợ/chồng bị tổn thương. Cảm giác tội lỗi.",
+            "stat_changes": {
+              "happiness": -23
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Parent's Health Issue",
+    "title_vi": "Vấn Đề Sức Khỏe Của Bố Mẹ",
+    "description_en": "Your parent calls with bad news. They need help with medical expenses.",
+    "description_vi": "Bố/mẹ gọi điện với tin xấu. Họ cần giúp đỡ chi phí y tế.",
+    "conditions": {
+      "min_age": 30,
+      "max_age": 40
+    },
+    "choices": [
+      {
+        "content_en": "Help pay their medical bills ($60)",
+        "content_vi": "Giúp trả viện phí ($60)",
+        "display_conditions": {
+          "min_money": 60
+        },
+        "outcomes": [
+          {
+            "probability": 80,
+            "message_en": "Parent recovered well. They're grateful.",
+            "message_vi": "Bố/mẹ hồi phục tốt. Họ rất biết ơn.",
+            "stat_changes": {
+              "money": -60,
+              "happiness": 8
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 20,
+            "message_en": "Treatment is ongoing. More expenses ahead.",
+            "message_vi": "Điều trị còn kéo dài. Chi phí tiếp tục.",
+            "stat_changes": {
+              "money": -80,
+              "happiness": -8
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Move them in with you",
+        "content_vi": "Đón bố/mẹ về ở cùng",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "Multi-generational household works well.",
+            "message_vi": "Gia đình nhiều thế hệ sống hòa thuận.",
+            "stat_changes": {
+              "happiness": 6,
+              "money": -20
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 40,
+            "message_en": "Tension in the house. Too many opinions.",
+            "message_vi": "Căng thẳng trong nhà. Quá nhiều ý kiến.",
+            "stat_changes": {
+              "happiness": -15,
+              "money": -20
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Can only send a small amount ($20)",
+        "content_vi": "Chỉ gửi được ít ($20)",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "You did what you could. Guilt lingers.",
+            "message_vi": "Bạn đã làm hết sức. Cảm giác tội lỗi vẫn còn.",
+            "stat_changes": {
+              "money": -20,
+              "happiness": -8
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Buying a Car",
+    "title_vi": "Mua Xe Hơi",
+    "description_en": "Commuting is getting harder. A car would make life much easier.",
+    "description_vi": "Di chuyển ngày càng khó khăn. Một chiếc xe hơi sẽ giúp cuộc sống dễ hơn.",
+    "conditions": {
+      "min_age": 30,
+      "max_age": 40,
+      "excludes_flags": [
+        "owns_car"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Buy a new car ($150)",
+        "content_vi": "Mua xe mới ($150)",
+        "display_conditions": {
+          "min_money": 150
+        },
+        "outcomes": [
+          {
+            "probability": 90,
+            "message_en": "New car smell! Freedom to go anywhere.",
+            "message_vi": "Mùi xe mới! Tự do đi đâu cũng được.",
+            "stat_changes": {
+              "money": -150,
+              "happiness": 11
+            },
+            "set_flags": {
+              "owns_car": true
+            }
+          },
+          {
+            "probability": 10,
+            "message_en": "Car had a recall issue. Dealer fixed it free though.",
+            "message_vi": "Xe bị thu hồi. Đại lý sửa miễn phí.",
+            "stat_changes": {
+              "money": -150,
+              "happiness": 8
+            },
+            "set_flags": {
+              "owns_car": true
+            }
+          }
+        ]
+      },
+      {
+        "content_en": "Buy a used car ($60)",
+        "content_vi": "Mua xe cũ ($60)",
+        "display_conditions": {
+          "min_money": 60
+        },
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Good deal! Runs great for the price.",
+            "message_vi": "Mua hời! Xe chạy tốt so với giá.",
+            "stat_changes": {
+              "money": -60,
+              "happiness": 8
+            },
+            "set_flags": {
+              "owns_car": true
+            }
+          },
+          {
+            "probability": 30,
+            "message_en": "Lemon. Endless repairs eating your savings.",
+            "message_vi": "Xe hỏng liên tục. Chi phí sửa ngốn tiết kiệm.",
+            "stat_changes": {
+              "money": -90,
+              "happiness": -8
+            },
+            "set_flags": {
+              "owns_car": true
+            }
+          }
+        ]
+      },
+      {
+        "content_en": "Keep using public transport",
+        "content_vi": "Tiếp tục dùng phương tiện công cộng",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Saving money but the commute is exhausting.",
+            "message_vi": "Tiết kiệm tiền nhưng đi lại mệt mỏi.",
+            "stat_changes": {
+              "happiness": -8,
+              "health": -3
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Career Change Decision",
+    "title_vi": "Quyết Định Đổi Nghề",
+    "description_en": "You've always dreamed of doing something different. A recruiter contacts you with an opportunity.",
+    "description_vi": "Bạn luôn mơ ước làm điều gì đó khác. Một nhà tuyển dụng liên hệ bạn với cơ hội mới.",
+    "conditions": {
+      "min_age": 30,
+      "max_age": 40,
+      "requires_flags": [
+        "is_employed"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Quit and switch to a new field ($50 training)",
+        "content_vi": "Nghỉ việc và chuyển sang lĩnh vực mới ($50 đào tạo)",
+        "display_conditions": {
+          "min_money": 50
+        },
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "New career is thriving! Higher pay as a consultant.",
+            "message_vi": "Nghề mới phát triển! Lương cao hơn với vai trò tư vấn.",
+            "stat_changes": {
+              "money": -50,
+              "happiness": 13
+            },
+            "set_flags": {
+              "job_office": false,
+              "job_manual": false,
+              "job_business": true,
+              "job_title": "Consultant",
+              "job_office_senior": false
+            }
+          },
+          {
+            "probability": 50,
+            "message_en": "Starting over is brutal. Lower pay while you learn.",
+            "message_vi": "Bắt đầu lại thật khắc nghiệt. Lương thấp hơn khi đang học.",
+            "stat_changes": {
+              "money": -50,
+              "happiness": -15
+            },
+            "set_flags": {
+              "job_office": false,
+              "job_manual": false,
+              "job_business": false,
+              "job_title": "Clerk",
+              "job_office_senior": false
+            }
+          }
+        ]
+      },
+      {
+        "content_en": "Take evening classes while working",
+        "content_vi": "Học buổi tối trong khi vẫn đi làm",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "New skills acquired! You got a raise.",
+            "message_vi": "Kỹ năng mới! Bạn được tăng lương.",
+            "stat_changes": {
+              "happiness": 5,
+              "health": -5,
+              "money": -15
+            },
+            "set_flags": {
+              "has_new_skill": true
+            }
+          },
+          {
+            "probability": 30,
+            "message_en": "Too exhausting. Had to drop the classes.",
+            "message_vi": "Quá mệt. Phải bỏ lớp.",
+            "stat_changes": {
+              "health": -8,
+              "happiness": -8
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Stick with what you know",
+        "content_vi": "Gắn bó với những gì đã biết",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Stability wins. The dream fades a little.",
+            "message_vi": "Sự ổn định thắng. Giấc mơ phai nhạt một chút.",
+            "stat_changes": {
+              "happiness": -5
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Unexpected Inheritance",
+    "title_vi": "Thừa Kế Bất Ngờ",
+    "description_en": "A distant relative passed away and left you a small inheritance.",
+    "description_vi": "Một người họ hàng xa qua đời và để lại cho bạn một khoản thừa kế nhỏ.",
+    "conditions": {
+      "min_age": 30,
+      "max_age": 40
+    },
+    "choices": [
+      {
+        "content_en": "Save it for the future",
+        "content_vi": "Tiết kiệm cho tương lai",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Wise choice. The money sits safely in savings.",
+            "message_vi": "Lựa chọn khôn ngoan. Tiền an toàn trong tiết kiệm.",
+            "stat_changes": {
+              "money": 60,
+              "happiness": 4
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Use it to pay off debts",
+        "content_vi": "Dùng để trả nợ",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Debts reduced! Weight off your shoulders.",
+            "message_vi": "Nợ giảm! Nhẹ gánh trên vai.",
+            "stat_changes": {
+              "money": 50,
+              "happiness": 8
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Splurge on something nice",
+        "content_vi": "Tiêu xài cho một thứ gì đó sang",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Treat yourself! You deserve it.",
+            "message_vi": "Thưởng cho mình! Bạn xứng đáng.",
+            "stat_changes": {
+              "money": 20,
+              "happiness": 10
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 30,
+            "message_en": "Bought something you didn't really need. Regret.",
+            "message_vi": "Mua thứ không thực sự cần. Hối tiếc.",
+            "stat_changes": {
+              "money": 10,
+              "happiness": -5
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Job Loss Crisis",
+    "title_vi": "Khủng Hoảng Mất Việc",
+    "description_en": "The company is downsizing. Your position is at risk.",
+    "description_vi": "Công ty đang cắt giảm nhân sự. Vị trí của bạn đang bị đe dọa.",
+    "conditions": {
+      "min_age": 32,
+      "max_age": 40,
+      "requires_flags": [
+        "is_employed"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Fight for your position",
+        "content_vi": "Đấu tranh giữ vị trí",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 40,
+            "message_en": "You survived the layoffs! But morale is low.",
+            "message_vi": "Bạn sống sót qua đợt cắt giảm! Nhưng tinh thần thấp.",
+            "stat_changes": {
+              "happiness": -15
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 60,
+            "message_en": "Laid off. Severance package was small.",
+            "message_vi": "Bị sa thải. Trợ cấp thôi việc nhỏ.",
+            "stat_changes": {
+              "money": 30,
+              "happiness": -38
+            },
+            "set_flags": {
+              "is_employed": false,
+              "job_title": null
+            }
+          }
+        ]
+      },
+      {
+        "content_en": "Accept voluntary redundancy ($60 package)",
+        "content_vi": "Chấp nhận nghỉ tự nguyện ($60 trợ cấp)",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Took the package. Time to find something new.",
+            "message_vi": "Nhận trợ cấp. Đến lúc tìm việc mới.",
+            "stat_changes": {
+              "money": 60,
+              "happiness": -23
+            },
+            "set_flags": {
+              "is_employed": false,
+              "job_title": null
+            }
+          }
+        ]
+      },
+      {
+        "content_en": "Start job hunting immediately",
+        "content_vi": "Bắt đầu tìm việc ngay",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 55,
+            "message_en": "Found a new job before layoffs! Smooth transition.",
+            "message_vi": "Tìm được việc mới trước khi bị sa thải! Chuyển đổi suôn sẻ.",
+            "stat_changes": {
+              "happiness": 3
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 45,
+            "message_en": "Job market is tough. Still searching.",
+            "message_vi": "Thị trường việc làm khó khăn. Vẫn đang tìm.",
+            "stat_changes": {
+              "happiness": -23,
+              "money": -20
+            },
+            "set_flags": {
+              "is_employed": false,
+              "job_title": null
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Unexpected Medical Bill",
+    "title_vi": "Hóa Đơn Y Tế Bất Ngờ",
+    "description_en": "You slip and break your wrist. The hospital bill is shockingly high.",
+    "description_vi": "Bạn trượt chân và gãy cổ tay. Hóa đơn bệnh viện cao đến sốc.",
+    "conditions": {
+      "min_age": 30,
+      "max_age": 40
+    },
+    "choices": [
+      {
+        "content_en": "Pay the full bill ($80)",
+        "content_vi": "Trả toàn bộ hóa đơn ($80)",
+        "display_conditions": {
+          "min_money": 80
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Bill paid. Wrist healing well. Finances hurt.",
+            "message_vi": "Đã trả. Cổ tay đang lành. Tài chính bị ảnh hưởng.",
+            "stat_changes": {
+              "money": -80,
+              "health": -5,
+              "happiness": -12
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Negotiate a payment plan",
+        "content_vi": "Thương lượng trả góp",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Hospital agreed to installments. Manageable.",
+            "message_vi": "Bệnh viện đồng ý trả góp. Có thể xoay sở.",
+            "stat_changes": {
+              "money": -40,
+              "health": -5,
+              "happiness": -8
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 30,
+            "message_en": "Interest on payments made it more expensive.",
+            "message_vi": "Lãi suất trả góp làm tốn kém hơn.",
+            "stat_changes": {
+              "money": -60,
+              "health": -5,
+              "happiness": -15
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Skip treatment, tough it out",
+        "content_vi": "Bỏ qua điều trị, tự chịu",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 30,
+            "message_en": "It healed... somewhat. Chronic pain remains.",
+            "message_vi": "Nó lành... phần nào. Đau mãn tính còn dai dẳng.",
+            "stat_changes": {
+              "health": -15,
+              "happiness": -8
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 70,
+            "message_en": "Got infected. Emergency surgery cost even more.",
+            "message_vi": "Bị nhiễm trùng. Phẫu thuật cấp cứu tốn hơn.",
+            "stat_changes": {
+              "health": -25,
+              "money": -100,
+              "happiness": -30
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Tax Season Surprise",
+    "title_vi": "Bất Ngờ Mùa Thuế",
+    "description_en": "Tax season arrives and you owe more than expected.",
+    "description_vi": "Mùa thuế đến và bạn nợ nhiều hơn dự kiến.",
+    "conditions": {
+      "min_age": 30,
+      "max_age": 40,
+      "requires_flags": [
+        "is_employed"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Pay in full immediately ($40)",
+        "content_vi": "Trả đầy đủ ngay ($40)",
+        "display_conditions": {
+          "min_money": 40
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Taxes paid. Clean record. Wallet hurts.",
+            "message_vi": "Thuế đã trả. Hồ sơ sạch. Ví đau.",
+            "stat_changes": {
+              "money": -40,
+              "happiness": -5
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Hire an accountant to find deductions ($15)",
+        "content_vi": "Thuê kế toán tìm khoản khấu trừ ($15)",
+        "display_conditions": {
+          "min_money": 15
+        },
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "Accountant saved you money! Only paid half.",
+            "message_vi": "Kế toán tiết kiệm được tiền! Chỉ trả nửa.",
+            "stat_changes": {
+              "money": -15,
+              "happiness": 3
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 40,
+            "message_en": "No deductions found. Paid full tax plus accountant fee.",
+            "message_vi": "Không tìm được khấu trừ. Trả thuế đầy đủ cộng phí kế toán.",
+            "stat_changes": {
+              "money": -55,
+              "happiness": -12
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Delay payment, deal with it later",
+        "content_vi": "Hoãn nộp, giải quyết sau",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 40,
+            "message_en": "Extension granted. Paid later without penalty.",
+            "message_vi": "Được gia hạn. Trả sau không bị phạt.",
+            "stat_changes": {
+              "money": -40,
+              "happiness": 2
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 60,
+            "message_en": "Late penalty added. Total bill increased.",
+            "message_vi": "Bị phạt trễ hạn. Tổng hóa đơn tăng.",
+            "stat_changes": {
+              "money": -55,
+              "happiness": -18
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Workplace Burnout",
+    "title_vi": "Kiệt Sức Vì Công Việc",
+    "description_en": "You've been working non-stop for months. Your body and mind are screaming for a break.",
+    "description_vi": "Bạn đã làm việc không ngừng nhiều tháng. Cơ thể và tinh thần đang kêu cứu.",
+    "conditions": {
+      "min_age": 30,
+      "max_age": 40,
+      "requires_flags": [
+        "is_employed"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Take unpaid leave for a month",
+        "content_vi": "Xin nghỉ không lương 1 tháng",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 80,
+            "message_en": "Total reset. Came back refreshed and productive.",
+            "message_vi": "Reset hoàn toàn. Quay lại tươi mới và năng suất.",
+            "stat_changes": {
+              "money": -30,
+              "happiness": 13,
+              "health": 10
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 20,
+            "message_en": "Colleagues resented your absence. Position weakened.",
+            "message_vi": "Đồng nghiệp khó chịu vì bạn vắng mặt. Vị trí yếu đi.",
+            "stat_changes": {
+              "money": -30,
+              "happiness": 3,
+              "health": 8
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Push through, promotion is close",
+        "content_vi": "Cố lên, thăng chức gần rồi",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 40,
+            "message_en": "Got the promotion! Worth the pain.",
+            "message_vi": "Được thăng chức! Xứng đáng với đau khổ.",
+            "stat_changes": {
+              "money": 50,
+              "happiness": 5,
+              "health": -15
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 60,
+            "message_en": "Collapsed at work. Hospitalized for exhaustion.",
+            "message_vi": "Ngã quỵ tại chỗ làm. Nhập viện vì kiệt sức.",
+            "stat_changes": {
+              "health": -25,
+              "happiness": -30,
+              "money": -40
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "See a therapist ($20)",
+        "content_vi": "Gặp chuyên gia tâm lý ($20)",
+        "display_conditions": {
+          "min_money": 20
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Learning coping strategies. Slow but meaningful recovery.",
+            "message_vi": "Học cách ứng phó. Hồi phục chậm nhưng có ý nghĩa.",
+            "stat_changes": {
+              "money": -20,
+              "happiness": 8,
+              "health": 5
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Financial Pressure in Marriage",
+    "title_vi": "Áp Lực Tài Chính Trong Hôn Nhân",
+    "description_en": "Money is tight. You and your spouse disagree on spending priorities.",
+    "description_vi": "Tiền bạn đang eo hẹp. Bạn và vợ/chồng không đồng ý về ưu tiên chi tiêu.",
+    "conditions": {
+      "min_age": 32,
+      "max_age": 40,
+      "requires_flags": [
+        "is_married"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Create a strict budget together",
+        "content_vi": "Cùng nhau lập ngân sách nghiêm ngặt",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Budget works! Both feel more secure about finances.",
+            "message_vi": "Ngân sách hoạt động! Cả hai cảm thấy an tâm hơn về tài chính.",
+            "stat_changes": {
+              "happiness": 6,
+              "money": 20
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 30,
+            "message_en": "Constant arguments about every dollar. Tensions rise.",
+            "message_vi": "Liên tục cãi nhau về từng đồng. Căng thẳng tăng.",
+            "stat_changes": {
+              "happiness": -23
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "One of you gets a second job",
+        "content_vi": "Một trong hai đi làm thêm",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "Extra income helps, but barely see each other.",
+            "message_vi": "Thu nhập thêm có ích, nhưng hiếm khi gặp nhau.",
+            "stat_changes": {
+              "money": 40,
+              "happiness": -15,
+              "health": -8
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 40,
+            "message_en": "Second job didn't last. Too exhausting.",
+            "message_vi": "Công việc thêm không kéo dài. Quá mệt.",
+            "stat_changes": {
+              "money": 15,
+              "happiness": -12,
+              "health": -5
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Borrow money from relatives ($50)",
+        "content_vi": "Vay tiền họ hàng ($50)",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "Relatives helped. But now you owe them.",
+            "message_vi": "Họ hàng giúp đỡ. Nhưng giờ bạn nợ họ.",
+            "stat_changes": {
+              "money": 50,
+              "happiness": -8
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 40,
+            "message_en": "They refused. Embarrassing conversation.",
+            "message_vi": "Họ từ chối. Cuộc trò chuyện xấu hổ.",
+            "stat_changes": {
+              "happiness": -23
+            },
+            "set_flags": {}
+          }
         ]
       }
     ]

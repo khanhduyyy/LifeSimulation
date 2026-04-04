@@ -22,7 +22,7 @@
             "message_en": "You made tons of friends and found your crowd.",
             "message_vi": "Bạn kết nhiều bạn bè và tìm được nhóm của mình.",
             "stat_changes": {
-              "happiness": 15
+              "happiness": 8
             },
             "set_flags": {}
           },
@@ -31,7 +31,7 @@
             "message_en": "Overcommitted and burned out in a month.",
             "message_vi": "Nhận quá nhiều và kiệt sức sau 1 tháng.",
             "stat_changes": {
-              "happiness": -5,
+              "happiness": -8,
               "health": -5
             },
             "set_flags": {}
@@ -48,7 +48,7 @@
             "message_en": "Top of your class from day one. Lonely but disciplined.",
             "message_vi": "Đứng đầu lớp ngay từ đầu. Cô đơn nhưng kỷ luật.",
             "stat_changes": {
-              "happiness": -5
+              "happiness": -8
             },
             "set_flags": {}
           },
@@ -57,7 +57,7 @@
             "message_en": "The workload is heavier than high school. You struggle.",
             "message_vi": "Khối lượng bài tập nặng hơn cấp 3. Bạn vật lộn.",
             "stat_changes": {
-              "happiness": -10,
+              "happiness": -15,
               "health": -5
             },
             "set_flags": {}
@@ -74,7 +74,7 @@
             "message_en": "Best time of your life... until mid-terms hit.",
             "message_vi": "Thời gian tuyệt nhất cuộc đời... cho đến kỳ thi giữa kỳ.",
             "stat_changes": {
-              "happiness": 20,
+              "happiness": 10,
               "health": -5
             },
             "set_flags": {}
@@ -84,7 +84,7 @@
             "message_en": "Wasted the first month. Academic probation warning.",
             "message_vi": "Bỏ phí tháng đầu. Bị cảnh báo học vụ.",
             "stat_changes": {
-              "happiness": 5,
+              "happiness": 3,
               "health": -5,
               "money": -10
             },
@@ -118,7 +118,7 @@
             "message_vi": "Kiếm được $30 tháng này. Mệt nhưng ổn định tài chính.",
             "stat_changes": {
               "money": 30,
-              "happiness": -3
+              "happiness": -5
             },
             "set_flags": {}
           },
@@ -128,7 +128,7 @@
             "message_vi": "Khó cân bằng với việc học. Điểm số đang giảm.",
             "stat_changes": {
               "money": 20,
-              "happiness": -8,
+              "happiness": -12,
               "health": -5
             },
             "set_flags": {}
@@ -146,7 +146,7 @@
             "message_vi": "Việc dạy kèm tốt. Lịch linh hoạt, lương ổn.",
             "stat_changes": {
               "money": 40,
-              "happiness": 5
+              "happiness": 3
             },
             "set_flags": {}
           },
@@ -172,7 +172,7 @@
             "message_vi": "Gia đình gửi cho bạn $40. Nhẹ nhõm!",
             "stat_changes": {
               "money": 40,
-              "happiness": 5
+              "happiness": 3
             },
             "set_flags": {}
           },
@@ -182,7 +182,7 @@
             "message_vi": "Gia đình cũng đang khó khăn. Chỉ nhận được $10.",
             "stat_changes": {
               "money": 10,
-              "happiness": -10
+              "happiness": -15
             },
             "set_flags": {}
           }
@@ -213,7 +213,7 @@
             "message_en": "Group effort paid off. High marks!",
             "message_vi": "Nỗ lực nhóm có kết quả. Điểm cao!",
             "stat_changes": {
-              "happiness": 12
+              "happiness": 6
             },
             "set_flags": {}
           },
@@ -222,7 +222,7 @@
             "message_en": "Group fell apart at the last minute. You barely passed.",
             "message_vi": "Nhóm tan rã vào phút chót. Bạn vừa vặn qua.",
             "stat_changes": {
-              "happiness": -8
+              "happiness": -12
             },
             "set_flags": {}
           }
@@ -238,7 +238,7 @@
             "message_en": "Your independent research impressed the professor.",
             "message_vi": "Nghiên cứu độc lập của bạn gây ấn tượng với giáo sư.",
             "stat_changes": {
-              "happiness": 15,
+              "happiness": 8,
               "health": -5
             },
             "set_flags": {}
@@ -248,7 +248,7 @@
             "message_en": "Sleepless nights, but only average results.",
             "message_vi": "Nhiều đêm thức trắng nhưng chỉ đạt kết quả trung bình.",
             "stat_changes": {
-              "happiness": -5,
+              "happiness": -8,
               "health": -10
             },
             "set_flags": {}
@@ -265,7 +265,7 @@
             "message_en": "Dean intervened! Professor lightened up slightly.",
             "message_vi": "Hiệu trưởng can thiệp! Giáo sư nhẹ tay hơn một chút.",
             "stat_changes": {
-              "happiness": 10
+              "happiness": 5
             },
             "set_flags": {}
           },
@@ -274,7 +274,7 @@
             "message_en": "Dean sided with professor. Now he's even harder on you.",
             "message_vi": "Hiệu trưởng về phe giáo sư. Bây giờ ông ấy càng khó với bạn hơn.",
             "stat_changes": {
-              "happiness": -15
+              "happiness": -23
             },
             "set_flags": {}
           }
@@ -305,7 +305,7 @@
             "message_en": "You started dating! Happy days ahead.",
             "message_vi": "Bạn đã bắt đầu hẹn hò! Những ngày hạnh phúc phía trước.",
             "stat_changes": {
-              "happiness": 20
+              "happiness": 10
             },
             "set_flags": {}
           },
@@ -314,7 +314,7 @@
             "message_en": "Rejected kindly. Awkward seeing them in class now.",
             "message_vi": "Bị từ chối nhẹ nhàng. Giờ gặp nhau trong lớp thật awkward.",
             "stat_changes": {
-              "happiness": -12
+              "happiness": -18
             },
             "set_flags": {}
           }
@@ -330,7 +330,7 @@
             "message_en": "Friendship blossomed into something more.",
             "message_vi": "Tình bạn nở thành điều gì đó hơn thế.",
             "stat_changes": {
-              "happiness": 15
+              "happiness": 8
             },
             "set_flags": {}
           },
@@ -339,7 +339,7 @@
             "message_en": "They started dating someone else. In the friend zone forever.",
             "message_vi": "Họ bắt đầu hẹn hò với người khác. Mãi trong vùng bạn bè.",
             "stat_changes": {
-              "happiness": -8
+              "happiness": -12
             },
             "set_flags": {}
           }
@@ -355,7 +355,7 @@
             "message_en": "Nothing romantic happened, but your GPA is enviable.",
             "message_vi": "Không có gì lãng mạn xảy ra, nhưng GPA của bạn đáng ngưỡng mộ.",
             "stat_changes": {
-              "happiness": -3
+              "happiness": -5
             },
             "set_flags": {}
           }
@@ -386,7 +386,7 @@
             "message_en": "Great experience! They offered you a job after graduation.",
             "message_vi": "Kinh nghiệm tuyệt vời! Họ hứa tuyển dụng bạn sau khi tốt nghiệp.",
             "stat_changes": {
-              "happiness": 15,
+              "happiness": 8,
               "health": -3
             },
             "set_flags": {
@@ -398,7 +398,7 @@
             "message_en": "Worked hard for free. At least you have a line on your resume.",
             "message_vi": "Làm việc chăm chỉ không công. Ít nhất bạn có thêm dòng vào CV.",
             "stat_changes": {
-              "happiness": -5
+              "happiness": -8
             },
             "set_flags": {
               "has_internship": true
@@ -416,7 +416,7 @@
             "message_en": "Strong grades, but less practical experience.",
             "message_vi": "Điểm số tốt, nhưng ít kinh nghiệm thực tế.",
             "stat_changes": {
-              "happiness": 3
+              "happiness": 2
             },
             "set_flags": {}
           }
@@ -433,7 +433,7 @@
             "message_vi": "Tìm được rồi! Thực tập có lương, đủ trang trải.",
             "stat_changes": {
               "money": 50,
-              "happiness": 20
+              "happiness": 10
             },
             "set_flags": {
               "has_internship": true
@@ -444,7 +444,7 @@
             "message_en": "No paid internship found. Missed the original offer.",
             "message_vi": "Không tìm được thực tập có lương. Bỏ lỡ cơ hội ban đầu.",
             "stat_changes": {
-              "happiness": -10
+              "happiness": -15
             },
             "set_flags": {}
           }
@@ -475,7 +475,7 @@
             "message_en": "Time to enter the workforce. Your degree gives you a head start.",
             "message_vi": "Đã đến lúc bước vào thị trường lao động. Bằng cấp của bạn tạo lợi thế tốt.",
             "stat_changes": {
-              "happiness": 10
+              "happiness": 5
             },
             "set_flags": {
               "has_degree": true,
@@ -499,7 +499,7 @@
             "message_vi": "Được nhận! Thêm hai năm học, nhưng tương lai sáng hơn.",
             "stat_changes": {
               "money": -80,
-              "happiness": 15
+              "happiness": 8
             },
             "set_flags": {
               "has_degree": true,
@@ -514,7 +514,7 @@
             "message_vi": "Không được nhận. Phí xét tuyển đã mất. Đến lúc đi tìm việc.",
             "stat_changes": {
               "money": -80,
-              "happiness": -15
+              "happiness": -23
             },
             "set_flags": {
               "has_degree": true,
@@ -550,7 +550,7 @@
             "message_en": "Your thesis is a masterpiece. Professors are impressed.",
             "message_vi": "Luận văn của bạn xuất sắc. Giáo sư rất ấn tượng.",
             "stat_changes": {
-              "happiness": 10,
+              "happiness": 5,
               "health": -5
             },
             "set_flags": {}
@@ -560,7 +560,7 @@
             "message_en": "Your research hit a dead end. Need to restart the chapter.",
             "message_vi": "Nghiên cứu của bạn đi vào ngõ cụt. Phải viết lại chương.",
             "stat_changes": {
-              "happiness": -10,
+              "happiness": -15,
               "health": -8
             },
             "set_flags": {}
@@ -578,7 +578,7 @@
             "message_vi": "Được trả lương khi trợ giảng và tiến độ đều đặn.",
             "stat_changes": {
               "money": 40,
-              "happiness": 5
+              "happiness": 3
             },
             "set_flags": {}
           },
@@ -588,7 +588,7 @@
             "message_vi": "Dạy học chiếm mất thời gian luận văn. Bị chậm tiến độ.",
             "stat_changes": {
               "money": 20,
-              "happiness": -5,
+              "happiness": -8,
               "health": -5
             },
             "set_flags": {}
@@ -605,7 +605,7 @@
             "message_en": "Enough academia. The real world is calling.",
             "message_vi": "Đã đủ trường lớp. Thế giới thực đang gọi.",
             "stat_changes": {
-              "happiness": 5
+              "happiness": 3
             },
             "set_flags": {
               "has_degree": true,
@@ -642,7 +642,7 @@
             "message_vi": "Có việc thư ký. Lương thấp, nhưng ổn định và làm trong nhà.",
             "stat_changes": {
               "money": 60,
-              "happiness": 5
+              "happiness": 3
             },
             "set_flags": {
               "job_office": true,
@@ -655,7 +655,7 @@
             "message_en": "Rejected everywhere. No degree hurts your chances.",
             "message_vi": "Bị từ chối mọi nơi. Không có bằng cấp ảnh hưởng cơ hội của bạn.",
             "stat_changes": {
-              "happiness": -15
+              "happiness": -23
             },
             "set_flags": {}
           }
@@ -673,7 +673,7 @@
             "stat_changes": {
               "money": 70,
               "health": -5,
-              "happiness": -5
+              "happiness": -8
             },
             "set_flags": {
               "job_manual": true,
@@ -687,7 +687,7 @@
             "message_vi": "Ngay cả nhà máy cũng đã đầy người. Bạn tạm thời làm việc vặt.",
             "stat_changes": {
               "money": 30,
-              "happiness": -10
+              "happiness": -15
             },
             "set_flags": {}
           }
@@ -706,7 +706,7 @@
             "message_vi": "Mọi người thích đồ ăn của bạn! Kinh doanh đang lên.",
             "stat_changes": {
               "money": 80,
-              "happiness": 15
+              "happiness": 8
             },
             "set_flags": {
               "job_business": true,
@@ -720,7 +720,7 @@
             "message_vi": "Cạnh tranh gay gắt. Bạn gần như hòa vốn.",
             "stat_changes": {
               "money": -20,
-              "happiness": -10
+              "happiness": -15
             },
             "set_flags": {}
           }

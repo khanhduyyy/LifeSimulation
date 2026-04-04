@@ -50,4 +50,17 @@ export interface SelectResult {
   game_over: boolean;
 }
 
-export type GamePhase = 'start' | 'event' | 'rolling' | 'outcome' | 'gameover';
+export interface TurnSummaryItem {
+  key: string;
+  stat: string;
+  value: number;
+  message_en: string;
+  message_vi: string;
+}
+
+export interface UpdateCharacterResult {
+  character: Character;
+  turn_summary: TurnSummaryItem[];
+}
+
+export type GamePhase = 'start' | 'event' | 'rolling' | 'outcome' | 'turn_summary' | 'gameover';

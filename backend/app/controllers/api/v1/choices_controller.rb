@@ -27,11 +27,21 @@ module Api
 
         selected_outcome ||= outcomes.last
 
-        # Apply stat changes
+        # Apply stat changes with dynamic variation (±20% randomness for replay variety)
+        actual_changes = {}
         if selected_outcome.stat_changes.present?
           selected_outcome.stat_changes.each do |stat, change|
             if character.respond_to?("#{stat}=")
-              new_value = character.send(stat) + change.to_i
+              base_change = change.to_i
+              # Apply ±20% variation for non-zero values to make replays feel different
+              if base_change.abs >= 5
+                variance = (base_change.abs * 0.2).ceil
+                varied_change = base_change + rand(-variance..variance)
+              else
+                varied_change = base_change
+              end
+              actual_changes[stat] = varied_change
+              new_value = character.send(stat) + varied_change
               new_value = new_value.clamp(0, 100) if %w[health happiness].include?(stat)
               character.send("#{stat}=", new_value)
             end
@@ -49,7 +59,7 @@ module Api
 
         character.save!
 
-        game_over = character.health <= 0 || character.money < 0
+        game_over = character.health <= 0 || character.money < 0 || character.happiness <= 0
 
         render json: {
           roll: roll,

@@ -1,4 +1,4 @@
-import { Character, Event, SelectResult } from './types';
+import { Character, Event, SelectResult, UpdateCharacterResult } from './types';
 
 const API_BASE = '/api/v1';
 const ADMIN_BASE = '/api/admin';
@@ -43,13 +43,13 @@ export const api = {
     return handleResponse<SelectResult>(res);
   },
 
-  async updateCharacter(id: number, updates: Partial<Character>): Promise<Character> {
+  async updateCharacter(id: number, updates: Partial<Character>): Promise<UpdateCharacterResult> {
     const res = await fetch(`${API_BASE}/characters/${id}`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ character: updates }),
     });
-    return handleResponse<Character>(res);
+    return handleResponse<UpdateCharacterResult>(res);
   },
 
   // === Admin API ===

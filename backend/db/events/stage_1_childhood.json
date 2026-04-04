@@ -4,24 +4,85 @@
     "title_vi": "Ngày Đầu Tiên Đến Trường",
     "description_en": "You're 6 years old and nervous about your first day of school.",
     "description_vi": "Bạn 6 tuổi và hồi hộp trước ngày đầu tiên đi học.",
-    "conditions": { "min_age": 6, "max_age": 17 },
+    "conditions": {
+      "min_age": 6,
+      "max_age": 6
+    },
     "choices": [
-      { "content_en": "Be brave and introduce yourself", "content_vi": "Dũng cảm tự giới thiệu bản thân", "display_conditions": null,
+      {
+        "content_en": "Be brave and introduce yourself",
+        "content_vi": "Dũng cảm tự giới thiệu bản thân",
+        "display_conditions": null,
         "outcomes": [
-          { "probability": 70, "message_en": "You made a friend on the first day!", "message_vi": "Bạn kết bạn ngay ngày đầu tiên!", "stat_changes": { "happiness": 10 }, "set_flags": {} },
-          { "probability": 30, "message_en": "They ignored you, but you felt proud.", "message_vi": "Họ phớt lờ bạn, nhưng bạn cảm thấy tự hào.", "stat_changes": { "happiness": 3 }, "set_flags": {} }
+          {
+            "probability": 70,
+            "message_en": "You made a friend on the first day!",
+            "message_vi": "Bạn kết bạn ngay ngày đầu tiên!",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 30,
+            "message_en": "They ignored you, but you felt proud.",
+            "message_vi": "Họ phớt lờ bạn, nhưng bạn cảm thấy tự hào.",
+            "stat_changes": {
+              "happiness": 2
+            },
+            "set_flags": {}
+          }
         ]
       },
-      { "content_en": "Sit quietly and observe", "content_vi": "Ngồi yên lặng quan sát", "display_conditions": null,
+      {
+        "content_en": "Sit quietly and observe",
+        "content_vi": "Ngồi yên lặng quan sát",
+        "display_conditions": null,
         "outcomes": [
-          { "probability": 60, "message_en": "A kind classmate approached you.", "message_vi": "Một bạn cùng lớp tốt bụng đến gần bạn.", "stat_changes": { "happiness": 5 }, "set_flags": {} },
-          { "probability": 40, "message_en": "You spent the day alone but felt safe.", "message_vi": "Bạn trải qua ngày đó một mình nhưng cảm thấy an toàn.", "stat_changes": { "happiness": -2 }, "set_flags": {} }
+          {
+            "probability": 60,
+            "message_en": "A kind classmate approached you.",
+            "message_vi": "Một bạn cùng lớp tốt bụng đến gần bạn.",
+            "stat_changes": {
+              "happiness": 3
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 40,
+            "message_en": "You spent the day alone but felt safe.",
+            "message_vi": "Bạn trải qua ngày đó một mình nhưng cảm thấy an toàn.",
+            "stat_changes": {
+              "happiness": -3
+            },
+            "set_flags": {}
+          }
         ]
       },
-      { "content_en": "Cry and ask to go home", "content_vi": "Khóc và đòi về nhà", "display_conditions": null,
+      {
+        "content_en": "Cry and ask to go home",
+        "content_vi": "Khóc và đòi về nhà",
+        "display_conditions": null,
         "outcomes": [
-          { "probability": 50, "message_en": "The teacher comforted you and the day got better.", "message_vi": "Cô giáo an ủi bạn và ngày hôm đó dần tốt hơn.", "stat_changes": { "happiness": 2 }, "set_flags": {} },
-          { "probability": 50, "message_en": "You cried all day. Not a great start.", "message_vi": "Bạn khóc cả ngày. Một khởi đầu không mấy tốt.", "stat_changes": { "happiness": -5, "health": -2 }, "set_flags": {} }
+          {
+            "probability": 50,
+            "message_en": "The teacher comforted you and the day got better.",
+            "message_vi": "Cô giáo an ủi bạn và ngày hôm đó dần tốt hơn.",
+            "stat_changes": {
+              "happiness": 1
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 50,
+            "message_en": "You cried all day. Not a great start.",
+            "message_vi": "Bạn khóc cả ngày. Một khởi đầu không mấy tốt.",
+            "stat_changes": {
+              "happiness": -8,
+              "health": -2
+            },
+            "set_flags": {}
+          }
         ]
       }
     ]
@@ -31,23 +92,79 @@
     "title_vi": "Ốm Trẻ Em",
     "description_en": "You wake up with a fever and a sore throat. Mom says you can skip school.",
     "description_vi": "Bạn thức dậy với cơn sốt và đau họng. Mẹ nói bạn có thể nghỉ học.",
-    "conditions": { "min_age": 6, "max_age": 17 },
+    "conditions": {
+      "min_age": 6,
+      "max_age": 10
+    },
     "choices": [
-      { "content_en": "Rest and drink medicine", "content_vi": "Nghỉ ngơi và uống thuốc", "display_conditions": null,
+      {
+        "content_en": "Rest and drink medicine",
+        "content_vi": "Nghỉ ngơi và uống thuốc",
+        "display_conditions": null,
         "outcomes": [
-          { "probability": 80, "message_en": "You recovered quickly!", "message_vi": "Bạn hồi phục nhanh chóng!", "stat_changes": { "health": 5 }, "set_flags": {} },
-          { "probability": 20, "message_en": "It turned into a bad cold that lasted a week.", "message_vi": "Nó trở thành cơn cảm lạnh kéo dài một tuần.", "stat_changes": { "health": -5, "happiness": -5 }, "set_flags": {} }
+          {
+            "probability": 80,
+            "message_en": "You recovered quickly!",
+            "message_vi": "Bạn hồi phục nhanh chóng!",
+            "stat_changes": {
+              "health": 5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 20,
+            "message_en": "It turned into a bad cold that lasted a week.",
+            "message_vi": "Nó trở thành cơn cảm lạnh kéo dài một tuần.",
+            "stat_changes": {
+              "health": -5,
+              "happiness": -8
+            },
+            "set_flags": {}
+          }
         ]
       },
-      { "content_en": "Go to school anyway", "content_vi": "Cố đi học dù đang bệnh", "display_conditions": null,
+      {
+        "content_en": "Go to school anyway",
+        "content_vi": "Cố đi học dù đang bệnh",
+        "display_conditions": null,
         "outcomes": [
-          { "probability": 40, "message_en": "You made it through, barely.", "message_vi": "Bạn cố qua được, nhưng rất mệt.", "stat_changes": { "health": -8, "happiness": -3 }, "set_flags": {} },
-          { "probability": 60, "message_en": "Sent home by the nurse. Got a few days off.", "message_vi": "Bị y tá cho về. Được nghỉ thêm vài ngày.", "stat_changes": { "health": -3, "happiness": 5 }, "set_flags": {} }
+          {
+            "probability": 40,
+            "message_en": "You made it through, barely.",
+            "message_vi": "Bạn cố qua được, nhưng rất mệt.",
+            "stat_changes": {
+              "health": -8,
+              "happiness": -5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 60,
+            "message_en": "Sent home by the nurse. Got a few days off.",
+            "message_vi": "Bị y tá cho về. Được nghỉ thêm vài ngày.",
+            "stat_changes": {
+              "health": -3,
+              "happiness": 3
+            },
+            "set_flags": {}
+          }
         ]
       },
-      { "content_en": "Watch cartoons all day", "content_vi": "Xem phim hoạt hình cả ngày", "display_conditions": null,
+      {
+        "content_en": "Watch cartoons all day",
+        "content_vi": "Xem phim hoạt hình cả ngày",
+        "display_conditions": null,
         "outcomes": [
-          { "probability": 100, "message_en": "Best sick day ever! But you're still sick tomorrow.", "message_vi": "Ngày ốm tuyệt nhất! Nhưng ngày mai vẫn còn bệnh.", "stat_changes": { "happiness": 10, "health": -2 }, "set_flags": {} }
+          {
+            "probability": 100,
+            "message_en": "Best sick day ever! But you're still sick tomorrow.",
+            "message_vi": "Ngày ốm tuyệt nhất! Nhưng ngày mai vẫn còn bệnh.",
+            "stat_changes": {
+              "happiness": 5,
+              "health": -2
+            },
+            "set_flags": {}
+          }
         ]
       }
     ]
@@ -57,24 +174,87 @@
     "title_vi": "Tên Bắt Nạt",
     "description_en": "An older kid takes your lunch money and pushes you around.",
     "description_vi": "Một đứa lớn hơn cướp tiền ăn sáng và đẩy bạn.",
-    "conditions": { "min_age": 6, "max_age": 17 },
+    "conditions": {
+      "min_age": 6,
+      "max_age": 17
+    },
     "choices": [
-      { "content_en": "Stand up to the bully", "content_vi": "Đương đầu với tên bắt nạt", "display_conditions": null,
+      {
+        "content_en": "Stand up to the bully",
+        "content_vi": "Đương đầu với tên bắt nạt",
+        "display_conditions": null,
         "outcomes": [
-          { "probability": 50, "message_en": "You stood your ground. Others respect you now.", "message_vi": "Bạn không nhún. Người khác tôn trọng bạn.", "stat_changes": { "happiness": 10, "health": -5 }, "set_flags": {} },
-          { "probability": 50, "message_en": "You got beat up. But you didn't give up.", "message_vi": "Bạn bị đánh. Nhưng bạn không bỏ cuộc.", "stat_changes": { "health": -10, "happiness": -5 }, "set_flags": {} }
+          {
+            "probability": 50,
+            "message_en": "You stood your ground. Others respect you now.",
+            "message_vi": "Bạn không nhún. Người khác tôn trọng bạn.",
+            "stat_changes": {
+              "happiness": 5,
+              "health": -5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 50,
+            "message_en": "You got beat up. But you didn't give up.",
+            "message_vi": "Bạn bị đánh. Nhưng bạn không bỏ cuộc.",
+            "stat_changes": {
+              "health": -10,
+              "happiness": -8
+            },
+            "set_flags": {}
+          }
         ]
       },
-      { "content_en": "Tell a teacher", "content_vi": "Mách thầy/cô giáo", "display_conditions": null,
+      {
+        "content_en": "Tell a teacher",
+        "content_vi": "Mách thầy/cô giáo",
+        "display_conditions": null,
         "outcomes": [
-          { "probability": 70, "message_en": "Teacher intervened. Bully got suspended.", "message_vi": "Giáo viên can thiệp. Tên bắt nạt bị đình chỉ.", "stat_changes": { "happiness": 8 }, "set_flags": {} },
-          { "probability": 30, "message_en": "Teacher didn't believe you. The bully got worse.", "message_vi": "Giáo viên không tin. Tên bắt nạt càng tệ hơn.", "stat_changes": { "happiness": -10 }, "set_flags": {} }
+          {
+            "probability": 70,
+            "message_en": "Teacher intervened. Bully got suspended.",
+            "message_vi": "Giáo viên can thiệp. Tên bắt nạt bị đình chỉ.",
+            "stat_changes": {
+              "happiness": 4
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 30,
+            "message_en": "Teacher didn't believe you. The bully got worse.",
+            "message_vi": "Giáo viên không tin. Tên bắt nạt càng tệ hơn.",
+            "stat_changes": {
+              "happiness": -15
+            },
+            "set_flags": {}
+          }
         ]
       },
-      { "content_en": "Avoid and ignore them", "content_vi": "Tránh mặt và bỏ qua", "display_conditions": null,
+      {
+        "content_en": "Avoid and ignore them",
+        "content_vi": "Tránh mặt và bỏ qua",
+        "display_conditions": null,
         "outcomes": [
-          { "probability": 60, "message_en": "They got bored and left you alone.", "message_vi": "Chúng chán và để mặc bạn.", "stat_changes": { "happiness": -3 }, "set_flags": {} },
-          { "probability": 40, "message_en": "They kept targeting you for months.", "message_vi": "Chúng tiếp tục nhắm vào bạn suốt nhiều tháng.", "stat_changes": { "happiness": -12, "health": -3 }, "set_flags": {} }
+          {
+            "probability": 60,
+            "message_en": "They got bored and left you alone.",
+            "message_vi": "Chúng chán và để mặc bạn.",
+            "stat_changes": {
+              "happiness": -5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 40,
+            "message_en": "They kept targeting you for months.",
+            "message_vi": "Chúng tiếp tục nhắm vào bạn suốt nhiều tháng.",
+            "stat_changes": {
+              "happiness": -18,
+              "health": -3
+            },
+            "set_flags": {}
+          }
         ]
       }
     ]
@@ -84,49 +264,159 @@
     "title_vi": "Thử Sức Đội Thể Thao",
     "description_en": "The school is holding tryouts for the football team this weekend.",
     "description_vi": "Trường tổ chức tuyển chọn vào đội bóng cuối tuần này.",
-    "conditions": { "min_age": 6, "max_age": 17 },
+    "conditions": {
+      "min_age": 6,
+      "max_age": 17
+    },
     "choices": [
-      { "content_en": "Try out for the team", "content_vi": "Tham gia tuyển chọn", "display_conditions": null,
+      {
+        "content_en": "Try out for the team",
+        "content_vi": "Tham gia tuyển chọn",
+        "display_conditions": null,
         "outcomes": [
-          { "probability": 60, "message_en": "You made the team! Healthy habits form early.", "message_vi": "Bạn vào được đội! Những thói quen lành mạnh hình thành từ sớm.", "stat_changes": { "health": 10, "happiness": 15 }, "set_flags": {} },
-          { "probability": 40, "message_en": "Didn't make the cut, but you got fitter from training.", "message_vi": "Không đạt, nhưng bạn trở nên khỏe hơn từ tập luyện.", "stat_changes": { "health": 5, "happiness": -3 }, "set_flags": {} }
+          {
+            "probability": 60,
+            "message_en": "You made the team! Healthy habits form early.",
+            "message_vi": "Bạn vào được đội! Những thói quen lành mạnh hình thành từ sớm.",
+            "stat_changes": {
+              "health": 10,
+              "happiness": 8
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 40,
+            "message_en": "Didn't make the cut, but you got fitter from training.",
+            "message_vi": "Không đạt, nhưng bạn trở nên khỏe hơn từ tập luyện.",
+            "stat_changes": {
+              "health": 5,
+              "happiness": -5
+            },
+            "set_flags": {}
+          }
         ]
       },
-      { "content_en": "Stay home and play video games", "content_vi": "Ở nhà chơi game", "display_conditions": null,
+      {
+        "content_en": "Stay home and play video games",
+        "content_vi": "Ở nhà chơi game",
+        "display_conditions": null,
         "outcomes": [
-          { "probability": 100, "message_en": "Great game! But you didn't do anything active.", "message_vi": "Game hay! Nhưng bạn không làm gì vận động.", "stat_changes": { "happiness": 5, "health": -3 }, "set_flags": {} }
+          {
+            "probability": 100,
+            "message_en": "Great game! But you didn't do anything active.",
+            "message_vi": "Game hay! Nhưng bạn không làm gì vận động.",
+            "stat_changes": {
+              "happiness": 3,
+              "health": -3
+            },
+            "set_flags": {}
+          }
         ]
       },
-      { "content_en": "Watch and cheer for friends", "content_vi": "Cổ vũ bạn bè từ bên ngoài", "display_conditions": null,
+      {
+        "content_en": "Watch and cheer for friends",
+        "content_vi": "Cổ vũ bạn bè từ bên ngoài",
+        "display_conditions": null,
         "outcomes": [
-          { "probability": 100, "message_en": "Good energy! Your friends appreciate your support.", "message_vi": "Năng lượng tốt! Bạn bè cảm kích sự ủng hộ của bạn.", "stat_changes": { "happiness": 8 }, "set_flags": {} }
+          {
+            "probability": 100,
+            "message_en": "Good energy! Your friends appreciate your support.",
+            "message_vi": "Năng lượng tốt! Bạn bè cảm kích sự ủng hộ của bạn.",
+            "stat_changes": {
+              "happiness": 4
+            },
+            "set_flags": {}
+          }
         ]
       }
     ]
   },
   {
-    "title_en": "First Exam",
-    "title_vi": "Kỳ Thi Đầu Tiên",
-    "description_en": "Your first real exam is tomorrow. You have one evening to prepare.",
-    "description_vi": "Kỳ thi thật đầu tiên của bạn là ngày mai. Bạn có một buổi tối để chuẩn bị.",
-    "conditions": { "min_age": 6, "max_age": 17 },
+    "title_en": "Exam",
+    "title_vi": "Kỳ Thi",
+    "description_en": "Your exam is tomorrow. You have one evening to prepare.",
+    "description_vi": "Kỳ thi của bạn vào ngày mai. Bạn có một buổi tối để chuẩn bị.",
+    "conditions": {
+      "min_age": 6,
+      "max_age": 17
+    },
     "choices": [
-      { "content_en": "Study all night", "content_vi": "Thức học cả đêm", "display_conditions": null,
+      {
+        "content_en": "Study all night",
+        "content_vi": "Thức học cả đêm",
+        "display_conditions": null,
         "outcomes": [
-          { "probability": 70, "message_en": "Aced the test! Hard work pays off.", "message_vi": "Làm bài tốt! Công sức được đền đáp.", "stat_changes": { "happiness": 10, "health": -5 }, "set_flags": {} },
-          { "probability": 30, "message_en": "Too tired to focus. Average score.", "message_vi": "Quá mệt để tập trung. Điểm trung bình.", "stat_changes": { "happiness": -3, "health": -8 }, "set_flags": {} }
+          {
+            "probability": 70,
+            "message_en": "Aced the test! Hard work pays off.",
+            "message_vi": "Làm bài tốt! Công sức được đền đáp.",
+            "stat_changes": {
+              "happiness": 5,
+              "health": -5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 30,
+            "message_en": "Too tired to focus. Average score.",
+            "message_vi": "Quá mệt để tập trung. Điểm trung bình.",
+            "stat_changes": {
+              "happiness": -5,
+              "health": -8
+            },
+            "set_flags": {}
+          }
         ]
       },
-      { "content_en": "Study a little then sleep early", "content_vi": "Học một chút rồi ngủ sớm", "display_conditions": null,
+      {
+        "content_en": "Study a little then sleep early",
+        "content_vi": "Học một chút rồi ngủ sớm",
+        "display_conditions": null,
         "outcomes": [
-          { "probability": 60, "message_en": "Well-rested mind. Good score!", "message_vi": "Đầu óc minh mẫn. Điểm cao!", "stat_changes": { "happiness": 8, "health": 3 }, "set_flags": {} },
-          { "probability": 40, "message_en": "Decent score. Could have done better.", "message_vi": "Điểm ổn. Nhưng có thể làm tốt hơn.", "stat_changes": { "happiness": 3 }, "set_flags": {} }
+          {
+            "probability": 60,
+            "message_en": "Well-rested mind. Good score!",
+            "message_vi": "Đầu óc minh mẫn. Điểm cao!",
+            "stat_changes": {
+              "happiness": 4,
+              "health": 3
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 40,
+            "message_en": "Decent score. Could have done better.",
+            "message_vi": "Điểm ổn. Nhưng có thể làm tốt hơn.",
+            "stat_changes": {
+              "happiness": 2
+            },
+            "set_flags": {}
+          }
         ]
       },
-      { "content_en": "Don't study at all", "content_vi": "Không học gì cả", "display_conditions": null,
+      {
+        "content_en": "Don't study at all",
+        "content_vi": "Không học gì cả",
+        "display_conditions": null,
         "outcomes": [
-          { "probability": 30, "message_en": "Lucky guess! You passed somehow.", "message_vi": "May mắn! Bạn vẫn qua được.", "stat_changes": { "happiness": 5 }, "set_flags": {} },
-          { "probability": 70, "message_en": "Failed. Parents are disappointed.", "message_vi": "Trượt. Ba mẹ thất vọng.", "stat_changes": { "happiness": -15 }, "set_flags": {} }
+          {
+            "probability": 30,
+            "message_en": "Lucky guess! You passed somehow.",
+            "message_vi": "May mắn! Bạn vẫn qua được.",
+            "stat_changes": {
+              "happiness": 3
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 70,
+            "message_en": "Failed. Parents are disappointed.",
+            "message_vi": "Trượt. Ba mẹ thất vọng.",
+            "stat_changes": {
+              "happiness": -23
+            },
+            "set_flags": {}
+          }
         ]
       }
     ]
@@ -136,24 +426,85 @@
     "title_vi": "Cãi Nhau Với Ba Mẹ",
     "description_en": "You had a big argument with your parents about going out with friends.",
     "description_vi": "Bạn cãi lớn với ba mẹ về việc đi chơi với bạn bè.",
-    "conditions": { "min_age": 6, "max_age": 17 },
+    "conditions": {
+      "min_age": 8,
+      "max_age": 17
+    },
     "choices": [
-      { "content_en": "Apologize and make peace", "content_vi": "Xin lỗi và làm hòa", "display_conditions": null,
+      {
+        "content_en": "Apologize and make peace",
+        "content_vi": "Xin lỗi và làm hòa",
+        "display_conditions": null,
         "outcomes": [
-          { "probability": 80, "message_en": "They forgave you. Family harmony restored.", "message_vi": "Họ tha thứ cho bạn. Gia đình hòa thuận trở lại.", "stat_changes": { "happiness": 8 }, "set_flags": {} },
-          { "probability": 20, "message_en": "Tension lingered for days. Stressful week.", "message_vi": "Căng thẳng kéo dài nhiều ngày. Tuần đầy áp lực.", "stat_changes": { "happiness": -3 }, "set_flags": {} }
+          {
+            "probability": 80,
+            "message_en": "They forgave you. Family harmony restored.",
+            "message_vi": "Họ tha thứ cho bạn. Gia đình hòa thuận trở lại.",
+            "stat_changes": {
+              "happiness": 4
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 20,
+            "message_en": "Tension lingered for days. Stressful week.",
+            "message_vi": "Căng thẳng kéo dài nhiều ngày. Tuần đầy áp lực.",
+            "stat_changes": {
+              "happiness": -5
+            },
+            "set_flags": {}
+          }
         ]
       },
-      { "content_en": "Stand your ground", "content_vi": "Bảo vệ quan điểm của mình", "display_conditions": null,
+      {
+        "content_en": "Stand your ground",
+        "content_vi": "Bảo vệ quan điểm của mình",
+        "display_conditions": null,
         "outcomes": [
-          { "probability": 40, "message_en": "They came around and respected your maturity.", "message_vi": "Họ thay đổi và tôn trọng sự trưởng thành của bạn.", "stat_changes": { "happiness": 12 }, "set_flags": {} },
-          { "probability": 60, "message_en": "Grounded for two weeks. So unfair.", "message_vi": "Bị cấm túc hai tuần. Không công bằng tí nào.", "stat_changes": { "happiness": -12 }, "set_flags": {} }
+          {
+            "probability": 40,
+            "message_en": "They came around and respected your maturity.",
+            "message_vi": "Họ thay đổi và tôn trọng sự trưởng thành của bạn.",
+            "stat_changes": {
+              "happiness": 6
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 60,
+            "message_en": "Grounded for two weeks. So unfair.",
+            "message_vi": "Bị cấm túc hai tuần. Không công bằng tí nào.",
+            "stat_changes": {
+              "happiness": -18
+            },
+            "set_flags": {}
+          }
         ]
       },
-      { "content_en": "Sneak out anyway", "content_vi": "Lén trốn đi dù sao", "display_conditions": null,
+      {
+        "content_en": "Sneak out anyway",
+        "content_vi": "Lén trốn đi dù sao",
+        "display_conditions": null,
         "outcomes": [
-          { "probability": 40, "message_en": "Got away with it! Great night with friends.", "message_vi": "Qua mặt được! Đêm tuyệt vời cùng bạn bè.", "stat_changes": { "happiness": 18, "money": -5 }, "set_flags": {} },
-          { "probability": 60, "message_en": "Caught coming home late. Grounded for a month.", "message_vi": "Bị bắt gặp về muộn. Cấm túc cả tháng.", "stat_changes": { "happiness": -20 }, "set_flags": {} }
+          {
+            "probability": 40,
+            "message_en": "Got away with it! Great night with friends.",
+            "message_vi": "Qua mặt được! Đêm tuyệt vời cùng bạn bè.",
+            "stat_changes": {
+              "happiness": 9,
+              "money": -5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 60,
+            "message_en": "Caught coming home late. Grounded for a month.",
+            "message_vi": "Bị bắt gặp về muộn. Cấm túc cả tháng.",
+            "stat_changes": {
+              "happiness": -30
+            },
+            "set_flags": {}
+          }
         ]
       }
     ]
@@ -163,22 +514,66 @@
     "title_vi": "Bạn Thân Chuyển Đi",
     "description_en": "Your best friend's family is moving to another city. This is your last week together.",
     "description_vi": "Gia đình người bạn thân nhất của bạn chuyển sang thành phố khác. Đây là tuần cuối cùng bên nhau.",
-    "conditions": { "min_age": 6, "max_age": 17 },
+    "conditions": {
+      "min_age": 8,
+      "max_age": 17
+    },
     "choices": [
-      { "content_en": "Throw a goodbye party", "content_vi": "Tổ chức tiệc chia tay", "display_conditions": null,
+      {
+        "content_en": "Throw a goodbye party",
+        "content_vi": "Tổ chức tiệc chia tay",
+        "display_conditions": null,
         "outcomes": [
-          { "probability": 80, "message_en": "Heartfelt farewell. You'll stay in touch forever.", "message_vi": "Lời tạm biệt chân thành. Bạn sẽ giữ liên lạc mãi mãi.", "stat_changes": { "happiness": 5 }, "set_flags": {} },
-          { "probability": 20, "message_en": "Too sad to celebrate. You cried most of the party.", "message_vi": "Quá buồn để ăn mừng. Bạn khóc gần hết bữa tiệc.", "stat_changes": { "happiness": -8 }, "set_flags": {} }
+          {
+            "probability": 80,
+            "message_en": "Heartfelt farewell. You'll stay in touch forever.",
+            "message_vi": "Lời tạm biệt chân thành. Bạn sẽ giữ liên lạc mãi mãi.",
+            "stat_changes": {
+              "happiness": 3
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 20,
+            "message_en": "Too sad to celebrate. You cried most of the party.",
+            "message_vi": "Quá buồn để ăn mừng. Bạn khóc gần hết bữa tiệc.",
+            "stat_changes": {
+              "happiness": -12
+            },
+            "set_flags": {}
+          }
         ]
       },
-      { "content_en": "Spend every moment together before they leave", "content_vi": "Dành mọi khoảnh khắc bên nhau trước khi họ rời đi", "display_conditions": null,
+      {
+        "content_en": "Spend every moment together before they leave",
+        "content_vi": "Dành mọi khoảnh khắc bên nhau trước khi họ rời đi",
+        "display_conditions": null,
         "outcomes": [
-          { "probability": 100, "message_en": "Beautiful last memories made. Distance won't break this friendship.", "message_vi": "Những ký ức đẹp cuối cùng. Khoảng cách không phá vỡ tình bạn này.", "stat_changes": { "happiness": 10 }, "set_flags": {} }
+          {
+            "probability": 100,
+            "message_en": "Beautiful last memories made. Distance won't break this friendship.",
+            "message_vi": "Những ký ức đẹp cuối cùng. Khoảng cách không phá vỡ tình bạn này.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "set_flags": {}
+          }
         ]
       },
-      { "content_en": "Stay home — it hurts too much to say goodbye", "content_vi": "Ở nhà — quá đau để nói lời tạm biệt", "display_conditions": null,
+      {
+        "content_en": "Stay home — it hurts too much to say goodbye",
+        "content_vi": "Ở nhà — quá đau để nói lời tạm biệt",
+        "display_conditions": null,
         "outcomes": [
-          { "probability": 100, "message_en": "You regret not saying goodbye. Lonely week.", "message_vi": "Bạn hối hận vì không nói lời tạm biệt. Tuần cô đơn.", "stat_changes": { "happiness": -10 }, "set_flags": {} }
+          {
+            "probability": 100,
+            "message_en": "You regret not saying goodbye. Lonely week.",
+            "message_vi": "Bạn hối hận vì không nói lời tạm biệt. Tuần cô đơn.",
+            "stat_changes": {
+              "happiness": -15
+            },
+            "set_flags": {}
+          }
         ]
       }
     ]
@@ -188,23 +583,78 @@
     "title_vi": "Kỳ Nghỉ Gia Đình",
     "description_en": "Your family is going on a week-long vacation. Where should you spend it?",
     "description_vi": "Gia đình bạn đi nghỉ một tuần. Nên dành thời gian ở đâu?",
-    "conditions": { "min_age": 6, "max_age": 17 },
+    "conditions": {
+      "min_age": 6,
+      "max_age": 17
+    },
     "choices": [
-      { "content_en": "Explore the beach with enthusiasm", "content_vi": "Hào hứng khám phá bãi biển", "display_conditions": null,
+      {
+        "content_en": "Explore the beach with enthusiasm",
+        "content_vi": "Hào hứng khám phá bãi biển",
+        "display_conditions": null,
         "outcomes": [
-          { "probability": 80, "message_en": "What a trip! Sun, sand, and family memories.", "message_vi": "Chuyến đi tuyệt vời! Nắng, cát, và ký ức gia đình.", "stat_changes": { "happiness": 20, "health": 5 }, "set_flags": {} },
-          { "probability": 20, "message_en": "Got sunburned badly. Still worth it though.", "message_vi": "Bị cháy nắng nặng. Nhưng vẫn xứng đáng.", "stat_changes": { "happiness": 10, "health": -3 }, "set_flags": {} }
+          {
+            "probability": 80,
+            "message_en": "What a trip! Sun, sand, and family memories.",
+            "message_vi": "Chuyến đi tuyệt vời! Nắng, cát, và ký ức gia đình.",
+            "stat_changes": {
+              "happiness": 10,
+              "health": 5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 20,
+            "message_en": "Got sunburned badly. Still worth it though.",
+            "message_vi": "Bị cháy nắng nặng. Nhưng vẫn xứng đáng.",
+            "stat_changes": {
+              "happiness": 5,
+              "health": -3
+            },
+            "set_flags": {}
+          }
         ]
       },
-      { "content_en": "Stay in the hotel room and game all week", "content_vi": "Ở trong phòng khách sạn chơi game cả tuần", "display_conditions": null,
+      {
+        "content_en": "Stay in the hotel room and game all week",
+        "content_vi": "Ở trong phòng khách sạn chơi game cả tuần",
+        "display_conditions": null,
         "outcomes": [
-          { "probability": 100, "message_en": "You won every match! But missed the scenery.", "message_vi": "Bạn thắng mọi trận! Nhưng bỏ lỡ phong cảnh.", "stat_changes": { "happiness": 8 }, "set_flags": {} }
+          {
+            "probability": 100,
+            "message_en": "You won every match! But missed the scenery.",
+            "message_vi": "Bạn thắng mọi trận! Nhưng bỏ lỡ phong cảnh.",
+            "stat_changes": {
+              "happiness": 4
+            },
+            "set_flags": {}
+          }
         ]
       },
-      { "content_en": "Bond with family activities", "content_vi": "Gắn kết qua các hoạt động gia đình", "display_conditions": null,
+      {
+        "content_en": "Bond with family activities",
+        "content_vi": "Gắn kết qua các hoạt động gia đình",
+        "display_conditions": null,
         "outcomes": [
-          { "probability": 70, "message_en": "A vacation that brought everyone closer.", "message_vi": "Kỳ nghỉ giúp mọi người gần nhau hơn.", "stat_changes": { "happiness": 18, "health": 5 }, "set_flags": {} },
-          { "probability": 30, "message_en": "Family bickering in close quarters. Still some good moments.", "message_vi": "Gia đình cãi nhau khi ở gần nhau. Nhưng vẫn có khoảnh khắc tốt.", "stat_changes": { "happiness": 5 }, "set_flags": {} }
+          {
+            "probability": 70,
+            "message_en": "A vacation that brought everyone closer.",
+            "message_vi": "Kỳ nghỉ giúp mọi người gần nhau hơn.",
+            "stat_changes": {
+              "happiness": 9,
+              "health": 5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 30,
+            "message_en": "Family bickering in close quarters. Still some good moments.",
+            "message_vi": "Gia đình cãi nhau khi ở gần nhau. Nhưng vẫn có khoảnh khắc tốt.",
+            "stat_changes": {
+              "happiness": 3
+            },
+            "set_flags": {}
+          }
         ]
       }
     ]
@@ -214,23 +664,75 @@
     "title_vi": "Tình Cảm Tuổi Học Trò",
     "description_en": "You have a huge crush on someone in your class. Now's your chance.",
     "description_vi": "Bạn thích một người trong lớp. Đây là cơ hội của bạn.",
-    "conditions": { "min_age": 6, "max_age": 17 },
+    "conditions": {
+      "min_age": 12,
+      "max_age": 17
+    },
     "choices": [
-      { "content_en": "Write them a love letter", "content_vi": "Viết thư tình cho người đó", "display_conditions": null,
+      {
+        "content_en": "Write them a love letter",
+        "content_vi": "Viết thư tình cho người đó",
+        "display_conditions": null,
         "outcomes": [
-          { "probability": 50, "message_en": "They said yes! Butterflies everywhere.", "message_vi": "Họ đồng ý! Cảm giác bướm bay khắp bụng.", "stat_changes": { "happiness": 20 }, "set_flags": {} },
-          { "probability": 50, "message_en": "They showed the letter to the whole class. Embarrassing.", "message_vi": "Họ đem thư khoe khắp lớp. Xấu hổ quá.", "stat_changes": { "happiness": -15 }, "set_flags": {} }
+          {
+            "probability": 50,
+            "message_en": "They said yes! Butterflies everywhere.",
+            "message_vi": "Họ đồng ý! Cảm giác bướm bay khắp bụng.",
+            "stat_changes": {
+              "happiness": 10
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 50,
+            "message_en": "They showed the letter to the whole class. Embarrassing.",
+            "message_vi": "Họ đem thư khoe khắp lớp. Xấu hổ quá.",
+            "stat_changes": {
+              "happiness": -23
+            },
+            "set_flags": {}
+          }
         ]
       },
-      { "content_en": "Ask them out directly", "content_vi": "Trực tiếp rủ họ đi chơi", "display_conditions": null,
+      {
+        "content_en": "Ask them out directly",
+        "content_vi": "Trực tiếp rủ họ đi chơi",
+        "display_conditions": null,
         "outcomes": [
-          { "probability": 45, "message_en": "They agreed and you went on a cute date.", "message_vi": "Họ đồng ý và bạn có một buổi hẹn hò dễ thương.", "stat_changes": { "happiness": 18 }, "set_flags": {} },
-          { "probability": 55, "message_en": "Rejected. Heartbreak is part of growing up.", "message_vi": "Bị từ chối. Đau lòng là một phần của sự trưởng thành.", "stat_changes": { "happiness": -10 }, "set_flags": {} }
+          {
+            "probability": 45,
+            "message_en": "They agreed and you went on a cute date.",
+            "message_vi": "Họ đồng ý và bạn có một buổi hẹn hò dễ thương.",
+            "stat_changes": {
+              "happiness": 9
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 55,
+            "message_en": "Rejected. Heartbreak is part of growing up.",
+            "message_vi": "Bị từ chối. Đau lòng là một phần của sự trưởng thành.",
+            "stat_changes": {
+              "happiness": -15
+            },
+            "set_flags": {}
+          }
         ]
       },
-      { "content_en": "Keep feelings to yourself", "content_vi": "Giữ cảm xúc trong lòng", "display_conditions": null,
+      {
+        "content_en": "Keep feelings to yourself",
+        "content_vi": "Giữ cảm xúc trong lòng",
+        "display_conditions": null,
         "outcomes": [
-          { "probability": 100, "message_en": "Safe choice. No risk, no reward. Life goes on.", "message_vi": "Lựa chọn an toàn. Không rủi ro, không phần thưởng. Cuộc đời tiếp tục.", "stat_changes": { "happiness": -2 }, "set_flags": {} }
+          {
+            "probability": 100,
+            "message_en": "Safe choice. No risk, no reward. Life goes on.",
+            "message_vi": "Lựa chọn an toàn. Không rủi ro, không phần thưởng. Cuộc đời tiếp tục.",
+            "stat_changes": {
+              "happiness": -3
+            },
+            "set_flags": {}
+          }
         ]
       }
     ]
@@ -240,24 +742,86 @@
     "title_vi": "Sở Thích Hay Thể Thao?",
     "description_en": "You have free time after school. What do you want to get into?",
     "description_vi": "Bạn có thời gian rảnh sau giờ học. Bạn muốn làm gì?",
-    "conditions": { "min_age": 6, "max_age": 17 },
+    "conditions": {
+      "min_age": 8,
+      "max_age": 17
+    },
     "choices": [
-      { "content_en": "Join an art class", "content_vi": "Tham gia lớp học vẽ", "display_conditions": null,
+      {
+        "content_en": "Join an art class",
+        "content_vi": "Tham gia lớp học vẽ",
+        "display_conditions": null,
         "outcomes": [
-          { "probability": 80, "message_en": "You discovered a real talent for art.", "message_vi": "Bạn khám phá ra năng khiếu thật sự về nghệ thuật.", "stat_changes": { "happiness": 15 }, "set_flags": {} },
-          { "probability": 20, "message_en": "You're not very talented, but you loved it anyway.", "message_vi": "Bạn không có tài năng lắm, nhưng vẫn yêu thích.", "stat_changes": { "happiness": 8 }, "set_flags": {} }
+          {
+            "probability": 80,
+            "message_en": "You discovered a real talent for art.",
+            "message_vi": "Bạn khám phá ra năng khiếu thật sự về nghệ thuật.",
+            "stat_changes": {
+              "happiness": 8
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 20,
+            "message_en": "You're not very talented, but you loved it anyway.",
+            "message_vi": "Bạn không có tài năng lắm, nhưng vẫn yêu thích.",
+            "stat_changes": {
+              "happiness": 4
+            },
+            "set_flags": {}
+          }
         ]
       },
-      { "content_en": "Train for a marathon", "content_vi": "Rèn luyện cho một cuộc thi chạy", "display_conditions": null,
+      {
+        "content_en": "Train for a marathon",
+        "content_vi": "Rèn luyện cho một cuộc thi chạy",
+        "display_conditions": null,
         "outcomes": [
-          { "probability": 60, "message_en": "Finished the race! You're stronger than you thought.", "message_vi": "Hoàn thành cuộc đua! Bạn mạnh hơn bạn nghĩ.", "stat_changes": { "health": 15, "happiness": 12 }, "set_flags": {} },
-          { "probability": 40, "message_en": "Dropped out halfway. Still got fitter from training.", "message_vi": "Bỏ cuộc giữa chừng. Nhưng vẫn khỏe hơn từ tập luyện.", "stat_changes": { "health": 5, "happiness": -3 }, "set_flags": {} }
+          {
+            "probability": 60,
+            "message_en": "Finished the race! You're stronger than you thought.",
+            "message_vi": "Hoàn thành cuộc đua! Bạn mạnh hơn bạn nghĩ.",
+            "stat_changes": {
+              "health": 15,
+              "happiness": 6
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 40,
+            "message_en": "Dropped out halfway. Still got fitter from training.",
+            "message_vi": "Bỏ cuộc giữa chừng. Nhưng vẫn khỏe hơn từ tập luyện.",
+            "stat_changes": {
+              "health": 5,
+              "happiness": -5
+            },
+            "set_flags": {}
+          }
         ]
       },
-      { "content_en": "Learn to play guitar", "content_vi": "Học chơi đàn guitar", "display_conditions": null,
+      {
+        "content_en": "Learn to play guitar",
+        "content_vi": "Học chơi đàn guitar",
+        "display_conditions": null,
         "outcomes": [
-          { "probability": 70, "message_en": "You can play a few songs! Friends are impressed.", "message_vi": "Bạn chơi được vài bài! Bạn bè ấn tượng.", "stat_changes": { "happiness": 18 }, "set_flags": {} },
-          { "probability": 30, "message_en": "Fingers hurt too much. Guitar is harder than it looks.", "message_vi": "Ngón tay đau quá. Guitar khó hơn vẻ bề ngoài.", "stat_changes": { "happiness": -3 }, "set_flags": {} }
+          {
+            "probability": 70,
+            "message_en": "You can play a few songs! Friends are impressed.",
+            "message_vi": "Bạn chơi được vài bài! Bạn bè ấn tượng.",
+            "stat_changes": {
+              "happiness": 9
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 30,
+            "message_en": "Fingers hurt too much. Guitar is harder than it looks.",
+            "message_vi": "Ngón tay đau quá. Guitar khó hơn vẻ bề ngoài.",
+            "stat_changes": {
+              "happiness": -5
+            },
+            "set_flags": {}
+          }
         ]
       }
     ]
@@ -267,24 +831,86 @@
     "title_vi": "Hội Chợ Khoa Học Trường",
     "description_en": "Your school is hosting a science fair. You have two weeks to prepare a project.",
     "description_vi": "Trường bạn tổ chức hội chợ khoa học. Bạn có hai tuần để chuẩn bị dự án.",
-    "conditions": { "min_age": 6, "max_age": 17 },
+    "conditions": {
+      "min_age": 12,
+      "max_age": 17
+    },
     "choices": [
-      { "content_en": "Pour everything into your project", "content_vi": "Dồn hết sức vào dự án", "display_conditions": null,
+      {
+        "content_en": "Pour everything into your project",
+        "content_vi": "Dồn hết sức vào dự án",
+        "display_conditions": null,
         "outcomes": [
-          { "probability": 65, "message_en": "First place! Your experiment was the best in school.", "message_vi": "Giải nhất! Thí nghiệm của bạn là tốt nhất trường.", "stat_changes": { "happiness": 20, "health": -3 }, "set_flags": {} },
-          { "probability": 35, "message_en": "Honorable mention. Your effort was clear.", "message_vi": "Đề cử danh dự. Nỗ lực của bạn rất rõ ràng.", "stat_changes": { "happiness": 8, "health": -3 }, "set_flags": {} }
+          {
+            "probability": 65,
+            "message_en": "First place! Your experiment was the best in school.",
+            "message_vi": "Giải nhất! Thí nghiệm của bạn là tốt nhất trường.",
+            "stat_changes": {
+              "happiness": 10,
+              "health": -3
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 35,
+            "message_en": "Honorable mention. Your effort was clear.",
+            "message_vi": "Đề cử danh dự. Nỗ lực của bạn rất rõ ràng.",
+            "stat_changes": {
+              "happiness": 4,
+              "health": -3
+            },
+            "set_flags": {}
+          }
         ]
       },
-      { "content_en": "Do a simple, safe project", "content_vi": "Làm dự án đơn giản, an toàn", "display_conditions": null,
+      {
+        "content_en": "Do a simple, safe project",
+        "content_vi": "Làm dự án đơn giản, an toàn",
+        "display_conditions": null,
         "outcomes": [
-          { "probability": 80, "message_en": "Passed without stress. A solid, comfortable result.", "message_vi": "Qua được mà không căng thẳng. Kết quả vững chắc, thoải mái.", "stat_changes": { "happiness": 5 }, "set_flags": {} },
-          { "probability": 20, "message_en": "Too basic. Teacher was not impressed.", "message_vi": "Quá đơn giản. Giáo viên không ấn tượng.", "stat_changes": { "happiness": -3 }, "set_flags": {} }
+          {
+            "probability": 80,
+            "message_en": "Passed without stress. A solid, comfortable result.",
+            "message_vi": "Qua được mà không căng thẳng. Kết quả vững chắc, thoải mái.",
+            "stat_changes": {
+              "happiness": 3
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 20,
+            "message_en": "Too basic. Teacher was not impressed.",
+            "message_vi": "Quá đơn giản. Giáo viên không ấn tượng.",
+            "stat_changes": {
+              "happiness": -5
+            },
+            "set_flags": {}
+          }
         ]
       },
-      { "content_en": "Copy a project from the internet", "content_vi": "Sao chép dự án từ internet", "display_conditions": null,
+      {
+        "content_en": "Copy a project from the internet",
+        "content_vi": "Sao chép dự án từ internet",
+        "display_conditions": null,
         "outcomes": [
-          { "probability": 50, "message_en": "They didn't notice. Got away with it this time.", "message_vi": "Họ không nhận ra. May mắn lần này.", "stat_changes": { "happiness": 5 }, "set_flags": {} },
-          { "probability": 50, "message_en": "Caught plagiarizing. Disqualified and sent to the principal.", "message_vi": "Bị bắt gặp đạo văn. Bị loại và gặp hiệu trưởng.", "stat_changes": { "happiness": -20 }, "set_flags": {} }
+          {
+            "probability": 50,
+            "message_en": "They didn't notice. Got away with it this time.",
+            "message_vi": "Họ không nhận ra. May mắn lần này.",
+            "stat_changes": {
+              "happiness": 3
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 50,
+            "message_en": "Caught plagiarizing. Disqualified and sent to the principal.",
+            "message_vi": "Bị bắt gặp đạo văn. Bị loại và gặp hiệu trưởng.",
+            "stat_changes": {
+              "happiness": -30
+            },
+            "set_flags": {}
+          }
         ]
       }
     ]
@@ -294,22 +920,1360 @@
     "title_vi": "Việc Làm Thêm Mùa Hè",
     "description_en": "It's summer break. Your neighbor offers you a part-time job helping out.",
     "description_vi": "Nghỉ hè rồi. Hàng xóm của bạn đề nghị cho bạn làm thêm.",
-    "conditions": { "min_age": 6, "max_age": 17 },
+    "conditions": {
+      "min_age": 15,
+      "max_age": 17
+    },
     "choices": [
-      { "content_en": "Take the job", "content_vi": "Nhận việc", "display_conditions": null,
+      {
+        "content_en": "Take the job",
+        "content_vi": "Nhận việc",
+        "display_conditions": null,
         "outcomes": [
-          { "probability": 70, "message_en": "Earned your first paycheck! $20. Hard work, but satisfying.", "message_vi": "Nhận tiền lương đầu tiên! $20. Vất vả nhưng thỏa mãn.", "stat_changes": { "money": 20, "happiness": 8 }, "set_flags": {} },
-          { "probability": 30, "message_en": "The job was exhausting, but you stuck with it.", "message_vi": "Công việc rất mệt, nhưng bạn vẫn kiên trì.", "stat_changes": { "money": 15, "happiness": -3, "health": -3 }, "set_flags": {} }
+          {
+            "probability": 70,
+            "message_en": "Earned your first paycheck! $20. Hard work, but satisfying.",
+            "message_vi": "Nhận tiền lương đầu tiên! $20. Vất vả nhưng thỏa mãn.",
+            "stat_changes": {
+              "money": 20,
+              "happiness": 4
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 30,
+            "message_en": "The job was exhausting, but you stuck with it.",
+            "message_vi": "Công việc rất mệt, nhưng bạn vẫn kiên trì.",
+            "stat_changes": {
+              "money": 15,
+              "happiness": -5,
+              "health": -3
+            },
+            "set_flags": {}
+          }
         ]
       },
-      { "content_en": "Spend summer with friends", "content_vi": "Dành hè chơi bời cùng bạn bè", "display_conditions": null,
+      {
+        "content_en": "Spend summer with friends",
+        "content_vi": "Dành hè chơi bời cùng bạn bè",
+        "display_conditions": null,
         "outcomes": [
-          { "probability": 100, "message_en": "An unforgettable summer. But your wallet is empty.", "message_vi": "Một mùa hè đáng nhớ. Nhưng ví tiền rỗng tuếch.", "stat_changes": { "happiness": 15, "money": -5 }, "set_flags": {} }
+          {
+            "probability": 100,
+            "message_en": "An unforgettable summer. But your wallet is empty.",
+            "message_vi": "Một mùa hè đáng nhớ. Nhưng ví tiền rỗng tuếch.",
+            "stat_changes": {
+              "happiness": 8,
+              "money": -5
+            },
+            "set_flags": {}
+          }
         ]
       },
-      { "content_en": "Stay home and study ahead", "content_vi": "Ở nhà tự học trước", "display_conditions": null,
+      {
+        "content_en": "Stay home and study ahead",
+        "content_vi": "Ở nhà tự học trước",
+        "display_conditions": null,
         "outcomes": [
-          { "probability": 100, "message_en": "You're ahead of the class. Proud parents.", "message_vi": "Bạn học trước cả lớp. Ba mẹ tự hào.", "stat_changes": { "happiness": 5 }, "set_flags": {} }
+          {
+            "probability": 100,
+            "message_en": "You're ahead of the class. Proud parents.",
+            "message_vi": "Bạn học trước cả lớp. Ba mẹ tự hào.",
+            "stat_changes": {
+              "happiness": 3
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Lost Toy",
+    "title_vi": "Đồ Chơi Bị Mất",
+    "description_en": "Your favorite toy has gone missing. You think you left it at the park.",
+    "description_vi": "Đồ chơi yêu thích của bạn bị mất. Bạn nghĩ mình bỏ quên ở công viên.",
+    "conditions": {
+      "min_age": 6,
+      "max_age": 11
+    },
+    "choices": [
+      {
+        "content_en": "Go back to the park and look for it",
+        "content_vi": "Quay lại công viên tìm",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "You found it! Someone kept it safe.",
+            "message_vi": "Tìm được rồi! Có người giữ lại cẩn thận.",
+            "stat_changes": {
+              "happiness": 6
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 40,
+            "message_en": "It was gone. You cried the whole way home.",
+            "message_vi": "Mất rồi. Bạn khóc suốt đường về.",
+            "stat_changes": {
+              "happiness": -15
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Ask mom to buy a new one",
+        "content_vi": "Nhờ mẹ mua cái mới",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Mom said yes! New toy, new joy.",
+            "message_vi": "Mẹ đồng ý! Đồ chơi mới, niềm vui mới.",
+            "stat_changes": {
+              "happiness": 4,
+              "money": -10
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 50,
+            "message_en": "Mom said you need to be more careful. No new toy.",
+            "message_vi": "Mẹ nói phải cẩn thận hơn. Không được mua cái mới.",
+            "stat_changes": {
+              "happiness": -8
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Accept the loss and move on",
+        "content_vi": "Chấp nhận mất và tiếp tục",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "You learned that things come and go. A small but real lesson.",
+            "message_vi": "Bạn học được rằng mọi thứ đều đến rồi đi. Một bài học nhỏ nhưng thật.",
+            "stat_changes": {
+              "happiness": -5
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Drawing Competition",
+    "title_vi": "Cuộc Thi Vẽ",
+    "description_en": "Your class is holding a drawing competition. The winner gets a prize.",
+    "description_vi": "Lớp bạn tổ chức cuộc thi vẽ. Người chiến thắng nhận được phần thưởng.",
+    "conditions": {
+      "min_age": 7,
+      "max_age": 17
+    },
+    "choices": [
+      {
+        "content_en": "Draw something creative and original",
+        "content_vi": "Vẽ thứ gì đó sáng tạo và độc đáo",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 55,
+            "message_en": "You won! Your drawing was the most imaginative.",
+            "message_vi": "Bạn thắng! Bức vẽ của bạn sáng tạo nhất.",
+            "stat_changes": {
+              "happiness": 10,
+              "money": 5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 45,
+            "message_en": "Runner-up. The class loved your style anyway.",
+            "message_vi": "Á quân. Nhưng cả lớp vẫn thích phong cách của bạn.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Copy a drawing from a book",
+        "content_vi": "Sao chép bức vẽ từ sách",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 40,
+            "message_en": "Teacher noticed but let it slide. Average score.",
+            "message_vi": "Giáo viên nhận ra nhưng bỏ qua. Điểm trung bình.",
+            "stat_changes": {
+              "happiness": 1
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 60,
+            "message_en": "No one noticed and you placed second!",
+            "message_vi": "Không ai nhận ra và bạn đạt giải nhì!",
+            "stat_changes": {
+              "happiness": 6
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Skip the competition",
+        "content_vi": "Bỏ không thi",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "You watched from the sidelines. Safe, but nothing gained.",
+            "message_vi": "Bạn đứng nhìn từ bên ngoài. An toàn nhưng không được gì.",
+            "stat_changes": {
+              "happiness": -3
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Stray Puppy",
+    "title_vi": "Chú Chó Lạc",
+    "description_en": "You found a small stray puppy on your way home from school.",
+    "description_vi": "Bạn tìm thấy một chú chó nhỏ lạc đường trên đường về từ trường.",
+    "conditions": {
+      "min_age": 8,
+      "max_age": 17
+    },
+    "choices": [
+      {
+        "content_en": "Bring it home and beg your parents to keep it",
+        "content_vi": "Mang về nhà và xin ba mẹ nuôi",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "They agreed! You have a new furry best friend.",
+            "message_vi": "Họ đồng ý! Bạn có người bạn bốn chân mới.",
+            "stat_changes": {
+              "happiness": 13,
+              "money": -15
+            },
+            "set_flags": {
+              "has_pet": true
+            }
+          },
+          {
+            "probability": 50,
+            "message_en": "Parents said no. You had to let the puppy go.",
+            "message_vi": "Ba mẹ nói không. Bạn phải thả chú chó đi.",
+            "stat_changes": {
+              "happiness": -15
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Find the owner by asking around",
+        "content_vi": "Hỏi xung quanh để tìm chủ nhân",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Owner found! They were so grateful, gave you a small reward.",
+            "message_vi": "Tìm được chủ rồi! Họ rất biết ơn và thưởng cho bạn một ít.",
+            "stat_changes": {
+              "happiness": 8,
+              "money": 5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 30,
+            "message_en": "Couldn't find the owner. Had to leave it at the shelter.",
+            "message_vi": "Không tìm được chủ. Phải gửi chú chó đến trại cứu trợ.",
+            "stat_changes": {
+              "happiness": -8
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Walk past and ignore it",
+        "content_vi": "Đi thẳng và bỏ qua",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "You felt a little guilty all evening.",
+            "message_vi": "Bạn cảm thấy có lỗi cả buổi tối.",
+            "stat_changes": {
+              "happiness": -8
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Pocket Money Decision",
+    "title_vi": "Quyết Định Tiêu Tiền Tiêu Vặt",
+    "description_en": "Your parents gave you $15 pocket money this month. There's a new toy and a book you want.",
+    "description_vi": "Ba mẹ cho bạn $15 tiền tiêu vặt tháng này. Có một đồ chơi mới và một cuốn sách bạn muốn.",
+    "conditions": {
+      "min_age": 8,
+      "max_age": 12
+    },
+    "choices": [
+      {
+        "content_en": "Buy the toy ($15)",
+        "content_vi": "Mua đồ chơi ($15)",
+        "display_conditions": {
+          "min_money": 15
+        },
+        "outcomes": [
+          {
+            "probability": 80,
+            "message_en": "Best. Toy. Ever. Played with it for weeks.",
+            "message_vi": "Đồ chơi tuyệt nhất từ trước đến nay. Chơi cả mấy tuần.",
+            "stat_changes": {
+              "happiness": 8,
+              "money": -15
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 20,
+            "message_en": "Got bored of it after two days. Regret.",
+            "message_vi": "Chán sau hai ngày. Hối hận.",
+            "stat_changes": {
+              "happiness": -5,
+              "money": -15
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Buy the book ($10)",
+        "content_vi": "Mua sách ($10)",
+        "display_conditions": {
+          "min_money": 10
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Finished it in 3 days. You loved every page.",
+            "message_vi": "Đọc xong trong 3 ngày. Bạn thích từng trang sách.",
+            "stat_changes": {
+              "happiness": 5,
+              "money": -10
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Save all of it",
+        "content_vi": "Tiết kiệm tất cả",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Responsible choice. Money saved for the future.",
+            "message_vi": "Lựa chọn có trách nhiệm. Tiền để dành cho tương lai.",
+            "stat_changes": {
+              "happiness": 2,
+              "money": 15
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "School Play Audition",
+    "title_vi": "Thử Vai Kịch Trường",
+    "description_en": "The school is putting on a play and they need actors. The lead role is open.",
+    "description_vi": "Trường đang dựng vở kịch và cần diễn viên. Vai chính đang chờ người.",
+    "conditions": {
+      "min_age": 8,
+      "max_age": 17
+    },
+    "choices": [
+      {
+        "content_en": "Audition for the lead role",
+        "content_vi": "Thử vai chính",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 55,
+            "message_en": "You got the lead! Parents were at the front row cheering.",
+            "message_vi": "Bạn đậu vai chính! Ba mẹ ngồi hàng đầu cổ vũ.",
+            "stat_changes": {
+              "happiness": 11
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 45,
+            "message_en": "You got a small role but loved being on stage.",
+            "message_vi": "Bạn được vai nhỏ nhưng rất vui khi được lên sân khấu.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Help with backstage props and decorations",
+        "content_vi": "Giúp chuẩn bị đạo cụ và trang trí hậu trường",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Your decorations made the play look amazing. Teacher praised you.",
+            "message_vi": "Trang trí của bạn làm vở kịch trở nên tuyệt vời. Giáo viên khen.",
+            "stat_changes": {
+              "happiness": 6
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Skip it entirely",
+        "content_vi": "Không tham gia gì cả",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "You watched the play alone. Wished you had joined.",
+            "message_vi": "Bạn xem vở kịch một mình. Ước gì mình đã tham gia.",
+            "stat_changes": {
+              "happiness": -5
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Grandparents Visit",
+    "title_vi": "Ông Bà Đến Thăm",
+    "description_en": "Your grandparents are visiting for the weekend. They always bring gifts and stories.",
+    "description_vi": "Ông bà đến thăm cuối tuần. Họ luôn mang quà và những câu chuyện hay.",
+    "conditions": {
+      "min_age": 6,
+      "max_age": 17
+    },
+    "choices": [
+      {
+        "content_en": "Sit and listen to their life stories",
+        "content_vi": "Ngồi lắng nghe câu chuyện cuộc đời họ",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 80,
+            "message_en": "Their stories were fascinating. You felt connected to your roots.",
+            "message_vi": "Câu chuyện của họ rất hấp dẫn. Bạn cảm thấy gắn kết với cội nguồn.",
+            "stat_changes": {
+              "happiness": 8
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 20,
+            "message_en": "You fell asleep halfway through. Grandma laughed it off.",
+            "message_vi": "Bạn ngủ gật giữa chừng. Bà cười và bỏ qua.",
+            "stat_changes": {
+              "happiness": 3
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Play with them in the garden",
+        "content_vi": "Chơi cùng họ ngoài vườn",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Wholesome memory made. Grandpa surprised you at hide-and-seek.",
+            "message_vi": "Tạo ra ký ức ấm lòng. Ông nội làm bạn ngạc nhiên trong trò trốn tìm.",
+            "stat_changes": {
+              "happiness": 9,
+              "health": 5
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Stay in your room playing games",
+        "content_vi": "Ở trong phòng chơi game",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "You missed quality time. Grandparents left looking a little sad.",
+            "message_vi": "Bạn bỏ lỡ thời gian quý báu. Ông bà ra về có vẻ hơi buồn.",
+            "stat_changes": {
+              "happiness": -8
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Peer Pressure",
+    "title_vi": "Áp Lực Từ Bạn Bè",
+    "description_en": "Your new group of friends wants you to skip class and hang out at the arcade.",
+    "description_vi": "Nhóm bạn mới muốn bạn trốn học và đi chơi điện tử cùng.",
+    "conditions": {
+      "min_age": 11,
+      "max_age": 17
+    },
+    "choices": [
+      {
+        "content_en": "Skip class and join them",
+        "content_vi": "Trốn học đi cùng",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Had a blast! School never found out.",
+            "message_vi": "Vui cực! Trường không biết gì.",
+            "stat_changes": {
+              "happiness": 8,
+              "money": -10
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 50,
+            "message_en": "Teacher called your parents. Grounded for two weeks.",
+            "message_vi": "Giáo viên gọi cho ba mẹ. Bị phạt cấm túc hai tuần.",
+            "stat_changes": {
+              "happiness": -27
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Decline and go to class",
+        "content_vi": "Từ chối và đi học",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "They respected you for it. Real friends stick around.",
+            "message_vi": "Họ nể bạn vì điều đó. Bạn bè thật sẽ ở lại.",
+            "stat_changes": {
+              "happiness": 4
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 30,
+            "message_en": "They called you a nerd. Left you out for a while.",
+            "message_vi": "Họ gọi bạn là mọt sách. Cô lập bạn một thời gian.",
+            "stat_changes": {
+              "happiness": -12
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Compromise: join them after school",
+        "content_vi": "Thỏa hiệp: gặp họ sau giờ học",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Everyone was happy with the compromise. Good balance.",
+            "message_vi": "Mọi người đều vui với sự thỏa hiệp. Cân bằng tốt.",
+            "stat_changes": {
+              "happiness": 5,
+              "money": -8
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Class President Election",
+    "title_vi": "Bầu Lớp Trưởng",
+    "description_en": "Your class needs a new class president. Some friends are nominating you.",
+    "description_vi": "Lớp bạn cần bầu lớp trưởng mới. Bạn bè đề cử bạn ra tranh cử.",
+    "conditions": {
+      "min_age": 11,
+      "max_age": 17
+    },
+    "choices": [
+      {
+        "content_en": "Run for class president",
+        "content_vi": "Tranh cử lớp trưởng",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "You won! Leadership comes with new responsibilities.",
+            "message_vi": "Bạn thắng! Vai trò lãnh đạo mang lại trách nhiệm mới.",
+            "stat_changes": {
+              "happiness": 10
+            },
+            "set_flags": {
+              "is_class_president": true
+            }
+          },
+          {
+            "probability": 40,
+            "message_en": "Lost by a few votes. Close race, good effort.",
+            "message_vi": "Thua vài phiếu. Cuộc đua sít sao, nỗ lực tốt.",
+            "stat_changes": {
+              "happiness": -8
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Nominate a close friend instead",
+        "content_vi": "Đề cử người bạn thân thay vào",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Your friend won and you earned their gratitude.",
+            "message_vi": "Bạn thân thắng và biết ơn bạn.",
+            "stat_changes": {
+              "happiness": 6
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 30,
+            "message_en": "Friend lost. They felt you didn't support them enough.",
+            "message_vi": "Bạn thân thua. Họ cảm thấy bạn ủng hộ chưa đủ.",
+            "stat_changes": {
+              "happiness": -8
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Decline, too much pressure",
+        "content_vi": "Từ chối, áp lực quá",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "You stayed under the radar. Comfortable but uneventful.",
+            "message_vi": "Bạn ở lại bóng tối. Thoải mái nhưng không có gì đáng nhớ.",
+            "stat_changes": {
+              "happiness": 1
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Bad Grades Warning",
+    "title_vi": "Cảnh Báo Điểm Kém",
+    "description_en": "You got a warning letter: if your grades don't improve, you might fail the semester.",
+    "description_vi": "Bạn nhận được thư cảnh báo: nếu điểm không cải thiện, bạn có thể trượt kỳ học.",
+    "conditions": {
+      "min_age": 11,
+      "max_age": 17
+    },
+    "choices": [
+      {
+        "content_en": "Buckle down and study hard",
+        "content_vi": "Tập trung và học chăm chỉ",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 75,
+            "message_en": "Grades recovered. Semester saved!",
+            "message_vi": "Điểm cải thiện. Kỳ học được cứu vãn!",
+            "stat_changes": {
+              "happiness": 8,
+              "health": -5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 25,
+            "message_en": "Still failed one subject. Had to retake it.",
+            "message_vi": "Vẫn trượt một môn. Phải học lại.",
+            "stat_changes": {
+              "happiness": -15
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Ask a tutor for help",
+        "content_vi": "Nhờ gia sư giúp đỡ",
+        "display_conditions": {
+          "min_money": 20
+        },
+        "outcomes": [
+          {
+            "probability": 85,
+            "message_en": "Tutor made it click! Passed with flying colors.",
+            "message_vi": "Gia sư giúp bạn hiểu bài! Qua môn xuất sắc.",
+            "stat_changes": {
+              "happiness": 9,
+              "money": -20
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 15,
+            "message_en": "Some improvement, but barely passed.",
+            "message_vi": "Cải thiện một chút nhưng chỉ vừa qua.",
+            "stat_changes": {
+              "happiness": 3,
+              "money": -20
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Give up and accept the fail",
+        "content_vi": "Bỏ cuộc và chấp nhận trượt",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Failed the semester. Parents were very disappointed.",
+            "message_vi": "Trượt kỳ học. Ba mẹ rất thất vọng.",
+            "stat_changes": {
+              "happiness": -30
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Online Gaming Addiction",
+    "title_vi": "Nghiện Game Online",
+    "description_en": "A popular online game just launched. Your friends play it every night until 2AM.",
+    "description_vi": "Một game online hot vừa ra mắt. Bạn bè chơi mỗi đêm đến 2 giờ sáng.",
+    "conditions": {
+      "min_age": 11,
+      "max_age": 17
+    },
+    "choices": [
+      {
+        "content_en": "Join them every night",
+        "content_vi": "Tham gia chơi cùng mỗi đêm",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 40,
+            "message_en": "You're the best player in the server! But exhausted at school.",
+            "message_vi": "Bạn là người chơi giỏi nhất server! Nhưng kiệt sức ở trường.",
+            "stat_changes": {
+              "happiness": 8,
+              "health": -12
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 60,
+            "message_en": "Sleep-deprived and falling behind in class. Not worth it.",
+            "message_vi": "Thiếu ngủ và tụt hậu trong học tập. Không đáng.",
+            "stat_changes": {
+              "happiness": 3,
+              "health": -15
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Play only on weekends",
+        "content_vi": "Chỉ chơi vào cuối tuần",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Perfect balance! Fun without sacrificing grades or health.",
+            "message_vi": "Cân bằng hoàn hảo! Vui mà không hy sinh điểm số hay sức khỏe.",
+            "stat_changes": {
+              "happiness": 6,
+              "health": 3
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Focus on studying and skip the game",
+        "content_vi": "Tập trung học và bỏ qua game",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 80,
+            "message_en": "Top of the class! Friends joke you're 'too serious'.",
+            "message_vi": "Đứng đầu lớp! Bạn bè đùa bạn 'nghiêm túc quá'.",
+            "stat_changes": {
+              "happiness": 4,
+              "health": 5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 20,
+            "message_en": "FOMO hit hard. Feeling left out from friend conversations.",
+            "message_vi": "FOMO (sợ bỏ lỡ) tấn công mạnh. Cảm thấy bị bỏ rơi trong cuộc trò chuyện với bạn bè.",
+            "stat_changes": {
+              "happiness": -8,
+              "health": 5
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "First Heartbreak",
+    "title_vi": "Lần Đầu Thất Tình",
+    "description_en": "The person you've been dating for two months suddenly broke up with you over text.",
+    "description_vi": "Người bạn đang yêu hai tháng đột ngột chia tay qua tin nhắn.",
+    "conditions": {
+      "min_age": 15,
+      "max_age": 17
+    },
+    "choices": [
+      {
+        "content_en": "Cry it out with your best friend",
+        "content_vi": "Khóc hết nước mắt cùng bạn thân",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 80,
+            "message_en": "Best friend stayed up all night with you. You feel better.",
+            "message_vi": "Bạn thân thức cùng bạn suốt đêm. Bạn cảm thấy khá hơn.",
+            "stat_changes": {
+              "happiness": -8
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 20,
+            "message_en": "Even your friend couldn't help. Raw grief for days.",
+            "message_vi": "Ngay cả bạn thân cũng không giúp được. Đau khổ nhiều ngày.",
+            "stat_changes": {
+              "happiness": -23
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Throw yourself into hobbies and studies",
+        "content_vi": "Dồn sức vào sở thích và học tập",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Pain turned into productivity. Came out stronger.",
+            "message_vi": "Đau khổ biến thành động lực. Bước ra mạnh mẽ hơn.",
+            "stat_changes": {
+              "happiness": -5,
+              "health": 5
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Try to win them back",
+        "content_vi": "Cố gắng lấy lại người đó",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 25,
+            "message_en": "They came back! Second chance at love.",
+            "message_vi": "Họ quay lại! Cơ hội thứ hai trong tình yêu.",
+            "stat_changes": {
+              "happiness": 10
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 75,
+            "message_en": "They blocked you. Time to move on.",
+            "message_vi": "Họ block bạn. Đã đến lúc tiếp tục sống.",
+            "stat_changes": {
+              "happiness": -30
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Social Media Drama",
+    "title_vi": "Drama Mạng Xã Hội",
+    "description_en": "Someone posted an embarrassing photo of you online. It's spreading fast.",
+    "description_vi": "Có người đăng ảnh xấu hổ của bạn lên mạng. Nó đang lan rộng nhanh chóng.",
+    "conditions": {
+      "min_age": 12,
+      "max_age": 17
+    },
+    "choices": [
+      {
+        "content_en": "Confront the person directly",
+        "content_vi": "Đối mặt trực tiếp với người đó",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "They apologized and deleted it. Problem solved.",
+            "message_vi": "Họ xin lỗi và xóa ảnh. Vấn đề được giải quyết.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 40,
+            "message_en": "Fight broke out. More drama followed.",
+            "message_vi": "Xảy ra cãi nhau. Thêm drama tiếp theo.",
+            "stat_changes": {
+              "happiness": -23
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Report the post and ask for adult help",
+        "content_vi": "Báo cáo bài đăng và nhờ người lớn giúp",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 80,
+            "message_en": "Post removed. Parents helped handle it maturely.",
+            "message_vi": "Bài đăng bị xóa. Ba mẹ giúp xử lý một cách chín chắn.",
+            "stat_changes": {
+              "happiness": 4
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 20,
+            "message_en": "Took days to remove. The damage was already done.",
+            "message_vi": "Mất vài ngày mới xóa được. Thiệt hại đã xảy ra.",
+            "stat_changes": {
+              "happiness": -12
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Ignore it and wait for it to die down",
+        "content_vi": "Mặc kệ và chờ nó qua đi",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "People forgot within a week. Internet moves fast.",
+            "message_vi": "Mọi người quên sau một tuần. Internet trôi nhanh.",
+            "stat_changes": {
+              "happiness": -5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 50,
+            "message_en": "It went viral and became a meme. Haunted you for months.",
+            "message_vi": "Nó viral và trở thành meme. Ám ảnh bạn cả tháng.",
+            "stat_changes": {
+              "happiness": -30
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Career Interest Discovery",
+    "title_vi": "Khám Phá Định Hướng Nghề Nghiệp",
+    "description_en": "Your school held a career exploration day. Different professionals came to talk.",
+    "description_vi": "Trường tổ chức ngày khám phá nghề nghiệp. Các chuyên gia đến chia sẻ.",
+    "conditions": {
+      "min_age": 15,
+      "max_age": 17
+    },
+    "choices": [
+      {
+        "content_en": "Attend every session and take notes",
+        "content_vi": "Tham dự tất cả buổi và ghi chú kỹ",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "You found a career path that excites you! Goals set.",
+            "message_vi": "Bạn tìm thấy định hướng nghề nghiệp khiến bạn hứng thú! Đặt mục tiêu rồi.",
+            "stat_changes": {
+              "happiness": 9
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 30,
+            "message_en": "Still unsure, but more informed about options.",
+            "message_vi": "Vẫn chưa chắc, nhưng hiểu rõ hơn về các lựa chọn.",
+            "stat_changes": {
+              "happiness": 3
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Go to a few sessions then hang out with friends",
+        "content_vi": "Dự vài buổi rồi đi chơi với bạn",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Decent exposure but missed some useful talks.",
+            "message_vi": "Tiếp xúc tốt nhưng bỏ lỡ vài buổi chia sẻ hữu ích.",
+            "stat_changes": {
+              "happiness": 4
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Skip it, you already know what you want",
+        "content_vi": "Bỏ qua, bạn đã biết mình muốn gì rồi",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "Confidence is good. You stayed true to your dream.",
+            "message_vi": "Tự tin thật tốt. Bạn trung thành với ước mơ của mình.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 40,
+            "message_en": "Missed info that could have opened new doors.",
+            "message_vi": "Bỏ lỡ thông tin có thể mở cánh cửa mới.",
+            "stat_changes": {
+              "happiness": -5
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "School Trip Disaster",
+    "title_vi": "Chuyến Dã Ngoại Thảm Họa",
+    "description_en": "On a school trip to a national park, your group gets separated from the main group.",
+    "description_vi": "Trong chuyến dã ngoại tới công viên quốc gia, nhóm bạn bị tách khỏi đoàn chính.",
+    "conditions": {
+      "min_age": 11,
+      "max_age": 17
+    },
+    "choices": [
+      {
+        "content_en": "Stay calm and use your phone to navigate back",
+        "content_vi": "Bình tĩnh và dùng điện thoại dẫn đường về",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 75,
+            "message_en": "Made it back! Teacher was furious but relieved.",
+            "message_vi": "Về được rồi! Giáo viên vừa tức vừa nhẹ nhõm.",
+            "stat_changes": {
+              "happiness": 5,
+              "health": -3
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 25,
+            "message_en": "Phone died. Waited 2 hours for rescue. Best story ever.",
+            "message_vi": "Hết pin điện thoại. Chờ 2 tiếng để được cứu. Câu chuyện hay nhất từ trước đến nay.",
+            "stat_changes": {
+              "happiness": 3,
+              "health": -8
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Panic and yell for help",
+        "content_vi": "Hoảng loạn và kêu to cầu cứu",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 80,
+            "message_en": "A park ranger heard and guided you back. Embarrassing but safe.",
+            "message_vi": "Kiểm lâm nghe thấy và dẫn bạn về. Xấu hổ nhưng an toàn.",
+            "stat_changes": {
+              "happiness": -8,
+              "health": 5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 20,
+            "message_en": "No one came. You wandered further and got more lost.",
+            "message_vi": "Không ai đến. Bạn tiếp tục lạc sâu hơn.",
+            "stat_changes": {
+              "happiness": -23,
+              "health": -10
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Lead the group confidently to find the trail",
+        "content_vi": "Tự tin dẫn nhóm tìm đường mòn",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 55,
+            "message_en": "You found the trail! Group hailed you as a hero.",
+            "message_vi": "Bạn tìm được đường mòn! Cả nhóm gọi bạn là anh hùng.",
+            "stat_changes": {
+              "happiness": 10,
+              "health": -3
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 45,
+            "message_en": "Wrong turn. Even more lost. But at least you tried.",
+            "message_vi": "Đi nhầm đường. Lạc hơn nữa. Nhưng ít ra bạn đã cố.",
+            "stat_changes": {
+              "happiness": -8,
+              "health": -5
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "First Part-Time Job Interview",
+    "title_vi": "Phỏng Vấn Việc Làm Thêm Đầu Tiên",
+    "description_en": "A nearby café is hiring part-time weekend staff. You see a poster and want to try.",
+    "description_vi": "Quán cà phê gần nhà đang tuyển nhân viên bán thời gian cuối tuần. Bạn thấy tờ rơi và muốn thử.",
+    "conditions": {
+      "min_age": 15,
+      "max_age": 17
+    },
+    "choices": [
+      {
+        "content_en": "Apply and prepare seriously for the interview",
+        "content_vi": "Nộp đơn và chuẩn bị kỹ cho buổi phỏng vấn",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Got the job! First real paycheck incoming.",
+            "message_vi": "Được nhận! Tiền lương thật đầu tiên sắp đến.",
+            "stat_changes": {
+              "happiness": 10,
+              "money": 25
+            },
+            "set_flags": {
+              "had_parttime_job": true
+            }
+          },
+          {
+            "probability": 30,
+            "message_en": "Didn't get it this time. Good interview experience though.",
+            "message_vi": "Lần này không được. Nhưng là kinh nghiệm phỏng vấn tốt.",
+            "stat_changes": {
+              "happiness": -5
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Walk in casually without preparation",
+        "content_vi": "Vào phỏng vấn tự nhiên không chuẩn bị",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 30,
+            "message_en": "Surprisingly hired on the spot! Natural charm works.",
+            "message_vi": "Ngạc nhiên được nhận ngay tại chỗ! Sự duyên dáng tự nhiên có tác dụng.",
+            "stat_changes": {
+              "happiness": 8,
+              "money": 20
+            },
+            "set_flags": {
+              "had_parttime_job": true
+            }
+          },
+          {
+            "probability": 70,
+            "message_en": "Unprepared and it showed. They said they'd call, but never did.",
+            "message_vi": "Không chuẩn bị và lộ rõ. Họ nói sẽ gọi nhưng không bao giờ gọi.",
+            "stat_changes": {
+              "happiness": -12
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Decide you're too young for this",
+        "content_vi": "Quyết định mình còn quá nhỏ để làm",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Missed an opportunity but stayed stress-free.",
+            "message_vi": "Bỏ lỡ cơ hội nhưng không bị căng thẳng.",
+            "stat_changes": {
+              "happiness": 1
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Surprise Test",
+    "title_vi": "Kiểm Tra Bất Ngờ",
+    "description_en": "Your teacher announces a surprise test worth 20% of your grade. Right now.",
+    "description_vi": "Giáo viên thông báo kiểm tra bất ngờ chiếm 20% điểm của bạn. Ngay bây giờ.",
+    "conditions": {
+      "min_age": 11,
+      "max_age": 17
+    },
+    "choices": [
+      {
+        "content_en": "Do your best from memory",
+        "content_vi": "Cố hết sức từ trí nhớ",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 65,
+            "message_en": "Studied enough to pass! Regular habits saved you.",
+            "message_vi": "Học đủ để qua! Thói quen học đều đặn đã cứu bạn.",
+            "stat_changes": {
+              "happiness": 6
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 35,
+            "message_en": "Struggled but managed a low passing score.",
+            "message_vi": "Vật lộn nhưng cũng được điểm vừa đủ qua.",
+            "stat_changes": {
+              "happiness": -8
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Peek at a classmate's paper",
+        "content_vi": "Lén nhìn bài của bạn cùng bàn",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 40,
+            "message_en": "Got away with it. Decent score.",
+            "message_vi": "Qua mặt được. Điểm ổn.",
+            "stat_changes": {
+              "happiness": 3
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 60,
+            "message_en": "Caught cheating. Zero marks and a call to parents.",
+            "message_vi": "Bị bắt gian lận. Điểm 0 và gọi cho ba mẹ.",
+            "stat_changes": {
+              "happiness": -33
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Ask to go to the bathroom and look it up on your phone",
+        "content_vi": "Xin đi vệ sinh và tra điện thoại",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 35,
+            "message_en": "Found the answers! Risky but worked.",
+            "message_vi": "Tìm được đáp án! Nguy hiểm nhưng thành công.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 65,
+            "message_en": "Teacher suspected. Took your phone away for a week.",
+            "message_vi": "Giáo viên nghi ngờ. Tịch thu điện thoại một tuần.",
+            "stat_changes": {
+              "happiness": -27
+            },
+            "set_flags": {}
+          }
         ]
       }
     ]
@@ -319,24 +2283,81 @@
     "title_vi": "Tốt Nghiệp Cấp 3: Lựa Chọn Lớn",
     "description_en": "You're 18 and just graduated high school with $100 saved. A huge decision awaits.",
     "description_vi": "Bạn 18 tuổi và vừa tốt nghiệp cấp 3 với $100 tiết kiệm. Một quyết định lớn đang chờ.",
-    "conditions": { "min_age": 18, "max_age": 18 },
+    "conditions": {
+      "min_age": 18,
+      "max_age": 18
+    },
     "choices": [
       {
         "content_en": "Apply for Public University ($50 registration fee)",
         "content_vi": "Thi vào Đại Học Công ($50 lệ phí)",
-        "display_conditions": { "min_money": 50 },
+        "display_conditions": {
+          "min_money": 50
+        },
         "outcomes": [
-          { "probability": 60, "message_en": "You passed the entrance exam! You are now a college student.", "message_vi": "Bạn vượt qua kỳ thi tuyển sinh! Bạn giờ là sinh viên đại học công.", "stat_changes": { "money": -50, "happiness": 20 }, "set_flags": { "path_college_public": true, "is_student": true }, "next_event_title_en": "College Orientation" },
-          { "probability": 40, "message_en": "You failed the entrance exam. Public university is out for now.", "message_vi": "Bạn trượt kỳ thi. Đại học công không còn là lựa chọn nữa.", "stat_changes": { "money": -50, "happiness": -15 }, "set_flags": { "path_work_early": true }, "next_event_title_en": "First Job Hunt" }
+          {
+            "probability": 60,
+            "message_en": "You passed the entrance exam! You are now a college student.",
+            "message_vi": "Bạn vượt qua kỳ thi tuyển sinh! Bạn giờ là sinh viên đại học công.",
+            "stat_changes": {
+              "money": -50,
+              "happiness": 10
+            },
+            "set_flags": {
+              "path_college_public": true,
+              "is_student": true
+            },
+            "next_event_title_en": "College Orientation"
+          },
+          {
+            "probability": 40,
+            "message_en": "You failed the entrance exam. Public university is out for now.",
+            "message_vi": "Bạn trượt kỳ thi. Đại học công không còn là lựa chọn nữa.",
+            "stat_changes": {
+              "money": -50,
+              "happiness": -23
+            },
+            "set_flags": {
+              "path_work_early": true
+            },
+            "next_event_title_en": "First Job Hunt"
+          }
         ]
       },
       {
         "content_en": "Apply for Private University ($120 tuition deposit)",
         "content_vi": "Vào Đại Học Tư ($120 học phí cọc)",
-        "display_conditions": { "min_money": 120 },
+        "display_conditions": {
+          "min_money": 120
+        },
         "outcomes": [
-          { "probability": 90, "message_en": "Private university accepted you! It's expensive, but worth it.", "message_vi": "Đại học tư nhận bạn! Đắt tiền, nhưng xứng đáng.", "stat_changes": { "money": -120, "happiness": 15 }, "set_flags": { "path_college_private": true, "is_student": true }, "next_event_title_en": "College Orientation" },
-          { "probability": 10, "message_en": "Even private university rejected you. Back to square one.", "message_vi": "Ngay cả đại học tư cũng từ chối bạn. Phải làm lại từ đầu.", "stat_changes": { "money": -120, "happiness": -20 }, "set_flags": { "path_work_early": true }, "next_event_title_en": "First Job Hunt" }
+          {
+            "probability": 90,
+            "message_en": "Private university accepted you! It's expensive, but worth it.",
+            "message_vi": "Đại học tư nhận bạn! Đắt tiền, nhưng xứng đáng.",
+            "stat_changes": {
+              "money": -120,
+              "happiness": 8
+            },
+            "set_flags": {
+              "path_college_private": true,
+              "is_student": true
+            },
+            "next_event_title_en": "College Orientation"
+          },
+          {
+            "probability": 10,
+            "message_en": "Even private university rejected you. Back to square one.",
+            "message_vi": "Ngay cả đại học tư cũng từ chối bạn. Phải làm lại từ đầu.",
+            "stat_changes": {
+              "money": -120,
+              "happiness": -30
+            },
+            "set_flags": {
+              "path_work_early": true
+            },
+            "next_event_title_en": "First Job Hunt"
+          }
         ]
       },
       {
@@ -344,7 +2365,18 @@
         "content_vi": "Bỏ qua đại học và đi làm ngay",
         "display_conditions": null,
         "outcomes": [
-          { "probability": 100, "message_en": "You chose the path less taken. Work starts now.", "message_vi": "Bạn chọn con đường ít người đi. Đây là bắt đầu của hành trình đi làm.", "stat_changes": { "happiness": -5 }, "set_flags": { "path_work_early": true }, "next_event_title_en": "First Job Hunt" }
+          {
+            "probability": 100,
+            "message_en": "You chose the path less taken. Work starts now.",
+            "message_vi": "Bạn chọn con đường ít người đi. Đây là bắt đầu của hành trình đi làm.",
+            "stat_changes": {
+              "happiness": -8
+            },
+            "set_flags": {
+              "path_work_early": true
+            },
+            "next_event_title_en": "First Job Hunt"
+          }
         ]
       }
     ]

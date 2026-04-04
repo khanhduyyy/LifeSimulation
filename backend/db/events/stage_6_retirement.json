@@ -4,14 +4,31 @@
     "title_vi": "Ngày Nghỉ Hưu",
     "description_en": "After decades of work, your employer throws a farewell party. What a journey it's been.",
     "description_vi": "Sau nhiều thập kỷ làm việc, công ty tổ chức tiệc tiễn bạn. Thật là một hành trình dài.",
-    "conditions": { "min_age": 60, "max_age": 65, "requires_flags": ["is_employed"] },
+    "conditions": {
+      "min_age": 60,
+      "max_age": 65,
+      "requires_flags": [
+        "is_employed"
+      ]
+    },
     "choices": [
       {
         "content_en": "Retire gracefully",
         "content_vi": "Nghỉ hưu nhẹ nhàng",
         "display_conditions": null,
         "outcomes": [
-          { "probability": 100, "message_en": "You retired with dignity. Pension starts next month.", "message_vi": "Bạn nghỉ hưu một cách xứng đáng. Lương hưu bắt đầu tháng tới.", "stat_changes": { "happiness": 25 }, "set_flags": { "is_employed": false, "is_retired": true } }
+          {
+            "probability": 100,
+            "message_en": "You retired with dignity. Pension starts next month.",
+            "message_vi": "Bạn nghỉ hưu một cách xứng đáng. Lương hưu bắt đầu tháng tới.",
+            "stat_changes": {
+              "happiness": 13
+            },
+            "set_flags": {
+              "is_employed": false,
+              "is_retired": true
+            }
+          }
         ]
       },
       {
@@ -19,17 +36,66 @@
         "content_vi": "Làm thêm vài năm nữa",
         "display_conditions": null,
         "outcomes": [
-          { "probability": 70, "message_en": "Stayed on as a senior consultant. Better pension later.", "message_vi": "Ở lại làm tư vấn cấp cao. Lương hưu tốt hơn sau này.", "stat_changes": { "money": 60, "happiness": 5, "health": -5 }, "set_flags": {} },
-          { "probability": 30, "message_en": "Health gave out. Forced to retire anyway.", "message_vi": "Sức khỏe không cho phép. Bị buộc phải nghỉ hưu sớm dù sao.", "stat_changes": { "happiness": -10, "health": -10 }, "set_flags": { "is_employed": false, "is_retired": true } }
+          {
+            "probability": 70,
+            "message_en": "Stayed on as a senior consultant. Better pension later.",
+            "message_vi": "Ở lại làm tư vấn cấp cao. Lương hưu tốt hơn sau này.",
+            "stat_changes": {
+              "money": 60,
+              "happiness": 3,
+              "health": -5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 30,
+            "message_en": "Health gave out. Forced to retire anyway.",
+            "message_vi": "Sức khỏe không cho phép. Bị buộc phải nghỉ hưu sớm dù sao.",
+            "stat_changes": {
+              "happiness": -15,
+              "health": -10
+            },
+            "set_flags": {
+              "is_employed": false,
+              "is_retired": true
+            }
+          }
         ]
       },
       {
         "content_en": "Start a small business instead ($100)",
         "content_vi": "Thay vào đó mở kinh doanh nhỏ ($100)",
-        "display_conditions": { "min_money": 100 },
+        "display_conditions": {
+          "min_money": 100
+        },
         "outcomes": [
-          { "probability": 50, "message_en": "Your small business thrives! A new chapter of success.", "message_vi": "Kinh doanh nhỏ của bạn phát triển! Một chương mới của thành công.", "stat_changes": { "money": -100, "happiness": 30 }, "set_flags": { "is_employed": false, "is_retired": false, "job_business": true } },
-          { "probability": 50, "message_en": "Business struggled. Lost the investment. Rest now.", "message_vi": "Kinh doanh gặp khó khăn. Mất vốn đầu tư. Nghỉ ngơi đi thôi.", "stat_changes": { "money": -100, "happiness": -15 }, "set_flags": { "is_employed": false, "is_retired": true } }
+          {
+            "probability": 50,
+            "message_en": "Your small business thrives! A new chapter of success.",
+            "message_vi": "Kinh doanh nhỏ của bạn phát triển! Một chương mới của thành công.",
+            "stat_changes": {
+              "money": -100,
+              "happiness": 15
+            },
+            "set_flags": {
+              "is_employed": false,
+              "is_retired": false,
+              "job_business": true
+            }
+          },
+          {
+            "probability": 50,
+            "message_en": "Business struggled. Lost the investment. Rest now.",
+            "message_vi": "Kinh doanh gặp khó khăn. Mất vốn đầu tư. Nghỉ ngơi đi thôi.",
+            "stat_changes": {
+              "money": -100,
+              "happiness": -23
+            },
+            "set_flags": {
+              "is_employed": false,
+              "is_retired": true
+            }
+          }
         ]
       }
     ]
@@ -39,14 +105,31 @@
     "title_vi": "Bắt Đầu Cuộc Đời Nghỉ Hưu",
     "description_en": "You were never employed, or circumstances led you here. Retirement has arrived.",
     "description_vi": "Bạn chưa bao giờ có việc làm ổn định, hoặc hoàn cảnh đã dẫn bạn đến đây. Tuổi nghỉ hưu đã đến.",
-    "conditions": { "min_age": 60, "max_age": 70, "excludes_flags": ["is_employed", "is_retired"] },
+    "conditions": {
+      "min_age": 60,
+      "max_age": 70,
+      "excludes_flags": [
+        "is_employed",
+        "is_retired"
+      ]
+    },
     "choices": [
       {
         "content_en": "Embrace the quiet life",
         "content_vi": "Chấp nhận cuộc sống yên tĩnh",
         "display_conditions": null,
         "outcomes": [
-          { "probability": 100, "message_en": "Simple pleasures fill your days. Contentment found.", "message_vi": "Những niềm vui giản dị lấp đầy những ngày của bạn. Tìm thấy sự mãn nguyện.", "stat_changes": { "happiness": 15 }, "set_flags": { "is_retired": true } }
+          {
+            "probability": 100,
+            "message_en": "Simple pleasures fill your days. Contentment found.",
+            "message_vi": "Những niềm vui giản dị lấp đầy những ngày của bạn. Tìm thấy sự mãn nguyện.",
+            "stat_changes": {
+              "happiness": 8
+            },
+            "set_flags": {
+              "is_retired": true
+            }
+          }
         ]
       },
       {
@@ -54,8 +137,29 @@
         "content_vi": "Tìm việc bán thời gian",
         "display_conditions": null,
         "outcomes": [
-          { "probability": 60, "message_en": "Found a casual gig. A little income helps.", "message_vi": "Tìm được việc ngắn hạn. Một ít thu nhập có ích.", "stat_changes": { "money": 30, "happiness": 10 }, "set_flags": { "is_retired": true } },
-          { "probability": 40, "message_en": "Too old for most openings. Rest was the only option.", "message_vi": "Quá tuổi cho hầu hết vị trí. Nghỉ ngơi là lựa chọn duy nhất.", "stat_changes": { "happiness": -5 }, "set_flags": { "is_retired": true } }
+          {
+            "probability": 60,
+            "message_en": "Found a casual gig. A little income helps.",
+            "message_vi": "Tìm được việc ngắn hạn. Một ít thu nhập có ích.",
+            "stat_changes": {
+              "money": 30,
+              "happiness": 5
+            },
+            "set_flags": {
+              "is_retired": true
+            }
+          },
+          {
+            "probability": 40,
+            "message_en": "Too old for most openings. Rest was the only option.",
+            "message_vi": "Quá tuổi cho hầu hết vị trí. Nghỉ ngơi là lựa chọn duy nhất.",
+            "stat_changes": {
+              "happiness": -8
+            },
+            "set_flags": {
+              "is_retired": true
+            }
+          }
         ]
       },
       {
@@ -63,8 +167,30 @@
         "content_vi": "Tình nguyện trong cộng đồng",
         "display_conditions": null,
         "outcomes": [
-          { "probability": 90, "message_en": "Giving back feels wonderful. Purpose found in retirement.", "message_vi": "Cho đi cảm thấy tuyệt vời. Tìm thấy mục đích khi nghỉ hưu.", "stat_changes": { "happiness": 20, "health": 5 }, "set_flags": { "is_retired": true } },
-          { "probability": 10, "message_en": "Volunteering was tiring but heart-warming.", "message_vi": "Tình nguyện mệt nhưng ấm lòng.", "stat_changes": { "happiness": 8, "health": -3 }, "set_flags": { "is_retired": true } }
+          {
+            "probability": 90,
+            "message_en": "Giving back feels wonderful. Purpose found in retirement.",
+            "message_vi": "Cho đi cảm thấy tuyệt vời. Tìm thấy mục đích khi nghỉ hưu.",
+            "stat_changes": {
+              "happiness": 10,
+              "health": 5
+            },
+            "set_flags": {
+              "is_retired": true
+            }
+          },
+          {
+            "probability": 10,
+            "message_en": "Volunteering was tiring but heart-warming.",
+            "message_vi": "Tình nguyện mệt nhưng ấm lòng.",
+            "stat_changes": {
+              "happiness": 4,
+              "health": -3
+            },
+            "set_flags": {
+              "is_retired": true
+            }
+          }
         ]
       }
     ]
@@ -74,15 +200,39 @@
     "title_vi": "Con Cái Về Thăm Dịp Lễ",
     "description_en": "The house is full again. Your children visit with their own families.",
     "description_vi": "Ngôi nhà lại đầy ắp. Con cái về thăm cùng với gia đình của chúng.",
-    "conditions": { "min_age": 60, "max_age": 80, "requires_flags": ["has_child"] },
+    "conditions": {
+      "min_age": 60,
+      "max_age": 80,
+      "requires_flags": [
+        "has_child"
+      ]
+    },
     "choices": [
       {
         "content_en": "Cook a big family feast",
         "content_vi": "Nấu một bữa tiệc gia đình lớn",
         "display_conditions": null,
         "outcomes": [
-          { "probability": 80, "message_en": "Best family reunion ever. Your grandchildren adore you.", "message_vi": "Buổi họp mặt gia đình tuyệt nhất. Các cháu của bạn yêu quý bạn.", "stat_changes": { "happiness": 30, "money": -20 }, "set_flags": {} },
-          { "probability": 20, "message_en": "An old argument resurfaced at dinner. You resolved it quickly.", "message_vi": "Một tranh cãi cũ bùng lên trong bữa ăn. Bạn giải quyết nhanh chóng.", "stat_changes": { "happiness": 10, "money": -20 }, "set_flags": {} }
+          {
+            "probability": 80,
+            "message_en": "Best family reunion ever. Your grandchildren adore you.",
+            "message_vi": "Buổi họp mặt gia đình tuyệt nhất. Các cháu của bạn yêu quý bạn.",
+            "stat_changes": {
+              "happiness": 15,
+              "money": -20
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 20,
+            "message_en": "An old argument resurfaced at dinner. You resolved it quickly.",
+            "message_vi": "Một tranh cãi cũ bùng lên trong bữa ăn. Bạn giải quyết nhanh chóng.",
+            "stat_changes": {
+              "happiness": 5,
+              "money": -20
+            },
+            "set_flags": {}
+          }
         ]
       },
       {
@@ -90,17 +240,54 @@
         "content_vi": "Để bọn trẻ tự tổ chức tất cả",
         "display_conditions": null,
         "outcomes": [
-          { "probability": 70, "message_en": "They handled it perfectly! You just relaxed and enjoyed.", "message_vi": "Chúng xử lý hoàn hảo! Bạn chỉ thư giãn và tận hưởng.", "stat_changes": { "happiness": 20 }, "set_flags": {} },
-          { "probability": 30, "message_en": "Total chaos, but heartwarming nonetheless.", "message_vi": "Hoàn toàn hỗn loạn, nhưng vẫn làm ấm lòng.", "stat_changes": { "happiness": 10 }, "set_flags": {} }
+          {
+            "probability": 70,
+            "message_en": "They handled it perfectly! You just relaxed and enjoyed.",
+            "message_vi": "Chúng xử lý hoàn hảo! Bạn chỉ thư giãn và tận hưởng.",
+            "stat_changes": {
+              "happiness": 10
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 30,
+            "message_en": "Total chaos, but heartwarming nonetheless.",
+            "message_vi": "Hoàn toàn hỗn loạn, nhưng vẫn làm ấm lòng.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "set_flags": {}
+          }
         ]
       },
       {
         "content_en": "Go on a trip with the whole family",
         "content_vi": "Đi du lịch cùng cả gia đình",
-        "display_conditions": { "min_money": 80 },
+        "display_conditions": {
+          "min_money": 80
+        },
         "outcomes": [
-          { "probability": 90, "message_en": "Unforgettable family trip! Memories that'll last forever.", "message_vi": "Chuyến du lịch gia đình không thể quên! Ký ức sẽ mãi mãi.", "stat_changes": { "money": -80, "happiness": 35, "health": 5 }, "set_flags": {} },
-          { "probability": 10, "message_en": "Trip had its bumps but the togetherness made it worthwhile.", "message_vi": "Chuyến đi có trục trặc nhưng sự đoàn kết làm nó xứng đáng.", "stat_changes": { "money": -80, "happiness": 15 }, "set_flags": {} }
+          {
+            "probability": 90,
+            "message_en": "Unforgettable family trip! Memories that'll last forever.",
+            "message_vi": "Chuyến du lịch gia đình không thể quên! Ký ức sẽ mãi mãi.",
+            "stat_changes": {
+              "money": -80,
+              "happiness": 18,
+              "health": 5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 10,
+            "message_en": "Trip had its bumps but the togetherness made it worthwhile.",
+            "message_vi": "Chuyến đi có trục trặc nhưng sự đoàn kết làm nó xứng đáng.",
+            "stat_changes": {
+              "money": -80,
+              "happiness": 8
+            },
+            "set_flags": {}
+          }
         ]
       }
     ]
@@ -110,15 +297,42 @@
     "title_vi": "Những Năm Tháng Vàng Bình Yên",
     "description_en": "No children, and that's okay. You've built a peaceful and fulfilling life of your own.",
     "description_vi": "Không con cái, và điều đó ổn thôi. Bạn đã xây dựng cuộc sống bình yên và viên mãn của riêng mình.",
-    "conditions": { "min_age": 60, "max_age": 80, "excludes_flags": ["has_child"] },
+    "conditions": {
+      "min_age": 60,
+      "max_age": 80,
+      "excludes_flags": [
+        "has_child"
+      ]
+    },
     "choices": [
       {
         "content_en": "Travel solo to a dream destination",
         "content_vi": "Du lịch một mình đến điểm đến trong mơ",
-        "display_conditions": { "min_money": 70 },
+        "display_conditions": {
+          "min_money": 70
+        },
         "outcomes": [
-          { "probability": 85, "message_en": "The trip of a lifetime. No compromises, pure joy.", "message_vi": "Chuyến đi của cả đời. Không thỏa hiệp, chỉ thuần túy vui vẻ.", "stat_changes": { "money": -70, "happiness": 35, "health": 5 }, "set_flags": {} },
-          { "probability": 15, "message_en": "Lost your luggage but found adventure.", "message_vi": "Mất hành lý nhưng tìm thấy cuộc phiêu lưu.", "stat_changes": { "money": -70, "happiness": 20 }, "set_flags": {} }
+          {
+            "probability": 85,
+            "message_en": "The trip of a lifetime. No compromises, pure joy.",
+            "message_vi": "Chuyến đi của cả đời. Không thỏa hiệp, chỉ thuần túy vui vẻ.",
+            "stat_changes": {
+              "money": -70,
+              "happiness": 18,
+              "health": 5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 15,
+            "message_en": "Lost your luggage but found adventure.",
+            "message_vi": "Mất hành lý nhưng tìm thấy cuộc phiêu lưu.",
+            "stat_changes": {
+              "money": -70,
+              "happiness": 10
+            },
+            "set_flags": {}
+          }
         ]
       },
       {
@@ -126,8 +340,25 @@
         "content_vi": "Tham gia câu lạc bộ người cao tuổi",
         "display_conditions": null,
         "outcomes": [
-          { "probability": 80, "message_en": "Found wonderful new friends at this stage of life.", "message_vi": "Tìm được những người bạn mới tuyệt vời ở giai đoạn này của cuộc đời.", "stat_changes": { "happiness": 25, "health": 5 }, "set_flags": {} },
-          { "probability": 20, "message_en": "Events were fun but schedules didn't always match.", "message_vi": "Các sự kiện vui nhưng lịch trình không phải lúc nào cũng khớp.", "stat_changes": { "happiness": 10 }, "set_flags": {} }
+          {
+            "probability": 80,
+            "message_en": "Found wonderful new friends at this stage of life.",
+            "message_vi": "Tìm được những người bạn mới tuyệt vời ở giai đoạn này của cuộc đời.",
+            "stat_changes": {
+              "happiness": 13,
+              "health": 5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 20,
+            "message_en": "Events were fun but schedules didn't always match.",
+            "message_vi": "Các sự kiện vui nhưng lịch trình không phải lúc nào cũng khớp.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "set_flags": {}
+          }
         ]
       },
       {
@@ -135,8 +366,24 @@
         "content_vi": "Viết hồi ký của bạn",
         "display_conditions": null,
         "outcomes": [
-          { "probability": 90, "message_en": "Your story is complete. A unique life, fully lived.", "message_vi": "Câu chuyện của bạn đã hoàn chỉnh. Một cuộc đời độc đáo, sống trọn vẹn.", "stat_changes": { "happiness": 28 }, "set_flags": {} },
-          { "probability": 10, "message_en": "Some chapters were hard to write. But therapeutic.", "message_vi": "Một số chương khó viết. Nhưng rất trị liệu.", "stat_changes": { "happiness": 12 }, "set_flags": {} }
+          {
+            "probability": 90,
+            "message_en": "Your story is complete. A unique life, fully lived.",
+            "message_vi": "Câu chuyện của bạn đã hoàn chỉnh. Một cuộc đời độc đáo, sống trọn vẹn.",
+            "stat_changes": {
+              "happiness": 14
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 10,
+            "message_en": "Some chapters were hard to write. But therapeutic.",
+            "message_vi": "Một số chương khó viết. Nhưng rất trị liệu.",
+            "stat_changes": {
+              "happiness": 6
+            },
+            "set_flags": {}
+          }
         ]
       }
     ]
@@ -146,15 +393,36 @@
     "title_vi": "Khoản Lương Hưu Bất Ngờ",
     "description_en": "Your pension fund has done extremely well this year. The payout is bigger than expected.",
     "description_vi": "Quỹ hưu trí của bạn làm rất tốt năm nay. Khoản chi trả lớn hơn dự kiến.",
-    "conditions": { "min_age": 60, "max_age": 80 },
+    "conditions": {
+      "min_age": 60,
+      "max_age": 80
+    },
     "choices": [
       {
         "content_en": "Splurge on something you always wanted",
         "content_vi": "Mua thứ bạn luôn muốn",
         "display_conditions": null,
         "outcomes": [
-          { "probability": 90, "message_en": "You finally bought it! No regrets at this age.", "message_vi": "Cuối cùng bạn mua được rồi! Không tiếc nuối ở tuổi này.", "stat_changes": { "money": -60, "happiness": 30 }, "set_flags": {} },
-          { "probability": 10, "message_en": "Bought it, but it wasn't as fulfilling as imagined.", "message_vi": "Đã mua, nhưng không thỏa mãn như tưởng tượng.", "stat_changes": { "money": -60, "happiness": 10 }, "set_flags": {} }
+          {
+            "probability": 90,
+            "message_en": "You finally bought it! No regrets at this age.",
+            "message_vi": "Cuối cùng bạn mua được rồi! Không tiếc nuối ở tuổi này.",
+            "stat_changes": {
+              "money": -60,
+              "happiness": 15
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 10,
+            "message_en": "Bought it, but it wasn't as fulfilling as imagined.",
+            "message_vi": "Đã mua, nhưng không thỏa mãn như tưởng tượng.",
+            "stat_changes": {
+              "money": -60,
+              "happiness": 5
+            },
+            "set_flags": {}
+          }
         ]
       },
       {
@@ -162,7 +430,16 @@
         "content_vi": "Tiết kiệm cho trường hợp khẩn cấp y tế",
         "display_conditions": null,
         "outcomes": [
-          { "probability": 100, "message_en": "Financial security in retirement. Peace of mind is priceless.", "message_vi": "An toàn tài chính lúc về hưu. Sự bình yên trong tâm trí vô giá.", "stat_changes": { "money": 80, "happiness": 10 }, "set_flags": {} }
+          {
+            "probability": 100,
+            "message_en": "Financial security in retirement. Peace of mind is priceless.",
+            "message_vi": "An toàn tài chính lúc về hưu. Sự bình yên trong tâm trí vô giá.",
+            "stat_changes": {
+              "money": 80,
+              "happiness": 5
+            },
+            "set_flags": {}
+          }
         ]
       },
       {
@@ -170,8 +447,26 @@
         "content_vi": "Cho con cái một phần",
         "display_conditions": null,
         "outcomes": [
-          { "probability": 80, "message_en": "Your children were overjoyed. A lasting legacy.", "message_vi": "Con cái của bạn vui mừng khôn tả. Một di sản lâu dài.", "stat_changes": { "money": -50, "happiness": 35 }, "set_flags": {} },
-          { "probability": 20, "message_en": "Children appreciated it, though money can't buy everything.", "message_vi": "Con cái trân trọng, dù tiền không mua được mọi thứ.", "stat_changes": { "money": -50, "happiness": 15 }, "set_flags": {} }
+          {
+            "probability": 80,
+            "message_en": "Your children were overjoyed. A lasting legacy.",
+            "message_vi": "Con cái của bạn vui mừng khôn tả. Một di sản lâu dài.",
+            "stat_changes": {
+              "money": -50,
+              "happiness": 18
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 20,
+            "message_en": "Children appreciated it, though money can't buy everything.",
+            "message_vi": "Con cái trân trọng, dù tiền không mua được mọi thứ.",
+            "stat_changes": {
+              "money": -50,
+              "happiness": 8
+            },
+            "set_flags": {}
+          }
         ]
       }
     ]
@@ -181,15 +476,37 @@
     "title_vi": "Biến Cố Sức Khỏe Khi Nghỉ Hưu",
     "description_en": "You wake up with chest pain one morning. Time to take it seriously.",
     "description_vi": "Bạn thức dậy với cơn đau ngực một buổi sáng. Đã đến lúc phải nghiêm túc đối mặt.",
-    "conditions": { "min_age": 60, "max_age": 85 },
+    "conditions": {
+      "min_age": 60,
+      "max_age": 85
+    },
     "choices": [
       {
         "content_en": "Go to the doctor immediately",
         "content_vi": "Đi khám bác sĩ ngay lập tức",
         "display_conditions": null,
         "outcomes": [
-          { "probability": 70, "message_en": "Minor issue caught early. Medication and rest prescribed.", "message_vi": "Vấn đề nhỏ được phát hiện sớm. Được kê thuốc và nghỉ ngơi.", "stat_changes": { "money": -30, "health": 8 }, "set_flags": {} },
-          { "probability": 30, "message_en": "Major heart issue. Surgery required. Expensive recovery.", "message_vi": "Vấn đề tim mạch nghiêm trọng. Cần phẫu thuật. Hồi phục tốn kém.", "stat_changes": { "money": -100, "health": -15, "happiness": -20 }, "set_flags": {} }
+          {
+            "probability": 70,
+            "message_en": "Minor issue caught early. Medication and rest prescribed.",
+            "message_vi": "Vấn đề nhỏ được phát hiện sớm. Được kê thuốc và nghỉ ngơi.",
+            "stat_changes": {
+              "money": -30,
+              "health": 8
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 30,
+            "message_en": "Major heart issue. Surgery required. Expensive recovery.",
+            "message_vi": "Vấn đề tim mạch nghiêm trọng. Cần phẫu thuật. Hồi phục tốn kém.",
+            "stat_changes": {
+              "money": -100,
+              "health": -15,
+              "happiness": -30
+            },
+            "set_flags": {}
+          }
         ]
       },
       {
@@ -197,17 +514,55 @@
         "content_vi": "Bỏ qua, có lẽ không có gì cả",
         "display_conditions": null,
         "outcomes": [
-          { "probability": 30, "message_en": "Pain went away. Just indigestion, thankfully.", "message_vi": "Cơn đau qua đi. May mắn chỉ là khó tiêu.", "stat_changes": {}, "set_flags": {} },
-          { "probability": 70, "message_en": "Had a heart attack later that week. Intensive care hospitalization.", "message_vi": "Bị đau tim vào cuối tuần đó. Nhập viện cấp cứu tích cực.", "stat_changes": { "health": -30, "money": -120, "happiness": -25 }, "set_flags": {} }
+          {
+            "probability": 30,
+            "message_en": "Pain went away. Just indigestion, thankfully.",
+            "message_vi": "Cơn đau qua đi. May mắn chỉ là khó tiêu.",
+            "stat_changes": {},
+            "set_flags": {}
+          },
+          {
+            "probability": 70,
+            "message_en": "Had a heart attack later that week. Intensive care hospitalization.",
+            "message_vi": "Bị đau tim vào cuối tuần đó. Nhập viện cấp cứu tích cực.",
+            "stat_changes": {
+              "health": -30,
+              "money": -120,
+              "happiness": -38
+            },
+            "set_flags": {}
+          }
         ]
       },
       {
         "content_en": "Use health insurance ($10 copay)",
         "content_vi": "Dùng bảo hiểm y tế ($10 đồng chi trả)",
-        "display_conditions": { "min_money": 10 },
+        "display_conditions": {
+          "min_money": 10
+        },
         "outcomes": [
-          { "probability": 80, "message_en": "Insurance covered most of it. Clean bill of health.", "message_vi": "Bảo hiểm chi trả phần lớn. Sức khỏe tốt.", "stat_changes": { "money": -10, "health": 12, "happiness": 8 }, "set_flags": {} },
-          { "probability": 20, "message_en": "Serious condition found. Treatment begins immediately.", "message_vi": "Phát hiện bệnh nghiêm trọng. Điều trị bắt đầu ngay lập tức.", "stat_changes": { "money": -40, "health": -8, "happiness": -10 }, "set_flags": {} }
+          {
+            "probability": 80,
+            "message_en": "Insurance covered most of it. Clean bill of health.",
+            "message_vi": "Bảo hiểm chi trả phần lớn. Sức khỏe tốt.",
+            "stat_changes": {
+              "money": -10,
+              "health": 12,
+              "happiness": 4
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 20,
+            "message_en": "Serious condition found. Treatment begins immediately.",
+            "message_vi": "Phát hiện bệnh nghiêm trọng. Điều trị bắt đầu ngay lập tức.",
+            "stat_changes": {
+              "money": -40,
+              "health": -8,
+              "happiness": -15
+            },
+            "set_flags": {}
+          }
         ]
       }
     ]
@@ -217,15 +572,34 @@
     "title_vi": "Nhìn Lại Cuộc Đời",
     "description_en": "Sitting in your garden, you reflect on the life you've lived. The good, the hard, all of it.",
     "description_vi": "Ngồi trong vườn nhà, bạn suy ngẫm về cuộc đời đã sống. Những điều tốt đẹp, những điều khó khăn, tất cả.",
-    "conditions": { "min_age": 65, "max_age": 90 },
+    "conditions": {
+      "min_age": 65,
+      "max_age": 90
+    },
     "choices": [
       {
         "content_en": "Write your memoirs",
         "content_vi": "Viết hồi ký của bạn",
         "display_conditions": null,
         "outcomes": [
-          { "probability": 80, "message_en": "Your story is complete. Everyone who reads it is moved.", "message_vi": "Câu chuyện của bạn đã hoàn chỉnh. Ai đọc cũng xúc động.", "stat_changes": { "happiness": 30 }, "set_flags": {} },
-          { "probability": 20, "message_en": "Some chapters were hard to write. But therapeutic.", "message_vi": "Một số chương khó viết. Nhưng rất trị liệu.", "stat_changes": { "happiness": 15 }, "set_flags": {} }
+          {
+            "probability": 80,
+            "message_en": "Your story is complete. Everyone who reads it is moved.",
+            "message_vi": "Câu chuyện của bạn đã hoàn chỉnh. Ai đọc cũng xúc động.",
+            "stat_changes": {
+              "happiness": 15
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 20,
+            "message_en": "Some chapters were hard to write. But therapeutic.",
+            "message_vi": "Một số chương khó viết. Nhưng rất trị liệu.",
+            "stat_changes": {
+              "happiness": 8
+            },
+            "set_flags": {}
+          }
         ]
       },
       {
@@ -233,8 +607,26 @@
         "content_vi": "Tình nguyện trong cộng đồng",
         "display_conditions": null,
         "outcomes": [
-          { "probability": 90, "message_en": "Giving back fills your heart. Purpose found in retirement.", "message_vi": "Cho đi làm trái tim bạn đầy ắp. Tìm thấy mục đích khi về hưu.", "stat_changes": { "happiness": 25, "health": 5 }, "set_flags": {} },
-          { "probability": 10, "message_en": "Physically tiring but spiritually rewarding.", "message_vi": "Mệt về thể chất nhưng bổ ích về tinh thần.", "stat_changes": { "happiness": 10, "health": -3 }, "set_flags": {} }
+          {
+            "probability": 90,
+            "message_en": "Giving back fills your heart. Purpose found in retirement.",
+            "message_vi": "Cho đi làm trái tim bạn đầy ắp. Tìm thấy mục đích khi về hưu.",
+            "stat_changes": {
+              "happiness": 13,
+              "health": 5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 10,
+            "message_en": "Physically tiring but spiritually rewarding.",
+            "message_vi": "Mệt về thể chất nhưng bổ ích về tinh thần.",
+            "stat_changes": {
+              "happiness": 5,
+              "health": -3
+            },
+            "set_flags": {}
+          }
         ]
       },
       {
@@ -242,7 +634,2042 @@
         "content_vi": "Đơn giản là nghỉ ngơi và tận hưởng sự bình yên",
         "display_conditions": null,
         "outcomes": [
-          { "probability": 100, "message_en": "Total contentment. You've earned this rest.", "message_vi": "Hoàn toàn mãn nguyện. Bạn đã xứng đáng với sự nghỉ ngơi này.", "stat_changes": { "happiness": 20, "health": 5 }, "set_flags": {} }
+          {
+            "probability": 100,
+            "message_en": "Total contentment. You've earned this rest.",
+            "message_vi": "Hoàn toàn mãn nguyện. Bạn đã xứng đáng với sự nghỉ ngơi này.",
+            "stat_changes": {
+              "happiness": 10,
+              "health": 5
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Grandchild Born",
+    "title_vi": "Cháu Chào Đời",
+    "description_en": "Your child calls with exciting news — you're going to be a grandparent!",
+    "description_vi": "Con gọi điện với tin vui — bạn sắp được làm ông bà!",
+    "conditions": {
+      "min_age": 60,
+      "max_age": 75,
+      "requires_flags": [
+        "has_child"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Visit immediately with gifts ($30)",
+        "content_vi": "Đến thăm ngay với quà ($30)",
+        "display_conditions": {
+          "min_money": 30
+        },
+        "outcomes": [
+          {
+            "probability": 90,
+            "message_en": "Holding your grandchild for the first time. Tears of joy.",
+            "message_vi": "Bế cháu lần đầu tiên. Nước mắt hạnh phúc.",
+            "stat_changes": {
+              "money": -30,
+              "happiness": 15
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 10,
+            "message_en": "Long trip was tiring but so worth it.",
+            "message_vi": "Chuyến đi dài mệt nhưng rất xứng đáng.",
+            "stat_changes": {
+              "money": -30,
+              "happiness": 13,
+              "health": -3
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Set up a college fund for the baby ($50)",
+        "content_vi": "Lập quỹ học cho cháu ($50)",
+        "display_conditions": {
+          "min_money": 50
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Investing in the next generation. Proud grandparent.",
+            "message_vi": "Đầu tư cho thế hệ tiếp theo. Ông bà tự hào.",
+            "stat_changes": {
+              "money": -50,
+              "happiness": 11
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Send congratulations from home",
+        "content_vi": "Gửi lời chúc mừng từ nhà",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Can't travel far, but your love reaches them.",
+            "message_vi": "Không thể đi xa, nhưng tình yêu vẫn đến được.",
+            "stat_changes": {
+              "happiness": 8
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Gardening Hobby",
+    "title_vi": "Sở Thích Làm Vườn",
+    "description_en": "With free time in retirement, you discover a passion for gardening.",
+    "description_vi": "Với thời gian rảnh khi nghỉ hưu, bạn khám phá niềm đam mê làm vườn.",
+    "conditions": {
+      "min_age": 60,
+      "max_age": 80
+    },
+    "choices": [
+      {
+        "content_en": "Build a beautiful garden ($20)",
+        "content_vi": "Xây dựng một khu vườn đẹp ($20)",
+        "display_conditions": {
+          "min_money": 20
+        },
+        "outcomes": [
+          {
+            "probability": 85,
+            "message_en": "Garden is blooming! Neighbors are jealous.",
+            "message_vi": "Vườn nở hoa rực rỡ! Hàng xóm ghen tị.",
+            "stat_changes": {
+              "money": -20,
+              "happiness": 10,
+              "health": 5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 15,
+            "message_en": "Pests destroyed half the plants. Try again next season.",
+            "message_vi": "Sâu bệnh phá hủy nửa vườn. Thử lại mùa sau.",
+            "stat_changes": {
+              "money": -20,
+              "happiness": 3,
+              "health": 3
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Grow vegetables to save on groceries",
+        "content_vi": "Trồng rau để tiết kiệm tiền chợ",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 80,
+            "message_en": "Fresh vegetables from your own garden! Healthy and cost-saving.",
+            "message_vi": "Rau tươi từ vườn nhà! Vừa khỏe vừa tiết kiệm.",
+            "stat_changes": {
+              "money": 10,
+              "happiness": 8,
+              "health": 5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 20,
+            "message_en": "Back pain from gardening. Need to pace yourself.",
+            "message_vi": "Đau lưng vì làm vườn. Cần làm từ từ.",
+            "stat_changes": {
+              "happiness": 4,
+              "health": -5
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Not interested in gardening",
+        "content_vi": "Không hứng thú với làm vườn",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Maybe another hobby. The search continues.",
+            "message_vi": "Có lẽ sở thích khác. Cuộc tìm kiếm tiếp tục.",
+            "stat_changes": {
+              "happiness": -3
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Travel Bucket List",
+    "title_vi": "Danh Sách Du Lịch Mơ Ước",
+    "description_en": "You've always wanted to travel. Now you finally have the time.",
+    "description_vi": "Bạn luôn muốn đi du lịch. Giờ cuối cùng cũng có thời gian.",
+    "conditions": {
+      "min_age": 60,
+      "max_age": 75
+    },
+    "choices": [
+      {
+        "content_en": "Take a dream vacation ($80)",
+        "content_vi": "Thực hiện chuyến đi mơ ước ($80)",
+        "display_conditions": {
+          "min_money": 80
+        },
+        "outcomes": [
+          {
+            "probability": 80,
+            "message_en": "Life-changing trip! Sights you'll never forget.",
+            "message_vi": "Chuyến đi thay đổi cuộc đời! Cảnh đẹp không bao giờ quên.",
+            "stat_changes": {
+              "money": -80,
+              "happiness": 15,
+              "health": -3
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 20,
+            "message_en": "Got sick during travel. Still made good memories.",
+            "message_vi": "Bị ốm khi đi du lịch. Vẫn có kỷ niệm đẹp.",
+            "stat_changes": {
+              "money": -80,
+              "happiness": 6,
+              "health": -8
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Explore nearby towns ($20)",
+        "content_vi": "Khám phá các thị trấn lân cận ($20)",
+        "display_conditions": {
+          "min_money": 20
+        },
+        "outcomes": [
+          {
+            "probability": 90,
+            "message_en": "Hidden gems right in your backyard! Wonderful discoveries.",
+            "message_vi": "Những viên ngọc ẩn ngay gần nhà! Khám phá tuyệt vời.",
+            "stat_changes": {
+              "money": -20,
+              "happiness": 9,
+              "health": 3
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 10,
+            "message_en": "Nothing exciting found, but the drive was pleasant.",
+            "message_vi": "Không có gì thú vị nhưng chuyến đi vẫn dễ chịu.",
+            "stat_changes": {
+              "money": -20,
+              "happiness": 4
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Travel through books and documentaries",
+        "content_vi": "Du lịch qua sách và phim tài liệu",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Armchair travel. Fascinating and free.",
+            "message_vi": "Du lịch tại chỗ. Hấp dẫn và miễn phí.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Volunteering at Community Center",
+    "title_vi": "Tình Nguyện Tại Trung Tâm Cộng Đồng",
+    "description_en": "The local community center is looking for volunteers. You have time and wisdom to share.",
+    "description_vi": "Trung tâm cộng đồng địa phương đang tìm tình nguyện viên. Bạn có thời gian và kinh nghiệm để chia sẻ.",
+    "conditions": {
+      "min_age": 60,
+      "max_age": 80
+    },
+    "choices": [
+      {
+        "content_en": "Volunteer regularly",
+        "content_vi": "Tình nguyện đều đặn",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 85,
+            "message_en": "Making a difference in people's lives. Purpose renewed.",
+            "message_vi": "Tạo sự khác biệt trong cuộc sống mọi người. Mục đích được làm mới.",
+            "stat_changes": {
+              "happiness": 11,
+              "health": 3
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 15,
+            "message_en": "Exhausting but fulfilling. Need to pace yourself.",
+            "message_vi": "Kiệt sức nhưng mãn nguyện. Cần làm từ từ.",
+            "stat_changes": {
+              "happiness": 6,
+              "health": -3
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Teach skills to younger people",
+        "content_vi": "Dạy kỹ năng cho người trẻ",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 80,
+            "message_en": "Students love your lessons! Legacy of knowledge.",
+            "message_vi": "Học viên yêu thích bài giảng! Di sản tri thức.",
+            "stat_changes": {
+              "happiness": 13
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 20,
+            "message_en": "Generation gap made teaching challenging.",
+            "message_vi": "Khoảng cách thế hệ làm việc dạy khó khăn.",
+            "stat_changes": {
+              "happiness": 3
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Donate money instead ($20)",
+        "content_vi": "Quyên góp tiền thay vì thời gian ($20)",
+        "display_conditions": {
+          "min_money": 20
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Generous donation. The center appreciates it.",
+            "message_vi": "Quyên góp hào phóng. Trung tâm rất cảm kích.",
+            "stat_changes": {
+              "money": -20,
+              "happiness": 5
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Downsizing the Home",
+    "title_vi": "Thu Nhỏ Chỗ Ở",
+    "description_en": "The big house feels empty now. Maybe it's time to move somewhere smaller?",
+    "description_vi": "Ngôi nhà lớn giờ cảm thấy trống vắng. Có lẽ đến lúc chuyển đến chỗ nhỏ hơn?",
+    "conditions": {
+      "min_age": 62,
+      "max_age": 75,
+      "requires_flags": [
+        "owns_house"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Sell the house and rent a cozy apartment",
+        "content_vi": "Bán nhà và thuê căn hộ nhỏ ấm cúng",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 75,
+            "message_en": "Got a good price! Less maintenance, more freedom.",
+            "message_vi": "Bán được giá tốt! Ít bảo trì hơn, tự do hơn.",
+            "stat_changes": {
+              "money": 150,
+              "happiness": 8
+            },
+            "set_flags": {
+              "owns_house": false
+            }
+          },
+          {
+            "probability": 25,
+            "message_en": "Hard to leave the memories. Bittersweet.",
+            "message_vi": "Khó rời xa kỷ niệm. Buồn vui lẫn lộn.",
+            "stat_changes": {
+              "money": 120,
+              "happiness": 3
+            },
+            "set_flags": {
+              "owns_house": false
+            }
+          }
+        ]
+      },
+      {
+        "content_en": "Stay and convert extra rooms to hobby spaces",
+        "content_vi": "Ở lại và biến phòng thừa thành phòng sở thích",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Art studio, reading nook, and workshop! House feels alive again.",
+            "message_vi": "Xưởng vẽ, góc đọc sách và phòng thủ công! Nhà lại tràn đầy sức sống.",
+            "stat_changes": {
+              "happiness": 9
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Rent out extra rooms for income",
+        "content_vi": "Cho thuê phòng thừa để kiếm thêm",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 65,
+            "message_en": "Nice tenants! Extra income and company.",
+            "message_vi": "Người thuê tốt! Thêm thu nhập và có bạn.",
+            "stat_changes": {
+              "money": 40,
+              "happiness": 5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 35,
+            "message_en": "Problematic tenants. Noise and mess.",
+            "message_vi": "Người thuê khó chịu. Ồn ào và bừa bộn.",
+            "stat_changes": {
+              "money": 25,
+              "happiness": -12
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Golden Wedding Anniversary",
+    "title_vi": "Kỷ Niệm Cưới Vàng",
+    "description_en": "Decades of marriage. Your family wants to celebrate this milestone.",
+    "description_vi": "Hàng chục năm hôn nhân. Gia đình muốn kỷ niệm cột mốc này.",
+    "conditions": {
+      "min_age": 62,
+      "max_age": 78,
+      "requires_flags": [
+        "is_married"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Host a big family gathering ($40)",
+        "content_vi": "Tổ chức tiệc gia đình lớn ($40)",
+        "display_conditions": {
+          "min_money": 40
+        },
+        "outcomes": [
+          {
+            "probability": 90,
+            "message_en": "All generations together! The most beautiful celebration.",
+            "message_vi": "Tất cả các thế hệ cùng nhau! Lễ kỷ niệm đẹp nhất.",
+            "stat_changes": {
+              "money": -40,
+              "happiness": 15
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 10,
+            "message_en": "Family drama at the party. Still mostly great.",
+            "message_vi": "Drama gia đình tại tiệc. Nhưng nhìn chung vẫn tuyệt.",
+            "stat_changes": {
+              "money": -40,
+              "happiness": 8
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Renew your vows privately",
+        "content_vi": "Làm mới lời thề riêng tư",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Just the two of you. More in love than ever.",
+            "message_vi": "Chỉ hai người. Yêu nhau hơn bao giờ hết.",
+            "stat_changes": {
+              "happiness": 13
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Simple dinner at home",
+        "content_vi": "Tiệc tối đơn giản tại nhà",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Quiet but heartfelt. A lifetime of memories.",
+            "message_vi": "Yên tĩnh nhưng chân thành. Cả đời kỷ niệm.",
+            "stat_changes": {
+              "happiness": 9
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Medical Scare",
+    "title_vi": "Sợ Hãi Y Tế",
+    "description_en": "You wake up with chest pain. Your family rushes you to the hospital.",
+    "description_vi": "Bạn thức dậy với cơn đau ngực. Gia đình vội đưa bạn đến bệnh viện.",
+    "conditions": {
+      "min_age": 65,
+      "max_age": 80
+    },
+    "choices": [
+      {
+        "content_en": "Follow all doctor's recommendations ($40)",
+        "content_vi": "Tuân theo mọi hướng dẫn bác sĩ ($40)",
+        "display_conditions": {
+          "min_money": 40
+        },
+        "outcomes": [
+          {
+            "probability": 75,
+            "message_en": "Just a scare. Diet and medication prescribed.",
+            "message_vi": "Chỉ là hù dọa. Được kê chế độ ăn và thuốc.",
+            "stat_changes": {
+              "money": -40,
+              "health": 5,
+              "happiness": 4
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 25,
+            "message_en": "Minor surgery needed. Successful recovery.",
+            "message_vi": "Cần phẫu thuật nhỏ. Hồi phục thành công.",
+            "stat_changes": {
+              "money": -60,
+              "health": -5,
+              "happiness": -8
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Get second opinion from specialist ($20)",
+        "content_vi": "Xin ý kiến bác sĩ chuyên khoa ($20)",
+        "display_conditions": {
+          "min_money": 20
+        },
+        "outcomes": [
+          {
+            "probability": 80,
+            "message_en": "Specialist confirmed it's manageable. Relief!",
+            "message_vi": "Chuyên gia xác nhận có thể kiểm soát. Nhẹ nhõm!",
+            "stat_changes": {
+              "money": -20,
+              "health": 3,
+              "happiness": 5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 20,
+            "message_en": "More tests needed. Stressful waiting.",
+            "message_vi": "Cần thêm xét nghiệm. Chờ đợi căng thẳng.",
+            "stat_changes": {
+              "money": -30,
+              "happiness": -15
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Tough it out at home",
+        "content_vi": "Tự chịu ở nhà",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 30,
+            "message_en": "Symptoms subsided on their own.",
+            "message_vi": "Triệu chứng tự hết.",
+            "stat_changes": {
+              "happiness": 2
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 70,
+            "message_en": "Got worse. Emergency room. Huge bill.",
+            "message_vi": "Nặng hơn. Cấp cứu. Hóa đơn khổng lồ.",
+            "stat_changes": {
+              "health": -20,
+              "money": -80,
+              "happiness": -23
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Community Involvement",
+    "title_vi": "Tham Gia Cộng Đồng",
+    "description_en": "The neighborhood association invites you to join their activities.",
+    "description_vi": "Hội khu dân cư mời bạn tham gia hoạt động.",
+    "conditions": {
+      "min_age": 60,
+      "max_age": 78
+    },
+    "choices": [
+      {
+        "content_en": "Become an active community member",
+        "content_vi": "Trở thành thành viên tích cực",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 80,
+            "message_en": "New friends and a sense of belonging. Golden years are bright.",
+            "message_vi": "Bạn mới và cảm giác thuộc về. Những năm vàng sáng lạng.",
+            "stat_changes": {
+              "happiness": 10,
+              "health": 3
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 20,
+            "message_en": "Community politics are exhausting.",
+            "message_vi": "Chính trị cộng đồng thật mệt mỏi.",
+            "stat_changes": {
+              "happiness": -8
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Organize neighborhood events",
+        "content_vi": "Tổ chức sự kiện khu phố",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Everyone loves the events! You're the neighborhood star.",
+            "message_vi": "Mọi người yêu thích sự kiện! Bạn là ngôi sao khu phố.",
+            "stat_changes": {
+              "happiness": 11
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 30,
+            "message_en": "Too much work organizing. But people appreciated it.",
+            "message_vi": "Quá nhiều việc tổ chức. Nhưng mọi người cảm kích.",
+            "stat_changes": {
+              "happiness": 4,
+              "health": -3
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Prefer peaceful solitude",
+        "content_vi": "Thích sự yên tĩnh cô đơn",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Quiet days reading and reflecting. Inner peace.",
+            "message_vi": "Những ngày yên tĩnh đọc sách và suy ngẫm. Bình an nội tâm.",
+            "stat_changes": {
+              "happiness": 4
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Writing Memoirs",
+    "title_vi": "Viết Hồi Ký",
+    "description_en": "You've lived a full life. Maybe it's time to write it all down.",
+    "description_vi": "Bạn đã sống một cuộc đời trọn vẹn. Có lẽ đến lúc viết lại tất cả.",
+    "conditions": {
+      "min_age": 65,
+      "max_age": 80
+    },
+    "choices": [
+      {
+        "content_en": "Write a memoir for your family",
+        "content_vi": "Viết hồi ký cho gia đình",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 80,
+            "message_en": "Family is moved to tears reading your story. Legacy preserved.",
+            "message_vi": "Gia đình xúc động khi đọc câu chuyện. Di sản được bảo tồn.",
+            "stat_changes": {
+              "happiness": 13
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 20,
+            "message_en": "Some memories are painful to revisit. But cathartic.",
+            "message_vi": "Một số ký ức đau buồn khi nhớ lại. Nhưng giải tỏa.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Try to publish a book",
+        "content_vi": "Cố gắng xuất bản sách",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 30,
+            "message_en": "Published! A local bestseller. Amazing achievement.",
+            "message_vi": "Xuất bản! Sách bán chạy địa phương. Thành tựu tuyệt vời.",
+            "stat_changes": {
+              "money": 50,
+              "happiness": 15
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 70,
+            "message_en": "Rejected by publishers. But the writing was healing.",
+            "message_vi": "Bị nhà xuất bản từ chối. Nhưng việc viết rất chữa lành.",
+            "stat_changes": {
+              "happiness": 4
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Record audio stories for grandchildren",
+        "content_vi": "Ghi âm câu chuyện cho cháu nghe",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Grandchildren listen to your stories every night. Precious.",
+            "message_vi": "Cháu nghe chuyện bạn kể mỗi tối. Thật quý giá.",
+            "stat_changes": {
+              "happiness": 11
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Peaceful Days",
+    "title_vi": "Những Ngày Bình Yên",
+    "description_en": "Another quiet morning. The sun shines through the window. Life is simple.",
+    "description_vi": "Thêm một buổi sáng yên tĩnh. Nắng chiếu qua cửa sổ. Cuộc sống đơn giản.",
+    "conditions": {
+      "min_age": 65,
+      "max_age": 80
+    },
+    "choices": [
+      {
+        "content_en": "Enjoy a slow morning walk",
+        "content_vi": "Tận hưởng buổi đi bộ sáng chậm rãi",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 85,
+            "message_en": "Fresh air and gentle exercise. Body and mind refreshed.",
+            "message_vi": "Không khí trong lành và tập nhẹ. Thể chất và tinh thần sảng khoái.",
+            "stat_changes": {
+              "health": 5,
+              "happiness": 6
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 15,
+            "message_en": "Slight stumble. Need to be more careful.",
+            "message_vi": "Suýt vấp. Cần cẩn thận hơn.",
+            "stat_changes": {
+              "health": -3,
+              "happiness": 3
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Call an old friend",
+        "content_vi": "Gọi cho bạn cũ",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Wonderful conversation. Friendship is timeless.",
+            "message_vi": "Cuộc trò chuyện tuyệt vời. Tình bạn không có tuổi.",
+            "stat_changes": {
+              "happiness": 8
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 30,
+            "message_en": "They didn't pick up. Hope they're okay.",
+            "message_vi": "Họ không nghe máy. Hy vọng họ ổn.",
+            "stat_changes": {
+              "happiness": -5
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Read a good book all day",
+        "content_vi": "Đọc sách hay cả ngày",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Lost in a great story. Time well spent.",
+            "message_vi": "Chìm đắm trong câu chuyện hay. Thời gian dùng xứng đáng.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Cooking Class for Seniors",
+    "title_vi": "Lớp Nấu Ăn Cho Người Cao Tuổi",
+    "description_en": "A local center offers cooking classes for seniors. Sounds fun!",
+    "description_vi": "Trung tâm địa phương mở lớp nấu ăn cho người cao tuổi. Nghe vui!",
+    "conditions": {
+      "min_age": 60,
+      "max_age": 78
+    },
+    "choices": [
+      {
+        "content_en": "Join and learn new recipes ($10)",
+        "content_vi": "Tham gia và học công thức mới ($10)",
+        "display_conditions": {
+          "min_money": 10
+        },
+        "outcomes": [
+          {
+            "probability": 85,
+            "message_en": "Discovered a talent for cooking! Family loves your new dishes.",
+            "message_vi": "Phát hiện tài nấu nướng! Gia đình mê món mới.",
+            "stat_changes": {
+              "money": -10,
+              "happiness": 10,
+              "health": 5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 15,
+            "message_en": "Burned a dish but made new friends in class.",
+            "message_vi": "Cháy một món nhưng có bạn mới trong lớp.",
+            "stat_changes": {
+              "money": -10,
+              "happiness": 6
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Watch cooking shows at home instead",
+        "content_vi": "Xem chương trình nấu ăn ở nhà",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Learned a few tricks. Comfortable at your own pace.",
+            "message_vi": "Học vài mẹo. Thoải mái theo tốc độ riêng.",
+            "stat_changes": {
+              "happiness": 4
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Cook your family's traditional recipes",
+        "content_vi": "Nấu công thức truyền thống gia đình",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Preserving family culinary heritage. Grandkids want the recipe.",
+            "message_vi": "Giữ gìn di sản ẩm thực gia đình. Cháu đòi công thức.",
+            "stat_changes": {
+              "happiness": 8
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Spouse's Health Crisis",
+    "title_vi": "Vấn Đề Sức Khỏe Của Vợ/Chồng",
+    "description_en": "Your spouse has been diagnosed with a serious condition. They need your full support.",
+    "description_vi": "Vợ/chồng bạn được chẩn đoán bệnh nặng. Họ cần sự hỗ trợ hoàn toàn từ bạn.",
+    "conditions": {
+      "min_age": 62,
+      "max_age": 80,
+      "requires_flags": [
+        "is_married"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Get the best treatment available ($80)",
+        "content_vi": "Tìm phương pháp điều trị tốt nhất ($80)",
+        "display_conditions": {
+          "min_money": 80
+        },
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Treatment worked! Spouse is recovering slowly.",
+            "message_vi": "Điều trị hiệu quả! Vợ/chồng đang hồi phục.",
+            "stat_changes": {
+              "money": -80,
+              "happiness": 5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 30,
+            "message_en": "Long battle ahead. But you're in it together.",
+            "message_vi": "Cuộc chiến dài phía trước. Nhưng cùng nhau vượt qua.",
+            "stat_changes": {
+              "money": -80,
+              "happiness": -15,
+              "health": -5
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Care for them at home",
+        "content_vi": "Chăm sóc tại nhà",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "Your devoted care made a real difference.",
+            "message_vi": "Sự chăm sóc tận tụy tạo ra sự khác biệt thực sự.",
+            "stat_changes": {
+              "happiness": 3,
+              "health": -8
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 40,
+            "message_en": "Caregiver burnout is real. Both of you struggled.",
+            "message_vi": "Kiệt sức vì chăm sóc. Cả hai đều vất vả.",
+            "stat_changes": {
+              "happiness": -23,
+              "health": -12
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Seek community support",
+        "content_vi": "Tìm sự hỗ trợ cộng đồng",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 80,
+            "message_en": "Support group helped enormously. You're not alone.",
+            "message_vi": "Nhóm hỗ trợ giúp rất nhiều. Bạn không đơn độc.",
+            "stat_changes": {
+              "happiness": 3,
+              "money": -15
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 20,
+            "message_en": "Hard to find the right support. Frustrating.",
+            "message_vi": "Khó tìm hỗ trợ phù hợp. Thất vọng.",
+            "stat_changes": {
+              "happiness": -12
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Financial Scam Alert",
+    "title_vi": "Cảnh Báo Lừa Đảo Tài Chính",
+    "description_en": "Someone calls claiming you won a lottery prize. Just pay a 'processing fee'.",
+    "description_vi": "Ai đó gọi nói bạn trúng xổ số. Chỉ cần trả 'phí xử lý'.",
+    "conditions": {
+      "min_age": 62,
+      "max_age": 80
+    },
+    "choices": [
+      {
+        "content_en": "Hang up immediately — obvious scam",
+        "content_vi": "Cúp máy ngay — lừa đảo rõ ràng",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Smart move! Reported the number to authorities.",
+            "message_vi": "Thông minh! Báo số điện thoại cho cơ quan chức năng.",
+            "stat_changes": {
+              "happiness": 4
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Ask family for advice first",
+        "content_vi": "Hỏi ý kiến gia đình trước",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Family confirmed it's a scam. Dodged a bullet!",
+            "message_vi": "Gia đình xác nhận lừa đảo. Thoát nạn!",
+            "stat_changes": {
+              "happiness": 3
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Pay the 'processing fee' ($30)",
+        "content_vi": "Trả 'phí xử lý' ($30)",
+        "display_conditions": {
+          "min_money": 30
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "It was a scam. Money gone. Feel embarrassed.",
+            "message_vi": "Đó là lừa đảo. Mất tiền. Cảm thấy xấu hổ.",
+            "stat_changes": {
+              "money": -30,
+              "happiness": -30
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Solo Retirement Life",
+    "title_vi": "Cuộc Sống Hưu Trí Đơn Thân",
+    "description_en": "Living alone in retirement. Some days are peaceful, some are lonely.",
+    "description_vi": "Sống một mình khi về hưu. Có ngày bình yên, có ngày cô đơn.",
+    "conditions": {
+      "min_age": 62,
+      "max_age": 80,
+      "requires_flags": [
+        "is_single"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Join a senior social club",
+        "content_vi": "Tham gia câu lạc bộ người cao tuổi",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 80,
+            "message_en": "New friends who understand you! Game nights are the best.",
+            "message_vi": "Bạn mới hiểu bạn! Đêm chơi game vui nhất.",
+            "stat_changes": {
+              "happiness": 11
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 20,
+            "message_en": "Didn't click with anyone. Still worth trying.",
+            "message_vi": "Không hợp ai. Vẫn đáng thử.",
+            "stat_changes": {
+              "happiness": 2
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Adopt a companion pet",
+        "content_vi": "Nhận nuôi thú cưng bầu bạn",
+        "display_conditions": {
+          "min_money": 10
+        },
+        "outcomes": [
+          {
+            "probability": 90,
+            "message_en": "A cat chose you. Best company ever.",
+            "message_vi": "Một chú mèo chọn bạn. Bầu bạn tuyệt nhất.",
+            "stat_changes": {
+              "money": -10,
+              "happiness": 10,
+              "health": 3
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 10,
+            "message_en": "Pet needs more care than expected. But still comforting.",
+            "message_vi": "Thú cưng cần chăm hơn dự kiến. Nhưng vẫn ấm áp.",
+            "stat_changes": {
+              "money": -15,
+              "happiness": 5
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Embrace solitude and independence",
+        "content_vi": "Đón nhận sự cô đơn và tự lập",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "You find peace in your own company. Self-sufficient.",
+            "message_vi": "Bạn tìm thấy bình yên trong sự tự lập. Tự chủ.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Home Repair Emergency",
+    "title_vi": "Sửa Nhà Khẩn Cấp",
+    "description_en": "A pipe burst in the middle of the night. Water everywhere!",
+    "description_vi": "Ống nước vỡ giữa đêm. Nước tràn khắp nơi!",
+    "conditions": {
+      "min_age": 60,
+      "max_age": 80,
+      "requires_flags": [
+        "owns_house"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Call a plumber immediately ($25)",
+        "content_vi": "Gọi thợ sửa ống nước ngay ($25)",
+        "display_conditions": {
+          "min_money": 25
+        },
+        "outcomes": [
+          {
+            "probability": 80,
+            "message_en": "Fixed in a few hours. Could have been worse.",
+            "message_vi": "Sửa xong trong vài giờ. Có thể tệ hơn.",
+            "stat_changes": {
+              "money": -25,
+              "happiness": -5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 20,
+            "message_en": "Plumber found more issues. Expensive repair.",
+            "message_vi": "Thợ phát hiện thêm vấn đề. Sửa tốn kém.",
+            "stat_changes": {
+              "money": -50,
+              "happiness": -15
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Ask a neighbor for help",
+        "content_vi": "Nhờ hàng xóm giúp",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "Neighbor knew plumbing! Fixed it for free.",
+            "message_vi": "Hàng xóm biết sửa ống! Sửa miễn phí.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 40,
+            "message_en": "Temporary fix only. Need a professional later.",
+            "message_vi": "Chỉ sửa tạm. Cần thợ chuyên nghiệp sau.",
+            "stat_changes": {
+              "money": -15,
+              "happiness": -8
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Try to fix it yourself",
+        "content_vi": "Tự sửa",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 30,
+            "message_en": "YouTube saved the day! You're handier than you thought.",
+            "message_vi": "YouTube cứu ngày! Bạn khéo tay hơn tưởng.",
+            "stat_changes": {
+              "happiness": 6
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 70,
+            "message_en": "Made it worse. Had to call emergency plumber.",
+            "message_vi": "Làm tệ hơn. Phải gọi thợ khẩn cấp.",
+            "stat_changes": {
+              "money": -40,
+              "happiness": -15,
+              "health": -3
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Family Reunion",
+    "title_vi": "Họp Mặt Gia Đình",
+    "description_en": "Your children organized a big family reunion. Everyone is coming.",
+    "description_vi": "Con cái tổ chức họp mặt gia đình lớn. Mọi người đều đến.",
+    "conditions": {
+      "min_age": 65,
+      "max_age": 80,
+      "requires_flags": [
+        "has_child"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Host at your home",
+        "content_vi": "Tổ chức tại nhà mình",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 80,
+            "message_en": "House full of laughter and love. Best day in years.",
+            "message_vi": "Nhà tràn ngập tiếng cười và tình yêu. Ngày đẹp nhất nhiều năm.",
+            "stat_changes": {
+              "happiness": 14,
+              "health": -3
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 20,
+            "message_en": "Exhausting to prepare but the smiles made it worth it.",
+            "message_vi": "Mệt để chuẩn bị nhưng nụ cười xứng đáng.",
+            "stat_changes": {
+              "happiness": 8,
+              "health": -5
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Let the kids handle everything",
+        "content_vi": "Để con cái lo hết",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Arrived as a honored guest. They made you feel so special.",
+            "message_vi": "Đến như khách mời danh dự. Họ làm bạn cảm thấy thật đặc biệt.",
+            "stat_changes": {
+              "happiness": 13
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Prefer a small intimate gathering",
+        "content_vi": "Thích họp mặt nhỏ thân mật",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Just close family. Deeper conversations, stronger bonds.",
+            "message_vi": "Chỉ gia đình thân thiết. Trò chuyện sâu hơn, gắn kết hơn.",
+            "stat_changes": {
+              "happiness": 9
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Learning Technology",
+    "title_vi": "Học Công Nghệ",
+    "description_en": "Your grandchild wants to video call, but you can barely use a smartphone.",
+    "description_vi": "Cháu muốn gọi video, nhưng bạn gần như không biết dùng điện thoại thông minh.",
+    "conditions": {
+      "min_age": 62,
+      "max_age": 80
+    },
+    "choices": [
+      {
+        "content_en": "Ask grandchild to teach you",
+        "content_vi": "Nhờ cháu dạy",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 80,
+            "message_en": "Grandchild was so patient! Now you can video call anytime.",
+            "message_vi": "Cháu kiên nhẫn lắm! Giờ bạn gọi video được rồi.",
+            "stat_changes": {
+              "happiness": 10
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 20,
+            "message_en": "Still confusing but you can at least answer calls.",
+            "message_vi": "Vẫn khó hiểu nhưng ít nhất bạn nghe được cuộc gọi.",
+            "stat_changes": {
+              "happiness": 4
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Take a senior tech class ($10)",
+        "content_vi": "Tham gia lớp công nghệ cho người cao tuổi ($10)",
+        "display_conditions": {
+          "min_money": 10
+        },
+        "outcomes": [
+          {
+            "probability": 75,
+            "message_en": "Now you can use social media! Connected to the world.",
+            "message_vi": "Giờ bạn dùng mạng xã hội được! Kết nối thế giới.",
+            "stat_changes": {
+              "money": -10,
+              "happiness": 9
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 25,
+            "message_en": "Too many buttons. But at least you learned the basics.",
+            "message_vi": "Quá nhiều nút. Nhưng ít nhất đã biết cơ bản.",
+            "stat_changes": {
+              "money": -10,
+              "happiness": 3
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Stick to phone calls",
+        "content_vi": "Vẫn gọi điện thoại thường",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Voice is enough. You hear their smile in their words.",
+            "message_vi": "Giọng nói là đủ. Bạn nghe nụ cười qua lời nói.",
+            "stat_changes": {
+              "happiness": 3
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Physical Therapy",
+    "title_vi": "Vật Lý Trị Liệu",
+    "description_en": "Your joints have been aching. The doctor recommends physical therapy.",
+    "description_vi": "Các khớp đang đau nhức. Bác sĩ khuyên vật lý trị liệu.",
+    "conditions": {
+      "min_age": 65,
+      "max_age": 80
+    },
+    "choices": [
+      {
+        "content_en": "Start regular therapy sessions ($20)",
+        "content_vi": "Bắt đầu trị liệu đều đặn ($20)",
+        "display_conditions": {
+          "min_money": 20
+        },
+        "outcomes": [
+          {
+            "probability": 80,
+            "message_en": "Mobility improved! Walking without pain again.",
+            "message_vi": "Khả năng vận động cải thiện! Đi lại không đau nữa.",
+            "stat_changes": {
+              "money": -20,
+              "health": 12,
+              "happiness": 8
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 20,
+            "message_en": "Slow progress but heading in the right direction.",
+            "message_vi": "Tiến triển chậm nhưng đúng hướng.",
+            "stat_changes": {
+              "money": -20,
+              "health": 5,
+              "happiness": 3
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Do gentle exercises at home",
+        "content_vi": "Tập nhẹ tại nhà",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Daily stretching helps! Feeling more flexible.",
+            "message_vi": "Giãn cơ hàng ngày có ích! Cảm thấy linh hoạt hơn.",
+            "stat_changes": {
+              "health": 8,
+              "happiness": 4
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 30,
+            "message_en": "Wrong form. Made the pain worse.",
+            "message_vi": "Tập sai tư thế. Đau hơn.",
+            "stat_changes": {
+              "health": -5,
+              "happiness": -8
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Just take pain medication",
+        "content_vi": "Chỉ uống thuốc giảm đau",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Pain managed. But the root cause remains.",
+            "message_vi": "Giảm đau. Nhưng nguyên nhân gốc vẫn còn.",
+            "stat_changes": {
+              "health": -3,
+              "happiness": 2
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 50,
+            "message_en": "Side effects from medication. Need to switch.",
+            "message_vi": "Tác dụng phụ từ thuốc. Cần đổi thuốc.",
+            "stat_changes": {
+              "health": -8,
+              "happiness": -8
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Charity Work",
+    "title_vi": "Công Tác Từ Thiện",
+    "description_en": "A local charity asks for help distributing food to those in need.",
+    "description_vi": "Tổ chức từ thiện địa phương nhờ phát thức ăn cho người cần.",
+    "conditions": {
+      "min_age": 60,
+      "max_age": 78
+    },
+    "choices": [
+      {
+        "content_en": "Volunteer your time and energy",
+        "content_vi": "Tình nguyện thời gian và công sức",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 85,
+            "message_en": "Seeing grateful faces made everything worth it.",
+            "message_vi": "Thấy khuôn mặt biết ơn làm mọi thứ xứng đáng.",
+            "stat_changes": {
+              "happiness": 11,
+              "health": -2
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 15,
+            "message_en": "Physically demanding. But your heart is full.",
+            "message_vi": "Đòi hỏi thể lực. Nhưng trái tim tràn đầy.",
+            "stat_changes": {
+              "happiness": 6,
+              "health": -5
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Donate money ($25)",
+        "content_vi": "Quyên góp tiền ($25)",
+        "display_conditions": {
+          "min_money": 25
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Your donation feeds many families. Generosity rewarded.",
+            "message_vi": "Khoản đóng góp nuôi nhiều gia đình. Lòng hào phóng được đền đáp.",
+            "stat_changes": {
+              "money": -25,
+              "happiness": 8
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Organize a fundraiser event",
+        "content_vi": "Tổ chức sự kiện gây quỹ",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Raised more than expected! Community rallied together.",
+            "message_vi": "Quyên được nhiều hơn dự kiến! Cộng đồng đoàn kết.",
+            "stat_changes": {
+              "happiness": 13
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 30,
+            "message_en": "Low turnout. But every bit helps.",
+            "message_vi": "Ít người đến. Nhưng mỗi đóng góp đều có ích.",
+            "stat_changes": {
+              "happiness": 4,
+              "health": -3
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Legacy Planning",
+    "title_vi": "Lập Kế Hoạch Di Sản",
+    "description_en": "A lawyer suggests writing a will and planning your legacy properly.",
+    "description_vi": "Luật sư đề nghị viết di chúc và lên kế hoạch di sản.",
+    "conditions": {
+      "min_age": 68,
+      "max_age": 80
+    },
+    "choices": [
+      {
+        "content_en": "Hire a lawyer to draft a proper will ($30)",
+        "content_vi": "Thuê luật sư soạn di chúc ($30)",
+        "display_conditions": {
+          "min_money": 30
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Everything is in order. Peace of mind for you and your family.",
+            "message_vi": "Mọi thứ được sắp xếp. An tâm cho bạn và gia đình.",
+            "stat_changes": {
+              "money": -30,
+              "happiness": 8
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Write it yourself at home",
+        "content_vi": "Tự viết tại nhà",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "Simple but clear. Family knows your wishes.",
+            "message_vi": "Đơn giản nhưng rõ ràng. Gia đình biết ý nguyện bạn.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 40,
+            "message_en": "Some legal issues. May need professional help later.",
+            "message_vi": "Một số vấn đề pháp lý. Có thể cần thợ chuyên nghiệp sau.",
+            "stat_changes": {
+              "happiness": 2
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Discuss it openly with family",
+        "content_vi": "Bàn bạc cởi mở với gia đình",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Important conversations had. Everyone is on the same page.",
+            "message_vi": "Cuộc trò chuyện quan trọng. Mọi người đều hiểu.",
+            "stat_changes": {
+              "happiness": 6
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 30,
+            "message_en": "Some family disagreements surfaced. Stressful topic.",
+            "message_vi": "Một vài bất đồng gia đình nổi lên. Chủ đề căng thẳng.",
+            "stat_changes": {
+              "happiness": -12
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Major Health Emergency",
+    "title_vi": "Cấp Cứu Sức Khỏe Nghiêm Trọng",
+    "description_en": "A serious health scare lands you in the hospital for weeks.",
+    "description_vi": "Một vấn đề sức khỏe nghiêm trọng khiến bạn nhập viện nhiều tuần.",
+    "conditions": {
+      "min_age": 65,
+      "max_age": 80
+    },
+    "choices": [
+      {
+        "content_en": "Full treatment at the best hospital ($100)",
+        "content_vi": "Điều trị toàn phần ở bệnh viện tốt nhất ($100)",
+        "display_conditions": {
+          "min_money": 100
+        },
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Top-notch care. Full recovery expected.",
+            "message_vi": "Chăm sóc hàng đầu. Hồi phục hoàn toàn.",
+            "stat_changes": {
+              "money": -100,
+              "health": 10,
+              "happiness": 3
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 30,
+            "message_en": "Treatment helped but permanent damage remains.",
+            "message_vi": "Điều trị có ích nhưng vẫn còn tổn thương lâu dài.",
+            "stat_changes": {
+              "money": -100,
+              "health": -5,
+              "happiness": -8
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Basic treatment at public hospital ($30)",
+        "content_vi": "Điều trị cơ bản ở bệnh viện công ($30)",
+        "display_conditions": {
+          "min_money": 30
+        },
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Adequate care. Slow but steady recovery.",
+            "message_vi": "Chăm sóc đủ. Hồi phục chậm nhưng chắc.",
+            "stat_changes": {
+              "money": -30,
+              "health": -5,
+              "happiness": -5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 50,
+            "message_en": "Long wait times. Condition worsened before treatment.",
+            "message_vi": "Chờ đợi lâu. Tình trạng xấu đi trước khi được điều trị.",
+            "stat_changes": {
+              "money": -30,
+              "health": -20,
+              "happiness": -23
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Refuse hospitalization",
+        "content_vi": "Từ chối nhập viện",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 20,
+            "message_en": "Stubborn recovery at home. Somehow pulled through.",
+            "message_vi": "Hồi phục cứng đầu ở nhà. Bằng cách nào đó vượt qua.",
+            "stat_changes": {
+              "health": -10,
+              "happiness": -8
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 80,
+            "message_en": "Condition deteriorated rapidly. Critical state.",
+            "message_vi": "Tình trạng xấu đi nhanh chóng. Tình trạng nguy kịch.",
+            "stat_changes": {
+              "health": -35,
+              "happiness": -38
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Rising Cost of Living in Retirement",
+    "title_vi": "Chi Phí Sinh Hoạt Tăng Khi Nghỉ Hưu",
+    "description_en": "Inflation is eating into your fixed pension. Everything costs more now.",
+    "description_vi": "Lạm phát đang ăn mòn lương hưu cố định. Mọi thứ đắt đỏ hơn.",
+    "conditions": {
+      "min_age": 65,
+      "max_age": 78,
+      "requires_flags": [
+        "is_retired"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Cut expenses drastically",
+        "content_vi": "Cắt giảm chi phí mạnh tay",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Living frugally. Basic but manageable.",
+            "message_vi": "Sống tiết kiệm. Cơ bản nhưng xoay sở được.",
+            "stat_changes": {
+              "happiness": -18,
+              "money": -5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 30,
+            "message_en": "Too many cuts. Quality of life suffered.",
+            "message_vi": "Cắt giảm quá nhiều. Chất lượng cuộc sống giảm.",
+            "stat_changes": {
+              "happiness": -30,
+              "health": -5,
+              "money": -5
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Ask children for help",
+        "content_vi": "Nhờ con cái giúp đỡ",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "Children send monthly support. Relief.",
+            "message_vi": "Con cái gửi tiền hỗ trợ hàng tháng. Nhẹ nhõm.",
+            "stat_changes": {
+              "money": 30,
+              "happiness": 3
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 40,
+            "message_en": "Children are struggling too. Minimal help.",
+            "message_vi": "Con cái cũng đang khó khăn. Giúp được ít.",
+            "stat_changes": {
+              "money": 10,
+              "happiness": -15
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Take on part-time work",
+        "content_vi": "Đi làm thêm bán thời gian",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Found a light job. Extra income helps.",
+            "message_vi": "Tìm được công việc nhẹ. Thu nhập thêm có ích.",
+            "stat_changes": {
+              "money": 25,
+              "happiness": 3,
+              "health": -5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 50,
+            "message_en": "Too physically demanding at this age. Had to quit.",
+            "message_vi": "Quá nặng nhọc ở tuổi này. Phải nghỉ.",
+            "stat_changes": {
+              "health": -10,
+              "happiness": -15
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Home Downsizing Decision",
+    "title_vi": "Quyết Định Thu Nhỏ Nhà Ở",
+    "description_en": "Your big house is hard to maintain alone. Maybe it's time to downsize.",
+    "description_vi": "Ngôi nhà lớn khó duy trì một mình. Có lẽ đến lúc chuyển nhỏ hơn.",
+    "conditions": {
+      "min_age": 68,
+      "max_age": 78
+    },
+    "choices": [
+      {
+        "content_en": "Sell the house and move to an apartment",
+        "content_vi": "Bán nhà và chuyển sang căn hộ",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Good profit from the sale! Cozy apartment life.",
+            "message_vi": "Bán được giá tốt! Cuộc sống căn hộ ấm cúng.",
+            "stat_changes": {
+              "money": 80,
+              "happiness": 4
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 30,
+            "message_en": "Hard to let go of memories. Apartment feels small.",
+            "message_vi": "Khó buông bỏ kỷ niệm. Căn hộ cảm thấy chật.",
+            "stat_changes": {
+              "money": 60,
+              "happiness": -15
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Stay and hire help for maintenance ($25/year)",
+        "content_vi": "Ở lại và thuê người bảo trì ($25/năm)",
+        "display_conditions": {
+          "min_money": 25
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Home sweet home. Extra cost but comfortable.",
+            "message_vi": "Nhà là nơi đẹp nhất. Tốn thêm nhưng thoải mái.",
+            "stat_changes": {
+              "money": -25,
+              "happiness": 5
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Move in with adult children",
+        "content_vi": "Sống cùng con cái đã lớn",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "Warm family life. Grandchildren bring joy.",
+            "message_vi": "Cuộc sống gia đình ấm áp. Cháu mang đến niềm vui.",
+            "stat_changes": {
+              "happiness": 9,
+              "money": 40
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 40,
+            "message_en": "Generational conflicts. Different lifestyles clash.",
+            "message_vi": "Xung đột thế hệ. Lối sống khác nhau va chạm.",
+            "stat_changes": {
+              "happiness": -18,
+              "money": 30
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Scam Targeting Seniors",
+    "title_vi": "Lừa Đảo Nhắm Vào Người Già",
+    "description_en": "You receive a suspicious phone call claiming you owe back taxes and must pay immediately.",
+    "description_vi": "Bạn nhận cuộc gọi đáng ngờ nói bạn nợ thuế và phải trả ngay.",
+    "conditions": {
+      "min_age": 65,
+      "max_age": 80
+    },
+    "choices": [
+      {
+        "content_en": "Hang up and report it",
+        "content_vi": "Cúp máy và báo cáo",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Smart move! Police took your report. You're safe.",
+            "message_vi": "Quyết định khôn ngoan! Cảnh sát ghi nhận. Bạn an toàn.",
+            "stat_changes": {
+              "happiness": 3
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Panic and pay them ($60)",
+        "content_vi": "Hoảng sợ và trả tiền ($60)",
+        "display_conditions": {
+          "min_money": 60
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "It was a scam. Money gone forever. Devastating.",
+            "message_vi": "Đó là lừa đảo. Tiền mất vĩnh viễn. Sụp đổ.",
+            "stat_changes": {
+              "money": -60,
+              "happiness": -38
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Ask your children to verify first",
+        "content_vi": "Nhờ con kiểm tra trước",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Children confirmed it's a scam. Crisis averted.",
+            "message_vi": "Con xác nhận là lừa đảo. Tránh được thảm họa.",
+            "stat_changes": {
+              "happiness": 4
+            },
+            "set_flags": {}
+          }
         ]
       }
     ]
