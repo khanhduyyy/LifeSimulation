@@ -1,0 +1,745 @@
+[
+  {
+    "title_en": "Research Grant Opportunity",
+    "title_vi": "Cơ Hội Nhận Tài Trợ Nghiên Cứu",
+    "description_en": "A prestigious foundation is offering research grants. Your proposal could secure funding for the next 3 years.",
+    "description_vi": "Một quỹ uy tín đang cung cấp tài trợ nghiên cứu. Đề xuất của bạn có thể đảm bảo kinh phí cho 3 năm tới.",
+    "i18n_key": "research_grant_opportunity_101",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 25,
+      "max_age": 55,
+      "requires_flags": [
+        "is_employed",
+        "job_research"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Write a comprehensive proposal",
+        "content_vi": "Viết đề xuất toàn diện",
+        "i18n_key": "research_grant_opportunity_101_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "Your proposal was accepted! $200 grant secured. Your reputation grows.",
+            "message_vi": "Đề xuất được chấp nhận! Nhận $200 tài trợ. Danh tiếng của bạn tăng lên.",
+            "i18n_key": "research_grant_opportunity_101_c1_o1",
+            "stat_changes": {
+              "money": 200,
+              "happiness": 20
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 40,
+            "message_en": "Rejected. The competition was fierce. At least you tried.",
+            "message_vi": "Bị từ chối. Cạnh tranh quá khốc liệt. Ít nhất bạn đã cố gắng.",
+            "i18n_key": "research_grant_opportunity_101_c1_o2",
+            "stat_changes": {
+              "happiness": -10,
+              "health": -5
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Collaborate with a colleague on the proposal",
+        "content_vi": "Hợp tác với đồng nghiệp viết đề xuất",
+        "i18n_key": "research_grant_opportunity_101_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Teamwork paid off! Shared $150 grant. Great partnership formed.",
+            "message_vi": "Làm việc nhóm có kết quả! Chia $150 tài trợ. Hình thành đối tác tốt.",
+            "i18n_key": "research_grant_opportunity_101_c2_o1",
+            "stat_changes": {
+              "money": 150,
+              "happiness": 15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 30,
+            "message_en": "Your colleague took credit for most of the work. Frustrating.",
+            "message_vi": "Đồng nghiệp chiếm công lao phần lớn. Thất vọng.",
+            "i18n_key": "research_grant_opportunity_101_c2_o2",
+            "stat_changes": {
+              "happiness": -15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Skip it, focus on current projects",
+        "content_vi": "Bỏ qua, tập trung vào dự án hiện tại",
+        "i18n_key": "research_grant_opportunity_101_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "You maintain steady progress on existing work. No regrets.",
+            "message_vi": "Bạn duy trì tiến độ ổn định với công việc hiện tại. Không hối tiếc.",
+            "i18n_key": "research_grant_opportunity_101_c3_o1",
+            "stat_changes": {
+              "happiness": 3
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Breakthrough Discovery",
+    "title_vi": "Khám Phá Đột Phá",
+    "description_en": "Your research has led to a significant breakthrough. This could change your career trajectory.",
+    "description_vi": "Nghiên cứu của bạn dẫn đến một khám phá quan trọng. Điều này có thể thay đổi quỹ đạo sự nghiệp.",
+    "i18n_key": "breakthrough_discovery_102",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 28,
+      "max_age": 55,
+      "requires_flags": [
+        "is_employed",
+        "job_research"
+      ],
+      "min_work_experience": 3
+    },
+    "choices": [
+      {
+        "content_en": "Publish immediately in a top journal",
+        "content_vi": "Công bố ngay trên tạp chí hàng đầu",
+        "i18n_key": "breakthrough_discovery_102_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 75,
+            "message_en": "Published! Your work gains international recognition. Career boost!",
+            "message_vi": "Đã công bố! Công trình được công nhận quốc tế. Sự nghiệp thăng tiến!",
+            "i18n_key": "breakthrough_discovery_102_c1_o1",
+            "stat_changes": {
+              "happiness": 25,
+              "money": 100
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 25,
+            "message_en": "Peer review found flaws. Back to the drawing board. Embarrassing.",
+            "message_vi": "Phản biện tìm thấy lỗi. Phải làm lại. Xấu hổ.",
+            "i18n_key": "breakthrough_discovery_102_c1_o2",
+            "stat_changes": {
+              "happiness": -20,
+              "health": -10
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Verify results with more experiments first",
+        "content_vi": "Xác minh kết quả với thêm thí nghiệm trước",
+        "i18n_key": "breakthrough_discovery_102_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 80,
+            "message_en": "Thorough verification paid off. Rock-solid publication. Respect earned.",
+            "message_vi": "Xác minh kỹ lưỡng có kết quả. Công bố vững chắc. Được tôn trọng.",
+            "i18n_key": "breakthrough_discovery_102_c2_o1",
+            "stat_changes": {
+              "happiness": 20,
+              "money": 80,
+              "health": -5
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 20,
+            "message_en": "Someone else published similar results first. You were scooped.",
+            "message_vi": "Người khác công bố kết quả tương tự trước. Bạn bị qua mặt.",
+            "i18n_key": "breakthrough_discovery_102_c2_o2",
+            "stat_changes": {
+              "happiness": -25,
+              "health": -8
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Patent the discovery before publishing",
+        "content_vi": "Đăng ký bằng sáng chế trước khi công bố",
+        "i18n_key": "breakthrough_discovery_102_c3",
+        "display_conditions": {
+          "min_money": 50
+        },
+        "outcomes": [
+          {
+            "probability": 65,
+            "message_en": "Patent secured! Future royalties guaranteed. Smart move.",
+            "message_vi": "Bằng sáng chế đã đăng ký! Đảm bảo tiền bản quyền tương lai. Nước đi thông minh.",
+            "i18n_key": "breakthrough_discovery_102_c3_o1",
+            "stat_changes": {
+              "money": 150,
+              "happiness": 22
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 35,
+            "message_en": "Patent process delayed publication. Lost priority. Patent fees wasted.",
+            "message_vi": "Quy trình bằng sáng chế làm chậm công bố. Mất ưu tiên. Phí bằng sáng chế lãng phí.",
+            "i18n_key": "breakthrough_discovery_102_c3_o2",
+            "stat_changes": {
+              "money": -50,
+              "happiness": -18
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Conference Presentation Invitation",
+    "title_vi": "Lời Mời Trình Bày Hội Nghị",
+    "description_en": "You've been invited to present your research at an international conference. Travel costs $80.",
+    "description_vi": "Bạn được mời trình bày nghiên cứu tại hội nghị quốc tế. Chi phí đi lại $80.",
+    "i18n_key": "conference_presentation_103",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 26,
+      "max_age": 55,
+      "requires_flags": [
+        "is_employed",
+        "job_research"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Attend and present your work",
+        "content_vi": "Tham dự và trình bày công trình",
+        "i18n_key": "conference_presentation_103_c1",
+        "display_conditions": {
+          "min_money": 80
+        },
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Great presentation! Made valuable connections. Career opportunities opened.",
+            "message_vi": "Trình bày tuyệt vời! Tạo được kết nối quý giá. Cơ hội nghề nghiệp mở ra.",
+            "i18n_key": "conference_presentation_103_c1_o1",
+            "stat_changes": {
+              "money": -80,
+              "happiness": 18
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 30,
+            "message_en": "Presentation went poorly. Tough questions exposed gaps in your research.",
+            "message_vi": "Trình bày không tốt. Câu hỏi khó bộc lộ khoảng trống trong nghiên cứu.",
+            "i18n_key": "conference_presentation_103_c1_o2",
+            "stat_changes": {
+              "money": -80,
+              "happiness": -15,
+              "health": -8
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Request funding from your institution",
+        "content_vi": "Xin tài trợ từ cơ quan",
+        "i18n_key": "conference_presentation_103_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "Funding approved! Free trip and successful presentation. Win-win.",
+            "message_vi": "Tài trợ được duyệt! Chuyến đi miễn phí và trình bày thành công. Đôi bên cùng có lợi.",
+            "i18n_key": "conference_presentation_103_c2_o1",
+            "stat_changes": {
+              "happiness": 20
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 40,
+            "message_en": "Funding denied. Budget cuts. You miss the conference.",
+            "message_vi": "Tài trợ bị từ chối. Cắt giảm ngân sách. Bạn bỏ lỡ hội nghị.",
+            "i18n_key": "conference_presentation_103_c2_o2",
+            "stat_changes": {
+              "happiness": -12
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Decline the invitation",
+        "content_vi": "Từ chối lời mời",
+        "i18n_key": "conference_presentation_103_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "You stay focused on lab work. Networking opportunity missed.",
+            "message_vi": "Bạn tập trung vào công việc phòng thí nghiệm. Bỏ lỡ cơ hội kết nối.",
+            "i18n_key": "conference_presentation_103_c3_o1",
+            "stat_changes": {
+              "happiness": -5
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Lab Equipment Failure",
+    "title_vi": "Thiết Bị Phòng Thí Nghiệm Hỏng",
+    "description_en": "Critical lab equipment broke down. Repairs cost $120 or you can work around it.",
+    "description_vi": "Thiết bị phòng thí nghiệm quan trọng hỏng. Sửa chữa tốn $120 hoặc bạn có thể tìm cách khác.",
+    "i18n_key": "lab_equipment_failure_104",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 25,
+      "max_age": 55,
+      "requires_flags": [
+        "is_employed",
+        "job_research"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Pay for immediate repairs",
+        "content_vi": "Trả tiền sửa chữa ngay",
+        "i18n_key": "lab_equipment_failure_104_c1",
+        "display_conditions": {
+          "min_money": 120
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Equipment fixed quickly. Research continues without delay.",
+            "message_vi": "Thiết bị được sửa nhanh. Nghiên cứu tiếp tục không bị trì hoãn.",
+            "i18n_key": "lab_equipment_failure_104_c1_o1",
+            "stat_changes": {
+              "money": -120,
+              "happiness": 5
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Use alternative methods and equipment",
+        "content_vi": "Dùng phương pháp và thiết bị thay thế",
+        "i18n_key": "lab_equipment_failure_104_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 55,
+            "message_en": "Creative workaround succeeded! You discovered a better methodology.",
+            "message_vi": "Giải pháp sáng tạo thành công! Bạn khám phá phương pháp tốt hơn.",
+            "i18n_key": "lab_equipment_failure_104_c2_o1",
+            "stat_changes": {
+              "happiness": 15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 45,
+            "message_en": "Alternative methods are slower. Research delayed by months.",
+            "message_vi": "Phương pháp thay thế chậm hơn. Nghiên cứu bị trì hoãn nhiều tháng.",
+            "i18n_key": "lab_equipment_failure_104_c2_o2",
+            "stat_changes": {
+              "happiness": -12,
+              "health": -5
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Apply for emergency equipment funding",
+        "content_vi": "Xin tài trợ thiết bị khẩn cấp",
+        "i18n_key": "lab_equipment_failure_104_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 65,
+            "message_en": "Funding approved! New equipment is even better than the old one.",
+            "message_vi": "Tài trợ được duyệt! Thiết bị mới còn tốt hơn cái cũ.",
+            "i18n_key": "lab_equipment_failure_104_c3_o1",
+            "stat_changes": {
+              "happiness": 18
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 35,
+            "message_en": "Funding denied. Bureaucracy delayed everything. Months wasted.",
+            "message_vi": "Tài trợ bị từ chối. Quan liêu làm chậm mọi thứ. Lãng phí nhiều tháng.",
+            "i18n_key": "lab_equipment_failure_104_c3_o2",
+            "stat_changes": {
+              "happiness": -18,
+              "health": -8
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Mentoring a PhD Student",
+    "title_vi": "Hướng Dẫn Nghiên Cứu Sinh",
+    "description_en": "A talented PhD student wants you as their advisor. It's time-consuming but rewarding.",
+    "description_vi": "Một nghiên cứu sinh tài năng muốn bạn làm người hướng dẫn. Tốn thời gian nhưng bổ ích.",
+    "i18n_key": "mentoring_phd_student_105",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 32,
+      "max_age": 55,
+      "requires_flags": [
+        "is_employed",
+        "job_research"
+      ],
+      "min_work_experience": 7
+    },
+    "choices": [
+      {
+        "content_en": "Accept and mentor them closely",
+        "content_vi": "Chấp nhận và hướng dẫn sát sao",
+        "i18n_key": "mentoring_phd_student_105_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Your student excels! Their success reflects well on you. Fulfilling.",
+            "message_vi": "Học trò của bạn xuất sắc! Thành công của họ làm bạn tự hào. Thỏa mãn.",
+            "i18n_key": "mentoring_phd_student_105_c1_o1",
+            "stat_changes": {
+              "happiness": 20,
+              "health": -8
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 30,
+            "message_en": "Student struggles constantly. Mentoring drains your energy and time.",
+            "message_vi": "Học trò liên tục gặp khó khăn. Hướng dẫn làm cạn kiệt năng lượng và thời gian.",
+            "i18n_key": "mentoring_phd_student_105_c1_o2",
+            "stat_changes": {
+              "happiness": -15,
+              "health": -12
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Accept but maintain boundaries",
+        "content_vi": "Chấp nhận nhưng giữ ranh giới",
+        "i18n_key": "mentoring_phd_student_105_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 75,
+            "message_en": "Balanced mentoring works well. Student progresses, you stay healthy.",
+            "message_vi": "Hướng dẫn cân bằng hiệu quả. Học trò tiến bộ, bạn giữ được sức khỏe.",
+            "i18n_key": "mentoring_phd_student_105_c2_o1",
+            "stat_changes": {
+              "happiness": 12,
+              "health": -3
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 25,
+            "message_en": "Student feels neglected. They switch advisors. Awkward.",
+            "message_vi": "Học trò cảm thấy bị bỏ rơi. Họ đổi người hướng dẫn. Khó xử.",
+            "i18n_key": "mentoring_phd_student_105_c2_o2",
+            "stat_changes": {
+              "happiness": -10
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Decline, focus on your own research",
+        "content_vi": "Từ chối, tập trung nghiên cứu riêng",
+        "i18n_key": "mentoring_phd_student_105_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "More time for your projects. But you miss the mentoring experience.",
+            "message_vi": "Nhiều thời gian cho dự án riêng. Nhưng bạn bỏ lỡ trải nghiệm hướng dẫn.",
+            "i18n_key": "mentoring_phd_student_105_c3_o1",
+            "stat_changes": {
+              "happiness": -3
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Research Ethics Dilemma",
+    "title_vi": "Tình Huống Đạo Đức Nghiên Cứu",
+    "description_en": "Your supervisor pressures you to manipulate data to secure more funding. This crosses ethical lines.",
+    "description_vi": "Người giám sát gây áp lực để bạn thao túng dữ liệu nhằm có thêm tài trợ. Điều này vi phạm đạo đức.",
+    "i18n_key": "research_ethics_dilemma_106",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 27,
+      "max_age": 50,
+      "requires_flags": [
+        "is_employed",
+        "job_research"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Refuse and report to ethics committee",
+        "content_vi": "Từ chối và báo cáo ủy ban đạo đức",
+        "i18n_key": "research_ethics_dilemma_106_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "Ethics committee investigates. You're protected as a whistleblower. Integrity intact.",
+            "message_vi": "Ủy ban đạo đức điều tra. Bạn được bảo vệ như người tố giác. Giữ được liêm chính.",
+            "i18n_key": "research_ethics_dilemma_106_c1_o1",
+            "stat_changes": {
+              "happiness": 15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 40,
+            "message_en": "Supervisor retaliates. Your career suffers but your conscience is clear.",
+            "message_vi": "Người giám sát trả thù. Sự nghiệp bị ảnh hưởng nhưng lương tâm trong sạch.",
+            "i18n_key": "research_ethics_dilemma_106_c1_o2",
+            "stat_changes": {
+              "happiness": -10,
+              "money": -50,
+              "health": -10
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Comply reluctantly to keep your job",
+        "content_vi": "Tuân theo miễn cưỡng để giữ việc",
+        "i18n_key": "research_ethics_dilemma_106_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Funding secured. But guilt haunts you. Your reputation is at risk.",
+            "message_vi": "Tài trợ được đảm bảo. Nhưng tội lỗi ám ảnh bạn. Danh tiếng bị đe dọa.",
+            "i18n_key": "research_ethics_dilemma_106_c2_o1",
+            "stat_changes": {
+              "money": 80,
+              "happiness": -20,
+              "health": -8
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 50,
+            "message_en": "The fraud is discovered. You're implicated. Career destroyed.",
+            "message_vi": "Gian lận bị phát hiện. Bạn bị liên lụy. Sự nghiệp tan vỡ.",
+            "i18n_key": "research_ethics_dilemma_106_c2_o2",
+            "stat_changes": {
+              "happiness": -35,
+              "health": -15,
+              "money": -100
+            },
+            "set_flags": {
+              "research_scandal": true
+            },
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Look for a new position elsewhere",
+        "content_vi": "Tìm vị trí mới ở nơi khác",
+        "i18n_key": "research_ethics_dilemma_106_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 65,
+            "message_en": "Found a better lab with ethical leadership. Fresh start!",
+            "message_vi": "Tìm được phòng thí nghiệm tốt hơn với lãnh đạo có đạo đức. Khởi đầu mới!",
+            "i18n_key": "research_ethics_dilemma_106_c3_o1",
+            "stat_changes": {
+              "happiness": 18,
+              "money": 50
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 35,
+            "message_en": "Job search takes months. Financial stress. But you kept your integrity.",
+            "message_vi": "Tìm việc mất nhiều tháng. Căng thẳng tài chính. Nhưng bạn giữ được liêm chính.",
+            "i18n_key": "research_ethics_dilemma_106_c3_o2",
+            "stat_changes": {
+              "happiness": -8,
+              "money": -60,
+              "health": -10
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Industry Collaboration Offer",
+    "title_vi": "Đề Nghị Hợp Tác Với Doanh Nghiệp",
+    "description_en": "A tech company wants to collaborate on your research. They offer $150 but want exclusive rights.",
+    "description_vi": "Một công ty công nghệ muốn hợp tác nghiên cứu. Họ trả $150 nhưng muốn quyền độc quyền.",
+    "i18n_key": "industry_collaboration_offer_107",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 30,
+      "max_age": 55,
+      "requires_flags": [
+        "is_employed",
+        "job_research"
+      ],
+      "min_work_experience": 5
+    },
+    "choices": [
+      {
+        "content_en": "Accept the exclusive partnership",
+        "content_vi": "Chấp nhận đối tác độc quyền",
+        "i18n_key": "industry_collaboration_offer_107_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Partnership thrives! Funding secured and practical applications developed.",
+            "message_vi": "Đối tác phát triển! Tài trợ được đảm bảo và ứng dụng thực tế được phát triển.",
+            "i18n_key": "industry_collaboration_offer_107_c1_o1",
+            "stat_changes": {
+              "money": 150,
+              "happiness": 15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 30,
+            "message_en": "Company restricts your academic freedom. You regret signing away rights.",
+            "message_vi": "Công ty hạn chế tự do học thuật. Bạn hối hận đã ký nhượng quyền.",
+            "i18n_key": "industry_collaboration_offer_107_c1_o2",
+            "stat_changes": {
+              "money": 150,
+              "happiness": -12
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Negotiate for non-exclusive terms",
+        "content_vi": "Thương lượng điều khoản không độc quyền",
+        "i18n_key": "industry_collaboration_offer_107_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 55,
+            "message_en": "They agree! $100 funding with freedom to publish. Best of both worlds.",
+            "message_vi": "Họ đồng ý! Tài trợ $100 với tự do công bố. Tốt nhất cả hai bên.",
+            "i18n_key": "industry_collaboration_offer_107_c2_o1",
+            "stat_changes": {
+              "money": 100,
+              "happiness": 18
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 45,
+            "message_en": "Company walks away. You maintain independence but lose funding.",
+            "message_vi": "Công ty rút lui. Bạn giữ được độc lập nhưng mất tài trợ.",
+            "i18n_key": "industry_collaboration_offer_107_c2_o2",
+            "stat_changes": {
+              "happiness": -8
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Decline to preserve academic independence",
+        "content_vi": "Từ chối để giữ độc lập học thuật",
+        "i18n_key": "industry_collaboration_offer_107_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "You maintain full control of your research. Pure science over profit.",
+            "message_vi": "Bạn giữ toàn quyền kiểm soát nghiên cứu. Khoa học thuần túy hơn lợi nhuận.",
+            "i18n_key": "industry_collaboration_offer_107_c3_o1",
+            "stat_changes": {
+              "happiness": 8
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  }
+]

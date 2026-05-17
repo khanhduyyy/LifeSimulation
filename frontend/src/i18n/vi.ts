@@ -6,9 +6,29 @@ export const vi: Translations = {
   startSubtitle: 'Mỗi quyết định thay đổi số phận. Mỗi lần chơi là một cuộc đời mới. Bạn sẽ sống cuộc đời như thế nào?',
   startButton: '🎮 Bắt đầu cuộc đời mới',
   featureRandom: 'Kết quả ngẫu nhiên',
-  featureEvents: '40+ Sự kiện',
+  featureEvents: '100+ Sự kiện',
   featureReplay: 'Chơi lại nhiều lần',
   featureEndings: 'Nhiều kết thúc',
+
+  // Tạo nhân vật
+  createTitle: 'Tạo Nhân Vật',
+  createSubtitle: 'Chọn tên, giới tính và hoàn cảnh gia đình để bắt đầu hành trình.',
+  nameLabel: 'Tên nhân vật',
+  namePlaceholder: 'Nhập tên của bạn...',
+  genderLabel: 'Giới tính',
+  genderMale: '👦 Nam',
+  genderFemale: '👧 Nữ',
+  backgroundLabel: 'Gia cảnh',
+  bgPoor: 'Gia đình nghèo',
+  bgPoorDesc: 'Cuộc sống khó khăn nhưng bạn rất kiên cường.',
+  bgMiddle: 'Gia đình trung lưu',
+  bgMiddleDesc: 'Khởi đầu cân bằng với nguồn lực vừa phải.',
+  bgRich: 'Gia đình giàu có',
+  bgRichDesc: 'Đặc quyền đi kèm với áp lực riêng.',
+  bgMoney: 'Tiền',
+  bgHealth: 'Sức khỏe',
+  bgHappiness: 'Hạnh phúc',
+  createButton: '🌟 Bắt đầu cuộc đời',
 
   // Chỉ số
   statAge: 'Tuổi',
@@ -26,6 +46,42 @@ export const vi: Translations = {
   diceResult: 'Kết quả xúc xắc',
   viewResults: '💀 Xem kết quả',
   continueBtn: '➡️ Tiếp tục',
+
+  // Nút hành động
+  btnRelationships: 'Quan hệ',
+  btnJob: 'Công việc',
+  btnAssets: 'Tài sản',
+  btnActions: 'Hành động',
+
+  // Popup Quan hệ
+  relTitle: 'Quan Hệ',
+  relFather: 'Ba',
+  relMother: 'Mẹ',
+  relSpouse: 'Vợ/Chồng',
+  relChildren: 'Con',
+  relNone: 'Chưa có',
+  relAge: 'Tuổi',
+
+  // Popup Công việc
+  jobTitle: 'Công Việc',
+  jobName: 'Chức vụ',
+  jobSalary: 'Lương',
+  jobPosition: 'Cấp bậc',
+  jobNone: 'Chưa có việc',
+
+  // Popup Tài sản
+  assetTitle: 'Tài Sản',
+  assetHouse: 'Nhà',
+  assetCar: 'Xe',
+  assetInsurance: 'Bảo hiểm',
+  assetNone: 'Chưa có tài sản',
+  assetValue: 'Giá trị',
+  assetYes: 'Đang có',
+  assetNo: 'Chưa có',
+
+  // Popup Hành động
+  actionsTitle: 'Hành Động',
+  actionsComingSoon: 'Các hành động sẽ mở khi bạn tiến xa hơn trong cuộc đời.',
 
   // Kết thúc - Chết
   deathTitle: 'Bạn Đã Qua Đời',
@@ -58,4 +114,14 @@ export const vi: Translations = {
   // Ngôn ngữ
   langLabel: '🌐',
   langName: 'VI',
+
+  // Misc
+  close: 'Đóng',
+  yearSummary: (age: number) => `📊 Tổng kết năm (Tuổi ${age})`,
+  summaryContBtn: 'Tiếp tục ▸',
+  yourChoices: 'Lựa chọn của bạn',
+  diceResult: 'Kết quả xúc xắc',
+  continueBtn: 'Tiếp tục ▸',
+  viewResults: 'Xem kết quả ▸',
+  locked: '🔒',
 };

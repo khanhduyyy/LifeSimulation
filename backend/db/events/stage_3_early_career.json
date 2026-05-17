@@ -1,4 +1,4 @@
-[
+﻿[
   {
     "title_en": "Masters Graduation Day",
     "title_vi": "Ngày Tốt Nghiệp Thạc Sĩ",
@@ -29,12 +29,18 @@
             },
             "set_flags": {
               "has_masters": true,
+              "has_grad_degree": true,
               "path_work_graduate": true,
               "is_student": false,
               "path_masters": false
-            }
+            },
+            "i18n_key": "masters_graduation_day_038_c1_o1",
+            "unset_flags": [
+              "is_grad_student"
+            ]
           }
-        ]
+        ],
+        "i18n_key": "masters_graduation_day_038_c1"
       },
       {
         "content_en": "Apply to top companies immediately",
@@ -50,10 +56,15 @@
             },
             "set_flags": {
               "has_masters": true,
+              "has_grad_degree": true,
               "path_work_graduate": true,
               "is_student": false,
               "path_masters": false
-            }
+            },
+            "i18n_key": "masters_graduation_day_038_c2_o1",
+            "unset_flags": [
+              "is_grad_student"
+            ]
           },
           {
             "probability": 40,
@@ -64,12 +75,18 @@
             },
             "set_flags": {
               "has_masters": true,
+              "has_grad_degree": true,
               "path_work_graduate": true,
               "is_student": false,
               "path_masters": false
-            }
+            },
+            "i18n_key": "masters_graduation_day_038_c2_o2",
+            "unset_flags": [
+              "is_grad_student"
+            ]
           }
-        ]
+        ],
+        "i18n_key": "masters_graduation_day_038_c2"
       },
       {
         "content_en": "Take a gap month to recharge",
@@ -86,130 +103,22 @@
             },
             "set_flags": {
               "has_masters": true,
+              "has_grad_degree": true,
               "path_work_graduate": true,
               "is_student": false,
               "path_masters": false
-            }
+            },
+            "i18n_key": "masters_graduation_day_038_c3_o1",
+            "unset_flags": [
+              "is_grad_student"
+            ]
           }
-        ]
+        ],
+        "i18n_key": "masters_graduation_day_038_c3"
       }
-    ]
-  },
-  {
-    "title_en": "Graduate Job Search",
-    "title_vi": "Tìm Việc Sau Tốt Nghiệp",
-    "description_en": "With your degree in hand, it's time to enter the job market. What field will you pursue?",
-    "description_vi": "Với tấm bằng trong tay, đã đến lúc bước vào thị trường lao động. Bạn sẽ theo đuổi lĩnh vực nào?",
-    "conditions": {
-      "min_age": 22,
-      "max_age": 29,
-      "requires_flags": [
-        "path_work_graduate"
-      ],
-      "excludes_flags": [
-        "job_office",
-        "job_manual",
-        "job_business",
-        "is_employed",
-        "is_student"
-      ]
-    },
-    "choices": [
-      {
-        "content_en": "Apply for professional office positions",
-        "content_vi": "Ứng tuyển vị trí văn phòng chuyên nghiệp",
-        "display_conditions": null,
-        "outcomes": [
-          {
-            "probability": 75,
-            "message_en": "Hired as a junior analyst! Your degree made a difference.",
-            "message_vi": "Được tuyển làm chuyên viên phân tích! Tấm bằng tạo sự khác biệt.",
-            "stat_changes": {
-              "money": 80,
-              "happiness": 8
-            },
-            "set_flags": {
-              "job_office": true,
-              "job_title": "Junior Analyst",
-              "is_employed": true
-            }
-          },
-          {
-            "probability": 25,
-            "message_en": "Competition is fierce. No offers yet.",
-            "message_vi": "Cạnh tranh khốc liệt. Chưa có lời mời.",
-            "stat_changes": {
-              "happiness": -15
-            },
-            "set_flags": {}
-          }
-        ]
-      },
-      {
-        "content_en": "Look for technical/skilled labor work",
-        "content_vi": "Tìm việc kỹ thuật/lao động tay nghề",
-        "display_conditions": null,
-        "outcomes": [
-          {
-            "probability": 80,
-            "message_en": "Got hired as a technician. Good pay for skilled work.",
-            "message_vi": "Được tuyển làm kỹ thuật viên. Lương tốt cho công việc chuyên môn.",
-            "stat_changes": {
-              "money": 70,
-              "happiness": 3,
-              "health": -3
-            },
-            "set_flags": {
-              "job_manual": true,
-              "job_title": "Technician",
-              "is_employed": true
-            }
-          },
-          {
-            "probability": 20,
-            "message_en": "Overqualified, they say. Keep looking.",
-            "message_vi": "Họ nói bạn quá giỏi cho vị trí này. Tiếp tục tìm.",
-            "stat_changes": {
-              "happiness": -12
-            },
-            "set_flags": {}
-          }
-        ]
-      },
-      {
-        "content_en": "Start your own consulting business",
-        "content_vi": "Mở công ty tư vấn riêng",
-        "display_conditions": {
-          "min_money": 60
-        },
-        "outcomes": [
-          {
-            "probability": 55,
-            "message_en": "Your consulting firm is off to a great start!",
-            "message_vi": "Công ty tư vấn bắt đầu rất tốt!",
-            "stat_changes": {
-              "money": -60,
-              "happiness": 10
-            },
-            "set_flags": {
-              "job_business": true,
-              "job_title": "Consultant",
-              "is_employed": true
-            }
-          },
-          {
-            "probability": 45,
-            "message_en": "Business struggled. Back to job hunting.",
-            "message_vi": "Kinh doanh khó khăn. Quay lại tìm việc.",
-            "stat_changes": {
-              "money": -60,
-              "happiness": -23
-            },
-            "set_flags": {}
-          }
-        ]
-      }
-    ]
+    ],
+    "i18n_key": "masters_graduation_day_038",
+    "event_type": "milestone"
   },
   {
     "title_en": "Research Opportunity",
@@ -238,7 +147,9 @@
               "happiness": 8,
               "health": -5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "research_opportunity_040_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 35,
@@ -248,9 +159,12 @@
               "happiness": -8,
               "health": -5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "research_opportunity_040_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "research_opportunity_040_c1"
       },
       {
         "content_en": "Balance with part-time tutoring for income",
@@ -265,7 +179,9 @@
               "money": 30,
               "happiness": 3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "research_opportunity_040_c2_o1",
+            "unset_flags": []
           },
           {
             "probability": 30,
@@ -276,9 +192,12 @@
               "happiness": -8,
               "health": -3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "research_opportunity_040_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "research_opportunity_040_c2"
       },
       {
         "content_en": "Focus on finishing thesis instead",
@@ -292,11 +211,16 @@
             "stat_changes": {
               "happiness": 4
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "research_opportunity_040_c3_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "research_opportunity_040_c3"
       }
-    ]
+    ],
+    "i18n_key": "research_opportunity_040",
+    "event_type": "random"
   },
   {
     "title_en": "First Day at the Office",
@@ -308,6 +232,9 @@
       "max_age": 29,
       "requires_flags": [
         "job_office"
+      ],
+      "excludes_flags": [
+        "first_day_done"
       ]
     },
     "choices": [
@@ -323,7 +250,11 @@
             "stat_changes": {
               "happiness": 5
             },
-            "set_flags": {}
+            "set_flags": {
+              "first_day_done": true
+            },
+            "i18n_key": "first_day_at_the_office_041_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 30,
@@ -332,9 +263,14 @@
             "stat_changes": {
               "happiness": 2
             },
-            "set_flags": {}
+            "set_flags": {
+              "first_day_done": true
+            },
+            "i18n_key": "first_day_at_the_office_041_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "first_day_at_the_office_041_c1"
       },
       {
         "content_en": "Keep your head down and learn the ropes",
@@ -348,7 +284,11 @@
             "stat_changes": {
               "happiness": 3
             },
-            "set_flags": {}
+            "set_flags": {
+              "first_day_done": true
+            },
+            "i18n_key": "first_day_at_the_office_041_c2_o1",
+            "unset_flags": []
           },
           {
             "probability": 20,
@@ -357,9 +297,14 @@
             "stat_changes": {
               "happiness": -8
             },
-            "set_flags": {}
+            "set_flags": {
+              "first_day_done": true
+            },
+            "i18n_key": "first_day_at_the_office_041_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "first_day_at_the_office_041_c2"
       },
       {
         "content_en": "Ask to join the most challenging project",
@@ -374,7 +319,11 @@
               "happiness": 8,
               "health": -5
             },
-            "set_flags": {}
+            "set_flags": {
+              "first_day_done": true
+            },
+            "i18n_key": "first_day_at_the_office_041_c3_o1",
+            "unset_flags": []
           },
           {
             "probability": 50,
@@ -383,15 +332,22 @@
             "stat_changes": {
               "happiness": -5
             },
-            "set_flags": {}
+            "set_flags": {
+              "first_day_done": true
+            },
+            "i18n_key": "first_day_at_the_office_041_c3_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "first_day_at_the_office_041_c3"
       }
-    ]
+    ],
+    "i18n_key": "first_day_at_the_office_041",
+    "event_type": "random"
   },
   {
-    "title_en": "First Day at the Factory",
-    "title_vi": "Ngày Đầu Tiên Tại Nhà Máy",
+    "title_en": "Work Day at the Factory",
+    "title_vi": "Ngày Làm Việc Tại Nhà Máy",
     "description_en": "The factory floor is loud and hot. Your shift foreman is a tough old veteran.",
     "description_vi": "Xưởng nhà máy ồn ào và nóng bức. Tổ trưởng ca là một cựu binh khắt khe.",
     "conditions": {
@@ -416,7 +372,11 @@
               "happiness": 4,
               "health": -5
             },
-            "set_flags": {}
+            "set_flags": {
+              "first_day_done": true
+            },
+            "i18n_key": "first_day_at_the_factory_042_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 35,
@@ -426,9 +386,14 @@
               "health": -10,
               "happiness": -8
             },
-            "set_flags": {}
+            "set_flags": {
+              "first_day_done": true
+            },
+            "i18n_key": "first_day_at_the_factory_042_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "first_day_at_the_factory_042_c1"
       },
       {
         "content_en": "Form alliances with coworkers",
@@ -436,25 +401,34 @@
         "display_conditions": null,
         "outcomes": [
           {
-            "probability": 70,
+            "probability": 64,
             "message_en": "Your coworkers cover for you. Job feels more bearable.",
             "message_vi": "Đồng nghiệp che chắn cho bạn. Công việc dễ chịu hơn.",
             "stat_changes": {
               "happiness": 6
             },
-            "set_flags": {}
+            "set_flags": {
+              "first_day_done": true
+            },
+            "i18n_key": "first_day_at_the_factory_042_c2_o1",
+            "unset_flags": []
           },
           {
-            "probability": 30,
+            "probability": 36,
             "message_en": "Some workers are territorial. You got the worst shifts.",
             "message_vi": "Một số công nhân khó tính. Bạn nhận ca tệ nhất.",
             "stat_changes": {
               "happiness": -12,
               "health": -3
             },
-            "set_flags": {}
+            "set_flags": {
+              "first_day_done": true
+            },
+            "i18n_key": "first_day_at_the_factory_042_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "first_day_at_the_factory_042_c2"
       },
       {
         "content_en": "File a complaint about safety conditions",
@@ -469,7 +443,11 @@
               "happiness": 5,
               "health": 5
             },
-            "set_flags": {}
+            "set_flags": {
+              "first_day_done": true
+            },
+            "i18n_key": "first_day_at_the_factory_042_c3_o1",
+            "unset_flags": []
           },
           {
             "probability": 60,
@@ -479,127 +457,18 @@
               "happiness": -18,
               "health": -5
             },
-            "set_flags": {}
+            "set_flags": {
+              "first_day_done": true
+            },
+            "i18n_key": "first_day_at_the_factory_042_c3_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "first_day_at_the_factory_042_c3"
       }
-    ]
-  },
-  {
-    "title_en": "Career Crossroads",
-    "title_vi": "Ngã Tư Sự Nghiệp",
-    "description_en": "You've been working odd jobs. It's time to pick a real career direction.",
-    "description_vi": "Bạn đã làm đủ thứ việc vặt. Đã đến lúc chọn hướng sự nghiệp thực sự.",
-    "conditions": {
-      "min_age": 19,
-      "max_age": 29,
-      "requires_flags": [
-        "path_work_early"
-      ],
-      "excludes_flags": [
-        "job_office",
-        "job_manual",
-        "job_business",
-        "is_employed",
-        "is_student"
-      ]
-    },
-    "choices": [
-      {
-        "content_en": "Look for an office job",
-        "content_vi": "Tìm việc văn phòng",
-        "display_conditions": null,
-        "outcomes": [
-          {
-            "probability": 70,
-            "message_en": "Found a data entry position. Stable pay.",
-            "message_vi": "Tìm được vị trí nhập liệu. Lương ổn.",
-            "stat_changes": {
-              "money": 55,
-              "happiness": 4
-            },
-            "set_flags": {
-              "job_office": true,
-              "job_title": "Office Staff",
-              "is_employed": true
-            }
-          },
-          {
-            "probability": 30,
-            "message_en": "No luck yet. Keep trying next month.",
-            "message_vi": "Chưa có tin tốt. Tiếp tục cố gắng.",
-            "stat_changes": {
-              "happiness": -8
-            },
-            "set_flags": {}
-          }
-        ]
-      },
-      {
-        "content_en": "Take manual labor work",
-        "content_vi": "Nhận việc lao động chân tay",
-        "display_conditions": null,
-        "outcomes": [
-          {
-            "probability": 90,
-            "message_en": "Hired on a construction crew. Good pay for hard work.",
-            "message_vi": "Được nhận vào tổ xây dựng. Lương tốt.",
-            "stat_changes": {
-              "money": 65,
-              "health": -5,
-              "happiness": -5
-            },
-            "set_flags": {
-              "job_manual": true,
-              "job_title": "Construction Worker",
-              "is_employed": true
-            }
-          },
-          {
-            "probability": 10,
-            "message_en": "Crew was full. Come back next week.",
-            "message_vi": "Tổ đã đủ người. Quay lại tuần sau.",
-            "stat_changes": {
-              "happiness": -12
-            },
-            "set_flags": {}
-          }
-        ]
-      },
-      {
-        "content_en": "Start a small business",
-        "content_vi": "Khởi nghiệp kinh doanh nhỏ",
-        "display_conditions": {
-          "min_money": 50
-        },
-        "outcomes": [
-          {
-            "probability": 55,
-            "message_en": "Your small venture is picking up steam!",
-            "message_vi": "Việc kinh doanh nhỏ đang khởi sắc!",
-            "stat_changes": {
-              "money": -50,
-              "happiness": 10
-            },
-            "set_flags": {
-              "job_business": true,
-              "job_title": "Self-Employed",
-              "is_employed": true
-            }
-          },
-          {
-            "probability": 45,
-            "message_en": "Lost the investment. Back to job searching.",
-            "message_vi": "Mất vốn. Quay lại tìm việc.",
-            "stat_changes": {
-              "money": -50,
-              "happiness": -23
-            },
-            "set_flags": {}
-          }
-        ]
-      }
-    ]
+    ],
+    "i18n_key": "first_day_at_the_factory_042",
+    "event_type": "random"
   },
   {
     "title_en": "Performance Review",
@@ -620,25 +489,29 @@
         "display_conditions": null,
         "outcomes": [
           {
-            "probability": 65,
-            "message_en": "Received a raise! Hard work recognized.",
-            "message_vi": "Được tăng lương! Nỗ lực được ghi nhận.",
+            "probability": 60,
+            "message_en": "Excellent feedback! Your work is highly valued.",
+            "message_vi": "Phản hồi xuất sắc! Công việc của bạn được đánh giá cao.",
             "stat_changes": {
-              "money": 50,
-              "happiness": 10
+              "happiness": 12
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "performance_review_044_c1_o1",
+            "unset_flags": []
           },
           {
-            "probability": 35,
-            "message_en": "Good feedback but no raise yet.",
-            "message_vi": "Phản hồi tốt nhưng chưa tăng lương.",
+            "probability": 40,
+            "message_en": "Good feedback with areas to improve.",
+            "message_vi": "Phản hồi tốt với một số điểm cần cải thiện.",
             "stat_changes": {
-              "happiness": -8
+              "happiness": 3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "performance_review_044_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "performance_review_044_c1"
       },
       {
         "content_en": "Request a promotion",
@@ -647,15 +520,16 @@
         "outcomes": [
           {
             "probability": 40,
-            "message_en": "Promoted to senior! Pay bump and new title.",
-            "message_vi": "Thăng lên chuyên viên cao cấp! Tăng lương.",
+            "message_en": "Promoted to senior! New responsibilities and title.",
+            "message_vi": "Thăng lên chuyên viên cao cấp! Trách nhiệm mới.",
             "stat_changes": {
-              "money": 80,
-              "happiness": 13
+              "happiness": 15
             },
             "set_flags": {
               "job_office_senior": true
-            }
+            },
+            "i18n_key": "performance_review_044_c2_o1",
+            "unset_flags": []
           },
           {
             "probability": 60,
@@ -664,9 +538,12 @@
             "stat_changes": {
               "happiness": -15
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "performance_review_044_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "performance_review_044_c2"
       },
       {
         "content_en": "Accept whatever they offer",
@@ -674,27 +551,34 @@
         "display_conditions": null,
         "outcomes": [
           {
-            "probability": 70,
+            "probability": 64,
             "message_en": "Small cost-of-living raise.",
             "message_vi": "Tăng lương nhỏ theo sinh hoạt.",
             "stat_changes": {
               "money": 20,
               "happiness": 1
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "performance_review_044_c3_o1",
+            "unset_flags": []
           },
           {
-            "probability": 30,
+            "probability": 36,
             "message_en": "No raise at all this year.",
             "message_vi": "Không tăng lương năm nay.",
             "stat_changes": {
               "happiness": -12
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "performance_review_044_c3_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "performance_review_044_c3"
       }
-    ]
+    ],
+    "i18n_key": "performance_review_044",
+    "event_type": "random"
   },
   {
     "title_en": "Workplace Accident",
@@ -722,7 +606,9 @@
               "money": 50,
               "happiness": 3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "workplace_accident_045_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 40,
@@ -731,9 +617,12 @@
             "stat_changes": {
               "happiness": -15
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "workplace_accident_045_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "workplace_accident_045_c1"
       },
       {
         "content_en": "Shake it off and keep working",
@@ -748,7 +637,9 @@
               "health": -5,
               "happiness": 3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "workplace_accident_045_c2_o1",
+            "unset_flags": []
           },
           {
             "probability": 50,
@@ -759,9 +650,12 @@
               "money": -40,
               "happiness": -15
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "workplace_accident_045_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "workplace_accident_045_c2"
       },
       {
         "content_en": "Take sick leave and see a doctor",
@@ -776,7 +670,9 @@
               "money": -20,
               "health": 10
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "workplace_accident_045_c3_o1",
+            "unset_flags": []
           },
           {
             "probability": 20,
@@ -787,10 +683,20 @@
               "health": 8,
               "happiness": -8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "workplace_accident_045_c3_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "workplace_accident_045_c3"
       }
+    ],
+    "i18n_key": "workplace_accident_045",
+    "event_type": "arc",
+    "arc_id": "manual_labor",
+    "arc_sequence": 1,
+    "arc_trigger_flags": [
+      "job_manual"
     ]
   },
   {
@@ -818,7 +724,9 @@
             "stat_changes": {
               "happiness": 8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "office_politics_046_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 50,
@@ -827,9 +735,12 @@
             "stat_changes": {
               "happiness": -23
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "office_politics_046_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "office_politics_046_c1"
       },
       {
         "content_en": "Document everything and report to HR",
@@ -843,7 +754,9 @@
             "stat_changes": {
               "happiness": 6
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "office_politics_046_c2_o1",
+            "unset_flags": []
           },
           {
             "probability": 35,
@@ -852,9 +765,12 @@
             "stat_changes": {
               "happiness": -12
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "office_politics_046_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "office_politics_046_c2"
       },
       {
         "content_en": "Outshine them with better work",
@@ -862,208 +778,34 @@
         "display_conditions": null,
         "outcomes": [
           {
-            "probability": 70,
+            "probability": 64,
             "message_en": "Your quality speaks for itself. Management noticed.",
             "message_vi": "Chất lượng tự nói lên. Ban quản lý nhận thấy.",
             "stat_changes": {
               "happiness": 5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "office_politics_046_c3_o1",
+            "unset_flags": []
           },
           {
-            "probability": 30,
+            "probability": 36,
             "message_en": "They kept at it. Mental health suffering.",
             "message_vi": "Họ vẫn tiếp tục. Sức khỏe tâm thần ảnh hưởng.",
             "stat_changes": {
               "happiness": -18,
               "health": -5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "office_politics_046_c3_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "office_politics_046_c3"
       }
-    ]
-  },
-  {
-    "title_en": "Switching Jobs",
-    "title_vi": "Chuyển Việc",
-    "description_en": "You've been offered a better position at a competing company.",
-    "description_vi": "Bạn được đề nghị vị trí tốt hơn tại công ty đối thủ.",
-    "conditions": {
-      "min_age": 22,
-      "max_age": 29,
-      "requires_flags": [
-        "job_office"
-      ]
-    },
-    "choices": [
-      {
-        "content_en": "Take the new job",
-        "content_vi": "Nhận công việc mới",
-        "display_conditions": null,
-        "outcomes": [
-          {
-            "probability": 70,
-            "message_en": "New company, new salary, new opportunities!",
-            "message_vi": "Công ty mới, lương mới, cơ hội mới!",
-            "stat_changes": {
-              "money": 60,
-              "happiness": 8
-            },
-            "set_flags": {}
-          },
-          {
-            "probability": 30,
-            "message_en": "New job's culture is terrible. Regret.",
-            "message_vi": "Văn hóa công ty mới rất tệ. Ân hận.",
-            "stat_changes": {
-              "money": 30,
-              "happiness": -15
-            },
-            "set_flags": {}
-          }
-        ]
-      },
-      {
-        "content_en": "Use the offer to negotiate a raise",
-        "content_vi": "Dùng đề nghị để thương lượng tăng lương",
-        "display_conditions": null,
-        "outcomes": [
-          {
-            "probability": 55,
-            "message_en": "They matched the offer! You stay with a raise.",
-            "message_vi": "Họ đáp ứng! Bạn ở lại với lương cao hơn.",
-            "stat_changes": {
-              "money": 40,
-              "happiness": 6
-            },
-            "set_flags": {}
-          },
-          {
-            "probability": 45,
-            "message_en": "They called your bluff. Awkward.",
-            "message_vi": "Họ gọi thẳng. Không thoải mái.",
-            "stat_changes": {
-              "happiness": -8
-            },
-            "set_flags": {}
-          }
-        ]
-      },
-      {
-        "content_en": "Decline and stay loyal",
-        "content_vi": "Từ chối và ở lại trung thành",
-        "display_conditions": null,
-        "outcomes": [
-          {
-            "probability": 100,
-            "message_en": "Loyalty noted. Small appreciation bonus.",
-            "message_vi": "Trung thành được ghi nhận. Thưởng nhỏ.",
-            "stat_changes": {
-              "money": 20,
-              "happiness": 3
-            },
-            "set_flags": {}
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "title_en": "Promotion at the Factory",
-    "title_vi": "Thăng Chức Tại Nhà Máy",
-    "description_en": "Your foreman retires and the plant manager offers you his position.",
-    "description_vi": "Tổ trưởng nghỉ hưu và giám đốc nhà máy đề nghị bạn vị trí đó.",
-    "conditions": {
-      "min_age": 22,
-      "max_age": 29,
-      "requires_flags": [
-        "job_manual"
-      ]
-    },
-    "choices": [
-      {
-        "content_en": "Accept the foreman role",
-        "content_vi": "Chấp nhận vai trò tổ trưởng",
-        "display_conditions": null,
-        "outcomes": [
-          {
-            "probability": 70,
-            "message_en": "Promoted to foreman. More pay, more responsibility.",
-            "message_vi": "Thăng thành tổ trưởng. Lương cao hơn.",
-            "stat_changes": {
-              "money": 50,
-              "happiness": 8
-            },
-            "set_flags": {}
-          },
-          {
-            "probability": 30,
-            "message_en": "Promoted but the team resents you.",
-            "message_vi": "Thăng nhưng tổ oán bạn.",
-            "stat_changes": {
-              "money": 40,
-              "happiness": -8
-            },
-            "set_flags": {}
-          }
-        ]
-      },
-      {
-        "content_en": "Decline and look for better work",
-        "content_vi": "Từ chối và tìm việc tốt hơn",
-        "display_conditions": null,
-        "outcomes": [
-          {
-            "probability": 55,
-            "message_en": "Found a higher-paying construction job.",
-            "message_vi": "Tìm được việc xây dựng lương cao hơn.",
-            "stat_changes": {
-              "money": 70,
-              "happiness": 5,
-              "health": -5
-            },
-            "set_flags": {}
-          },
-          {
-            "probability": 45,
-            "message_en": "Jobless for 2 months. Savings took a hit.",
-            "message_vi": "Thất nghiệp 2 tháng. Tiền tiết kiệm giảm.",
-            "stat_changes": {
-              "money": -40,
-              "happiness": -23
-            },
-            "set_flags": {}
-          }
-        ]
-      },
-      {
-        "content_en": "Negotiate better pay first",
-        "content_vi": "Thương lượng lương tốt hơn trước",
-        "display_conditions": null,
-        "outcomes": [
-          {
-            "probability": 60,
-            "message_en": "They agreed to your terms. Win-win!",
-            "message_vi": "Họ đồng ý. Cả hai đều thắng!",
-            "stat_changes": {
-              "money": 70,
-              "happiness": 10
-            },
-            "set_flags": {}
-          },
-          {
-            "probability": 40,
-            "message_en": "Negotiation failed. Role went to someone else.",
-            "message_vi": "Thương lượng thất bại. Giao vị trí cho người khác.",
-            "stat_changes": {
-              "happiness": -15
-            },
-            "set_flags": {}
-          }
-        ]
-      }
-    ]
+    ],
+    "i18n_key": "office_politics_046",
+    "event_type": "random"
   },
   {
     "title_en": "Side Hustle",
@@ -1089,7 +831,9 @@
               "happiness": 5,
               "health": -3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "side_hustle_049_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 40,
@@ -1099,9 +843,12 @@
               "health": -10,
               "happiness": -12
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "side_hustle_049_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "side_hustle_049_c1"
       },
       {
         "content_en": "Sell handmade goods online",
@@ -1116,7 +863,9 @@
               "money": 40,
               "happiness": 8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "side_hustle_049_c2_o1",
+            "unset_flags": []
           },
           {
             "probability": 50,
@@ -1126,9 +875,12 @@
               "money": 10,
               "happiness": -5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "side_hustle_049_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "side_hustle_049_c2"
       },
       {
         "content_en": "Main job is enough",
@@ -1142,11 +894,16 @@
             "stat_changes": {
               "happiness": 3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "side_hustle_049_c3_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "side_hustle_049_c3"
       }
-    ]
+    ],
+    "i18n_key": "side_hustle_049",
+    "event_type": "random"
   },
   {
     "title_en": "Deadline Crunch",
@@ -1175,7 +932,9 @@
               "happiness": 5,
               "health": -8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "deadline_crunch_050_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 30,
@@ -1185,9 +944,12 @@
               "health": -10,
               "happiness": -8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "deadline_crunch_050_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "deadline_crunch_050_c1"
       },
       {
         "content_en": "Ask for a deadline extension",
@@ -1201,7 +963,9 @@
             "stat_changes": {
               "happiness": 4
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "deadline_crunch_050_c2_o1",
+            "unset_flags": []
           },
           {
             "probability": 50,
@@ -1210,9 +974,12 @@
             "stat_changes": {
               "happiness": -18
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "deadline_crunch_050_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "deadline_crunch_050_c2"
       },
       {
         "content_en": "Delegate tasks to the team",
@@ -1226,7 +993,9 @@
             "stat_changes": {
               "happiness": 8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "deadline_crunch_050_c3_o1",
+            "unset_flags": []
           },
           {
             "probability": 40,
@@ -1235,11 +1004,16 @@
             "stat_changes": {
               "happiness": -8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "deadline_crunch_050_c3_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "deadline_crunch_050_c3"
       }
-    ]
+    ],
+    "i18n_key": "deadline_crunch_050",
+    "event_type": "random"
   },
   {
     "title_en": "Office Team Building",
@@ -1267,7 +1041,9 @@
               "happiness": 8,
               "health": 3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "office_team_building_051_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 25,
@@ -1276,9 +1052,12 @@
             "stat_changes": {
               "happiness": 2
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "office_team_building_051_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "office_team_building_051_c1"
       },
       {
         "content_en": "Network with senior managers",
@@ -1293,7 +1072,9 @@
               "happiness": 6,
               "money": 20
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "office_team_building_051_c2_o1",
+            "unset_flags": []
           },
           {
             "probability": 40,
@@ -1302,9 +1083,12 @@
             "stat_changes": {
               "happiness": -8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "office_team_building_051_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "office_team_building_051_c2"
       },
       {
         "content_en": "Skip it and relax at home",
@@ -1319,11 +1103,16 @@
               "happiness": 3,
               "health": 5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "office_team_building_051_c3_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "office_team_building_051_c3"
       }
-    ]
+    ],
+    "i18n_key": "office_team_building_051",
+    "event_type": "random"
   },
   {
     "title_en": "Night Shift Challenge",
@@ -1352,7 +1141,9 @@
               "health": -10,
               "happiness": -5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "night_shift_challenge_052_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 40,
@@ -1363,9 +1154,12 @@
               "health": -15,
               "happiness": -12
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "night_shift_challenge_052_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "night_shift_challenge_052_c1"
       },
       {
         "content_en": "Negotiate for a different schedule",
@@ -1381,7 +1175,9 @@
               "happiness": 3,
               "health": -5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "night_shift_challenge_052_c2_o1",
+            "unset_flags": []
           },
           {
             "probability": 50,
@@ -1390,9 +1186,12 @@
             "stat_changes": {
               "happiness": -12
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "night_shift_challenge_052_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "night_shift_challenge_052_c2"
       },
       {
         "content_en": "Refuse and risk losing hours",
@@ -1408,11 +1207,16 @@
               "health": 5,
               "happiness": 2
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "night_shift_challenge_052_c3_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "night_shift_challenge_052_c3"
       }
-    ]
+    ],
+    "i18n_key": "night_shift_challenge_052",
+    "event_type": "random"
   },
   {
     "title_en": "Safety Training Day",
@@ -1440,7 +1244,9 @@
               "health": 5,
               "happiness": 4
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "safety_training_day_053_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 20,
@@ -1449,9 +1255,12 @@
             "stat_changes": {
               "happiness": 1
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "safety_training_day_053_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "safety_training_day_053_c1"
       },
       {
         "content_en": "Sleep through it",
@@ -1465,7 +1274,9 @@
             "stat_changes": {
               "happiness": 2
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "safety_training_day_053_c2_o1",
+            "unset_flags": []
           },
           {
             "probability": 60,
@@ -1474,9 +1285,12 @@
             "stat_changes": {
               "happiness": -15
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "safety_training_day_053_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "safety_training_day_053_c2"
       },
       {
         "content_en": "Volunteer to be safety representative",
@@ -1491,7 +1305,9 @@
               "money": 15,
               "happiness": 5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "safety_training_day_053_c3_o1",
+            "unset_flags": []
           },
           {
             "probability": 30,
@@ -1500,11 +1316,16 @@
             "stat_changes": {
               "happiness": -5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "safety_training_day_053_c3_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "safety_training_day_053_c3"
       }
-    ]
+    ],
+    "i18n_key": "safety_training_day_053",
+    "event_type": "random"
   },
   {
     "title_en": "First Big Client",
@@ -1525,7 +1346,7 @@
         "display_conditions": null,
         "outcomes": [
           {
-            "probability": 65,
+            "probability": 59,
             "message_en": "Deal closed! Revenue doubled this month.",
             "message_vi": "Chốt hợp đồng! Doanh thu gấp đôi tháng này.",
             "stat_changes": {
@@ -1533,19 +1354,24 @@
               "happiness": 13,
               "health": -5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "first_big_client_054_c1_o1",
+            "unset_flags": []
           },
           {
-            "probability": 35,
+            "probability": 41,
             "message_en": "They went with a bigger competitor. Heartbreaking.",
             "message_vi": "Họ chọn đối thủ lớn hơn. Đau lòng.",
             "stat_changes": {
               "happiness": -23,
               "health": -3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "first_big_client_054_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "first_big_client_054_c1"
       },
       {
         "content_en": "Offer a competitive discount",
@@ -1553,25 +1379,30 @@
         "display_conditions": null,
         "outcomes": [
           {
-            "probability": 80,
+            "probability": 73,
             "message_en": "Discount worked! Long-term contract signed.",
             "message_vi": "Giảm giá hiệu quả! Ký hợp đồng dài hạn.",
             "stat_changes": {
               "money": 50,
               "happiness": 8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "first_big_client_054_c2_o1",
+            "unset_flags": []
           },
           {
-            "probability": 20,
+            "probability": 27,
             "message_en": "They wanted even more discount. No deal.",
             "message_vi": "Họ muốn giảm thêm. Không có thỏa thuận.",
             "stat_changes": {
               "happiness": -12
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "first_big_client_054_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "first_big_client_054_c2"
       },
       {
         "content_en": "Play it cool and negotiate hard",
@@ -1586,7 +1417,9 @@
               "money": 100,
               "happiness": 10
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "first_big_client_054_c3_o1",
+            "unset_flags": []
           },
           {
             "probability": 50,
@@ -1595,11 +1428,16 @@
             "stat_changes": {
               "happiness": -18
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "first_big_client_054_c3_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "first_big_client_054_c3"
       }
-    ]
+    ],
+    "i18n_key": "first_big_client_054",
+    "event_type": "random"
   },
   {
     "title_en": "Business Expansion",
@@ -1629,7 +1467,9 @@
               "money": -80,
               "happiness": 13
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "business_expansion_055_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 45,
@@ -1639,9 +1479,12 @@
               "money": -80,
               "happiness": -23
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "business_expansion_055_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "business_expansion_055_c1"
       },
       {
         "content_en": "Invest in online presence",
@@ -1656,7 +1499,9 @@
               "money": 40,
               "happiness": 8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "business_expansion_055_c2_o1",
+            "unset_flags": []
           },
           {
             "probability": 30,
@@ -1666,9 +1511,12 @@
               "money": -10,
               "happiness": -5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "business_expansion_055_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "business_expansion_055_c2"
       },
       {
         "content_en": "Stay small and stable",
@@ -1683,11 +1531,16 @@
               "happiness": 4,
               "money": 20
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "business_expansion_055_c3_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "business_expansion_055_c3"
       }
-    ]
+    ],
+    "i18n_key": "business_expansion_055",
+    "event_type": "random"
   },
   {
     "title_en": "Apartment Hunting",
@@ -1707,26 +1560,31 @@
         },
         "outcomes": [
           {
-            "probability": 80,
+            "probability": 76,
             "message_en": "Beautiful new apartment! Quality of life improved.",
             "message_vi": "Căn hộ mới xinh đẹp! Chất lượng cuộc sống cải thiện.",
             "stat_changes": {
               "money": -40,
               "happiness": 9
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "apartment_hunting_056_c1_o1",
+            "unset_flags": []
           },
           {
-            "probability": 20,
+            "probability": 24,
             "message_en": "Nice place but noisy neighbors. Not ideal.",
             "message_vi": "Chỗ đẹp nhưng hàng xóm ồn ào.",
             "stat_changes": {
               "money": -40,
               "happiness": 3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "apartment_hunting_056_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "apartment_hunting_056_c1"
       },
       {
         "content_en": "Find a roommate to split costs",
@@ -1741,7 +1599,9 @@
               "money": 20,
               "happiness": 6
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "apartment_hunting_056_c2_o1",
+            "unset_flags": []
           },
           {
             "probability": 40,
@@ -1750,9 +1610,12 @@
             "stat_changes": {
               "happiness": -15
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "apartment_hunting_056_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "apartment_hunting_056_c2"
       },
       {
         "content_en": "Stay where you are to save money",
@@ -1767,11 +1630,16 @@
               "happiness": -5,
               "money": 10
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "apartment_hunting_056_c3_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "apartment_hunting_056_c3"
       }
-    ]
+    ],
+    "i18n_key": "apartment_hunting_056",
+    "event_type": "random"
   },
   {
     "title_en": "Dating Life",
@@ -1799,7 +1667,9 @@
               "happiness": 10,
               "money": -15
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "dating_life_057_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 50,
@@ -1809,9 +1679,12 @@
               "happiness": -5,
               "money": -15
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "dating_life_057_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "dating_life_057_c1"
       },
       {
         "content_en": "Try dating apps instead",
@@ -1825,7 +1698,9 @@
             "stat_changes": {
               "happiness": 9
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "dating_life_057_c2_o1",
+            "unset_flags": []
           },
           {
             "probability": 60,
@@ -1834,9 +1709,12 @@
             "stat_changes": {
               "happiness": -8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "dating_life_057_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "dating_life_057_c2"
       },
       {
         "content_en": "Focus on career, no time for dating",
@@ -1850,114 +1728,16 @@
             "stat_changes": {
               "happiness": -3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "dating_life_057_c3_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "dating_life_057_c3"
       }
-    ]
-  },
-  {
-    "title_en": "Job Interview",
-    "title_vi": "Phỏng Vấn Xin Việc",
-    "description_en": "You've been job hunting for a while. Finally, a company called you for an interview.",
-    "description_vi": "Bạn tìm việc đã lâu. Cuối cùng, một công ty gọi bạn phỏng vấn.",
-    "conditions": {
-      "min_age": 19,
-      "max_age": 29,
-      "excludes_flags": [
-        "is_employed",
-        "is_student"
-      ]
-    },
-    "choices": [
-      {
-        "content_en": "Prepare thoroughly and ace it",
-        "content_vi": "Chuẩn bị kỹ lưỡng và làm tốt",
-        "display_conditions": null,
-        "outcomes": [
-          {
-            "probability": 65,
-            "message_en": "Hired! You start an office position next monday.",
-            "message_vi": "Được tuyển! Bạn bắt đầu làm văn phòng thứ hai tới.",
-            "stat_changes": {
-              "money": 60,
-              "happiness": 10
-            },
-            "set_flags": {
-              "job_office": true,
-              "job_title": "Office Staff",
-              "is_employed": true
-            }
-          },
-          {
-            "probability": 35,
-            "message_en": "Close but no cigar. They chose someone else.",
-            "message_vi": "Gần đạt nhưng hụt. Họ chọn người khác.",
-            "stat_changes": {
-              "happiness": -15
-            },
-            "set_flags": {}
-          }
-        ]
-      },
-      {
-        "content_en": "Walk in casually",
-        "content_vi": "Vào phỏng vấn thoải mái",
-        "display_conditions": null,
-        "outcomes": [
-          {
-            "probability": 40,
-            "message_en": "Your confidence impressed them. Got a labor job.",
-            "message_vi": "Sự tự tin gây ấn tượng. Có việc lao động.",
-            "stat_changes": {
-              "money": 55,
-              "happiness": 5
-            },
-            "set_flags": {
-              "job_manual": true,
-              "job_title": "Factory Worker",
-              "is_employed": true
-            }
-          },
-          {
-            "probability": 60,
-            "message_en": "They wanted someone more prepared.",
-            "message_vi": "Họ muốn người chuẩn bị kỹ hơn.",
-            "stat_changes": {
-              "happiness": -12
-            },
-            "set_flags": {}
-          }
-        ]
-      },
-      {
-        "content_en": "Skip the interview and freelance instead",
-        "content_vi": "Bỏ phỏng vấn và làm tự do",
-        "display_conditions": null,
-        "outcomes": [
-          {
-            "probability": 50,
-            "message_en": "Freelancing gives some income. Not stable though.",
-            "message_vi": "Làm tự do cho thu nhập. Nhưng không ổn định.",
-            "stat_changes": {
-              "money": 30,
-              "happiness": 3
-            },
-            "set_flags": {}
-          },
-          {
-            "probability": 50,
-            "message_en": "No clients this month. Really struggling.",
-            "message_vi": "Không có khách tháng này. Thật sự khó khăn.",
-            "stat_changes": {
-              "money": -10,
-              "happiness": -18
-            },
-            "set_flags": {}
-          }
-        ]
-      }
-    ]
+    ],
+    "i18n_key": "dating_life_057",
+    "event_type": "random"
   },
   {
     "title_en": "Financial Planning",
@@ -1983,9 +1763,12 @@
             "stat_changes": {
               "happiness": 5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "financial_planning_059_c1_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "financial_planning_059_c1"
       },
       {
         "content_en": "Invest in stocks ($50)",
@@ -2002,7 +1785,9 @@
               "money": 30,
               "happiness": 8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "financial_planning_059_c2_o1",
+            "unset_flags": []
           },
           {
             "probability": 45,
@@ -2012,9 +1797,12 @@
               "money": -25,
               "happiness": -18
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "financial_planning_059_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "financial_planning_059_c2"
       },
       {
         "content_en": "Spend freely — you're young!",
@@ -2029,11 +1817,16 @@
               "happiness": 4,
               "money": -10
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "financial_planning_059_c3_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "financial_planning_059_c3"
       }
-    ]
+    ],
+    "i18n_key": "financial_planning_059",
+    "event_type": "random"
   },
   {
     "title_en": "Mentor at Work",
@@ -2044,7 +1837,8 @@
       "min_age": 22,
       "max_age": 29,
       "requires_flags": [
-        "is_employed"
+        "is_employed",
+        "job_office"
       ]
     },
     "choices": [
@@ -2060,7 +1854,9 @@
             "stat_changes": {
               "happiness": 8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "mentor_at_work_060_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 20,
@@ -2070,9 +1866,12 @@
               "happiness": -5,
               "health": -3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "mentor_at_work_060_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "mentor_at_work_060_c1"
       },
       {
         "content_en": "Politely decline, prefer independence",
@@ -2086,9 +1885,12 @@
             "stat_changes": {
               "happiness": 2
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "mentor_at_work_060_c2_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "mentor_at_work_060_c2"
       },
       {
         "content_en": "Ask for specific skills training",
@@ -2103,7 +1905,9 @@
               "happiness": 6,
               "money": 20
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "mentor_at_work_060_c3_o1",
+            "unset_flags": []
           },
           {
             "probability": 30,
@@ -2112,11 +1916,16 @@
             "stat_changes": {
               "happiness": -3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "mentor_at_work_060_c3_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "mentor_at_work_060_c3"
       }
-    ]
+    ],
+    "i18n_key": "mentor_at_work_060",
+    "event_type": "random"
   },
   {
     "title_en": "Workplace Burnout",
@@ -2127,7 +1936,8 @@
       "min_age": 22,
       "max_age": 29,
       "requires_flags": [
-        "is_employed"
+        "is_employed",
+        "job_office"
       ]
     },
     "choices": [
@@ -2139,7 +1949,7 @@
         },
         "outcomes": [
           {
-            "probability": 90,
+            "probability": 88,
             "message_en": "Fully recharged! Back to work with new energy.",
             "message_vi": "Nạp đầy năng lượng! Trở lại với sức sống mới.",
             "stat_changes": {
@@ -2147,19 +1957,24 @@
               "health": 10,
               "happiness": 10
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "workplace_burnout_061_c1_o1",
+            "unset_flags": []
           },
           {
-            "probability": 10,
+            "probability": 12,
             "message_en": "Vacation was stressful. Travel mishaps everywhere.",
             "message_vi": "Kỳ nghỉ căng thẳng. Trục trặc du lịch khắp nơi.",
             "stat_changes": {
               "money": -30,
               "happiness": 2
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "workplace_burnout_061_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "workplace_burnout_061_c1"
       },
       {
         "content_en": "Power through and push harder",
@@ -2175,7 +1990,9 @@
               "health": -12,
               "happiness": -8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "workplace_burnout_061_c2_o1",
+            "unset_flags": []
           },
           {
             "probability": 60,
@@ -2186,9 +2003,12 @@
               "happiness": -23,
               "money": -20
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "workplace_burnout_061_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "workplace_burnout_061_c2"
       },
       {
         "content_en": "Set boundaries at work",
@@ -2196,27 +2016,34 @@
         "display_conditions": null,
         "outcomes": [
           {
-            "probability": 70,
+            "probability": 64,
             "message_en": "Boss respects your boundaries. Life improved.",
             "message_vi": "Sếp tôn trọng ranh giới. Cuộc sống cải thiện.",
             "stat_changes": {
               "happiness": 6,
               "health": 5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "workplace_burnout_061_c3_o1",
+            "unset_flags": []
           },
           {
-            "probability": 30,
+            "probability": 36,
             "message_en": "Labeled as 'not a team player'. Tension at work.",
             "message_vi": "Bị gán là 'không hòa đồng'. Căng thẳng.",
             "stat_changes": {
               "happiness": -12
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "workplace_burnout_061_c3_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "workplace_burnout_061_c3"
       }
-    ]
+    ],
+    "i18n_key": "workplace_burnout_061",
+    "event_type": "random"
   },
   {
     "title_en": "Health Scare",
@@ -2244,7 +2071,9 @@
               "health": 10,
               "happiness": 4
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "health_scare_062_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 30,
@@ -2255,9 +2084,12 @@
               "health": 5,
               "happiness": -8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "health_scare_062_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "health_scare_062_c1"
       },
       {
         "content_en": "Start exercising regularly",
@@ -2272,7 +2104,9 @@
               "health": 12,
               "happiness": 5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "health_scare_062_c2_o1",
+            "unset_flags": []
           },
           {
             "probability": 20,
@@ -2282,9 +2116,12 @@
               "health": -5,
               "happiness": -5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "health_scare_062_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "health_scare_062_c2"
       },
       {
         "content_en": "Ignore it, it'll pass",
@@ -2296,7 +2133,9 @@
             "message_en": "Symptoms went away. Lucky break.",
             "message_vi": "Triệu chứng biến mất. May mắn.",
             "stat_changes": {},
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "health_scare_062_c3_o1",
+            "unset_flags": []
           },
           {
             "probability": 50,
@@ -2307,11 +2146,16 @@
               "money": -50,
               "happiness": -15
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "health_scare_062_c3_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "health_scare_062_c3"
       }
-    ]
+    ],
+    "i18n_key": "health_scare_062",
+    "event_type": "random"
   },
   {
     "title_en": "Family Visit",
@@ -2329,7 +2173,7 @@
         "display_conditions": null,
         "outcomes": [
           {
-            "probability": 80,
+            "probability": 76,
             "message_en": "Warm family time. Mom's cooking is the best.",
             "message_vi": "Thời gian gia đình ấm áp. Đồ mẹ nấu ngon nhất.",
             "stat_changes": {
@@ -2337,19 +2181,24 @@
               "health": 5,
               "money": -15
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "family_visit_063_c1_o1",
+            "unset_flags": []
           },
           {
-            "probability": 20,
+            "probability": 24,
             "message_en": "Parents lecture you about marriage. Stressful.",
             "message_vi": "Ba mẹ liên tục hỏi chuyện kết hôn. Áp lực.",
             "stat_changes": {
               "happiness": -8,
               "money": -15
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "family_visit_063_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "family_visit_063_c1"
       },
       {
         "content_en": "Video call instead",
@@ -2363,9 +2212,12 @@
             "stat_changes": {
               "happiness": 4
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "family_visit_063_c2_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "family_visit_063_c2"
       },
       {
         "content_en": "Too busy with work, skip this time",
@@ -2379,11 +2231,16 @@
             "stat_changes": {
               "happiness": -12
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "family_visit_063_c3_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "family_visit_063_c3"
       }
-    ]
+    ],
+    "i18n_key": "family_visit_063",
+    "event_type": "random"
   },
   {
     "title_en": "Weekend Adventure",
@@ -2403,7 +2260,7 @@
         },
         "outcomes": [
           {
-            "probability": 75,
+            "probability": 71,
             "message_en": "Best weekend ever! Memories for a lifetime.",
             "message_vi": "Cuối tuần tuyệt nhất! Kỷ niệm cả đời.",
             "stat_changes": {
@@ -2411,10 +2268,12 @@
               "happiness": 11,
               "health": 5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "weekend_adventure_064_c1_o1",
+            "unset_flags": []
           },
           {
-            "probability": 25,
+            "probability": 29,
             "message_en": "Got caught in the rain. Fun but exhausting.",
             "message_vi": "Bị mắc mưa. Vui nhưng kiệt sức.",
             "stat_changes": {
@@ -2422,9 +2281,12 @@
               "happiness": 5,
               "health": -3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "weekend_adventure_064_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "weekend_adventure_064_c1"
       },
       {
         "content_en": "Stay home and rest",
@@ -2439,9 +2301,12 @@
               "happiness": -3,
               "health": 5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "weekend_adventure_064_c2_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "weekend_adventure_064_c2"
       },
       {
         "content_en": "Suggest a cheaper activity in town",
@@ -2455,7 +2320,9 @@
             "stat_changes": {
               "happiness": 6
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "weekend_adventure_064_c3_o1",
+            "unset_flags": []
           },
           {
             "probability": 30,
@@ -2464,11 +2331,16 @@
             "stat_changes": {
               "happiness": -5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "weekend_adventure_064_c3_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "weekend_adventure_064_c3"
       }
-    ]
+    ],
+    "i18n_key": "weekend_adventure_064",
+    "event_type": "random"
   },
   {
     "title_en": "Learning New Skills",
@@ -2495,7 +2367,9 @@
               "money": -25,
               "happiness": 8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "learning_new_skills_065_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 25,
@@ -2505,9 +2379,12 @@
               "money": -25,
               "happiness": -8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "learning_new_skills_065_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "learning_new_skills_065_c1"
       },
       {
         "content_en": "Watch free YouTube tutorials",
@@ -2521,7 +2398,9 @@
             "stat_changes": {
               "happiness": 5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "learning_new_skills_065_c2_o1",
+            "unset_flags": []
           },
           {
             "probability": 40,
@@ -2530,9 +2409,12 @@
             "stat_changes": {
               "happiness": 2
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "learning_new_skills_065_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "learning_new_skills_065_c2"
       },
       {
         "content_en": "Focus on learning at work instead",
@@ -2546,11 +2428,16 @@
             "stat_changes": {
               "happiness": 3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "learning_new_skills_065_c3_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "learning_new_skills_065_c3"
       }
-    ]
+    ],
+    "i18n_key": "learning_new_skills_065",
+    "event_type": "random"
   },
   {
     "title_en": "Tax Season Stress",
@@ -2580,7 +2467,9 @@
               "money": -25,
               "happiness": 6
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "tax_season_stress_066_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 15,
@@ -2590,9 +2479,12 @@
               "money": -25,
               "happiness": 2
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "tax_season_stress_066_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "tax_season_stress_066_c1"
       },
       {
         "content_en": "Do it yourself",
@@ -2607,7 +2499,9 @@
               "happiness": -8,
               "health": -3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "tax_season_stress_066_c2_o1",
+            "unset_flags": []
           },
           {
             "probability": 50,
@@ -2617,9 +2511,12 @@
               "money": -40,
               "happiness": -23
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "tax_season_stress_066_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "tax_season_stress_066_c2"
       },
       {
         "content_en": "File late and pay the penalty",
@@ -2634,11 +2531,16 @@
               "money": -20,
               "happiness": -8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "tax_season_stress_066_c3_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "tax_season_stress_066_c3"
       }
-    ]
+    ],
+    "i18n_key": "tax_season_stress_066",
+    "event_type": "random"
   },
   {
     "title_en": "Coworker Friendship",
@@ -2649,7 +2551,8 @@
       "min_age": 19,
       "max_age": 29,
       "requires_flags": [
-        "is_employed"
+        "is_employed",
+        "job_office"
       ]
     },
     "choices": [
@@ -2665,7 +2568,9 @@
             "stat_changes": {
               "happiness": 8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "coworker_friendship_067_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 30,
@@ -2674,9 +2579,12 @@
             "stat_changes": {
               "happiness": -8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "coworker_friendship_067_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "coworker_friendship_067_c1"
       },
       {
         "content_en": "Keep it professional",
@@ -2690,9 +2598,12 @@
             "stat_changes": {
               "happiness": 3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "coworker_friendship_067_c2_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "coworker_friendship_067_c2"
       },
       {
         "content_en": "Join their after-work hobby group",
@@ -2700,26 +2611,33 @@
         "display_conditions": null,
         "outcomes": [
           {
-            "probability": 80,
+            "probability": 76,
             "message_en": "Found a new hobby and new friends! Life feels fuller.",
             "message_vi": "Có sở thích mới và bạn mới! Cuộc sống phong phú hơn.",
             "stat_changes": {
               "happiness": 9,
               "health": 3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "coworker_friendship_067_c3_o1",
+            "unset_flags": []
           },
           {
-            "probability": 20,
+            "probability": 24,
             "message_en": "Not your thing. Politely stepped away.",
             "message_vi": "Không hợp. Lịch sự rút lui.",
             "stat_changes": {
               "happiness": -3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "coworker_friendship_067_c3_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "coworker_friendship_067_c3"
       }
-    ]
+    ],
+    "i18n_key": "coworker_friendship_067",
+    "event_type": "random"
   }
 ]

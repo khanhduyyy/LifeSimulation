@@ -1,0 +1,744 @@
+[
+  {
+    "title_en": "Black Friday Chaos",
+    "title_vi": "Hỗn Loạn Black Friday",
+    "description_en": "Store is packed with aggressive shoppers. It's absolute chaos. You're overwhelmed.",
+    "description_vi": "Cửa hàng chật kín người mua sắm hung hăng. Hoàn toàn hỗn loạn. Bạn choáng ngợp.",
+    "i18n_key": "black_friday_chaos_501",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 18,
+      "max_age": 50,
+      "requires_flags": [
+        "is_employed",
+        "job_retail"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Work the full shift, earn overtime pay",
+        "content_vi": "Làm cả ca, kiếm lương làm thêm giờ",
+        "i18n_key": "black_friday_chaos_501_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "Survived! Huge paycheck from overtime. Exhausted but worth it.",
+            "message_vi": "Sống sót! Lương khổng lồ từ làm thêm giờ. Kiệt sức nhưng xứng đáng.",
+            "i18n_key": "black_friday_chaos_501_c1_o1",
+            "stat_changes": {
+              "money": 80,
+              "happiness": -5,
+              "health": -15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 40,
+            "message_en": "Panic attack mid-shift. Sent home early. No overtime pay.",
+            "message_vi": "Hoảng loạn giữa ca. Bị đuổi về sớm. Không có lương làm thêm.",
+            "i18n_key": "black_friday_chaos_501_c1_o2",
+            "stat_changes": {
+              "happiness": -25,
+              "health": -20
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Call in sick, avoid the madness",
+        "content_vi": "Báo ốm, tránh sự điên rồ",
+        "i18n_key": "black_friday_chaos_501_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Mental health day well spent. Rested and refreshed.",
+            "message_vi": "Ngày chăm sóc sức khỏe tinh thần đáng giá. Nghỉ ngơi và sảng khoái.",
+            "i18n_key": "black_friday_chaos_501_c2_o1",
+            "stat_changes": {
+              "happiness": 15,
+              "health": 10,
+              "money": -30
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 50,
+            "message_en": "Manager doesn't believe you. Written up for no-show. Job at risk.",
+            "message_vi": "Quản lý không tin. Bị cảnh cáo vì vắng mặt. Công việc bị đe dọa.",
+            "i18n_key": "black_friday_chaos_501_c2_o2",
+            "stat_changes": {
+              "happiness": -20,
+              "money": -30
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Work but take frequent breaks",
+        "content_vi": "Làm việc nhưng nghỉ giải lao thường xuyên",
+        "i18n_key": "black_friday_chaos_501_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Pacing yourself works. Manageable stress. Decent pay.",
+            "message_vi": "Điều chỉnh nhịp độ hiệu quả. Căng thẳng có thể quản lý. Lương ổn.",
+            "i18n_key": "black_friday_chaos_501_c3_o1",
+            "stat_changes": {
+              "money": 50,
+              "happiness": 5,
+              "health": -8
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 30,
+            "message_en": "Manager catches you 'slacking'. Reprimanded in front of customers. Humiliating.",
+            "message_vi": "Quản lý bắt gặp bạn 'lười biếng'. Bị khiển trách trước mặt khách hàng. Nhục nhã.",
+            "i18n_key": "black_friday_chaos_501_c3_o2",
+            "stat_changes": {
+              "money": 40,
+              "happiness": -18
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Shoplifter Caught",
+    "title_vi": "Bắt Gặp Kẻ Trộm Cửa Hàng",
+    "description_en": "You catch someone stealing expensive items. They're heading for the exit.",
+    "description_vi": "Bạn bắt gặp ai đó đang trộm đồ đắt tiền. Họ đang đi ra lối thoát.",
+    "i18n_key": "shoplifter_caught_502",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 18,
+      "max_age": 50,
+      "requires_flags": [
+        "is_employed",
+        "job_retail"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Confront them and call security",
+        "content_vi": "Đối chất và gọi bảo vệ",
+        "i18n_key": "shoplifter_caught_502_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 65,
+            "message_en": "Security handles it. Items recovered. Manager praises your vigilance!",
+            "message_vi": "Bảo vệ xử lý. Đồ được thu hồi. Quản lý khen ngợi sự cảnh giác!",
+            "i18n_key": "shoplifter_caught_502_c1_o1",
+            "stat_changes": {
+              "happiness": 15,
+              "money": 30
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 35,
+            "message_en": "Thief becomes violent. You're injured. Workers' comp claim filed.",
+            "message_vi": "Kẻ trộm trở nên bạo lực. Bạn bị thương. Nộp đơn bồi thường công nhân.",
+            "i18n_key": "shoplifter_caught_502_c1_o2",
+            "stat_changes": {
+              "happiness": -20,
+              "health": -25,
+              "money": 50
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Alert manager quietly, don't engage",
+        "content_vi": "Báo quản lý lặng lẽ, không can thiệp",
+        "i18n_key": "shoplifter_caught_502_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 75,
+            "message_en": "Smart move. Manager and security handle it safely. No risk to you.",
+            "message_vi": "Nước đi thông minh. Quản lý và bảo vệ xử lý an toàn. Không rủi ro cho bạn.",
+            "i18n_key": "shoplifter_caught_502_c2_o1",
+            "stat_changes": {
+              "happiness": 10
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 25,
+            "message_en": "By the time manager arrives, thief escaped. Loss blamed on you.",
+            "message_vi": "Khi quản lý đến, kẻ trộm đã trốn. Mất mát bị đổ lỗi cho bạn.",
+            "i18n_key": "shoplifter_caught_502_c2_o2",
+            "stat_changes": {
+              "happiness": -15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Pretend you didn't see anything",
+        "content_vi": "Giả vờ không thấy gì",
+        "i18n_key": "shoplifter_caught_502_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Thief escapes. Store loses money. You feel guilty for not acting.",
+            "message_vi": "Kẻ trộm trốn thoát. Cửa hàng mất tiền. Bạn cảm thấy tội lỗi vì không hành động.",
+            "i18n_key": "shoplifter_caught_502_c3_o1",
+            "stat_changes": {
+              "happiness": -12
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Inventory Shortage Discovered",
+    "title_vi": "Phát Hiện Thiếu Hàng Tồn Kho",
+    "description_en": "Inventory count shows $200 worth of missing merchandise. Management suspects employee theft.",
+    "description_vi": "Kiểm kê cho thấy thiếu hàng trị giá $200. Quản lý nghi ngờ nhân viên trộm.",
+    "i18n_key": "inventory_shortage_503",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 20,
+      "max_age": 50,
+      "requires_flags": [
+        "is_employed",
+        "job_retail"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Volunteer to help investigate",
+        "content_vi": "Tình nguyện giúp điều tra",
+        "i18n_key": "inventory_shortage_503_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "You find the real culprit. Management trusts you more. Bonus received!",
+            "message_vi": "Bạn tìm ra thủ phạm thật. Quản lý tin tưởng bạn hơn. Nhận thưởng!",
+            "i18n_key": "inventory_shortage_503_c1_o1",
+            "stat_changes": {
+              "happiness": 18,
+              "money": 40
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 30,
+            "message_en": "Investigation goes nowhere. Everyone is under suspicion. Tense workplace.",
+            "message_vi": "Điều tra không đi đến đâu. Mọi người đều bị nghi ngờ. Nơi làm việc căng thẳng.",
+            "i18n_key": "inventory_shortage_503_c1_o2",
+            "stat_changes": {
+              "happiness": -15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Stay out of it, not your problem",
+        "content_vi": "Tránh xa, không phải vấn đề của bạn",
+        "i18n_key": "inventory_shortage_503_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Management handles it. Issue resolved without your involvement.",
+            "message_vi": "Quản lý xử lý. Vấn đề được giải quyết không cần bạn.",
+            "i18n_key": "inventory_shortage_503_c2_o1",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 50,
+            "message_en": "You're questioned as a suspect. Uncomfortable and stressful.",
+            "message_vi": "Bạn bị thẩm vấn như nghi phạm. Khó chịu và căng thẳng.",
+            "i18n_key": "inventory_shortage_503_c2_o2",
+            "stat_changes": {
+              "happiness": -20,
+              "health": -10
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Suggest better security measures",
+        "content_vi": "Đề xuất biện pháp bảo mật tốt hơn",
+        "i18n_key": "inventory_shortage_503_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 65,
+            "message_en": "Management implements your ideas. Theft stops. You're seen as problem-solver!",
+            "message_vi": "Quản lý thực hiện ý tưởng của bạn. Trộm cắp dừng lại. Bạn được xem là người giải quyết vấn đề!",
+            "i18n_key": "inventory_shortage_503_c3_o1",
+            "stat_changes": {
+              "happiness": 20,
+              "money": 50
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 35,
+            "message_en": "Management ignores your suggestions. Nothing changes. Frustrating.",
+            "message_vi": "Quản lý phớt lờ đề xuất. Không có gì thay đổi. Thất vọng.",
+            "i18n_key": "inventory_shortage_503_c3_o2",
+            "stat_changes": {
+              "happiness": -10
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Store Closing Early",
+    "title_vi": "Cửa Hàng Đóng Cửa Sớm",
+    "description_en": "Corporate announces your store location is closing permanently in 3 months.",
+    "description_vi": "Công ty thông báo cửa hàng của bạn sẽ đóng cửa vĩnh viễn trong 3 tháng.",
+    "i18n_key": "store_closing_504",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 22,
+      "max_age": 50,
+      "requires_flags": [
+        "is_employed",
+        "job_retail"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Transfer to another store location",
+        "content_vi": "Chuyển sang cửa hàng khác",
+        "i18n_key": "store_closing_504_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Transfer approved! New location is better. Kept your job!",
+            "message_vi": "Chuyển được chấp nhận! Địa điểm mới tốt hơn. Giữ được việc!",
+            "i18n_key": "store_closing_504_c1_o1",
+            "stat_changes": {
+              "happiness": 12
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 30,
+            "message_en": "New location is far. Long commute drains you daily.",
+            "message_vi": "Địa điểm mới xa. Đi lại dài làm bạn kiệt sức mỗi ngày.",
+            "i18n_key": "store_closing_504_c1_o2",
+            "stat_changes": {
+              "happiness": -15,
+              "health": -10
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Start job hunting immediately",
+        "content_vi": "Bắt đầu tìm việc ngay",
+        "i18n_key": "store_closing_504_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 65,
+            "message_en": "Found better job before closing! Higher pay, better benefits!",
+            "message_vi": "Tìm được việc tốt hơn trước khi đóng cửa! Lương cao hơn, phúc lợi tốt hơn!",
+            "i18n_key": "store_closing_504_c2_o1",
+            "stat_changes": {
+              "money": 60,
+              "happiness": 25
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 35,
+            "message_en": "Job market is tough. Unemployed when store closes. Stressful gap.",
+            "message_vi": "Thị trường việc làm khó khăn. Thất nghiệp khi cửa hàng đóng. Khoảng trống căng thẳng.",
+            "i18n_key": "store_closing_504_c2_o2",
+            "stat_changes": {
+              "money": -80,
+              "happiness": -30,
+              "health": -15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Stay until the end for severance package",
+        "content_vi": "Ở lại đến cuối để nhận trợ cấp thôi việc",
+        "i18n_key": "store_closing_504_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Received severance. Cushion for job search. Bittersweet ending.",
+            "message_vi": "Nhận trợ cấp. Đệm cho tìm việc. Kết thúc ngọt ngào lẫn đắng cay.",
+            "i18n_key": "store_closing_504_c3_o1",
+            "stat_changes": {
+              "money": 100,
+              "happiness": -10
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Rude Manager",
+    "title_vi": "Quản Lý Thô Lỗ",
+    "description_en": "Your manager constantly yells at staff and belittles you in front of customers.",
+    "description_vi": "Quản lý của bạn liên tục la mắng nhân viên và hạ thấp bạn trước mặt khách hàng.",
+    "i18n_key": "rude_manager_505",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 18,
+      "max_age": 50,
+      "requires_flags": [
+        "is_employed",
+        "job_retail"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Report to HR or district manager",
+        "content_vi": "Báo cáo lên nhân sự hoặc quản lý khu vực",
+        "i18n_key": "rude_manager_505_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 55,
+            "message_en": "Manager is reprimanded. Behavior improves. Workplace better!",
+            "message_vi": "Quản lý bị khiển trách. Hành vi cải thiện. Nơi làm việc tốt hơn!",
+            "i18n_key": "rude_manager_505_c1_o1",
+            "stat_changes": {
+              "happiness": 20
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 45,
+            "message_en": "Manager retaliates. Cuts your hours. Makes work miserable.",
+            "message_vi": "Quản lý trả thù. Cắt giờ làm. Làm công việc khổ sở.",
+            "i18n_key": "rude_manager_505_c1_o2",
+            "stat_changes": {
+              "money": -40,
+              "happiness": -30,
+              "health": -12
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Endure it, you need the job",
+        "content_vi": "Chịu đựng, bạn cần công việc",
+        "i18n_key": "rude_manager_505_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Mental health deteriorates. Self-esteem drops. Is any job worth this?",
+            "message_vi": "Sức khỏe tinh thần giảm sút. Lòng tự trọng giảm. Công việc nào xứng đáng với điều này?",
+            "i18n_key": "rude_manager_505_c2_o1",
+            "stat_changes": {
+              "happiness": -25,
+              "health": -15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Quit and find a better workplace",
+        "content_vi": "Nghỉ việc và tìm nơi làm việc tốt hơn",
+        "i18n_key": "rude_manager_505_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Should have left sooner!",
+            "message_vi": "Lẽ ra nên nghỉ sớm hơn!",
+            "i18n_key": "rude_manager_505_c3_o1",
+            "stat_changes": {
+              "money": 20,
+              "happiness": 30,
+              "health": 15
+            },
+            "set_flags": {
+              "is_employed": false
+            },
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Employee Discount Abuse",
+    "title_vi": "Lạm Dụng Giảm Giá Nhân Viên",
+    "description_en": "A coworker asks you to use your employee discount to buy items for them. It's against policy.",
+    "description_vi": "Đồng nghiệp nhờ bạn dùng giảm giá nhân viên để mua đồ cho họ. Điều này vi phạm quy định.",
+    "i18n_key": "employee_discount_abuse_506",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 18,
+      "max_age": 50,
+      "requires_flags": [
+        "is_employed",
+        "job_retail"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Refuse, explain it's against policy",
+        "content_vi": "Từ chối, giải thích vi phạm quy định",
+        "i18n_key": "employee_discount_abuse_506_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "They understand. Respect your integrity. Friendship intact.",
+            "message_vi": "Họ hiểu. Tôn trọng sự chính trực của bạn. Tình bạn còn nguyên.",
+            "i18n_key": "employee_discount_abuse_506_c1_o1",
+            "stat_changes": {
+              "happiness": 10
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 30,
+            "message_en": "They get angry. Spread rumors you're 'stuck up'. Workplace tension.",
+            "message_vi": "Họ tức giận. Tung tin đồn bạn 'kiêu ngạo'. Căng thẳng nơi làm việc.",
+            "i18n_key": "employee_discount_abuse_506_c1_o2",
+            "stat_changes": {
+              "happiness": -15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Do it once to help them out",
+        "content_vi": "Làm một lần để giúp họ",
+        "i18n_key": "employee_discount_abuse_506_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 40,
+            "message_en": "They're grateful. One-time favor. No issues.",
+            "message_vi": "Họ biết ơn. Giúp đỡ một lần. Không vấn đề gì.",
+            "i18n_key": "employee_discount_abuse_506_c2_o1",
+            "stat_changes": {
+              "happiness": 8
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 60,
+            "message_en": "They keep asking. Then others ask. You're caught by management. Fired.",
+            "message_vi": "Họ tiếp tục xin. Rồi người khác xin. Bạn bị quản lý bắt gặp. Bị sa thải.",
+            "i18n_key": "employee_discount_abuse_506_c2_o2",
+            "stat_changes": {
+              "money": -100,
+              "happiness": -35,
+              "health": -15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Report them to management",
+        "content_vi": "Báo cáo họ lên quản lý",
+        "i18n_key": "employee_discount_abuse_506_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Management thanks you for honesty. Policy enforced. You're trusted.",
+            "message_vi": "Quản lý cảm ơn sự trung thực. Quy định được thực thi. Bạn được tin tưởng.",
+            "i18n_key": "employee_discount_abuse_506_c3_o1",
+            "stat_changes": {
+              "happiness": 12,
+              "money": 30
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 50,
+            "message_en": "Coworkers see you as a snitch. Ostracized. Lonely at work.",
+            "message_vi": "Đồng nghiệp thấy bạn là kẻ tố cáo. Bị tẩy chay. Cô đơn ở công việc.",
+            "i18n_key": "employee_discount_abuse_506_c3_o2",
+            "stat_changes": {
+              "happiness": -25
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Holiday Season Burnout",
+    "title_vi": "Kiệt Sức Mùa Lễ",
+    "description_en": "You've worked 50+ hours every week for 2 months straight during holiday season. Exhausted.",
+    "description_vi": "Bạn đã làm việc 50+ giờ mỗi tuần trong 2 tháng liên tục mùa lễ. Kiệt sức.",
+    "i18n_key": "holiday_burnout_507",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 18,
+      "max_age": 50,
+      "requires_flags": [
+        "is_employed",
+        "job_retail"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Push through for the holiday bonus",
+        "content_vi": "Cố gắng vượt qua để nhận thưởng lễ",
+        "i18n_key": "holiday_burnout_507_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "Bonus received! Big paycheck. Worth the exhaustion.",
+            "message_vi": "Nhận thưởng! Lương lớn. Xứng đáng với sự kiệt sức.",
+            "i18n_key": "holiday_burnout_507_c1_o1",
+            "stat_changes": {
+              "money": 100,
+              "happiness": 5,
+              "health": -20
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 40,
+            "message_en": "You collapse. Hospitalized. Missed work. No bonus. Health ruined.",
+            "message_vi": "Bạn ngã quỵ. Nhập viện. Nghỉ việc. Không thưởng. Sức khỏe hủy hoại.",
+            "i18n_key": "holiday_burnout_507_c1_o2",
+            "stat_changes": {
+              "money": -120,
+              "happiness": -35,
+              "health": -30
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Request time off to recover",
+        "content_vi": "Xin nghỉ phép để hồi phục",
+        "i18n_key": "holiday_burnout_507_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 55,
+            "message_en": "Manager approves. Rest restores you. Return refreshed!",
+            "message_vi": "Quản lý chấp thuận. Nghỉ ngơi phục hồi bạn. Trở lại sảng khoái!",
+            "i18n_key": "holiday_burnout_507_c2_o1",
+            "stat_changes": {
+              "happiness": 20,
+              "health": 15,
+              "money": -40
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 45,
+            "message_en": "Request denied. Busiest time of year. Keep working or quit.",
+            "message_vi": "Yêu cầu bị từ chối. Thời điểm bận nhất năm. Tiếp tục làm hoặc nghỉ.",
+            "i18n_key": "holiday_burnout_507_c2_o2",
+            "stat_changes": {
+              "happiness": -20,
+              "health": -15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Quit, health is more important",
+        "content_vi": "Nghỉ việc, sức khỏe quan trọng hơn",
+        "i18n_key": "holiday_burnout_507_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Health recovers. Found less demanding job. Better work-life balance.",
+            "message_vi": "Sức khỏe phục hồi. Tìm được việc ít áp lực hơn. Cân bằng công việc-cuộc sống tốt hơn.",
+            "i18n_key": "holiday_burnout_507_c3_o1",
+            "stat_changes": {
+              "money": -50,
+              "happiness": 15,
+              "health": 20
+            },
+            "set_flags": {
+              "is_employed": false
+            },
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  }
+]

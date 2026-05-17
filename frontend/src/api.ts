@@ -1,4 +1,4 @@
-import { Character, Event, SelectResult, UpdateCharacterResult } from './types';
+import { Character, Event, SelectResult, UpdateCharacterResult, CreateCharacterParams } from './types';
 
 const API_BASE = '/api/v1';
 const ADMIN_BASE = '/api/admin';
@@ -14,10 +14,11 @@ async function handleResponse<T>(response: Response): Promise<T> {
 export const api = {
   // === Game API ===
 
-  async createCharacter(): Promise<Character> {
+  async createCharacter(params: CreateCharacterParams): Promise<Character> {
     const res = await fetch(`${API_BASE}/characters`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(params),
     });
     return handleResponse<Character>(res);
   },
@@ -27,11 +28,11 @@ export const api = {
     return handleResponse<Character>(res);
   },
 
-  async getEvent(characterId: number, nextEventId?: number): Promise<Event> {
+  async getEvents(characterId: number, nextEventId?: number): Promise<Event[]> {
     let url = `${API_BASE}/events?character_id=${characterId}`;
     if (nextEventId) url += `&next_event_id=${nextEventId}`;
     const res = await fetch(url);
-    return handleResponse<Event>(res);
+    return handleResponse<Event[]>(res);
   },
 
   async selectChoice(choiceId: number, characterId: number): Promise<SelectResult> {
@@ -52,9 +53,27 @@ export const api = {
     return handleResponse<UpdateCharacterResult>(res);
   },
 
+  async performAction(characterId: number, actionType: string, params?: any): Promise<{ character: Character; result: { success: boolean; message_en: string; message_vi: string; stat_changes?: Record<string, number>; proposal?: boolean; partner_name?: string } }> {
+    const res = await fetch(`${API_BASE}/characters/${characterId}/action`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ action_type: actionType, ...params }),
+    });
+    return handleResponse(res);
+  },
+
+  async selectJob(characterId: number, jobType: string): Promise<{ character: Character; message_en: string; message_vi: string }> {
+    const res = await fetch(`${API_BASE}/characters/${characterId}/select_job`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ job_type: jobType }),
+    });
+    return handleResponse(res);
+  },
+
   // === Admin API ===
 
-  async getEvents(): Promise<Event[]> {
+  async getAdminEvents(): Promise<Event[]> {
     const res = await fetch(`${ADMIN_BASE}/events`);
     return handleResponse<Event[]>(res);
   },

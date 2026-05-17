@@ -1,0 +1,477 @@
+[
+  {
+    "title_en": "Dream Home Opportunity",
+    "title_vi": "Cơ hội mua nhà mơ ước",
+    "description_en": "A real estate agent approaches you with an incredible deal on a property. It's in a great neighborhood and within your budget range. This could be your chance to own a home!",
+    "description_vi": "Một môi giới bất động sản tiếp cận bạn với một cơ hội tuyệt vời. Nhà ở khu vực tốt và trong tầm giá. Đây có thể là cơ hội sở hữu nhà!",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 25,
+      "max_age": 50,
+      "requires_flags": [
+        "is_employed"
+      ],
+      "excludes_flags": [
+        "has_house"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Buy the house! It's a great investment",
+        "content_vi": "Mua nhà! Đây là khoản đầu tư tốt",
+        "outcomes": [
+          {
+            "message_en": "You sign the papers and get the keys! Welcome home! The neighborhood is perfect.",
+            "message_vi": "Bạn ký giấy tờ và nhận chìa khóa! Chào mừng về nhà! Khu phố thật hoàn hảo.",
+            "stat_changes": {
+              "happiness": 15,
+              "money": -400
+            },
+            "set_flags": {
+              "has_house": true,
+              "house_name": "Căn hộ ấm cúng",
+              "house_value": 500
+            },
+            "probability": 65
+          },
+          {
+            "message_en": "You buy the house, but discover some hidden repair costs. Still, it's yours!",
+            "message_vi": "Bạn mua nhà, nhưng phát hiện chi phí sửa chữa ẩn. Dù sao, nó là của bạn!",
+            "stat_changes": {
+              "happiness": 8,
+              "money": -520
+            },
+            "set_flags": {
+              "has_house": true,
+              "house_name": "Căn hộ",
+              "house_value": 500
+            },
+            "probability": 35
+          }
+        ]
+      },
+      {
+        "content_en": "Negotiate for a lower price",
+        "content_vi": "Thương lượng giá thấp hơn",
+        "outcomes": [
+          {
+            "message_en": "The seller accepts your counter-offer! You saved a lot and got a beautiful home.",
+            "message_vi": "Người bán chấp nhận đề nghị! Bạn tiết kiệm được nhiều và có ngôi nhà đẹp.",
+            "stat_changes": {
+              "happiness": 18,
+              "money": -400
+            },
+            "set_flags": {
+              "has_house": true,
+              "house_name": "Nhà ngoại ô",
+              "house_value": 400
+            },
+            "probability": 40
+          },
+          {
+            "message_en": "The seller refuses your offer and sells to someone else. You missed your chance.",
+            "message_vi": "Người bán từ chối và bán cho người khác. Bạn bỏ lỡ cơ hội.",
+            "stat_changes": {
+              "happiness": -5
+            },
+            "probability": 60
+          }
+        ]
+      },
+      {
+        "content_en": "Save more money first, houses can wait",
+        "content_vi": "Tiết kiệm thêm đã, nhà có thể chờ",
+        "outcomes": [
+          {
+            "message_en": "Smart move! You continue saving and your bank account grows steadily.",
+            "message_vi": "Khôn ngoan! Bạn tiếp tục tiết kiệm và tài khoản tăng đều.",
+            "stat_changes": {
+              "money": 30
+            },
+            "probability": 55
+          },
+          {
+            "message_en": "Housing prices go up later. You regret not buying when you had the chance.",
+            "message_vi": "Giá nhà tăng sau đó. Bạn hối hận không mua khi có cơ hội.",
+            "stat_changes": {
+              "happiness": -3
+            },
+            "probability": 45
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "New Car Deal",
+    "title_vi": "Cơ hội mua xe",
+    "description_en": "A car dealership is having a massive sale. You've been eyeing a reliable vehicle for a while. The salesman says this price won't last!",
+    "description_vi": "Đại lý xe đang có đợt giảm giá lớn. Bạn đã để ý một chiếc xe đáng tin cậy lâu rồi. Nhân viên nói giá này không kéo dài!",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 20,
+      "max_age": 55,
+      "requires_flags": [
+        "is_employed"
+      ],
+      "excludes_flags": [
+        "has_car"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Buy the car on the spot",
+        "content_vi": "Mua xe ngay lập tức",
+        "outcomes": [
+          {
+            "message_en": "You drive off the lot in your new car! The feeling of freedom is incredible.",
+            "message_vi": "Bạn lái xe mới ra khỏi đại lý! Cảm giác tự do thật tuyệt vời.",
+            "stat_changes": {
+              "happiness": 10,
+              "money": -200
+            },
+            "set_flags": {
+              "has_car": true,
+              "car_name": "Toyota Camry",
+              "car_value": 200
+            },
+            "probability": 60
+          },
+          {
+            "message_en": "You buy the car but it has more miles than advertised. Still drives well though.",
+            "message_vi": "Bạn mua xe nhưng nó chạy nhiều hơn quảng cáo. Dù sao vẫn chạy tốt.",
+            "stat_changes": {
+              "happiness": 5,
+              "money": -180
+            },
+            "set_flags": {
+              "has_car": true,
+              "car_name": "Honda Civic",
+              "car_value": 180
+            },
+            "probability": 40
+          }
+        ]
+      },
+      {
+        "content_en": "Look for used car options instead",
+        "content_vi": "Tìm xe cũ thay thế",
+        "outcomes": [
+          {
+            "message_en": "You find an amazing used car in great condition! Saved a fortune.",
+            "message_vi": "Bạn tìm được xe cũ tuyệt vời trong tình trạng tốt! Tiết kiệm được nhiều.",
+            "stat_changes": {
+              "happiness": 8,
+              "money": -120
+            },
+            "set_flags": {
+              "has_car": true,
+              "car_name": "Mazda 3",
+              "car_value": 120
+            },
+            "probability": 50
+          },
+          {
+            "message_en": "The used car seemed fine but keeps breaking down. Money wasted on repairs.",
+            "message_vi": "Xe cũ trông ổn nhưng liên tục hỏng. Tốn tiền sửa chữa.",
+            "stat_changes": {
+              "happiness": -5,
+              "money": -100
+            },
+            "probability": 50
+          }
+        ]
+      },
+      {
+        "content_en": "Take public transport, save money",
+        "content_vi": "Đi xe buýt, tiết kiệm tiền",
+        "outcomes": [
+          {
+            "message_en": "You save money by using public transport. It's not glamorous but it works.",
+            "message_vi": "Bạn tiết kiệm tiền bằng xe buýt. Không sang nhưng hiệu quả.",
+            "stat_changes": {
+              "money": 20
+            },
+            "probability": 55
+          },
+          {
+            "message_en": "The long commute on crowded buses takes a toll on your mood.",
+            "message_vi": "Đi xe buýt đông đúc lâu dần ảnh hưởng tâm trạng.",
+            "stat_changes": {
+              "happiness": -3
+            },
+            "probability": 45
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Insurance Sales Pitch",
+    "title_vi": "Chào mời bảo hiểm",
+    "description_en": "An insurance agent visits your home and explains the benefits of health insurance. With rising healthcare costs, it seems like a wise investment.",
+    "description_vi": "Một nhân viên bảo hiểm đến nhà giải thích lợi ích bảo hiểm sức khỏe. Với chi phí y tế tăng cao, đây có vẻ là khoản đầu tư khôn ngoan.",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 22,
+      "max_age": 60,
+      "requires_flags": [
+        "is_employed"
+      ],
+      "excludes_flags": [
+        "insurance_valid"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Sign up for the insurance plan",
+        "content_vi": "Đăng ký gói bảo hiểm",
+        "outcomes": [
+          {
+            "message_en": "You sign up for comprehensive coverage. Peace of mind is priceless!",
+            "message_vi": "Bạn đăng ký bảo hiểm toàn diện. Sự yên tâm vô giá!",
+            "stat_changes": {
+              "happiness": 5,
+              "money": -50,
+              "health": 5
+            },
+            "set_flags": {
+              "insurance_expires_at": "AGE_PLUS_10"
+            },
+            "probability": 70
+          },
+          {
+            "message_en": "The plan is expensive but covers everything. Better safe than sorry.",
+            "message_vi": "Gói đắt nhưng bao phủ mọi thứ. Cẩn tắc vô áy náy.",
+            "stat_changes": {
+              "happiness": 2,
+              "money": -70
+            },
+            "set_flags": {
+              "insurance_expires_at": "AGE_PLUS_10"
+            },
+            "probability": 30
+          }
+        ]
+      },
+      {
+        "content_en": "Ask for more information first",
+        "content_vi": "Hỏi thêm thông tin trước",
+        "outcomes": [
+          {
+            "message_en": "After research, you find a better deal online and sign up there instead!",
+            "message_vi": "Sau khi tìm hiểu, bạn tìm thấy gói tốt hơn trên mạng và đăng ký!",
+            "stat_changes": {
+              "happiness": 6,
+              "money": -40
+            },
+            "set_flags": {
+              "insurance_expires_at": "AGE_PLUS_10"
+            },
+            "probability": 45
+          },
+          {
+            "message_en": "You keep procrastinating and never get around to buying insurance.",
+            "message_vi": "Bạn cứ trì hoãn và không bao giờ mua bảo hiểm.",
+            "stat_changes": {
+              "happiness": -2
+            },
+            "probability": 55
+          }
+        ]
+      },
+      {
+        "content_en": "Decline — I'm young and healthy",
+        "content_vi": "Từ chối — Tôi còn trẻ và khỏe mạnh",
+        "outcomes": [
+          {
+            "message_en": "You feel confident about your health. No need for insurance right now.",
+            "message_vi": "Bạn tự tin về sức khỏe. Chưa cần bảo hiểm lúc này.",
+            "stat_changes": {
+              "happiness": 2
+            },
+            "probability": 50
+          },
+          {
+            "message_en": "A surprise illness hits and hospital bills drain your savings. Insurance would've helped...",
+            "message_vi": "Bệnh bất ngờ ập đến và viện phí rút sạch tiết kiệm. Giá như có bảo hiểm...",
+            "stat_changes": {
+              "happiness": -8,
+              "health": -10,
+              "money": -100
+            },
+            "probability": 50
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Side Business Opportunity",
+    "title_vi": "Cơ hội kinh doanh phụ",
+    "description_en": "A friend proposes a business idea: opening an online store together. It could be a great source of extra income, but requires investment.",
+    "description_vi": "Bạn bè đề xuất ý tưởng kinh doanh: cùng mở cửa hàng online. Có thể là nguồn thu nhập thêm tốt, nhưng cần đầu tư.",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 22,
+      "max_age": 50
+    },
+    "choices": [
+      {
+        "content_en": "Invest and become a partner",
+        "content_vi": "Đầu tư và trở thành đối tác",
+        "outcomes": [
+          {
+            "message_en": "The business takes off! Your investment doubles within a year!",
+            "message_vi": "Kinh doanh phát triển! Khoản đầu tư gấp đôi trong một năm!",
+            "stat_changes": {
+              "happiness": 15,
+              "money": 80
+            },
+            "probability": 40
+          },
+          {
+            "message_en": "The business struggles and you lose most of your investment. Hard lesson learned.",
+            "message_vi": "Kinh doanh khó khăn và bạn mất phần lớn đầu tư. Bài học đắt giá.",
+            "stat_changes": {
+              "happiness": -10,
+              "money": -100
+            },
+            "probability": 60
+          }
+        ]
+      },
+      {
+        "content_en": "Help with advice but don't invest money",
+        "content_vi": "Giúp ý kiến nhưng không đầu tư tiền",
+        "outcomes": [
+          {
+            "message_en": "Your friend succeeds and offers you a small cut as thanks! Win-win.",
+            "message_vi": "Bạn bè thành công và chia phần nhỏ cho bạn! Đôi bên đều lợi.",
+            "stat_changes": {
+              "happiness": 7,
+              "money": 30
+            },
+            "probability": 45
+          },
+          {
+            "message_en": "The business fails. At least you didn't lose any money.",
+            "message_vi": "Kinh doanh thất bại. Ít nhất bạn không mất tiền.",
+            "stat_changes": {
+              "happiness": -2
+            },
+            "probability": 55
+          }
+        ]
+      },
+      {
+        "content_en": "Decline politely, you prefer stability",
+        "content_vi": "Từ chối lịch sự, bạn thích ổn định",
+        "outcomes": [
+          {
+            "message_en": "You focus on your current career. Stability is underrated.",
+            "message_vi": "Bạn tập trung vào sự nghiệp hiện tại. Ổn định bị đánh giá thấp.",
+            "stat_changes": {
+              "happiness": 3
+            },
+            "probability": 55
+          },
+          {
+            "message_en": "The business becomes huge. Your friend is now rich. You feel regret.",
+            "message_vi": "Kinh doanh phát triển lớn. Bạn bè giờ giàu có. Bạn hối hận.",
+            "stat_changes": {
+              "happiness": -7
+            },
+            "probability": 45
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Workplace Conflict",
+    "title_vi": "Mâu thuẫn nơi làm việc",
+    "description_en": "A coworker takes credit for your project in front of the boss. Everyone saw it happen. What do you do?",
+    "description_vi": "Đồng nghiệp nhận công trạng dự án của bạn trước mặt sếp. Mọi người đều thấy. Bạn sẽ làm gì?",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 20,
+      "max_age": 55,
+      "requires_flags": [
+        "is_employed",
+        "job_office"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Confront them publicly with evidence",
+        "content_vi": "Đối chất công khai với bằng chứng",
+        "outcomes": [
+          {
+            "message_en": "You present email trails proving it's your work. The boss apologizes and gives you full credit!",
+            "message_vi": "Bạn trình bày email chứng minh đó là công của bạn. Sếp xin lỗi và ghi nhận!",
+            "stat_changes": {
+              "happiness": 12,
+              "money": 20
+            },
+            "probability": 50
+          },
+          {
+            "message_en": "The confrontation gets heated. HR gets involved. It's resolved but left a bad taste.",
+            "message_vi": "Đối chất gay gắt. HR can thiệp. Giải quyết được nhưng để lại ấn tượng xấu.",
+            "stat_changes": {
+              "happiness": -5
+            },
+            "probability": 50
+          }
+        ]
+      },
+      {
+        "content_en": "Talk to the boss privately",
+        "content_vi": "Nói chuyện riêng với sếp",
+        "outcomes": [
+          {
+            "message_en": "The boss appreciates your maturity. They reassign credit and give you a small bonus.",
+            "message_vi": "Sếp đánh giá cao sự trưởng thành. Họ ghi nhận đúng người và thưởng nhỏ.",
+            "stat_changes": {
+              "happiness": 8,
+              "money": 15
+            },
+            "probability": 60
+          },
+          {
+            "message_en": "The boss listens but doesn't want to cause drama. Nothing changes.",
+            "message_vi": "Sếp lắng nghe nhưng không muốn gây chuyện. Không gì thay đổi.",
+            "stat_changes": {
+              "happiness": -6
+            },
+            "probability": 40
+          }
+        ]
+      },
+      {
+        "content_en": "Let it go and focus on the next project",
+        "content_vi": "Bỏ qua và tập trung dự án tiếp",
+        "outcomes": [
+          {
+            "message_en": "You channel your frustration into making the next project even better. It pays off!",
+            "message_vi": "Bạn biến bức xúc thành động lực cho dự án tiếp. Có kết quả!",
+            "stat_changes": {
+              "happiness": 5,
+              "money": 10
+            },
+            "probability": 55
+          },
+          {
+            "message_en": "The coworker keeps stealing credit. You feel undervalued and consider quitting.",
+            "message_vi": "Đồng nghiệp tiếp tục cướp công. Bạn cảm thấy không được trân trọng.",
+            "stat_changes": {
+              "happiness": -8
+            },
+            "probability": 45
+          }
+        ]
+      }
+    ]
+  }
+]

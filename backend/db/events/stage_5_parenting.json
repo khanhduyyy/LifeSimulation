@@ -5,11 +5,12 @@
     "description_en": "Your child's teacher calls to say they're having academic trouble.",
     "description_vi": "Giáo viên của con bạn gọi điện nói con đang gặp khó khăn trong học tập.",
     "conditions": {
-      "min_age": 40,
-      "max_age": 59,
+      "min_age": 35,
       "requires_flags": [
         "has_child"
-      ]
+      ],
+      "min_child_age": 6,
+      "max_child_age": 17
     },
     "choices": [
       {
@@ -27,7 +28,9 @@
               "money": -30,
               "happiness": 8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "child_s_school_problem_090_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 20,
@@ -37,9 +40,12 @@
               "money": -30,
               "happiness": 3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "child_s_school_problem_090_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "child_s_school_problem_090_c1"
       },
       {
         "content_en": "Help them yourself every evening",
@@ -47,24 +53,29 @@
         "display_conditions": null,
         "outcomes": [
           {
-            "probability": 65,
+            "probability": 59,
             "message_en": "Quality time with your child AND better grades. Win-win.",
             "message_vi": "Thời gian chất lượng với con VÀ điểm số tốt hơn. Cả hai đều thắng.",
             "stat_changes": {
               "happiness": 10
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "child_s_school_problem_090_c2_o1",
+            "unset_flags": []
           },
           {
-            "probability": 35,
+            "probability": 41,
             "message_en": "Tensions rose during study sessions. But you're both trying.",
             "message_vi": "Căng thẳng trong buổi học. Nhưng cả hai đều đang cố gắng.",
             "stat_changes": {
               "happiness": -8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "child_s_school_problem_090_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "child_s_school_problem_090_c2"
       },
       {
         "content_en": "Let the school handle it",
@@ -78,7 +89,9 @@
             "stat_changes": {
               "happiness": 3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "child_s_school_problem_090_c3_o1",
+            "unset_flags": []
           },
           {
             "probability": 50,
@@ -87,11 +100,16 @@
             "stat_changes": {
               "happiness": -15
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "child_s_school_problem_090_c3_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "child_s_school_problem_090_c3"
       }
-    ]
+    ],
+    "i18n_key": "child_s_school_problem_090",
+    "event_type": "random"
   },
   {
     "title_en": "Buying a House",
@@ -100,41 +118,56 @@
     "description_vi": "Bạn đã tiết kiệm đủ để cân nhắc mua bất động sản. Đây là cột mốc lớn trong cuộc đời.",
     "conditions": {
       "min_age": 40,
-      "max_age": 59
+      "max_age": 59,
+      "excludes_flags": [
+        "owns_house",
+        "has_house"
+      ]
     },
     "choices": [
       {
-        "content_en": "Buy a house now ($200 down payment)",
-        "content_vi": "Mua nhà ngay ($200 tiền đặt cọc)",
+        "content_en": "Buy a house now ($400 down payment)",
+        "content_vi": "Mua nhà ngay ($400 tiền đặt cọc)",
         "display_conditions": {
-          "min_money": 200
+          "min_money": 400
         },
         "outcomes": [
           {
-            "probability": 70,
+            "probability": 65,
             "message_en": "You own your home! No more rent. Wealth building begins.",
             "message_vi": "Bạn sở hữu nhà! Không còn tiền thuê. Bắt đầu xây dựng tài sản.",
             "stat_changes": {
-              "money": -200,
+              "money": -400,
               "happiness": 15
             },
             "set_flags": {
-              "owns_house": true
-            }
+              "owns_house": true,
+              "has_house": true,
+              "house_name": "Căn hộ",
+              "house_value": 500
+            },
+            "i18n_key": "buying_a_house_091_c1_o1",
+            "unset_flags": []
           },
           {
-            "probability": 30,
-            "message_en": "Mortgage approved but high interest rate. Long road ahead.",
-            "message_vi": "Được duyệt thế chấp nhưng lãi suất cao. Còn đường dài phía trước.",
+            "probability": 35,
+            "message_en": "House needs unexpected repairs. Extra costs.",
+            "message_vi": "Nhà cần sửa chữa bất ngờ. Chi phí thêm.",
             "stat_changes": {
-              "money": -200,
+              "money": -550,
               "happiness": 8
             },
             "set_flags": {
-              "owns_house": true
-            }
+              "owns_house": true,
+              "has_house": true,
+              "house_name": "Căn hộ",
+              "house_value": 500
+            },
+            "i18n_key": "buying_a_house_091_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "buying_a_house_091_c1"
       },
       {
         "content_en": "Keep renting and invest the money",
@@ -149,7 +182,9 @@
               "money": 60,
               "happiness": 5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "buying_a_house_091_c2_o1",
+            "unset_flags": []
           },
           {
             "probability": 45,
@@ -159,9 +194,12 @@
               "money": -30,
               "happiness": -15
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "buying_a_house_091_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "buying_a_house_091_c2"
       },
       {
         "content_en": "Not financially ready yet",
@@ -175,11 +213,16 @@
             "stat_changes": {
               "happiness": -5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "buying_a_house_091_c3_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "buying_a_house_091_c3"
       }
-    ]
+    ],
+    "i18n_key": "buying_a_house_091",
+    "event_type": "random"
   },
   {
     "title_en": "Buying a Car",
@@ -202,7 +245,7 @@
         },
         "outcomes": [
           {
-            "probability": 75,
+            "probability": 71,
             "message_en": "Great car! Practical and cost-effective.",
             "message_vi": "Xe tốt! Thực tế và tiết kiệm chi phí.",
             "stat_changes": {
@@ -210,11 +253,16 @@
               "happiness": 10
             },
             "set_flags": {
-              "owns_car": true
-            }
+              "owns_car": true,
+              "has_car": true,
+              "car_name": "Honda Accord",
+              "car_value": 100
+            },
+            "i18n_key": "buying_a_car_092_c1_o1",
+            "unset_flags": []
           },
           {
-            "probability": 25,
+            "probability": 29,
             "message_en": "The car broke down the first week. Repair costs extra.",
             "message_vi": "Xe hỏng ngay tuần đầu. Tốn thêm tiền sửa chữa.",
             "stat_changes": {
@@ -222,10 +270,16 @@
               "happiness": -8
             },
             "set_flags": {
-              "owns_car": true
-            }
+              "owns_car": true,
+              "has_car": true,
+              "car_name": "Hyundai Elantra",
+              "car_value": 70
+            },
+            "i18n_key": "buying_a_car_092_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "buying_a_car_092_c1"
       },
       {
         "content_en": "Buy a brand new car on installment ($50/year)",
@@ -243,10 +297,16 @@
               "happiness": 13
             },
             "set_flags": {
-              "owns_car": true
-            }
+              "owns_car": true,
+              "has_car": true,
+              "car_name": "Toyota Corolla",
+              "car_value": 150
+            },
+            "i18n_key": "buying_a_car_092_c2_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "buying_a_car_092_c2"
       },
       {
         "content_en": "Continue with public transport",
@@ -260,17 +320,22 @@
             "stat_changes": {
               "happiness": -5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "buying_a_car_092_c3_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "buying_a_car_092_c3"
       }
-    ]
+    ],
+    "i18n_key": "buying_a_car_092",
+    "event_type": "random"
   },
   {
     "title_en": "Midlife Reflection",
-    "title_vi": "Suy Nghĩ Tuổi Trung Niên",
+    "title_vi": "Nhìn Lại Tuổi Trung Niên",
     "description_en": "In your 50s, you sit down and think about whether your life has gone the way you hoped.",
-    "description_vi": "Ở tuổi 50, bạn ngồi xuống và suy ngẫm liệu cuộc đời có đi đúng hướng bạn mong không.",
+    "description_vi": "Ở tuổi trung niên, bạn ngồi xuống và suy ngẫm liệu cuộc đời có đi đúng hướng bạn mong không.",
     "conditions": {
       "min_age": 50,
       "max_age": 59
@@ -282,24 +347,29 @@
         "display_conditions": null,
         "outcomes": [
           {
-            "probability": 80,
+            "probability": 76,
             "message_en": "Gratitude filled your heart. Life has been rich.",
             "message_vi": "Lòng biết ơn tràn ngập trái tim bạn. Cuộc đời thật phong phú.",
             "stat_changes": {
               "happiness": 10
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "midlife_reflection_093_c1_o1",
+            "unset_flags": []
           },
           {
-            "probability": 20,
+            "probability": 24,
             "message_en": "Some regrets, but you choose to move forward.",
             "message_vi": "Có chút tiếc nuối, nhưng bạn chọn tiếp tục.",
             "stat_changes": {
               "happiness": 3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "midlife_reflection_093_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "midlife_reflection_093_c1"
       },
       {
         "content_en": "Make a big change — new hobby or new goal",
@@ -307,26 +377,31 @@
         "display_conditions": null,
         "outcomes": [
           {
-            "probability": 70,
+            "probability": 65,
             "message_en": "Midlife discovery! This new chapter energizes you.",
             "message_vi": "Khám phá tuổi trung niên! Chương mới này tiếp thêm năng lượng cho bạn.",
             "stat_changes": {
               "happiness": 13,
               "health": 5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "midlife_reflection_093_c2_o1",
+            "unset_flags": []
           },
           {
-            "probability": 30,
+            "probability": 35,
             "message_en": "The change was hard. But growth never comes easy.",
             "message_vi": "Sự thay đổi rất khó khăn. Nhưng sự trưởng thành không bao giờ dễ dàng.",
             "stat_changes": {
               "happiness": 4,
               "health": -3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "midlife_reflection_093_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "midlife_reflection_093_c2"
       },
       {
         "content_en": "Take a health-focused retreat",
@@ -344,7 +419,9 @@
               "health": 15,
               "happiness": 8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "midlife_reflection_093_c3_o1",
+            "unset_flags": []
           },
           {
             "probability": 10,
@@ -354,11 +431,16 @@
               "money": -50,
               "happiness": 3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "midlife_reflection_093_c3_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "midlife_reflection_093_c3"
       }
-    ]
+    ],
+    "i18n_key": "midlife_reflection_093",
+    "event_type": "random"
   },
   {
     "title_en": "Child Leaves for University",
@@ -366,11 +448,13 @@
     "description_en": "Your child got into university. It's time to say goodbye to the everyday chaos.",
     "description_vi": "Con bạn vào được đại học. Đã đến lúc nói lời tạm biệt với sự hỗn độn hàng ngày.",
     "conditions": {
-      "min_age": 50,
-      "max_age": 59,
+      "min_age": 38,
+      "max_age": 65,
       "requires_flags": [
         "has_child"
-      ]
+      ],
+      "min_child_age": 18,
+      "max_child_age": 22
     },
     "choices": [
       {
@@ -388,9 +472,12 @@
               "money": -60,
               "happiness": 10
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "child_leaves_for_university_094_c1_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "child_leaves_for_university_094_c1"
       },
       {
         "content_en": "Encourage them to be independent",
@@ -404,7 +491,9 @@
             "stat_changes": {
               "happiness": 5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "child_leaves_for_university_094_c2_o1",
+            "unset_flags": []
           },
           {
             "probability": 40,
@@ -414,9 +503,12 @@
               "happiness": -8,
               "money": -30
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "child_leaves_for_university_094_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "child_leaves_for_university_094_c2"
       },
       {
         "content_en": "Feel the bittersweet empty nest",
@@ -430,11 +522,16 @@
             "stat_changes": {
               "happiness": -8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "child_leaves_for_university_094_c3_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "child_leaves_for_university_094_c3"
       }
-    ]
+    ],
+    "i18n_key": "child_leaves_for_university_094",
+    "event_type": "random"
   },
   {
     "title_en": "Midlife Health Checkup",
@@ -454,7 +551,7 @@
         },
         "outcomes": [
           {
-            "probability": 70,
+            "probability": 64,
             "message_en": "Everything normal! Healthy lifestyle is paying off.",
             "message_vi": "Mọi thứ bình thường! Lối sống lành mạnh đang có kết quả.",
             "stat_changes": {
@@ -462,10 +559,12 @@
               "health": 10,
               "happiness": 5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "midlife_health_checkup_095_c1_o1",
+            "unset_flags": []
           },
           {
-            "probability": 30,
+            "probability": 36,
             "message_en": "Found some issues early. Treatment starts before it worsens.",
             "message_vi": "Phát hiện một số vấn đề sớm. Bắt đầu điều trị trước khi trầm trọng.",
             "stat_changes": {
@@ -473,9 +572,12 @@
               "health": -5,
               "happiness": -15
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "midlife_health_checkup_095_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "midlife_health_checkup_095_c1"
       },
       {
         "content_en": "Skip it, you feel fine",
@@ -487,7 +589,9 @@
             "message_en": "Dodged a bullet. No symptoms at all.",
             "message_vi": "Tránh được nguy hiểm. Không có triệu chứng gì cả.",
             "stat_changes": {},
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "midlife_health_checkup_095_c2_o1",
+            "unset_flags": []
           },
           {
             "probability": 60,
@@ -498,9 +602,12 @@
               "money": -60,
               "happiness": -23
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "midlife_health_checkup_095_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "midlife_health_checkup_095_c2"
       },
       {
         "content_en": "Start exercising more instead",
@@ -515,7 +622,9 @@
               "health": 12,
               "happiness": 4
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "midlife_health_checkup_095_c3_o1",
+            "unset_flags": []
           },
           {
             "probability": 30,
@@ -525,11 +634,16 @@
               "health": -5,
               "happiness": -8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "midlife_health_checkup_095_c3_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "midlife_health_checkup_095_c3"
       }
-    ]
+    ],
+    "i18n_key": "midlife_health_checkup_095",
+    "event_type": "random"
   },
   {
     "title_en": "Child's Birthday Party",
@@ -537,11 +651,12 @@
     "description_en": "Your child's birthday is coming up. They want a big party.",
     "description_vi": "Sinh nhật con sắp tới. Con muốn một bữa tiệc lớn.",
     "conditions": {
-      "min_age": 40,
-      "max_age": 55,
+      "min_age": 32,
       "requires_flags": [
         "has_child"
-      ]
+      ],
+      "min_child_age": 4,
+      "max_child_age": 16
     },
     "choices": [
       {
@@ -552,26 +667,31 @@
         },
         "outcomes": [
           {
-            "probability": 85,
+            "probability": 82,
             "message_en": "Best party ever! Your child is the happiest kid in school.",
             "message_vi": "Bữa tiệc tuyệt nhất! Con là đứa trẻ vui nhất trường.",
             "stat_changes": {
               "money": -40,
               "happiness": 10
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "child_s_birthday_party_096_c1_o1",
+            "unset_flags": []
           },
           {
-            "probability": 15,
+            "probability": 18,
             "message_en": "Party was fun but a kid broke a window. Extra costs.",
             "message_vi": "Tiệc vui nhưng một đứa trẻ làm vỡ cửa sổ. Tốn thêm.",
             "stat_changes": {
               "money": -55,
               "happiness": 5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "child_s_birthday_party_096_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "child_s_birthday_party_096_c1"
       },
       {
         "content_en": "Simple family celebration at home",
@@ -586,9 +706,12 @@
               "happiness": 6,
               "money": -10
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "child_s_birthday_party_096_c2_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "child_s_birthday_party_096_c2"
       },
       {
         "content_en": "Take them on a special outing",
@@ -596,28 +719,35 @@
         "display_conditions": null,
         "outcomes": [
           {
-            "probability": 80,
+            "probability": 76,
             "message_en": "Memorable adventure! Bonding time with your child.",
             "message_vi": "Cuộc phiêu lưu đáng nhớ! Thời gian gắn kết với con.",
             "stat_changes": {
               "money": -25,
               "happiness": 9
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "child_s_birthday_party_096_c3_o1",
+            "unset_flags": []
           },
           {
-            "probability": 20,
+            "probability": 24,
             "message_en": "Rain ruined the outing. Had ice cream instead.",
             "message_vi": "Mưa hỏng chuyến đi. Ăn kem thay vậy.",
             "stat_changes": {
               "money": -15,
               "happiness": 4
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "child_s_birthday_party_096_c3_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "child_s_birthday_party_096_c3"
       }
-    ]
+    ],
+    "i18n_key": "child_s_birthday_party_096",
+    "event_type": "random"
   },
   {
     "title_en": "Home Renovation",
@@ -626,7 +756,7 @@
     "description_vi": "Nhà đang xuống cấp. Mái dột và bếp cần nâng cấp.",
     "conditions": {
       "min_age": 40,
-      "max_age": 59,
+      "max_age": 65,
       "requires_flags": [
         "owns_house"
       ]
@@ -640,26 +770,31 @@
         },
         "outcomes": [
           {
-            "probability": 75,
+            "probability": 71,
             "message_en": "House looks brand new! Property value increased.",
             "message_vi": "Nhà trông như mới! Giá trị bất động sản tăng.",
             "stat_changes": {
               "money": -80,
               "happiness": 11
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "home_renovation_097_c1_o1",
+            "unset_flags": []
           },
           {
-            "probability": 25,
+            "probability": 29,
             "message_en": "Contractor did a sloppy job. Needed rework.",
             "message_vi": "Nhà thầu làm ẩu. Phải sửa lại.",
             "stat_changes": {
               "money": -100,
               "happiness": -8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "home_renovation_097_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "home_renovation_097_c1"
       },
       {
         "content_en": "Fix only essential things ($30)",
@@ -676,9 +811,12 @@
               "money": -30,
               "happiness": 4
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "home_renovation_097_c2_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "home_renovation_097_c2"
       },
       {
         "content_en": "DIY repairs on weekends",
@@ -693,7 +831,9 @@
               "happiness": 8,
               "health": -3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "home_renovation_097_c3_o1",
+            "unset_flags": []
           },
           {
             "probability": 50,
@@ -703,11 +843,16 @@
               "money": -50,
               "happiness": -12
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "home_renovation_097_c3_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "home_renovation_097_c3"
       }
-    ]
+    ],
+    "i18n_key": "home_renovation_097",
+    "event_type": "random"
   },
   {
     "title_en": "Marriage Renewal",
@@ -730,17 +875,19 @@
         },
         "outcomes": [
           {
-            "probability": 85,
+            "probability": 82,
             "message_en": "Best trip since the wedding! Falling in love all over again.",
             "message_vi": "Chuyến đi tuyệt nhất kể từ đám cưới! Yêu lại từ đầu.",
             "stat_changes": {
               "money": -60,
               "happiness": 14
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "marriage_renewal_098_c1_o1",
+            "unset_flags": []
           },
           {
-            "probability": 15,
+            "probability": 18,
             "message_en": "Trip was nice but you both got food poisoning.",
             "message_vi": "Chuyến đi đẹp nhưng cả hai bị ngộ độc thực phẩm.",
             "stat_changes": {
@@ -748,9 +895,12 @@
               "happiness": 3,
               "health": -8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "marriage_renewal_098_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "marriage_renewal_098_c1"
       },
       {
         "content_en": "Start date nights every week",
@@ -765,9 +915,12 @@
               "happiness": 9,
               "money": -10
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "marriage_renewal_098_c2_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "marriage_renewal_098_c2"
       },
       {
         "content_en": "Focus on individual growth first",
@@ -781,7 +934,9 @@
             "stat_changes": {
               "happiness": 5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "marriage_renewal_098_c3_o1",
+            "unset_flags": []
           },
           {
             "probability": 40,
@@ -790,11 +945,16 @@
             "stat_changes": {
               "happiness": -15
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "marriage_renewal_098_c3_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "marriage_renewal_098_c3"
       }
-    ]
+    ],
+    "i18n_key": "marriage_renewal_098",
+    "event_type": "random"
   },
   {
     "title_en": "Child Asks for Money",
@@ -802,11 +962,12 @@
     "description_en": "Your teenager needs money for a school trip. It's expensive.",
     "description_vi": "Con mới lớn cần tiền cho chuyến đi trường. Khá tốn kém.",
     "conditions": {
-      "min_age": 42,
-      "max_age": 55,
+      "min_age": 36,
       "requires_flags": [
         "has_child"
-      ]
+      ],
+      "min_child_age": 13,
+      "max_child_age": 19
     },
     "choices": [
       {
@@ -824,7 +985,9 @@
               "money": -35,
               "happiness": 8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "child_asks_for_money_099_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 20,
@@ -834,9 +997,12 @@
               "money": -45,
               "happiness": 3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "child_asks_for_money_099_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "child_asks_for_money_099_c1"
       },
       {
         "content_en": "Split the cost — teach responsibility",
@@ -844,26 +1010,31 @@
         "display_conditions": null,
         "outcomes": [
           {
-            "probability": 70,
+            "probability": 65,
             "message_en": "Child worked part-time to earn their share. Proud moment.",
             "message_vi": "Con làm thêm để kiếm phần mình. Khoảnh khắc tự hào.",
             "stat_changes": {
               "money": -15,
               "happiness": 9
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "child_asks_for_money_099_c2_o1",
+            "unset_flags": []
           },
           {
-            "probability": 30,
+            "probability": 35,
             "message_en": "Child was upset but learned a valuable lesson.",
             "message_vi": "Con không vui nhưng học được bài học quý giá.",
             "stat_changes": {
               "money": -15,
               "happiness": 3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "child_asks_for_money_099_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "child_asks_for_money_099_c2"
       },
       {
         "content_en": "Can't afford it right now",
@@ -877,101 +1048,16 @@
             "stat_changes": {
               "happiness": -18
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "child_asks_for_money_099_c3_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "child_asks_for_money_099_c3"
       }
-    ]
-  },
-  {
-    "title_en": "Senior Position at Work",
-    "title_vi": "Vị Trí Cao Cấp Tại Công Ty",
-    "description_en": "With decades of experience, you're being considered for a management role.",
-    "description_vi": "Với nhiều năm kinh nghiệm, bạn đang được cân nhắc cho vị trí quản lý.",
-    "conditions": {
-      "min_age": 40,
-      "max_age": 55,
-      "requires_flags": [
-        "is_employed"
-      ]
-    },
-    "choices": [
-      {
-        "content_en": "Accept the management position",
-        "content_vi": "Chấp nhận vị trí quản lý",
-        "display_conditions": null,
-        "outcomes": [
-          {
-            "probability": 70,
-            "message_en": "Great leader! Team loves working under you.",
-            "message_vi": "Nhà lãnh đạo giỏi! Nhóm thích làm việc dưới quyền bạn.",
-            "stat_changes": {
-              "money": 60,
-              "happiness": 10,
-              "health": -3
-            },
-            "set_flags": {
-              "job_office_senior": true
-            }
-          },
-          {
-            "probability": 30,
-            "message_en": "Management is stressful. Too many meetings.",
-            "message_vi": "Quản lý căng thẳng. Quá nhiều cuộc họp.",
-            "stat_changes": {
-              "money": 40,
-              "happiness": -8,
-              "health": -8
-            },
-            "set_flags": {
-              "job_office_senior": true
-            }
-          }
-        ]
-      },
-      {
-        "content_en": "Negotiate for a specialist role instead",
-        "content_vi": "Thương lượng vị trí chuyên gia thay vì quản lý",
-        "display_conditions": null,
-        "outcomes": [
-          {
-            "probability": 80,
-            "message_en": "Expert role with good pay. Less stress than management.",
-            "message_vi": "Vai trò chuyên gia lương tốt. Ít áp lực hơn quản lý.",
-            "stat_changes": {
-              "money": 40,
-              "happiness": 8
-            },
-            "set_flags": {}
-          },
-          {
-            "probability": 20,
-            "message_en": "No such role available. Stay in current position.",
-            "message_vi": "Không có vị trí đó. Ở lại vị trí hiện tại.",
-            "stat_changes": {
-              "happiness": -5
-            },
-            "set_flags": {}
-          }
-        ]
-      },
-      {
-        "content_en": "Decline — preparing for retirement",
-        "content_vi": "Từ chối — chuẩn bị về hưu",
-        "display_conditions": null,
-        "outcomes": [
-          {
-            "probability": 100,
-            "message_en": "Coast mode activated. Enjoying the remaining years.",
-            "message_vi": "Chế độ thoải mái. Tận hưởng những năm còn lại.",
-            "stat_changes": {
-              "happiness": 4
-            },
-            "set_flags": {}
-          }
-        ]
-      }
-    ]
+    ],
+    "i18n_key": "child_asks_for_money_099",
+    "event_type": "random"
   },
   {
     "title_en": "Insurance Decision",
@@ -998,9 +1084,14 @@
               "money": -25,
               "happiness": 6
             },
-            "set_flags": {}
+            "set_flags": {
+              "insurance_expires_at": "AGE_PLUS_10"
+            },
+            "i18n_key": "insurance_decision_101_c1_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "insurance_decision_101_c1"
       },
       {
         "content_en": "Buy basic insurance only ($10)",
@@ -1017,9 +1108,14 @@
               "money": -10,
               "happiness": 3
             },
-            "set_flags": {}
+            "set_flags": {
+              "insurance_expires_at": "AGE_PLUS_10"
+            },
+            "i18n_key": "insurance_decision_101_c2_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "insurance_decision_101_c2"
       },
       {
         "content_en": "Skip it — waste of money",
@@ -1033,7 +1129,9 @@
             "stat_changes": {
               "happiness": 2
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "insurance_decision_101_c3_o1",
+            "unset_flags": []
           },
           {
             "probability": 40,
@@ -1044,11 +1142,16 @@
               "money": -80,
               "happiness": -23
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "insurance_decision_101_c3_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "insurance_decision_101_c3"
       }
-    ]
+    ],
+    "i18n_key": "insurance_decision_101",
+    "event_type": "random"
   },
   {
     "title_en": "Old Friend Passed Away",
@@ -1073,9 +1176,12 @@
               "happiness": -15,
               "money": -10
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "old_friend_passed_away_102_c1_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "old_friend_passed_away_102_c1"
       },
       {
         "content_en": "Reconnect with other old friends",
@@ -1083,24 +1189,29 @@
         "display_conditions": null,
         "outcomes": [
           {
-            "probability": 80,
+            "probability": 73,
             "message_en": "Reunited with old friends. Precious relationships renewed.",
             "message_vi": "Gặp lại bạn cũ. Những mối quan hệ quý giá được làm mới.",
             "stat_changes": {
               "happiness": 3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "old_friend_passed_away_102_c2_o1",
+            "unset_flags": []
           },
           {
-            "probability": 20,
+            "probability": 27,
             "message_en": "Some friends have moved on. Things change.",
             "message_vi": "Một số bạn đã rời đi. Mọi thứ thay đổi.",
             "stat_changes": {
               "happiness": -12
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "old_friend_passed_away_102_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "old_friend_passed_away_102_c2"
       },
       {
         "content_en": "Focus on your own health",
@@ -1115,11 +1226,16 @@
               "health": 8,
               "happiness": -5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "old_friend_passed_away_102_c3_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "old_friend_passed_away_102_c3"
       }
-    ]
+    ],
+    "i18n_key": "old_friend_passed_away_102",
+    "event_type": "random"
   },
   {
     "title_en": "Neighbor Dispute",
@@ -1143,7 +1259,9 @@
             "stat_changes": {
               "happiness": 5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "neighbor_dispute_103_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 40,
@@ -1152,9 +1270,12 @@
             "stat_changes": {
               "happiness": -12
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "neighbor_dispute_103_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "neighbor_dispute_103_c1"
       },
       {
         "content_en": "File a formal complaint",
@@ -1168,7 +1289,9 @@
             "stat_changes": {
               "happiness": 4
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "neighbor_dispute_103_c2_o1",
+            "unset_flags": []
           },
           {
             "probability": 50,
@@ -1178,9 +1301,12 @@
               "happiness": -18,
               "money": -15
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "neighbor_dispute_103_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "neighbor_dispute_103_c2"
       },
       {
         "content_en": "Just deal with it yourself",
@@ -1194,11 +1320,16 @@
             "stat_changes": {
               "happiness": -5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "neighbor_dispute_103_c3_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "neighbor_dispute_103_c3"
       }
-    ]
+    ],
+    "i18n_key": "neighbor_dispute_103",
+    "event_type": "random"
   },
   {
     "title_en": "Rediscovering a Hobby",
@@ -1216,26 +1347,31 @@
         "display_conditions": null,
         "outcomes": [
           {
-            "probability": 80,
+            "probability": 76,
             "message_en": "Music fills the house again. Pure joy.",
             "message_vi": "âm nhạc lại tràn ngập ngôi nhà. Niềm vui thuần khiết.",
             "stat_changes": {
               "happiness": 10,
               "health": 3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "rediscovering_a_hobby_104_c1_o1",
+            "unset_flags": []
           },
           {
-            "probability": 20,
+            "probability": 24,
             "message_en": "Fingers hurt initially. But persistence pays off.",
             "message_vi": "Đau tay ban đầu. Nhưng kiên trì sẽ được đền đáp.",
             "stat_changes": {
               "happiness": 5,
               "health": -2
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "rediscovering_a_hobby_104_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "rediscovering_a_hobby_104_c1"
       },
       {
         "content_en": "Join a community band or group",
@@ -1243,24 +1379,29 @@
         "display_conditions": null,
         "outcomes": [
           {
-            "probability": 75,
+            "probability": 71,
             "message_en": "New friends through music! Weekly jam sessions.",
             "message_vi": "Bạn mới qua âm nhạc! Jam session hàng tuần.",
             "stat_changes": {
               "happiness": 11
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "rediscovering_a_hobby_104_c2_o1",
+            "unset_flags": []
           },
           {
-            "probability": 25,
+            "probability": 29,
             "message_en": "Too rusty to keep up. Quit after a month.",
             "message_vi": "Quá cứng tay để theo kịp. Bỏ sau một tháng.",
             "stat_changes": {
               "happiness": -5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "rediscovering_a_hobby_104_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "rediscovering_a_hobby_104_c2"
       },
       {
         "content_en": "Sell the guitar — those days are over",
@@ -1275,11 +1416,16 @@
               "money": 15,
               "happiness": -8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "rediscovering_a_hobby_104_c3_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "rediscovering_a_hobby_104_c3"
       }
-    ]
+    ],
+    "i18n_key": "rediscovering_a_hobby_104",
+    "event_type": "random"
   },
   {
     "title_en": "Preparing for Retirement",
@@ -1287,11 +1433,8 @@
     "description_en": "Retirement is approaching. It's time to think about your financial future.",
     "description_vi": "Nghỉ hưu đang đến gần. Đến lúc nghĩ về tương lai tài chính.",
     "conditions": {
-      "min_age": 55,
-      "max_age": 59,
-      "requires_flags": [
-        "is_employed"
-      ]
+      "min_age": 45,
+      "max_age": 54
     },
     "choices": [
       {
@@ -1309,9 +1452,12 @@
               "money": -50,
               "happiness": 8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "preparing_for_retirement_105_c1_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "preparing_for_retirement_105_c1"
       },
       {
         "content_en": "Plan to work a few more years",
@@ -1326,7 +1472,9 @@
               "happiness": 3,
               "money": 30
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "preparing_for_retirement_105_c2_o1",
+            "unset_flags": []
           },
           {
             "probability": 30,
@@ -1336,9 +1484,12 @@
               "health": -8,
               "happiness": -8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "preparing_for_retirement_105_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "preparing_for_retirement_105_c2"
       },
       {
         "content_en": "Look into part-time retirement jobs",
@@ -1352,11 +1503,16 @@
             "stat_changes": {
               "happiness": 5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "preparing_for_retirement_105_c3_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "preparing_for_retirement_105_c3"
       }
-    ]
+    ],
+    "i18n_key": "preparing_for_retirement_105",
+    "event_type": "random"
   },
   {
     "title_en": "Child's College Tuition",
@@ -1364,11 +1520,12 @@
     "description_en": "Your child got accepted to university. The tuition is expensive.",
     "description_vi": "Con bạn đỗ đại học. Học phí rất đắt.",
     "conditions": {
-      "min_age": 44,
-      "max_age": 55,
+      "min_age": 38,
       "requires_flags": [
         "has_child"
-      ]
+      ],
+      "min_child_age": 18,
+      "max_child_age": 22
     },
     "choices": [
       {
@@ -1379,26 +1536,31 @@
         },
         "outcomes": [
           {
-            "probability": 70,
+            "probability": 64,
             "message_en": "Child excels in university. Investment in the future.",
             "message_vi": "Con học giỏi ở đại học. Đầu tư cho tương lai.",
             "stat_changes": {
               "money": -80,
               "happiness": 8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "child_s_college_tuition_106_c1_o1",
+            "unset_flags": []
           },
           {
-            "probability": 30,
+            "probability": 36,
             "message_en": "Child struggles academically. Expensive disappointment.",
             "message_vi": "Con gặp khó khăn trong học tập. Thất vọng đắt giá.",
             "stat_changes": {
               "money": -80,
               "happiness": -15
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "child_s_college_tuition_106_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "child_s_college_tuition_106_c1"
       },
       {
         "content_en": "Help with partial tuition ($40)",
@@ -1415,9 +1577,12 @@
               "money": -40,
               "happiness": 5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "child_s_college_tuition_106_c2_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "child_s_college_tuition_106_c2"
       },
       {
         "content_en": "Can't afford it — child takes loans",
@@ -1431,7 +1596,9 @@
             "stat_changes": {
               "happiness": -12
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "child_s_college_tuition_106_c3_o1",
+            "unset_flags": []
           },
           {
             "probability": 40,
@@ -1440,11 +1607,16 @@
             "stat_changes": {
               "happiness": -30
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "child_s_college_tuition_106_c3_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "child_s_college_tuition_106_c3"
       }
-    ]
+    ],
+    "i18n_key": "child_s_college_tuition_106",
+    "event_type": "random"
   },
   {
     "title_en": "Health Insurance Dilemma",
@@ -1471,9 +1643,12 @@
               "money": -30,
               "happiness": 3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "health_insurance_dilemma_107_c1_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "health_insurance_dilemma_107_c1"
       },
       {
         "content_en": "Downgrade to basic plan ($10)",
@@ -1483,17 +1658,19 @@
         },
         "outcomes": [
           {
-            "probability": 70,
+            "probability": 64,
             "message_en": "Saved money. Nothing serious happened this year.",
             "message_vi": "Tiết kiệm tiền. Năm nay không có gì nghiêm trọng.",
             "stat_changes": {
               "money": -10,
               "happiness": 2
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "health_insurance_dilemma_107_c2_o1",
+            "unset_flags": []
           },
           {
-            "probability": 30,
+            "probability": 36,
             "message_en": "Had a health scare. Basic plan barely covered it.",
             "message_vi": "Gặp vấn đề sức khỏe. Gói cơ bản gần như không đủ.",
             "stat_changes": {
@@ -1501,9 +1678,12 @@
               "health": -10,
               "happiness": -15
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "health_insurance_dilemma_107_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "health_insurance_dilemma_107_c2"
       },
       {
         "content_en": "Cancel insurance entirely",
@@ -1517,7 +1697,9 @@
             "stat_changes": {
               "happiness": 3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "health_insurance_dilemma_107_c3_o1",
+            "unset_flags": []
           },
           {
             "probability": 50,
@@ -1528,107 +1710,16 @@
               "health": -15,
               "happiness": -30
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "health_insurance_dilemma_107_c3_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "health_insurance_dilemma_107_c3"
       }
-    ]
-  },
-  {
-    "title_en": "Midlife Career Layoff",
-    "title_vi": "Mất Việc Tuổi Trung Niên",
-    "description_en": "At your age, the company prefers younger workers. You're being 'restructured' out.",
-    "description_vi": "Ở tuổi này, công ty ưu tiên nhân viên trẻ hơn. Bạn đang bị 'tái cấu trúc' ra ngoài.",
-    "conditions": {
-      "min_age": 48,
-      "max_age": 57,
-      "requires_flags": [
-        "is_employed"
-      ]
-    },
-    "choices": [
-      {
-        "content_en": "File an age discrimination complaint",
-        "content_vi": "Khiếu nại phân biệt tuổi tác",
-        "display_conditions": null,
-        "outcomes": [
-          {
-            "probability": 35,
-            "message_en": "Won the case! Compensation and job security.",
-            "message_vi": "Thắng kiện! Được bồi thường và bảo đảm công việc.",
-            "stat_changes": {
-              "money": 60,
-              "happiness": 8
-            },
-            "set_flags": {}
-          },
-          {
-            "probability": 65,
-            "message_en": "Case dismissed. Reputation damaged. Hard to find work.",
-            "message_vi": "Vụ kiện bị bác. Danh tiếng bị ảnh hưởng. Khó tìm việc.",
-            "stat_changes": {
-              "money": -30,
-              "happiness": -30
-            },
-            "set_flags": {
-              "is_employed": false,
-              "job_title": null
-            }
-          }
-        ]
-      },
-      {
-        "content_en": "Accept severance and retire early",
-        "content_vi": "Nhận trợ cấp và nghỉ hưu sớm",
-        "display_conditions": null,
-        "outcomes": [
-          {
-            "probability": 100,
-            "message_en": "Early retirement. Less money but more freedom.",
-            "message_vi": "Nghỉ hưu sớm. Ít tiền hơn nhưng tự do hơn.",
-            "stat_changes": {
-              "money": 50,
-              "happiness": 3
-            },
-            "set_flags": {
-              "is_employed": false,
-              "is_retired": true,
-              "job_title": null
-            }
-          }
-        ]
-      },
-      {
-        "content_en": "Desperately search for new employment",
-        "content_vi": "Tuyệt vọng tìm việc mới",
-        "display_conditions": null,
-        "outcomes": [
-          {
-            "probability": 40,
-            "message_en": "Found a lower-paying position. Better than nothing.",
-            "message_vi": "Tìm được vị trí lương thấp hơn. Tốt hơn không.",
-            "stat_changes": {
-              "happiness": -8
-            },
-            "set_flags": {}
-          },
-          {
-            "probability": 60,
-            "message_en": "Months without work. Savings draining fast.",
-            "message_vi": "Nhiều tháng không có việc. Tiết kiệm cạn nhanh.",
-            "stat_changes": {
-              "money": -50,
-              "happiness": -30,
-              "health": -5
-            },
-            "set_flags": {
-              "is_employed": false,
-              "job_title": null
-            }
-          }
-        ]
-      }
-    ]
+    ],
+    "i18n_key": "health_insurance_dilemma_107",
+    "event_type": "random"
   },
   {
     "title_en": "Empty Nest Feelings",
@@ -1637,10 +1728,10 @@
     "description_vi": "Con cái đã lớn và rời nhà. Ngôi nhà trở nên im ắng lạ thường.",
     "conditions": {
       "min_age": 50,
-      "max_age": 59,
       "requires_flags": [
         "has_child"
-      ]
+      ],
+      "min_child_age": 22
     },
     "choices": [
       {
@@ -1649,25 +1740,30 @@
         "display_conditions": null,
         "outcomes": [
           {
-            "probability": 70,
+            "probability": 58,
             "message_en": "Second honeymoon! Relationship stronger than ever.",
             "message_vi": "Tuần trăng mật lần hai! Mối quan hệ mạnh hơn bao giờ hết.",
             "stat_changes": {
               "happiness": 10,
               "money": -15
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "empty_nest_feelings_109_c1_o1",
+            "unset_flags": []
           },
           {
-            "probability": 30,
+            "probability": 42,
             "message_en": "Realized you've grown apart over the years.",
             "message_vi": "Nhận ra hai người đã xa cách nhau qua nhiều năm.",
             "stat_changes": {
               "happiness": -23
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "empty_nest_feelings_109_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "empty_nest_feelings_109_c1"
       },
       {
         "content_en": "Pour energy into new hobbies",
@@ -1682,9 +1778,12 @@
               "happiness": 8,
               "money": -10
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "empty_nest_feelings_109_c2_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "empty_nest_feelings_109_c2"
       },
       {
         "content_en": "Struggle with loneliness",
@@ -1699,7 +1798,9 @@
               "happiness": -30,
               "health": -5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "empty_nest_feelings_109_c3_o1",
+            "unset_flags": []
           },
           {
             "probability": 40,
@@ -1708,11 +1809,16 @@
             "stat_changes": {
               "happiness": -8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "empty_nest_feelings_109_c3_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "empty_nest_feelings_109_c3"
       }
-    ]
+    ],
+    "i18n_key": "empty_nest_feelings_109",
+    "event_type": "random"
   },
   {
     "title_en": "Rising Home Maintenance Costs",
@@ -1740,9 +1846,12 @@
               "happiness": 8,
               "health": 5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "rising_home_maintenance_costs_110_c1_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "rising_home_maintenance_costs_110_c1"
       },
       {
         "content_en": "Fix only urgent issues ($30)",
@@ -1752,26 +1861,31 @@
         },
         "outcomes": [
           {
-            "probability": 70,
+            "probability": 64,
             "message_en": "Patched up. Should hold for another few years.",
             "message_vi": "Vá tạm. Nên giữ được thêm vài năm.",
             "stat_changes": {
               "money": -30,
               "happiness": 3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "rising_home_maintenance_costs_110_c2_o1",
+            "unset_flags": []
           },
           {
-            "probability": 30,
+            "probability": 36,
             "message_en": "Quick fix failed. More repairs needed soon.",
             "message_vi": "Sửa tạm thất bại. Cần sửa thêm sớm.",
             "stat_changes": {
               "money": -30,
               "happiness": -12
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "rising_home_maintenance_costs_110_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "rising_home_maintenance_costs_110_c2"
       },
       {
         "content_en": "Ignore the problems",
@@ -1785,7 +1899,9 @@
             "stat_changes": {
               "happiness": -5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "rising_home_maintenance_costs_110_c3_o1",
+            "unset_flags": []
           },
           {
             "probability": 60,
@@ -1796,11 +1912,16 @@
               "health": -8,
               "happiness": -23
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "rising_home_maintenance_costs_110_c3_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "rising_home_maintenance_costs_110_c3"
       }
-    ]
+    ],
+    "i18n_key": "rising_home_maintenance_costs_110",
+    "event_type": "random"
   },
   {
     "title_en": "Caring for Aging Parents",
@@ -1809,7 +1930,11 @@
     "description_vi": "Cha mẹ già cần chăm sóc hàng ngày. Họ không thể sống một mình nữa.",
     "conditions": {
       "min_age": 45,
-      "max_age": 58
+      "max_age": 58,
+      "requires_any_flag": [
+        "father_alive",
+        "mother_alive"
+      ]
     },
     "choices": [
       {
@@ -1826,7 +1951,9 @@
               "money": -25,
               "health": -5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "caring_for_aging_parents_111_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 40,
@@ -1837,9 +1964,12 @@
               "money": -25,
               "health": -8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "caring_for_aging_parents_111_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "caring_for_aging_parents_111_c1"
       },
       {
         "content_en": "Hire a caretaker ($40/year)",
@@ -1849,26 +1979,31 @@
         },
         "outcomes": [
           {
-            "probability": 80,
+            "probability": 73,
             "message_en": "Good caretaker found. Parents comfortable.",
             "message_vi": "Tìm được người chăm sóc tốt. Cha mẹ thoải mái.",
             "stat_changes": {
               "money": -40,
               "happiness": 4
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "caring_for_aging_parents_111_c2_o1",
+            "unset_flags": []
           },
           {
-            "probability": 20,
+            "probability": 27,
             "message_en": "Caretaker was negligent. Parents unhappy.",
             "message_vi": "Người chăm sóc cẩu thả. Cha mẹ không vui.",
             "stat_changes": {
               "money": -40,
               "happiness": -15
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "caring_for_aging_parents_111_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "caring_for_aging_parents_111_c2"
       },
       {
         "content_en": "Place them in a nursing home ($60)",
@@ -1885,7 +2020,9 @@
               "money": -60,
               "happiness": 3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "caring_for_aging_parents_111_c3_o1",
+            "unset_flags": []
           },
           {
             "probability": 50,
@@ -1895,10 +2032,15 @@
               "money": -60,
               "happiness": -27
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "caring_for_aging_parents_111_c3_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "caring_for_aging_parents_111_c3"
       }
-    ]
+    ],
+    "i18n_key": "caring_for_aging_parents_111",
+    "event_type": "random"
   }
 ]

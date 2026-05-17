@@ -1,0 +1,777 @@
+[
+  {
+    "title_en": "Difficult Customer Complaint",
+    "title_vi": "Khách Hàng Khó Tính Phàn Nàn",
+    "description_en": "An angry customer is yelling at you over a minor issue. Everyone is watching.",
+    "description_vi": "Một khách hàng tức giận đang la mắng bạn vì vấn đề nhỏ. Mọi người đang xem.",
+    "i18n_key": "difficult_customer_401",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 20,
+      "max_age": 55,
+      "requires_flags": [
+        "is_employed",
+        "job_service"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Stay calm and apologize professionally",
+        "content_vi": "Giữ bình tĩnh và xin lỗi chuyên nghiệp",
+        "i18n_key": "difficult_customer_401_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Customer calms down. Manager praises your professionalism. Tip received!",
+            "message_vi": "Khách hàng bình tĩnh lại. Quản lý khen ngợi sự chuyên nghiệp. Nhận được tiền boa!",
+            "i18n_key": "difficult_customer_401_c1_o1",
+            "stat_changes": {
+              "happiness": 12,
+              "money": 20
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 30,
+            "message_en": "Customer still angry, demands to see manager. You feel humiliated.",
+            "message_vi": "Khách hàng vẫn tức giận, yêu cầu gặp quản lý. Bạn cảm thấy bị sỉ nhục.",
+            "i18n_key": "difficult_customer_401_c1_o2",
+            "stat_changes": {
+              "happiness": -15,
+              "health": -5
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Stand your ground, explain the policy firmly",
+        "content_vi": "Giữ vững lập trường, giải thích chính sách rõ ràng",
+        "i18n_key": "difficult_customer_401_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Customer realizes they're wrong. Apologizes. Other customers respect you.",
+            "message_vi": "Khách hàng nhận ra họ sai. Xin lỗi. Khách hàng khác tôn trọng bạn.",
+            "i18n_key": "difficult_customer_401_c2_o1",
+            "stat_changes": {
+              "happiness": 15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 50,
+            "message_en": "Customer escalates. Manager sides with customer. You're reprimanded.",
+            "message_vi": "Khách hàng leo thang. Quản lý về phe khách hàng. Bạn bị khiển trách.",
+            "i18n_key": "difficult_customer_401_c2_o2",
+            "stat_changes": {
+              "happiness": -20,
+              "health": -8
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Offer a discount to resolve quickly",
+        "content_vi": "Đưa ra giảm giá để giải quyết nhanh",
+        "i18n_key": "difficult_customer_401_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 80,
+            "message_en": "Problem solved instantly. Customer happy. Manager appreciates quick thinking.",
+            "message_vi": "Vấn đề giải quyết ngay lập tức. Khách hàng hài lòng. Quản lý đánh giá cao tư duy nhanh.",
+            "i18n_key": "difficult_customer_401_c3_o1",
+            "stat_changes": {
+              "happiness": 10
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 20,
+            "message_en": "Manager angry you gave discount without permission. Docked from your pay.",
+            "message_vi": "Quản lý tức giận vì bạn giảm giá không xin phép. Trừ lương.",
+            "i18n_key": "difficult_customer_401_c3_o2",
+            "stat_changes": {
+              "happiness": -12,
+              "money": -15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Tip Jar Theft",
+    "title_vi": "Trộm Hũ Tiền Boa",
+    "description_en": "You catch a coworker stealing from the shared tip jar. $30 is missing.",
+    "description_vi": "Bạn bắt gặp đồng nghiệp trộm từ hũ tiền boa chung. Mất $30.",
+    "i18n_key": "tip_jar_theft_402",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 20,
+      "max_age": 50,
+      "requires_flags": [
+        "is_employed",
+        "job_service"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Confront them privately",
+        "content_vi": "Đối chất riêng tư",
+        "i18n_key": "tip_jar_theft_402_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "They apologize and return the money. Promise not to do it again.",
+            "message_vi": "Họ xin lỗi và trả lại tiền. Hứa không làm lại.",
+            "i18n_key": "tip_jar_theft_402_c1_o1",
+            "stat_changes": {
+              "money": 30,
+              "happiness": 8
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 40,
+            "message_en": "They deny it and turn hostile. Workplace becomes tense.",
+            "message_vi": "Họ phủ nhận và trở nên thù địch. Nơi làm việc trở nên căng thẳng.",
+            "i18n_key": "tip_jar_theft_402_c1_o2",
+            "stat_changes": {
+              "happiness": -15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Report to manager immediately",
+        "content_vi": "Báo cáo quản lý ngay lập tức",
+        "i18n_key": "tip_jar_theft_402_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Coworker fired. Tips secured. Team thanks you for speaking up.",
+            "message_vi": "Đồng nghiệp bị sa thải. Tiền boa được bảo vệ. Nhóm cảm ơn bạn đã lên tiếng.",
+            "i18n_key": "tip_jar_theft_402_c2_o1",
+            "stat_changes": {
+              "money": 30,
+              "happiness": 12
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 30,
+            "message_en": "Manager doesn't believe you. Coworker stays. You're seen as troublemaker.",
+            "message_vi": "Quản lý không tin bạn. Đồng nghiệp ở lại. Bạn bị xem là kẻ gây rối.",
+            "i18n_key": "tip_jar_theft_402_c2_o2",
+            "stat_changes": {
+              "happiness": -20
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Let it go, not worth the drama",
+        "content_vi": "Bỏ qua, không đáng để gây chuyện",
+        "i18n_key": "tip_jar_theft_402_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "They keep stealing. Everyone's tips decrease. You regret staying silent.",
+            "message_vi": "Họ tiếp tục trộm. Tiền boa của mọi người giảm. Bạn hối hận đã im lặng.",
+            "i18n_key": "tip_jar_theft_402_c3_o1",
+            "stat_changes": {
+              "money": -30,
+              "happiness": -18
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Shift Schedule Conflict",
+    "title_vi": "Xung Đột Lịch Làm Việc",
+    "description_en": "Manager scheduled you for double shifts all week. You're exhausted but need the money.",
+    "description_vi": "Quản lý xếp lịch ca kép cả tuần. Bạn kiệt sức nhưng cần tiền.",
+    "i18n_key": "shift_schedule_conflict_403",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 20,
+      "max_age": 50,
+      "requires_flags": [
+        "is_employed",
+        "job_service"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Work all shifts, earn maximum money",
+        "content_vi": "Làm tất cả ca, kiếm tối đa tiền",
+        "i18n_key": "shift_schedule_conflict_403_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "Paycheck is huge! Exhausted but bills are paid. Worth it.",
+            "message_vi": "Lương khổng lồ! Kiệt sức nhưng hóa đơn được trả. Xứng đáng.",
+            "i18n_key": "shift_schedule_conflict_403_c1_o1",
+            "stat_changes": {
+              "money": 80,
+              "happiness": -10,
+              "health": -15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 40,
+            "message_en": "You collapse from exhaustion mid-shift. Sent home. No extra pay.",
+            "message_vi": "Bạn ngã quỵ vì kiệt sức giữa ca. Bị đuổi về. Không có lương thêm.",
+            "i18n_key": "shift_schedule_conflict_403_c1_o2",
+            "stat_changes": {
+              "happiness": -25,
+              "health": -25
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Request to reduce hours for health",
+        "content_vi": "Yêu cầu giảm giờ vì sức khỏe",
+        "i18n_key": "shift_schedule_conflict_403_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 65,
+            "message_en": "Manager understands. Reasonable schedule. Better work-life balance.",
+            "message_vi": "Quản lý hiểu. Lịch hợp lý. Cân bằng công việc-cuộc sống tốt hơn.",
+            "i18n_key": "shift_schedule_conflict_403_c2_o1",
+            "stat_changes": {
+              "money": 30,
+              "happiness": 15,
+              "health": 10
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 35,
+            "message_en": "Manager gives your shifts to others. Income drops significantly.",
+            "message_vi": "Quản lý đưa ca của bạn cho người khác. Thu nhập giảm đáng kể.",
+            "i18n_key": "shift_schedule_conflict_403_c2_o2",
+            "stat_changes": {
+              "money": -20,
+              "happiness": -12
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Find a different job with better hours",
+        "content_vi": "Tìm việc khác với giờ làm tốt hơn",
+        "i18n_key": "shift_schedule_conflict_403_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 55,
+            "message_en": "New job found! Better schedule and slightly better pay!",
+            "message_vi": "Tìm được việc mới! Lịch tốt hơn và lương cao hơn một chút!",
+            "i18n_key": "shift_schedule_conflict_403_c3_o1",
+            "stat_changes": {
+              "money": 40,
+              "happiness": 18,
+              "health": 8
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 45,
+            "message_en": "Job search takes weeks. Lost income during transition. Stressful.",
+            "message_vi": "Tìm việc mất nhiều tuần. Mất thu nhập trong quá trình chuyển đổi. Căng thẳng.",
+            "i18n_key": "shift_schedule_conflict_403_c3_o2",
+            "stat_changes": {
+              "money": -40,
+              "happiness": -15,
+              "health": -8
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Workplace Harassment",
+    "title_vi": "Quấy Rối Nơi Làm Việc",
+    "description_en": "A regular customer makes inappropriate comments every visit. It's getting worse.",
+    "description_vi": "Một khách hàng quen có những bình luận không phù hợp mỗi lần đến. Ngày càng tệ hơn.",
+    "i18n_key": "workplace_harassment_404",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 20,
+      "max_age": 50,
+      "requires_flags": [
+        "is_employed",
+        "job_service"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Report to manager and refuse to serve them",
+        "content_vi": "Báo cáo quản lý và từ chối phục vụ họ",
+        "i18n_key": "workplace_harassment_404_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Manager bans the customer. You feel protected and respected.",
+            "message_vi": "Quản lý cấm khách hàng. Bạn cảm thấy được bảo vệ và tôn trọng.",
+            "i18n_key": "workplace_harassment_404_c1_o1",
+            "stat_changes": {
+              "happiness": 20,
+              "health": 10
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 30,
+            "message_en": "Manager says 'customer is always right'. You're told to deal with it. Betrayed.",
+            "message_vi": "Quản lý nói 'khách hàng luôn đúng'. Bạn được bảo chịu đựng. Bị phản bội.",
+            "i18n_key": "workplace_harassment_404_c1_o2",
+            "stat_changes": {
+              "happiness": -30,
+              "health": -15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Confront the customer directly",
+        "content_vi": "Đối chất trực tiếp với khách hàng",
+        "i18n_key": "workplace_harassment_404_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 55,
+            "message_en": "They apologize and stop. Other staff respect your courage.",
+            "message_vi": "Họ xin lỗi và dừng lại. Nhân viên khác tôn trọng lòng dũng cảm của bạn.",
+            "i18n_key": "workplace_harassment_404_c2_o1",
+            "stat_changes": {
+              "happiness": 18
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 45,
+            "message_en": "They complain to manager. You're reprimanded for being 'rude'. Unfair.",
+            "message_vi": "Họ phàn nàn với quản lý. Bạn bị khiển trách vì 'thô lỗ'. Bất công.",
+            "i18n_key": "workplace_harassment_404_c2_o2",
+            "stat_changes": {
+              "happiness": -25,
+              "health": -12
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Quit and find a safer workplace",
+        "content_vi": "Nghỉ việc và tìm nơi làm việc an toàn hơn",
+        "i18n_key": "workplace_harassment_404_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "New job is much better. Respectful environment. Should have left sooner!",
+            "message_vi": "Việc mới tốt hơn nhiều. Môi trường tôn trọng. Nên rời đi sớm hơn!",
+            "i18n_key": "workplace_harassment_404_c3_o1",
+            "stat_changes": {
+              "money": 20,
+              "happiness": 25,
+              "health": 15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 40,
+            "message_en": "Hard to find work. Financial gap is stressful. But at least you're safe.",
+            "message_vi": "Khó tìm việc. Khoảng trống tài chính căng thẳng. Nhưng ít nhất bạn an toàn.",
+            "i18n_key": "workplace_harassment_404_c3_o2",
+            "stat_changes": {
+              "money": -50,
+              "happiness": 5,
+              "health": 10
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Slow Day, Low Tips",
+    "title_vi": "Ngày Ế Ẩm, Tiền Boa Thấp",
+    "description_en": "Business is dead. You've made only $10 in tips all day. Bills are due.",
+    "description_vi": "Kinh doanh ế ẩm. Bạn chỉ kiếm được $10 tiền boa cả ngày. Hóa đơn đến hạn.",
+    "i18n_key": "slow_day_low_tips_406",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 20,
+      "max_age": 50,
+      "requires_flags": [
+        "is_employed",
+        "job_service"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Pick up extra shifts this week",
+        "content_vi": "Nhận thêm ca tuần này",
+        "i18n_key": "slow_day_low_tips_406_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Extra shifts pay off. Bills covered. Exhausted but relieved.",
+            "message_vi": "Ca thêm có kết quả. Hóa đơn được trả. Kiệt sức nhưng nhẹ nhõm.",
+            "i18n_key": "slow_day_low_tips_406_c1_o1",
+            "stat_changes": {
+              "money": 40,
+              "happiness": 5,
+              "health": -10
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 30,
+            "message_en": "All shifts are slow. Barely made anything. Wasted time.",
+            "message_vi": "Tất cả ca đều ế. Hầu như không kiếm được gì. Lãng phí thời gian.",
+            "i18n_key": "slow_day_low_tips_406_c1_o2",
+            "stat_changes": {
+              "money": 10,
+              "happiness": -15,
+              "health": -12
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Look for a second part-time job",
+        "content_vi": "Tìm việc bán thời gian thứ hai",
+        "i18n_key": "slow_day_low_tips_406_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "Found weekend gig! Extra income stream. Busy but financially stable.",
+            "message_vi": "Tìm được việc cuối tuần! Nguồn thu nhập thêm. Bận rộn nhưng ổn định tài chính.",
+            "i18n_key": "slow_day_low_tips_406_c2_o1",
+            "stat_changes": {
+              "money": 50,
+              "happiness": 8,
+              "health": -8
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 40,
+            "message_en": "No one is hiring. Still struggling financially. Stressful.",
+            "message_vi": "Không ai tuyển dụng. Vẫn khó khăn tài chính. Căng thẳng.",
+            "i18n_key": "slow_day_low_tips_406_c2_o2",
+            "stat_changes": {
+              "happiness": -18,
+              "health": -8
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Ask family for help with bills",
+        "content_vi": "Xin gia đình giúp đỡ với hóa đơn",
+        "i18n_key": "slow_day_low_tips_406_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 65,
+            "message_en": "Family helps out. Bills paid. Grateful but embarrassed.",
+            "message_vi": "Gia đình giúp đỡ. Hóa đơn được trả. Biết ơn nhưng xấu hổ.",
+            "i18n_key": "slow_day_low_tips_406_c3_o1",
+            "stat_changes": {
+              "money": 40,
+              "happiness": -10
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 35,
+            "message_en": "Family is struggling too. Can't help. You're on your own.",
+            "message_vi": "Gia đình cũng đang khó khăn. Không thể giúp. Bạn phải tự lo.",
+            "i18n_key": "slow_day_low_tips_406_c3_o2",
+            "stat_changes": {
+              "happiness": -25,
+              "health": -10
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Health Code Violation",
+    "title_vi": "Vi Phạm Quy Định Y Tế",
+    "description_en": "You notice the kitchen has serious health code violations. Management knows but ignores it.",
+    "description_vi": "Bạn nhận thấy bếp có vi phạm quy định y tế nghiêm trọng. Quản lý biết nhưng phớt lờ.",
+    "i18n_key": "health_code_violation_407",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 22,
+      "max_age": 50,
+      "requires_flags": [
+        "is_employed",
+        "job_service"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Report to health department anonymously",
+        "content_vi": "Báo cáo ẩn danh cho sở y tế",
+        "i18n_key": "health_code_violation_407_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Inspection forces cleanup. Workplace safer. You did the right thing.",
+            "message_vi": "Thanh tra buộc dọn dẹp. Nơi làm việc an toàn hơn. Bạn đã làm đúng.",
+            "i18n_key": "health_code_violation_407_c1_o1",
+            "stat_changes": {
+              "happiness": 15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 30,
+            "message_en": "Restaurant temporarily closed. Everyone loses income. Coworkers blame you.",
+            "message_vi": "Nhà hàng đóng cửa tạm thời. Mọi người mất thu nhập. Đồng nghiệp đổ lỗi cho bạn.",
+            "i18n_key": "health_code_violation_407_c1_o2",
+            "stat_changes": {
+              "money": -60,
+              "happiness": -20
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Confront management about fixing it",
+        "content_vi": "Đối chất với quản lý về việc sửa chữa",
+        "i18n_key": "health_code_violation_407_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Management fixes issues to avoid trouble. Problem solved internally.",
+            "message_vi": "Quản lý sửa vấn đề để tránh rắc rối. Vấn đề được giải quyết nội bộ.",
+            "i18n_key": "health_code_violation_407_c2_o1",
+            "stat_changes": {
+              "happiness": 12
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 50,
+            "message_en": "Management fires you for 'causing problems'. Retaliation is real.",
+            "message_vi": "Quản lý sa thải bạn vì 'gây rắc rối'. Trả thù là có thật.",
+            "i18n_key": "health_code_violation_407_c2_o2",
+            "stat_changes": {
+              "money": -80,
+              "happiness": -30,
+              "health": -12
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Stay quiet, keep your job",
+        "content_vi": "Im lặng, giữ công việc",
+        "i18n_key": "health_code_violation_407_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Guilt weighs on you. Customers could get sick. Moral compromise.",
+            "message_vi": "Tội lỗi đè nặng. Khách hàng có thể bị ốm. Thỏa hiệp đạo đức.",
+            "i18n_key": "health_code_violation_407_c3_o1",
+            "stat_changes": {
+              "happiness": -20,
+              "health": -8
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Generous Tipper Regular",
+    "title_vi": "Khách Quen Cho Boa Hào Phóng",
+    "description_en": "A wealthy regular always tips you $50. Today they ask for your personal phone number.",
+    "description_vi": "Một khách quen giàu có luôn cho bạn boa $50. Hôm nay họ xin số điện thoại cá nhân.",
+    "i18n_key": "generous_tipper_408",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 20,
+      "max_age": 45,
+      "requires_flags": [
+        "is_employed",
+        "job_service"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Politely decline, keep it professional",
+        "content_vi": "Từ chối lịch sự, giữ chuyên nghiệp",
+        "i18n_key": "generous_tipper_408_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "They respect your boundaries. Still tip well. Professional relationship maintained.",
+            "message_vi": "Họ tôn trọng ranh giới. Vẫn cho boa tốt. Mối quan hệ chuyên nghiệp được duy trì.",
+            "i18n_key": "generous_tipper_408_c1_o1",
+            "stat_changes": {
+              "happiness": 10,
+              "money": 50
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 30,
+            "message_en": "They stop coming. Lost your best tipper. Income drops.",
+            "message_vi": "Họ ngừng đến. Mất người cho boa tốt nhất. Thu nhập giảm.",
+            "i18n_key": "generous_tipper_408_c1_o2",
+            "stat_changes": {
+              "happiness": -15,
+              "money": -30
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Give your number, see where it goes",
+        "content_vi": "Đưa số, xem chuyện gì xảy ra",
+        "i18n_key": "generous_tipper_408_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 40,
+            "message_en": "They're genuinely nice! Dating a wealthy person. Life improves!",
+            "message_vi": "Họ thực sự tốt! Hẹn hò với người giàu có. Cuộc sống cải thiện!",
+            "i18n_key": "generous_tipper_408_c2_o1",
+            "stat_changes": {
+              "happiness": 25,
+              "money": 100
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 60,
+            "message_en": "They become possessive and controlling. Workplace is now uncomfortable. Regret.",
+            "message_vi": "Họ trở nên chiếm hữu và kiểm soát. Nơi làm việc giờ khó chịu. Hối hận.",
+            "i18n_key": "generous_tipper_408_c2_o2",
+            "stat_changes": {
+              "happiness": -25,
+              "health": -12
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Report to manager, feels inappropriate",
+        "content_vi": "Báo cáo quản lý, cảm thấy không phù hợp",
+        "i18n_key": "generous_tipper_408_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "Manager handles it professionally. Customer warned. You feel protected.",
+            "message_vi": "Quản lý xử lý chuyên nghiệp. Khách hàng được cảnh cáo. Bạn cảm thấy được bảo vệ.",
+            "i18n_key": "generous_tipper_408_c3_o1",
+            "stat_changes": {
+              "happiness": 15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 40,
+            "message_en": "Manager says you're overreacting. Customer is a VIP. You're on your own.",
+            "message_vi": "Quản lý nói bạn phản ứng thái quá. Khách hàng là VIP. Bạn phải tự lo.",
+            "i18n_key": "generous_tipper_408_c3_o2",
+            "stat_changes": {
+              "happiness": -20
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  }
+]

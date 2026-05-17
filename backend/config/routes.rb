@@ -2,7 +2,12 @@ Rails.application.routes.draw do
   # API namespace
   namespace :api do
     namespace :v1 do
-      resources :characters, only: [:create, :show, :update]
+      resources :characters, only: [:create, :show, :update] do
+        member do
+          post :action  # Perform a life action (buy house, work overtime, etc.)
+          post :select_job  # Select a career path
+        end
+      end
       resources :events, only: [:index, :show]
       resources :choices, only: [:show] do
         member do

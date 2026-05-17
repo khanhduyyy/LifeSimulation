@@ -1,0 +1,95 @@
+[
+  {
+    "title_en": "Retirement Decision",
+    "title_vi": "Quyết Định Nghỉ Hưu",
+    "description_en": "You've reached age 55. It's time to decide about retirement and what comes next in your life.",
+    "description_vi": "Bạn đã 55 tuổi. Đã đến lúc quyết định về việc nghỉ hưu và những gì sẽ đến tiếp theo trong cuộc đời.",
+    "conditions": {
+      "min_age": 55,
+      "max_age": 55,
+      "requires_flags": [
+        "is_employed"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Retire now and enjoy life",
+        "content_vi": "Nghỉ hưu ngay và tận hưởng cuộc sống",
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "You've retired! Time to relax and enjoy the fruits of your labor.",
+            "message_vi": "Bạn đã nghỉ hưu! Đã đến lúc thư giãn và tận hưởng thành quả lao động.",
+            "stat_changes": {
+              "happiness": 20
+            },
+            "set_flags": {
+              "is_retired": true
+            },
+            "unset_flags": [
+              "is_employed"
+            ]
+          }
+        ]
+      },
+      {
+        "content_en": "Work a few more years",
+        "content_vi": "Làm việc thêm vài năm nữa",
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "You decide to keep working. The routine gives you purpose.",
+            "message_vi": "Bạn quyết định tiếp tục làm việc. Công việc cho bạn mục đích sống.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "set_flags": {
+              "delayed_retirement": true
+            }
+          }
+        ]
+      },
+      {
+        "content_en": "Retire and start a small business",
+        "content_vi": "Nghỉ hưu và bắt đầu kinh doanh nhỏ",
+        "display_conditions": {
+          "min_money": 300
+        },
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "Your retirement business is thriving! Passive income secured.",
+            "message_vi": "Công việc kinh doanh sau nghỉ hưu phát triển tốt! Thu nhập thụ động đảm bảo.",
+            "stat_changes": {
+              "money": -300,
+              "happiness": 25
+            },
+            "set_flags": {
+              "is_retired": true,
+              "retirement_business": true
+            },
+            "unset_flags": [
+              "is_employed"
+            ]
+          },
+          {
+            "probability": 40,
+            "message_en": "The business struggles. You lost some savings but gained experience.",
+            "message_vi": "Kinh doanh gặp khó khăn. Bạn mất một số tiền tiết kiệm nhưng có thêm kinh nghiệm.",
+            "stat_changes": {
+              "money": -300,
+              "happiness": -10
+            },
+            "set_flags": {
+              "is_retired": true
+            },
+            "unset_flags": [
+              "is_employed"
+            ]
+          }
+        ]
+      }
+    ],
+    "event_type": "milestone"
+  }
+]

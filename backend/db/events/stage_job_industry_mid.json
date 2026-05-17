@@ -1,0 +1,696 @@
+[
+  {
+    "title_en": "Production Line Breakdown",
+    "title_vi": "Dây Chuyền Sản Xuất Hỏng",
+    "description_en": "Critical production equipment failed. As supervisor, you must get it running fast or lose the day's output.",
+    "description_vi": "Thiết bị sản xuất quan trọng hỏng. Với vai trò giám sát, bạn phải khởi động nhanh hoặc mất sản lượng cả ngày.",
+    "i18n_key": "production_breakdown_701",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 25,
+      "max_age": 55,
+      "requires_flags": [
+        "is_employed",
+        "job_industry_mid"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Call maintenance, wait for proper fix",
+        "content_vi": "Gọi bảo trì, chờ sửa đúng cách",
+        "i18n_key": "production_breakdown_701_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Fixed properly. No future issues. Lost today but saved tomorrow.",
+            "message_vi": "Sửa đúng cách. Không vấn đề sau này. Mất hôm nay nhưng cứu ngày mai.",
+            "i18n_key": "production_breakdown_701_c1_o1",
+            "stat_changes": {
+              "happiness": 10
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 30,
+            "message_en": "Maintenance takes hours. Production quota missed. Boss is furious.",
+            "message_vi": "Bảo trì mất nhiều giờ. Chỉ tiêu sản xuất không đạt. Sếp tức giận.",
+            "i18n_key": "production_breakdown_701_c1_o2",
+            "stat_changes": {
+              "happiness": -20,
+              "money": -40
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Quick temporary fix yourself",
+        "content_vi": "Tự sửa tạm thời nhanh",
+        "i18n_key": "production_breakdown_701_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "Your fix works! Production continues. Boss impressed by quick thinking!",
+            "message_vi": "Sửa chữa của bạn hiệu quả! Sản xuất tiếp tục. Sếp ấn tượng với tư duy nhanh!",
+            "i18n_key": "production_breakdown_701_c2_o1",
+            "stat_changes": {
+              "happiness": 20,
+              "money": 50
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 40,
+            "message_en": "Fix fails catastrophically. Equipment damaged worse. Huge repair bill.",
+            "message_vi": "Sửa chữa thất bại thảm hại. Thiết bị hỏng nặng hơn. Hóa đơn sửa chữa khổng lồ.",
+            "i18n_key": "production_breakdown_701_c2_o2",
+            "stat_changes": {
+              "happiness": -30,
+              "money": -100,
+              "health": -10
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Shift workers to other tasks",
+        "content_vi": "Chuyển công nhân sang công việc khác",
+        "i18n_key": "production_breakdown_701_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 75,
+            "message_en": "Smart resource management! Productivity maintained. Leadership skills recognized!",
+            "message_vi": "Quản lý nguồn lực thông minh! Năng suất được duy trì. Kỹ năng lãnh đạo được công nhận!",
+            "i18n_key": "production_breakdown_701_c3_o1",
+            "stat_changes": {
+              "happiness": 18,
+              "money": 40
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 25,
+            "message_en": "Workers untrained for other tasks. Chaos ensues. Worse than doing nothing.",
+            "message_vi": "Công nhân chưa được đào tạo cho công việc khác. Hỗn loạn xảy ra. Tệ hơn không làm gì.",
+            "i18n_key": "production_breakdown_701_c3_o2",
+            "stat_changes": {
+              "happiness": -18,
+              "money": -30
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Quality Control Failure",
+    "title_vi": "Thất Bại Kiểm Soát Chất Lượng",
+    "description_en": "A batch of defective products passed inspection. Customer complaints are flooding in.",
+    "description_vi": "Một lô sản phẩm lỗi đã qua kiểm tra. Khiếu nại khách hàng tràn vào.",
+    "i18n_key": "quality_control_failure_702",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 27,
+      "max_age": 55,
+      "requires_flags": [
+        "is_employed",
+        "job_industry_mid"
+      ],
+      "min_work_experience": 3
+    },
+    "choices": [
+      {
+        "content_en": "Recall all products immediately",
+        "content_vi": "Thu hồi tất cả sản phẩm ngay lập tức",
+        "i18n_key": "quality_control_failure_702_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Quick action saves brand reputation. Customers appreciate honesty. Crisis managed!",
+            "message_vi": "Hành động nhanh cứu danh tiếng thương hiệu. Khách hàng đánh giá cao sự trung thực. Khủng hoảng được quản lý!",
+            "i18n_key": "quality_control_failure_702_c1_o1",
+            "stat_changes": {
+              "happiness": 15,
+              "money": -60
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 30,
+            "message_en": "Recall costs are massive. Company blames you. Job at risk.",
+            "message_vi": "Chi phí thu hồi khổng lồ. Công ty đổ lỗi cho bạn. Công việc bị đe dọa.",
+            "i18n_key": "quality_control_failure_702_c1_o2",
+            "stat_changes": {
+              "happiness": -25,
+              "money": -100
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Investigate root cause before acting",
+        "content_vi": "Điều tra nguyên nhân gốc rễ trước khi hành động",
+        "i18n_key": "quality_control_failure_702_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 65,
+            "message_en": "Found the issue! Targeted fix prevents future problems. Smart approach!",
+            "message_vi": "Tìm ra vấn đề! Sửa chữa có mục tiêu ngăn vấn đề tương lai. Cách tiếp cận thông minh!",
+            "i18n_key": "quality_control_failure_702_c2_o1",
+            "stat_changes": {
+              "happiness": 20,
+              "money": 40
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 35,
+            "message_en": "Investigation takes too long. More complaints. Damage spreads. Should have acted faster.",
+            "message_vi": "Điều tra mất quá lâu. Nhiều khiếu nại hơn. Thiệt hại lan rộng. Nên hành động nhanh hơn.",
+            "i18n_key": "quality_control_failure_702_c2_o2",
+            "stat_changes": {
+              "happiness": -30,
+              "money": -120
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Offer refunds quietly, avoid publicity",
+        "content_vi": "Đưa ra hoàn tiền lặng lẽ, tránh công khai",
+        "i18n_key": "quality_control_failure_702_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Issue contained. Most customers satisfied. No media attention. Dodged bullet.",
+            "message_vi": "Vấn đề được kiểm soát. Hầu hết khách hàng hài lòng. Không có sự chú ý của truyền thông. Thoát nạn.",
+            "i18n_key": "quality_control_failure_702_c3_o1",
+            "stat_changes": {
+              "happiness": 12,
+              "money": -50
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 50,
+            "message_en": "Story leaks to media. Cover-up scandal worse than original problem. Disaster.",
+            "message_vi": "Câu chuyện rò rỉ ra truyền thông. Bê bối che đậy tệ hơn vấn đề ban đầu. Thảm họa.",
+            "i18n_key": "quality_control_failure_702_c3_o2",
+            "stat_changes": {
+              "happiness": -35,
+              "money": -150,
+              "health": -15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Worker Injury Incident",
+    "title_vi": "Sự Cố Công Nhân Bị Thương",
+    "description_en": "A worker was injured on your shift. As supervisor, you're responsible for the investigation.",
+    "description_vi": "Một công nhân bị thương trong ca của bạn. Với vai trò giám sát, bạn chịu trách nhiệm điều tra.",
+    "i18n_key": "worker_injury_703",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 26,
+      "max_age": 55,
+      "requires_flags": [
+        "is_employed",
+        "job_industry_mid"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Report honestly, implement safety changes",
+        "content_vi": "Báo cáo trung thực, thực hiện thay đổi an toàn",
+        "i18n_key": "worker_injury_703_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 75,
+            "message_en": "Transparency appreciated. Safety improved. Workers trust you more.",
+            "message_vi": "Minh bạch được đánh giá cao. An toàn được cải thiện. Công nhân tin tưởng bạn hơn.",
+            "i18n_key": "worker_injury_703_c1_o1",
+            "stat_changes": {
+              "happiness": 18
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 25,
+            "message_en": "Management blames you for the incident. Reprimanded despite honesty.",
+            "message_vi": "Quản lý đổ lỗi cho bạn về sự cố. Bị khiển trách dù trung thực.",
+            "i18n_key": "worker_injury_703_c1_o2",
+            "stat_changes": {
+              "happiness": -20,
+              "money": -50
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Minimize incident in report",
+        "content_vi": "Giảm thiểu sự cố trong báo cáo",
+        "i18n_key": "worker_injury_703_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 40,
+            "message_en": "Management happy with report. No penalties. But guilt weighs on you.",
+            "message_vi": "Quản lý hài lòng với báo cáo. Không bị phạt. Nhưng tội lỗi đè nặng.",
+            "i18n_key": "worker_injury_703_c2_o1",
+            "stat_changes": {
+              "happiness": -15,
+              "health": -8
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 60,
+            "message_en": "Workers know you lied. Lost their respect. Another injury happens. You're fired.",
+            "message_vi": "Công nhân biết bạn nói dối. Mất tôn trọng. Thương tích khác xảy ra. Bạn bị sa thải.",
+            "i18n_key": "worker_injury_703_c2_o2",
+            "stat_changes": {
+              "happiness": -35,
+              "money": -120,
+              "health": -15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Support injured worker personally",
+        "content_vi": "Hỗ trợ công nhân bị thương cá nhân",
+        "i18n_key": "worker_injury_703_c3",
+        "display_conditions": {
+          "min_money": 50
+        },
+        "outcomes": [
+          {
+            "probability": 80,
+            "message_en": "Worker and team deeply grateful. Loyalty earned. Worth every penny.",
+            "message_vi": "Công nhân và nhóm vô cùng biết ơn. Lòng trung thành được tạo ra. Xứng đáng từng xu.",
+            "i18n_key": "worker_injury_703_c3_o1",
+            "stat_changes": {
+              "happiness": 25,
+              "money": -50
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 20,
+            "message_en": "Worker sues anyway. Your help seen as admission of guilt. Backfired.",
+            "message_vi": "Công nhân vẫn kiện. Sự giúp đỡ của bạn bị xem là thừa nhận tội lỗi. Phản tác dụng.",
+            "i18n_key": "worker_injury_703_c3_o2",
+            "stat_changes": {
+              "happiness": -25,
+              "money": -100
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Overtime Demand",
+    "title_vi": "Yêu Cầu Làm Thêm Giờ",
+    "description_en": "Management demands mandatory overtime for entire team. Workers are exhausted and resisting.",
+    "description_vi": "Quản lý yêu cầu làm thêm giờ bắt buộc cho cả nhóm. Công nhân kiệt sức và phản kháng.",
+    "i18n_key": "overtime_demand_704",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 25,
+      "max_age": 55,
+      "requires_flags": [
+        "is_employed",
+        "job_industry_mid"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Enforce overtime, follow orders",
+        "content_vi": "Thực thi làm thêm giờ, tuân theo lệnh",
+        "i18n_key": "overtime_demand_704_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Quota met. Management pleased. But team morale destroyed. They resent you.",
+            "message_vi": "Chỉ tiêu đạt. Quản lý hài lòng. Nhưng tinh thần nhóm bị phá hủy. Họ bực bội với bạn.",
+            "i18n_key": "overtime_demand_704_c1_o1",
+            "stat_changes": {
+              "happiness": -15,
+              "money": 60,
+              "health": -12
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 50,
+            "message_en": "Workers call in sick en masse. Production halts anyway. Worse outcome.",
+            "message_vi": "Công nhân báo ốm hàng loạt. Sản xuất vẫn dừng. Kết quả tệ hơn.",
+            "i18n_key": "overtime_demand_704_c1_o2",
+            "stat_changes": {
+              "happiness": -30,
+              "money": -80,
+              "health": -15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Negotiate with management for incentives",
+        "content_vi": "Thương lượng với quản lý về ưu đãi",
+        "i18n_key": "overtime_demand_704_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Got overtime bonuses approved! Workers willing. Everyone wins!",
+            "message_vi": "Được phê duyệt thưởng làm thêm giờ! Công nhân sẵn sàng. Mọi người đều thắng!",
+            "i18n_key": "overtime_demand_704_c2_o1",
+            "stat_changes": {
+              "happiness": 20,
+              "money": 80,
+              "health": -8
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 30,
+            "message_en": "Management refuses. You look weak to both sides. Lost respect.",
+            "message_vi": "Quản lý từ chối. Bạn trông yếu đuối với cả hai bên. Mất tôn trọng.",
+            "i18n_key": "overtime_demand_704_c2_o2",
+            "stat_changes": {
+              "happiness": -25
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Refuse to enforce, stand with workers",
+        "content_vi": "Từ chối thực thi, đứng về phía công nhân",
+        "i18n_key": "overtime_demand_704_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 40,
+            "message_en": "Workers love you. Management backs down. You're a hero!",
+            "message_vi": "Công nhân yêu quý bạn. Quản lý lùi bước. Bạn là anh hùng!",
+            "i18n_key": "overtime_demand_704_c3_o1",
+            "stat_changes": {
+              "happiness": 30
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 60,
+            "message_en": "You're fired for insubordination. Unemployed. Principles cost you the job.",
+            "message_vi": "Bạn bị sa thải vì không tuân lệnh. Thất nghiệp. Nguyên tắc khiến bạn mất việc.",
+            "i18n_key": "overtime_demand_704_c3_o2",
+            "stat_changes": {
+              "happiness": -30,
+              "money": -150,
+              "health": -12
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "New Technology Training",
+    "title_vi": "Đào Tạo Công Nghệ Mới",
+    "description_en": "Factory is implementing new automated systems. You and your team need training but production can't stop.",
+    "description_vi": "Nhà máy đang triển khai hệ thống tự động mới. Bạn và nhóm cần đào tạo nhưng sản xuất không thể dừng.",
+    "i18n_key": "new_technology_training_707",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 27,
+      "max_age": 55,
+      "requires_flags": [
+        "is_employed",
+        "job_industry_mid"
+      ],
+      "min_work_experience": 4
+    },
+    "choices": [
+      {
+        "content_en": "Learn quickly, train team yourself",
+        "content_vi": "Học nhanh, tự đào tạo nhóm",
+        "i18n_key": "new_technology_training_707_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 65,
+            "message_en": "You master it fast! Team trained efficiently. Smooth transition. Leadership recognized!",
+            "message_vi": "Bạn thành thạo nhanh! Nhóm được đào tạo hiệu quả. Chuyển đổi suôn sẻ. Lãnh đạo được công nhận!",
+            "i18n_key": "new_technology_training_707_c1_o1",
+            "stat_changes": {
+              "happiness": 25,
+              "money": 70,
+              "health": -8
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 35,
+            "message_en": "You struggle with new tech. Team confused. Production errors increase. Embarrassing.",
+            "message_vi": "Bạn vật lộn với công nghệ mới. Nhóm bối rối. Lỗi sản xuất tăng. Xấu hổ.",
+            "i18n_key": "new_technology_training_707_c1_o2",
+            "stat_changes": {
+              "happiness": -25,
+              "money": -60,
+              "health": -15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Request proper external training",
+        "content_vi": "Yêu cầu đào tạo bên ngoài đúng cách",
+        "i18n_key": "new_technology_training_707_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Professional training approved! Everyone learns properly. Best outcome!",
+            "message_vi": "Đào tạo chuyên nghiệp được phê duyệt! Mọi người học đúng cách. Kết quả tốt nhất!",
+            "i18n_key": "new_technology_training_707_c2_o1",
+            "stat_changes": {
+              "happiness": 20,
+              "money": 50
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 30,
+            "message_en": "Training denied due to budget. You're expected to figure it out. No support.",
+            "message_vi": "Đào tạo bị từ chối do ngân sách. Bạn được kỳ vọng tự tìm ra. Không hỗ trợ.",
+            "i18n_key": "new_technology_training_707_c2_o2",
+            "stat_changes": {
+              "happiness": -20,
+              "health": -10
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Resist change, stick with old methods",
+        "content_vi": "Chống lại thay đổi, giữ phương pháp cũ",
+        "i18n_key": "new_technology_training_707_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 20,
+            "message_en": "Management realizes old system works better. Change cancelled. You were right!",
+            "message_vi": "Quản lý nhận ra hệ thống cũ hoạt động tốt hơn. Thay đổi bị hủy. Bạn đã đúng!",
+            "i18n_key": "new_technology_training_707_c3_o1",
+            "stat_changes": {
+              "happiness": 15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 80,
+            "message_en": "Seen as resistant to change. Passed over for advancement. Career stagnates.",
+            "message_vi": "Bị xem là chống lại thay đổi. Bị bỏ qua thăng tiến. Sự nghiệp đình trệ.",
+            "i18n_key": "new_technology_training_707_c3_o2",
+            "stat_changes": {
+              "happiness": -30,
+              "money": -50
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Supplier Quality Issues",
+    "title_vi": "Vấn Đề Chất Lượng Nhà Cung Cấp",
+    "description_en": "Your regular supplier delivered substandard materials. Switch suppliers or give them another chance?",
+    "description_vi": "Nhà cung cấp thường xuyên giao vật liệu kém chất lượng. Đổi nhà cung cấp hay cho họ cơ hội khác?",
+    "i18n_key": "supplier_quality_708",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 28,
+      "max_age": 55,
+      "requires_flags": [
+        "is_employed",
+        "job_industry_mid"
+      ],
+      "min_work_experience": 5
+    },
+    "choices": [
+      {
+        "content_en": "Switch to new supplier immediately",
+        "content_vi": "Chuyển sang nhà cung cấp mới ngay lập tức",
+        "i18n_key": "supplier_quality_708_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "New supplier is excellent! Better quality, same price. Should have switched sooner!",
+            "message_vi": "Nhà cung cấp mới xuất sắc! Chất lượng tốt hơn, cùng giá. Nên chuyển sớm hơn!",
+            "i18n_key": "supplier_quality_708_c1_o1",
+            "stat_changes": {
+              "happiness": 20,
+              "money": 50
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 40,
+            "message_en": "New supplier worse! Delivery delays. Production halts. Regret switching.",
+            "message_vi": "Nhà cung cấp mới tệ hơn! Trì hoãn giao hàng. Sản xuất dừng. Hối hận đã chuyển.",
+            "i18n_key": "supplier_quality_708_c1_o2",
+            "stat_changes": {
+              "happiness": -25,
+              "money": -100
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Negotiate quality improvements with current supplier",
+        "content_vi": "Thương lượng cải thiện chất lượng với nhà cung cấp hiện tại",
+        "i18n_key": "supplier_quality_708_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 75,
+            "message_en": "They fix issues! Long relationship preserved. Quality restored. Win-win!",
+            "message_vi": "Họ sửa vấn đề! Mối quan hệ lâu dài được bảo tồn. Chất lượng phục hồi. Đôi bên cùng có lợi!",
+            "i18n_key": "supplier_quality_708_c2_o1",
+            "stat_changes": {
+              "happiness": 18,
+              "money": 40
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 25,
+            "message_en": "They promise but don't deliver. More bad materials. Wasted time trusting them.",
+            "message_vi": "Họ hứa nhưng không thực hiện. Vật liệu tồi hơn. Lãng phí thời gian tin họ.",
+            "i18n_key": "supplier_quality_708_c2_o2",
+            "stat_changes": {
+              "happiness": -20,
+              "money": -80
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Use materials anyway, meet deadlines",
+        "content_vi": "Dùng vật liệu dù sao, đáp ứng thời hạn",
+        "i18n_key": "supplier_quality_708_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 30,
+            "message_en": "Products pass inspection. Deadline met. Got lucky this time.",
+            "message_vi": "Sản phẩm qua kiểm tra. Thời hạn đáp ứng. May mắn lần này.",
+            "i18n_key": "supplier_quality_708_c3_o1",
+            "stat_changes": {
+              "happiness": -5,
+              "money": 30
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 70,
+            "message_en": "Products fail. Customer rejects shipment. Massive losses. Your fault for using bad materials.",
+            "message_vi": "Sản phẩm thất bại. Khách hàng từ chối lô hàng. Thua lỗ lớn. Lỗi của bạn vì dùng vật liệu tồi.",
+            "i18n_key": "supplier_quality_708_c3_o2",
+            "stat_changes": {
+              "happiness": -35,
+              "money": -150,
+              "health": -15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -10,17 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_03_07_153026) do
+ActiveRecord::Schema[8.1].define(version: 2026_04_18_130000) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
   create_table "characters", force: :cascade do |t|
     t.integer "age"
+    t.jsonb "assets", default: {}
+    t.string "background", default: "middle"
     t.datetime "created_at", null: false
+    t.jsonb "family", default: {}
     t.jsonb "flags", default: {}
+    t.string "gender"
     t.integer "happiness"
     t.integer "health"
+    t.jsonb "job", default: {}
     t.integer "money"
+    t.string "name"
     t.integer "seen_event_ids", default: [], array: true
     t.datetime "updated_at", null: false
   end
@@ -37,14 +43,20 @@ ActiveRecord::Schema[8.1].define(version: 2026_03_07_153026) do
   end
 
   create_table "events", force: :cascade do |t|
+    t.string "arc_id"
+    t.integer "arc_sequence"
+    t.string "arc_trigger_flags", default: [], array: true
     t.jsonb "conditions"
     t.datetime "created_at", null: false
     t.text "description_en"
     t.text "description_vi"
+    t.string "event_type", default: "random"
     t.string "i18n_key"
     t.string "title_en"
     t.string "title_vi"
     t.datetime "updated_at", null: false
+    t.index ["arc_id"], name: "index_events_on_arc_id"
+    t.index ["event_type"], name: "index_events_on_event_type"
   end
 
   create_table "outcomes", force: :cascade do |t|
@@ -57,6 +69,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_03_07_153026) do
     t.integer "probability"
     t.jsonb "set_flags"
     t.jsonb "stat_changes"
+    t.jsonb "unset_flags", default: []
     t.datetime "updated_at", null: false
     t.index ["choice_id"], name: "index_outcomes_on_choice_id"
     t.index ["next_event_id"], name: "index_outcomes_on_next_event_id"

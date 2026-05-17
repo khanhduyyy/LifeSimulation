@@ -1,0 +1,792 @@
+[
+  {
+    "title_en": "Safety Incident at Plant",
+    "title_vi": "Sự Cố An Toàn Tại Nhà Máy",
+    "description_en": "A serious safety violation was discovered. As senior engineer, you must decide how to handle it.",
+    "description_vi": "Phát hiện vi phạm an toàn nghiêm trọng. Với vai trò kỹ sư cao cấp, bạn phải quyết định cách xử lý.",
+    "i18n_key": "safety_incident_601",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 28,
+      "max_age": 55,
+      "requires_flags": [
+        "is_employed",
+        "job_industry_high"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Shut down operations immediately",
+        "content_vi": "Dừng hoạt động ngay lập tức",
+        "i18n_key": "safety_incident_601_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 75,
+            "message_en": "Lives saved. Management praises your decisive action. Safety first!",
+            "message_vi": "Cứu được mạng người. Quản lý khen ngợi hành động quyết đoán. An toàn trên hết!",
+            "i18n_key": "safety_incident_601_c1_o1",
+            "stat_changes": {
+              "happiness": 25,
+              "money": 50
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 25,
+            "message_en": "Production loss costs millions. You're blamed for overreacting. Career damaged.",
+            "message_vi": "Mất sản xuất tốn hàng triệu. Bạn bị đổ lỗi phản ứng thái quá. Sự nghiệp bị ảnh hưởng.",
+            "i18n_key": "safety_incident_601_c1_o2",
+            "stat_changes": {
+              "happiness": -20,
+              "money": -80
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Fix it while maintaining production",
+        "content_vi": "Sửa chữa trong khi duy trì sản xuất",
+        "i18n_key": "safety_incident_601_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "Brilliant solution! Fixed safely without downtime. Promoted!",
+            "message_vi": "Giải pháp xuất sắc! Sửa an toàn không ngừng hoạt động. Thăng chức!",
+            "i18n_key": "safety_incident_601_c2_o1",
+            "stat_changes": {
+              "happiness": 30,
+              "money": 100
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 40,
+            "message_en": "Accident occurs during fix. Worker injured. You're held responsible.",
+            "message_vi": "Tai nạn xảy ra khi sửa. Công nhân bị thương. Bạn chịu trách nhiệm.",
+            "i18n_key": "safety_incident_601_c2_o2",
+            "stat_changes": {
+              "happiness": -35,
+              "health": -15,
+              "money": -150
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Report to regulatory authorities",
+        "content_vi": "Báo cáo cơ quan quản lý",
+        "i18n_key": "safety_incident_601_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 55,
+            "message_en": "Authorities force proper fix. You're protected as whistleblower. Integrity intact.",
+            "message_vi": "Cơ quan buộc sửa đúng cách. Bạn được bảo vệ như người tố giác. Giữ được liêm chính.",
+            "i18n_key": "safety_incident_601_c3_o1",
+            "stat_changes": {
+              "happiness": 20
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 45,
+            "message_en": "Company fined heavily. You're fired for 'disloyalty'. Blacklisted in industry.",
+            "message_vi": "Công ty bị phạt nặng. Bạn bị sa thải vì 'không trung thành'. Bị đưa vào danh sách đen.",
+            "i18n_key": "safety_incident_601_c3_o2",
+            "stat_changes": {
+              "happiness": -30,
+              "money": -200,
+              "health": -12
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Environmental Compliance Issue",
+    "title_vi": "Vấn Đề Tuân Thủ Môi Trường",
+    "description_en": "Your plant is exceeding emission limits. Fixing it costs $150 and halts production for a week.",
+    "description_vi": "Nhà máy của bạn vượt giới hạn khí thải. Sửa chữa tốn $150 và dừng sản xuất một tuần.",
+    "i18n_key": "environmental_compliance_602",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 30,
+      "max_age": 55,
+      "requires_flags": [
+        "is_employed",
+        "job_industry_high"
+      ],
+      "min_work_experience": 5
+    },
+    "choices": [
+      {
+        "content_en": "Invest in proper emission controls",
+        "content_vi": "Đầu tư vào kiểm soát khí thải đúng cách",
+        "i18n_key": "environmental_compliance_602_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 80,
+            "message_en": "Compliance achieved! Company avoids fines. You're seen as responsible leader.",
+            "message_vi": "Đạt tuân thủ! Công ty tránh phạt. Bạn được xem là lãnh đạo có trách nhiệm.",
+            "i18n_key": "environmental_compliance_602_c1_o1",
+            "stat_changes": {
+              "happiness": 20,
+              "money": 60
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 20,
+            "message_en": "Equipment fails after installation. More delays. Budget overrun.",
+            "message_vi": "Thiết bị hỏng sau lắp đặt. Trì hoãn thêm. Vượt ngân sách.",
+            "i18n_key": "environmental_compliance_602_c1_o2",
+            "stat_changes": {
+              "happiness": -15,
+              "money": -100
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Find cheaper workaround solution",
+        "content_vi": "Tìm giải pháp thay thế rẻ hơn",
+        "i18n_key": "environmental_compliance_602_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Innovative solution works! Saved money and met standards. Genius!",
+            "message_vi": "Giải pháp sáng tạo hiệu quả! Tiết kiệm tiền và đạt tiêu chuẩn. Thiên tài!",
+            "i18n_key": "environmental_compliance_602_c2_o1",
+            "stat_changes": {
+              "happiness": 25,
+              "money": 80
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 50,
+            "message_en": "Workaround fails inspection. Massive fines. Your reputation ruined.",
+            "message_vi": "Giải pháp thất bại kiểm tra. Phạt nặng. Danh tiếng bị hủy hoại.",
+            "i18n_key": "environmental_compliance_602_c2_o2",
+            "stat_changes": {
+              "happiness": -30,
+              "money": -200
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Delay and hope inspectors don't notice",
+        "content_vi": "Trì hoãn và hy vọng thanh tra không phát hiện",
+        "i18n_key": "environmental_compliance_602_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 30,
+            "message_en": "Got lucky. No inspection this quarter. Dodged a bullet.",
+            "message_vi": "May mắn. Không có thanh tra quý này. Thoát nạn.",
+            "i18n_key": "environmental_compliance_602_c3_o1",
+            "stat_changes": {
+              "happiness": -10
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 70,
+            "message_en": "Caught! Huge fines. Plant shut down. You're fired. Criminal charges possible.",
+            "message_vi": "Bị bắt! Phạt khổng lồ. Nhà máy đóng cửa. Bạn bị sa thải. Có thể bị truy tố hình sự.",
+            "i18n_key": "environmental_compliance_602_c3_o2",
+            "stat_changes": {
+              "happiness": -40,
+              "money": -300,
+              "health": -20
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Equipment Upgrade Decision",
+    "title_vi": "Quyết Định Nâng Cấp Thiết Bị",
+    "description_en": "New technology could increase efficiency 30% but costs $200. Old equipment still works.",
+    "description_vi": "Công nghệ mới có thể tăng hiệu suất 30% nhưng tốn $200. Thiết bị cũ vẫn hoạt động.",
+    "i18n_key": "equipment_upgrade_603",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 32,
+      "max_age": 55,
+      "requires_flags": [
+        "is_employed",
+        "job_industry_high"
+      ],
+      "min_work_experience": 7
+    },
+    "choices": [
+      {
+        "content_en": "Approve the upgrade investment",
+        "content_vi": "Phê duyệt đầu tư nâng cấp",
+        "i18n_key": "equipment_upgrade_603_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 75,
+            "message_en": "Efficiency gains are huge! ROI achieved in 6 months. Visionary decision!",
+            "message_vi": "Tăng hiệu suất khổng lồ! Hoàn vốn trong 6 tháng. Quyết định có tầm nhìn!",
+            "i18n_key": "equipment_upgrade_603_c1_o1",
+            "stat_changes": {
+              "happiness": 28,
+              "money": 150
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 25,
+            "message_en": "New equipment has bugs. Downtime costs more than savings. Bad investment.",
+            "message_vi": "Thiết bị mới có lỗi. Thời gian ngừng hoạt động tốn hơn tiết kiệm. Đầu tư tồi.",
+            "i18n_key": "equipment_upgrade_603_c1_o2",
+            "stat_changes": {
+              "happiness": -25,
+              "money": -150
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Keep old equipment, maintain status quo",
+        "content_vi": "Giữ thiết bị cũ, duy trì hiện trạng",
+        "i18n_key": "equipment_upgrade_603_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Safe choice. No risk. But competitors who upgraded are outpacing you.",
+            "message_vi": "Lựa chọn an toàn. Không rủi ro. Nhưng đối thủ nâng cấp đang vượt qua bạn.",
+            "i18n_key": "equipment_upgrade_603_c2_o1",
+            "stat_changes": {
+              "happiness": -10
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 50,
+            "message_en": "Old equipment breaks down catastrophically. Emergency replacement costs triple!",
+            "message_vi": "Thiết bị cũ hỏng thảm khốc. Thay thế khẩn cấp tốn gấp ba!",
+            "i18n_key": "equipment_upgrade_603_c2_o2",
+            "stat_changes": {
+              "happiness": -30,
+              "money": -250,
+              "health": -15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Propose phased upgrade to reduce risk",
+        "content_vi": "Đề xuất nâng cấp từng giai đoạn để giảm rủi ro",
+        "i18n_key": "equipment_upgrade_603_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 80,
+            "message_en": "Smart approach! Gradual upgrade minimizes disruption. Management impressed!",
+            "message_vi": "Cách tiếp cận thông minh! Nâng cấp dần giảm thiểu gián đoạn. Quản lý ấn tượng!",
+            "i18n_key": "equipment_upgrade_603_c3_o1",
+            "stat_changes": {
+              "happiness": 25,
+              "money": 100
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 20,
+            "message_en": "Phased approach takes too long. Lost competitive advantage. Mediocre results.",
+            "message_vi": "Cách tiếp cận từng giai đoạn mất quá lâu. Mất lợi thế cạnh tranh. Kết quả tầm thường.",
+            "i18n_key": "equipment_upgrade_603_c3_o2",
+            "stat_changes": {
+              "happiness": -8,
+              "money": 20
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Labor Union Negotiation",
+    "title_vi": "Đàm Phán Công Đoàn",
+    "description_en": "Workers threaten to strike over safety concerns. As senior engineer, you're caught between management and workers.",
+    "description_vi": "Công nhân đe dọa đình công vì lo ngại an toàn. Với vai trò kỹ sư cao cấp, bạn kẹt giữa quản lý và công nhân.",
+    "i18n_key": "labor_union_604",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 33,
+      "max_age": 55,
+      "requires_flags": [
+        "is_employed",
+        "job_industry_high"
+      ],
+      "min_work_experience": 8
+    },
+    "choices": [
+      {
+        "content_en": "Side with workers, push for safety improvements",
+        "content_vi": "Về phe công nhân, thúc đẩy cải thiện an toàn",
+        "i18n_key": "labor_union_604_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 65,
+            "message_en": "Management implements changes. Strike averted. Workers respect you. Hero!",
+            "message_vi": "Quản lý thực hiện thay đổi. Tránh đình công. Công nhân tôn trọng bạn. Anh hùng!",
+            "i18n_key": "labor_union_604_c1_o1",
+            "stat_changes": {
+              "happiness": 30,
+              "money": 80
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 35,
+            "message_en": "Management sees you as traitor. Passed over for promotion. Career stalled.",
+            "message_vi": "Quản lý thấy bạn là kẻ phản bội. Bị bỏ qua thăng chức. Sự nghiệp đình trệ.",
+            "i18n_key": "labor_union_604_c1_o2",
+            "stat_changes": {
+              "happiness": -20,
+              "money": -50
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Support management position",
+        "content_vi": "Ủng hộ lập trường quản lý",
+        "i18n_key": "labor_union_604_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 45,
+            "message_en": "Management rewards loyalty. Promoted! But workers distrust you now.",
+            "message_vi": "Quản lý thưởng lòng trung thành. Thăng chức! Nhưng công nhân không tin bạn.",
+            "i18n_key": "labor_union_604_c2_o1",
+            "stat_changes": {
+              "happiness": 10,
+              "money": 120
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 55,
+            "message_en": "Strike happens. Production halts. You're blamed for not preventing it.",
+            "message_vi": "Đình công xảy ra. Sản xuất dừng. Bạn bị đổ lỗi không ngăn chặn.",
+            "i18n_key": "labor_union_604_c2_o2",
+            "stat_changes": {
+              "happiness": -30,
+              "money": -100,
+              "health": -15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Mediate and find compromise solution",
+        "content_vi": "Hòa giải và tìm giải pháp thỏa hiệp",
+        "i18n_key": "labor_union_604_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 75,
+            "message_en": "Brilliant mediation! Both sides satisfied. You're seen as diplomatic leader!",
+            "message_vi": "Hòa giải xuất sắc! Cả hai bên hài lòng. Bạn được xem là lãnh đạo ngoại giao!",
+            "i18n_key": "labor_union_604_c3_o1",
+            "stat_changes": {
+              "happiness": 35,
+              "money": 150
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 25,
+            "message_en": "Neither side happy with compromise. Both blame you. Lose-lose.",
+            "message_vi": "Cả hai bên không hài lòng với thỏa hiệp. Cả hai đổ lỗi cho bạn. Thua cả hai.",
+            "i18n_key": "labor_union_604_c3_o2",
+            "stat_changes": {
+              "happiness": -25,
+              "health": -12
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "International Project Opportunity",
+    "title_vi": "Cơ Hội Dự Án Quốc Tế",
+    "description_en": "Company offers you a 2-year assignment overseas. Higher pay but away from family.",
+    "description_vi": "Công ty đề nghị nhiệm vụ 2 năm ở nước ngoài. Lương cao hơn nhưng xa gia đình.",
+    "i18n_key": "international_project_605",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 30,
+      "max_age": 50,
+      "requires_flags": [
+        "is_employed",
+        "job_industry_high"
+      ],
+      "min_work_experience": 6
+    },
+    "choices": [
+      {
+        "content_en": "Accept the overseas assignment",
+        "content_vi": "Chấp nhận nhiệm vụ nước ngoài",
+        "i18n_key": "international_project_605_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Amazing experience! Career boost. Returned as industry expert!",
+            "message_vi": "Trải nghiệm tuyệt vời! Sự nghiệp thăng tiến. Trở về như chuyên gia ngành!",
+            "i18n_key": "international_project_605_c1_o1",
+            "stat_changes": {
+              "happiness": 25,
+              "money": 200,
+              "health": -10
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 30,
+            "message_en": "Lonely and isolated. Family relationships strained. Regret accepting.",
+            "message_vi": "Cô đơn và cô lập. Mối quan hệ gia đình căng thẳng. Hối hận đã chấp nhận.",
+            "i18n_key": "international_project_605_c1_o2",
+            "stat_changes": {
+              "happiness": -30,
+              "money": 150,
+              "health": -20
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Negotiate for shorter assignment",
+        "content_vi": "Thương lượng nhiệm vụ ngắn hơn",
+        "i18n_key": "international_project_605_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "They agree to 1 year! Perfect balance. Career and family both win!",
+            "message_vi": "Họ đồng ý 1 năm! Cân bằng hoàn hảo. Cả sự nghiệp và gia đình đều thắng!",
+            "i18n_key": "international_project_605_c2_o1",
+            "stat_changes": {
+              "happiness": 30,
+              "money": 150
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 40,
+            "message_en": "They withdraw offer. Given to someone more committed. Opportunity lost.",
+            "message_vi": "Họ rút lại đề nghị. Đưa cho người cam kết hơn. Cơ hội bị mất.",
+            "i18n_key": "international_project_605_c2_o2",
+            "stat_changes": {
+              "happiness": -20
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Decline, family comes first",
+        "content_vi": "Từ chối, gia đình trên hết",
+        "i18n_key": "international_project_605_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Family appreciates your choice. But career advancement slows. Trade-offs.",
+            "message_vi": "Gia đình đánh giá cao lựa chọn. Nhưng thăng tiến sự nghiệp chậm lại. Đánh đổi.",
+            "i18n_key": "international_project_605_c3_o1",
+            "stat_changes": {
+              "happiness": 10
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Process Innovation Idea",
+    "title_vi": "Ý Tưởng Đổi Mới Quy Trình",
+    "description_en": "You've developed a revolutionary process improvement. Patent it personally or give to company?",
+    "description_vi": "Bạn phát triển cải tiến quy trình cách mạng. Đăng ký bằng sáng chế cá nhân hay cho công ty?",
+    "i18n_key": "process_innovation_606",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 32,
+      "max_age": 55,
+      "requires_flags": [
+        "is_employed",
+        "job_industry_high"
+      ],
+      "min_work_experience": 7
+    },
+    "choices": [
+      {
+        "content_en": "Patent it personally, negotiate licensing",
+        "content_vi": "Đăng ký bằng sáng chế cá nhân, thương lượng cấp phép",
+        "i18n_key": "process_innovation_606_c1",
+        "display_conditions": {
+          "min_money": 80
+        },
+        "outcomes": [
+          {
+            "probability": 55,
+            "message_en": "Company licenses your patent! Royalties for life. Wealthy!",
+            "message_vi": "Công ty cấp phép bằng sáng chế! Tiền bản quyền suốt đời. Giàu có!",
+            "i18n_key": "process_innovation_606_c1_o1",
+            "stat_changes": {
+              "happiness": 40,
+              "money": 300
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 45,
+            "message_en": "Company sues claiming work-for-hire. Legal battle drains you. Nightmare.",
+            "message_vi": "Công ty kiện tuyên bố thuê làm việc. Tranh chấp pháp lý làm bạn kiệt quệ. Ác mộng.",
+            "i18n_key": "process_innovation_606_c1_o2",
+            "stat_changes": {
+              "happiness": -35,
+              "money": -200,
+              "health": -20
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Give to company, negotiate bonus",
+        "content_vi": "Cho công ty, thương lượng thưởng",
+        "i18n_key": "process_innovation_606_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 75,
+            "message_en": "Huge bonus and promotion! Company saves millions. Win-win!",
+            "message_vi": "Thưởng lớn và thăng chức! Công ty tiết kiệm hàng triệu. Đôi bên cùng có lợi!",
+            "i18n_key": "process_innovation_606_c2_o1",
+            "stat_changes": {
+              "happiness": 35,
+              "money": 180
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 25,
+            "message_en": "Company gives minimal bonus. They profit millions, you get peanuts. Exploited.",
+            "message_vi": "Công ty cho thưởng tối thiểu. Họ lời hàng triệu, bạn nhận ít ỏi. Bị bóc lột.",
+            "i18n_key": "process_innovation_606_c2_o2",
+            "stat_changes": {
+              "happiness": -25,
+              "money": 50
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Keep it secret, start own company",
+        "content_vi": "Giữ bí mật, khởi nghiệp riêng",
+        "i18n_key": "process_innovation_606_c3",
+        "display_conditions": {
+          "min_money": 150
+        },
+        "outcomes": [
+          {
+            "probability": 45,
+            "message_en": "Your startup thrives! Industry disrupted. You're now CEO!",
+            "message_vi": "Startup của bạn phát triển! Ngành bị đảo lộn. Bạn giờ là CEO!",
+            "i18n_key": "process_innovation_606_c3_o1",
+            "stat_changes": {
+              "happiness": 45,
+              "money": 250
+            },
+            "set_flags": {
+              "job_business": true
+            },
+            "unset_flags": [
+              "job_industry_high"
+            ]
+          },
+          {
+            "probability": 55,
+            "message_en": "Startup fails. Burned through savings. Old employer won't rehire you. Disaster.",
+            "message_vi": "Startup thất bại. Tiêu hết tiết kiệm. Chủ cũ không tuyển lại. Thảm họa.",
+            "i18n_key": "process_innovation_606_c3_o2",
+            "stat_changes": {
+              "happiness": -40,
+              "money": -250,
+              "health": -25
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Industry Conference Speaking Invitation",
+    "title_vi": "Lời Mời Phát Biểu Hội Nghị Ngành",
+    "description_en": "You're invited to speak at major industry conference. Great for reputation but takes time to prepare.",
+    "description_vi": "Bạn được mời phát biểu tại hội nghị ngành lớn. Tốt cho danh tiếng nhưng mất thời gian chuẩn bị.",
+    "i18n_key": "conference_speaking_608",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 35,
+      "max_age": 55,
+      "requires_flags": [
+        "is_employed",
+        "job_industry_high"
+      ],
+      "min_work_experience": 10
+    },
+    "choices": [
+      {
+        "content_en": "Accept and prepare excellent presentation",
+        "content_vi": "Chấp nhận và chuẩn bị bài thuyết trình xuất sắc",
+        "i18n_key": "conference_speaking_608_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 75,
+            "message_en": "Standing ovation! Industry recognition. Job offers flood in!",
+            "message_vi": "Vỗ tay đứng dậy! Công nhận trong ngành. Đề nghị công việc tràn vào!",
+            "i18n_key": "conference_speaking_608_c1_o1",
+            "stat_changes": {
+              "happiness": 35,
+              "money": 100,
+              "health": -8
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 25,
+            "message_en": "Presentation bombs. Technical issues. Embarrassing. Reputation damaged.",
+            "message_vi": "Thuyết trình thất bại. Vấn đề kỹ thuật. Xấu hổ. Danh tiếng bị ảnh hưởng.",
+            "i18n_key": "conference_speaking_608_c1_o2",
+            "stat_changes": {
+              "happiness": -30,
+              "health": -15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Accept but do minimal preparation",
+        "content_vi": "Chấp nhận nhưng chuẩn bị tối thiểu",
+        "i18n_key": "conference_speaking_608_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 40,
+            "message_en": "Your expertise carries you through. Decent presentation. No harm done.",
+            "message_vi": "Chuyên môn giúp bạn vượt qua. Thuyết trình ổn. Không hại gì.",
+            "i18n_key": "conference_speaking_608_c2_o1",
+            "stat_changes": {
+              "happiness": 10
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 60,
+            "message_en": "Unprepared and it shows. Mediocre talk. Missed opportunity to shine.",
+            "message_vi": "Chưa chuẩn bị và nó thể hiện rõ. Bài nói tầm thường. Bỏ lỡ cơ hội tỏa sáng.",
+            "i18n_key": "conference_speaking_608_c2_o2",
+            "stat_changes": {
+              "happiness": -15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Decline, too busy with work",
+        "content_vi": "Từ chối, quá bận với công việc",
+        "i18n_key": "conference_speaking_608_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Focus on work. But missed networking opportunity. Career visibility suffers.",
+            "message_vi": "Tập trung vào công việc. Nhưng bỏ lỡ cơ hội kết nối. Khả năng hiển thị sự nghiệp giảm.",
+            "i18n_key": "conference_speaking_608_c3_o1",
+            "stat_changes": {
+              "happiness": -10
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  }
+]

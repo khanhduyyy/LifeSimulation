@@ -21,7 +21,9 @@
             "stat_changes": {
               "happiness": 5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "first_day_of_school_001_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 30,
@@ -30,9 +32,12 @@
             "stat_changes": {
               "happiness": 2
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "first_day_of_school_001_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "first_day_of_school_001_c1"
       },
       {
         "content_en": "Sit quietly and observe",
@@ -46,7 +51,9 @@
             "stat_changes": {
               "happiness": 3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "first_day_of_school_001_c2_o1",
+            "unset_flags": []
           },
           {
             "probability": 40,
@@ -55,9 +62,12 @@
             "stat_changes": {
               "happiness": -3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "first_day_of_school_001_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "first_day_of_school_001_c2"
       },
       {
         "content_en": "Cry and ask to go home",
@@ -71,7 +81,9 @@
             "stat_changes": {
               "happiness": 1
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "first_day_of_school_001_c3_o1",
+            "unset_flags": []
           },
           {
             "probability": 50,
@@ -81,11 +93,16 @@
               "happiness": -8,
               "health": -2
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "first_day_of_school_001_c3_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "first_day_of_school_001_c3"
       }
-    ]
+    ],
+    "i18n_key": "first_day_of_school_001",
+    "event_type": "milestone"
   },
   {
     "title_en": "Childhood Illness",
@@ -109,7 +126,9 @@
             "stat_changes": {
               "health": 5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "childhood_illness_002_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 20,
@@ -119,9 +138,12 @@
               "health": -5,
               "happiness": -8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "childhood_illness_002_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "childhood_illness_002_c1"
       },
       {
         "content_en": "Go to school anyway",
@@ -136,7 +158,9 @@
               "health": -8,
               "happiness": -5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "childhood_illness_002_c2_o1",
+            "unset_flags": []
           },
           {
             "probability": 60,
@@ -146,9 +170,12 @@
               "health": -3,
               "happiness": 3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "childhood_illness_002_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "childhood_illness_002_c2"
       },
       {
         "content_en": "Watch cartoons all day",
@@ -163,11 +190,16 @@
               "happiness": 5,
               "health": -2
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "childhood_illness_002_c3_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "childhood_illness_002_c3"
       }
-    ]
+    ],
+    "i18n_key": "childhood_illness_002",
+    "event_type": "random"
   },
   {
     "title_en": "School Bully",
@@ -192,7 +224,9 @@
               "happiness": 5,
               "health": -5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "school_bully_003_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 50,
@@ -202,9 +236,12 @@
               "health": -10,
               "happiness": -8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "school_bully_003_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "school_bully_003_c1"
       },
       {
         "content_en": "Tell a teacher",
@@ -212,24 +249,29 @@
         "display_conditions": null,
         "outcomes": [
           {
-            "probability": 70,
+            "probability": 64,
             "message_en": "Teacher intervened. Bully got suspended.",
             "message_vi": "Giáo viên can thiệp. Tên bắt nạt bị đình chỉ.",
             "stat_changes": {
               "happiness": 4
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "school_bully_003_c2_o1",
+            "unset_flags": []
           },
           {
-            "probability": 30,
+            "probability": 36,
             "message_en": "Teacher didn't believe you. The bully got worse.",
             "message_vi": "Giáo viên không tin. Tên bắt nạt càng tệ hơn.",
             "stat_changes": {
               "happiness": -15
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "school_bully_003_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "school_bully_003_c2"
       },
       {
         "content_en": "Avoid and ignore them",
@@ -243,7 +285,9 @@
             "stat_changes": {
               "happiness": -5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "school_bully_003_c3_o1",
+            "unset_flags": []
           },
           {
             "probability": 40,
@@ -253,11 +297,16 @@
               "happiness": -18,
               "health": -3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "school_bully_003_c3_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "school_bully_003_c3"
       }
-    ]
+    ],
+    "i18n_key": "school_bully_003",
+    "event_type": "random"
   },
   {
     "title_en": "Sports Team Tryout",
@@ -282,7 +331,9 @@
               "health": 10,
               "happiness": 8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "sports_team_tryout_004_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 40,
@@ -292,9 +343,12 @@
               "health": 5,
               "happiness": -5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "sports_team_tryout_004_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "sports_team_tryout_004_c1"
       },
       {
         "content_en": "Stay home and play video games",
@@ -309,9 +363,12 @@
               "happiness": 3,
               "health": -3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "sports_team_tryout_004_c2_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "sports_team_tryout_004_c2"
       },
       {
         "content_en": "Watch and cheer for friends",
@@ -325,11 +382,16 @@
             "stat_changes": {
               "happiness": 4
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "sports_team_tryout_004_c3_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "sports_team_tryout_004_c3"
       }
-    ]
+    ],
+    "i18n_key": "sports_team_tryout_004",
+    "event_type": "random"
   },
   {
     "title_en": "Exam",
@@ -354,7 +416,9 @@
               "happiness": 5,
               "health": -5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "exam_005_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 30,
@@ -364,9 +428,12 @@
               "happiness": -5,
               "health": -8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "exam_005_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "exam_005_c1"
       },
       {
         "content_en": "Study a little then sleep early",
@@ -381,7 +448,9 @@
               "happiness": 4,
               "health": 3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "exam_005_c2_o1",
+            "unset_flags": []
           },
           {
             "probability": 40,
@@ -390,9 +459,12 @@
             "stat_changes": {
               "happiness": 2
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "exam_005_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "exam_005_c2"
       },
       {
         "content_en": "Don't study at all",
@@ -406,7 +478,9 @@
             "stat_changes": {
               "happiness": 3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "exam_005_c3_o1",
+            "unset_flags": []
           },
           {
             "probability": 70,
@@ -415,11 +489,16 @@
             "stat_changes": {
               "happiness": -23
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "exam_005_c3_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "exam_005_c3"
       }
-    ]
+    ],
+    "i18n_key": "exam_005",
+    "event_type": "random"
   },
   {
     "title_en": "Fights With Parents",
@@ -443,7 +522,9 @@
             "stat_changes": {
               "happiness": 4
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "fights_with_parents_006_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 20,
@@ -452,9 +533,12 @@
             "stat_changes": {
               "happiness": -5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "fights_with_parents_006_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "fights_with_parents_006_c1"
       },
       {
         "content_en": "Stand your ground",
@@ -468,7 +552,9 @@
             "stat_changes": {
               "happiness": 6
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "fights_with_parents_006_c2_o1",
+            "unset_flags": []
           },
           {
             "probability": 60,
@@ -477,9 +563,12 @@
             "stat_changes": {
               "happiness": -18
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "fights_with_parents_006_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "fights_with_parents_006_c2"
       },
       {
         "content_en": "Sneak out anyway",
@@ -494,7 +583,9 @@
               "happiness": 9,
               "money": -5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "fights_with_parents_006_c3_o1",
+            "unset_flags": []
           },
           {
             "probability": 60,
@@ -503,11 +594,16 @@
             "stat_changes": {
               "happiness": -30
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "fights_with_parents_006_c3_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "fights_with_parents_006_c3"
       }
-    ]
+    ],
+    "i18n_key": "fights_with_parents_006",
+    "event_type": "random"
   },
   {
     "title_en": "Best Friend Move Away",
@@ -525,24 +621,29 @@
         "display_conditions": null,
         "outcomes": [
           {
-            "probability": 80,
+            "probability": 73,
             "message_en": "Heartfelt farewell. You'll stay in touch forever.",
             "message_vi": "Lời tạm biệt chân thành. Bạn sẽ giữ liên lạc mãi mãi.",
             "stat_changes": {
               "happiness": 3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "best_friend_move_away_007_c1_o1",
+            "unset_flags": []
           },
           {
-            "probability": 20,
+            "probability": 27,
             "message_en": "Too sad to celebrate. You cried most of the party.",
             "message_vi": "Quá buồn để ăn mừng. Bạn khóc gần hết bữa tiệc.",
             "stat_changes": {
               "happiness": -12
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "best_friend_move_away_007_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "best_friend_move_away_007_c1"
       },
       {
         "content_en": "Spend every moment together before they leave",
@@ -556,9 +657,12 @@
             "stat_changes": {
               "happiness": 5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "best_friend_move_away_007_c2_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "best_friend_move_away_007_c2"
       },
       {
         "content_en": "Stay home — it hurts too much to say goodbye",
@@ -572,11 +676,16 @@
             "stat_changes": {
               "happiness": -15
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "best_friend_move_away_007_c3_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "best_friend_move_away_007_c3"
       }
-    ]
+    ],
+    "i18n_key": "best_friend_move_away_007",
+    "event_type": "random"
   },
   {
     "title_en": "Family Vacation",
@@ -594,26 +703,31 @@
         "display_conditions": null,
         "outcomes": [
           {
-            "probability": 80,
+            "probability": 76,
             "message_en": "What a trip! Sun, sand, and family memories.",
             "message_vi": "Chuyến đi tuyệt vời! Nắng, cát, và ký ức gia đình.",
             "stat_changes": {
               "happiness": 10,
               "health": 5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "family_vacation_008_c1_o1",
+            "unset_flags": []
           },
           {
-            "probability": 20,
+            "probability": 24,
             "message_en": "Got sunburned badly. Still worth it though.",
             "message_vi": "Bị cháy nắng nặng. Nhưng vẫn xứng đáng.",
             "stat_changes": {
               "happiness": 5,
               "health": -3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "family_vacation_008_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "family_vacation_008_c1"
       },
       {
         "content_en": "Stay in the hotel room and game all week",
@@ -627,9 +741,12 @@
             "stat_changes": {
               "happiness": 4
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "family_vacation_008_c2_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "family_vacation_008_c2"
       },
       {
         "content_en": "Bond with family activities",
@@ -637,27 +754,34 @@
         "display_conditions": null,
         "outcomes": [
           {
-            "probability": 70,
+            "probability": 65,
             "message_en": "A vacation that brought everyone closer.",
             "message_vi": "Kỳ nghỉ giúp mọi người gần nhau hơn.",
             "stat_changes": {
               "happiness": 9,
               "health": 5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "family_vacation_008_c3_o1",
+            "unset_flags": []
           },
           {
-            "probability": 30,
+            "probability": 35,
             "message_en": "Family bickering in close quarters. Still some good moments.",
             "message_vi": "Gia đình cãi nhau khi ở gần nhau. Nhưng vẫn có khoảnh khắc tốt.",
             "stat_changes": {
               "happiness": 3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "family_vacation_008_c3_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "family_vacation_008_c3"
       }
-    ]
+    ],
+    "i18n_key": "family_vacation_008",
+    "event_type": "random"
   },
   {
     "title_en": "Teenage Crush",
@@ -681,7 +805,9 @@
             "stat_changes": {
               "happiness": 10
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "teenage_crush_009_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 50,
@@ -690,9 +816,12 @@
             "stat_changes": {
               "happiness": -23
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "teenage_crush_009_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "teenage_crush_009_c1"
       },
       {
         "content_en": "Ask them out directly",
@@ -706,7 +835,9 @@
             "stat_changes": {
               "happiness": 9
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "teenage_crush_009_c2_o1",
+            "unset_flags": []
           },
           {
             "probability": 55,
@@ -715,9 +846,12 @@
             "stat_changes": {
               "happiness": -15
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "teenage_crush_009_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "teenage_crush_009_c2"
       },
       {
         "content_en": "Keep feelings to yourself",
@@ -731,11 +865,16 @@
             "stat_changes": {
               "happiness": -3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "teenage_crush_009_c3_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "teenage_crush_009_c3"
       }
-    ]
+    ],
+    "i18n_key": "teenage_crush_009",
+    "event_type": "random"
   },
   {
     "title_en": "Hobby or Sports?",
@@ -759,7 +898,9 @@
             "stat_changes": {
               "happiness": 8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "hobby_or_sports_010_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 20,
@@ -768,9 +909,12 @@
             "stat_changes": {
               "happiness": 4
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "hobby_or_sports_010_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "hobby_or_sports_010_c1"
       },
       {
         "content_en": "Train for a marathon",
@@ -785,7 +929,9 @@
               "health": 15,
               "happiness": 6
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "hobby_or_sports_010_c2_o1",
+            "unset_flags": []
           },
           {
             "probability": 40,
@@ -795,9 +941,12 @@
               "health": 5,
               "happiness": -5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "hobby_or_sports_010_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "hobby_or_sports_010_c2"
       },
       {
         "content_en": "Learn to play guitar",
@@ -805,26 +954,33 @@
         "display_conditions": null,
         "outcomes": [
           {
-            "probability": 70,
+            "probability": 65,
             "message_en": "You can play a few songs! Friends are impressed.",
             "message_vi": "Bạn chơi được vài bài! Bạn bè ấn tượng.",
             "stat_changes": {
               "happiness": 9
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "hobby_or_sports_010_c3_o1",
+            "unset_flags": []
           },
           {
-            "probability": 30,
+            "probability": 35,
             "message_en": "Fingers hurt too much. Guitar is harder than it looks.",
             "message_vi": "Ngón tay đau quá. Guitar khó hơn vẻ bề ngoài.",
             "stat_changes": {
               "happiness": -5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "hobby_or_sports_010_c3_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "hobby_or_sports_010_c3"
       }
-    ]
+    ],
+    "i18n_key": "hobby_or_sports_010",
+    "event_type": "random"
   },
   {
     "title_en": "School Science Fair",
@@ -842,26 +998,31 @@
         "display_conditions": null,
         "outcomes": [
           {
-            "probability": 65,
+            "probability": 59,
             "message_en": "First place! Your experiment was the best in school.",
             "message_vi": "Giải nhất! Thí nghiệm của bạn là tốt nhất trường.",
             "stat_changes": {
               "happiness": 10,
               "health": -3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "school_science_fair_011_c1_o1",
+            "unset_flags": []
           },
           {
-            "probability": 35,
+            "probability": 41,
             "message_en": "Honorable mention. Your effort was clear.",
             "message_vi": "Đề cử danh dự. Nỗ lực của bạn rất rõ ràng.",
             "stat_changes": {
               "happiness": 4,
               "health": -3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "school_science_fair_011_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "school_science_fair_011_c1"
       },
       {
         "content_en": "Do a simple, safe project",
@@ -875,7 +1036,9 @@
             "stat_changes": {
               "happiness": 3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "school_science_fair_011_c2_o1",
+            "unset_flags": []
           },
           {
             "probability": 20,
@@ -884,9 +1047,12 @@
             "stat_changes": {
               "happiness": -5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "school_science_fair_011_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "school_science_fair_011_c2"
       },
       {
         "content_en": "Copy a project from the internet",
@@ -900,7 +1066,9 @@
             "stat_changes": {
               "happiness": 3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "school_science_fair_011_c3_o1",
+            "unset_flags": []
           },
           {
             "probability": 50,
@@ -909,11 +1077,16 @@
             "stat_changes": {
               "happiness": -30
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "school_science_fair_011_c3_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "school_science_fair_011_c3"
       }
-    ]
+    ],
+    "i18n_key": "school_science_fair_011",
+    "event_type": "random"
   },
   {
     "title_en": "Part-Time Summer Job",
@@ -938,7 +1111,9 @@
               "money": 20,
               "happiness": 4
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "part_time_summer_job_012_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 30,
@@ -949,9 +1124,12 @@
               "happiness": -5,
               "health": -3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "part_time_summer_job_012_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "part_time_summer_job_012_c1"
       },
       {
         "content_en": "Spend summer with friends",
@@ -966,9 +1144,12 @@
               "happiness": 8,
               "money": -5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "part_time_summer_job_012_c2_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "part_time_summer_job_012_c2"
       },
       {
         "content_en": "Stay home and study ahead",
@@ -982,11 +1163,16 @@
             "stat_changes": {
               "happiness": 3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "part_time_summer_job_012_c3_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "part_time_summer_job_012_c3"
       }
-    ]
+    ],
+    "i18n_key": "part_time_summer_job_012",
+    "event_type": "random"
   },
   {
     "title_en": "Lost Toy",
@@ -1010,7 +1196,9 @@
             "stat_changes": {
               "happiness": 6
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "lost_toy_013_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 40,
@@ -1019,9 +1207,12 @@
             "stat_changes": {
               "happiness": -15
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "lost_toy_013_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "lost_toy_013_c1"
       },
       {
         "content_en": "Ask mom to buy a new one",
@@ -1036,7 +1227,9 @@
               "happiness": 4,
               "money": -10
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "lost_toy_013_c2_o1",
+            "unset_flags": []
           },
           {
             "probability": 50,
@@ -1045,9 +1238,12 @@
             "stat_changes": {
               "happiness": -8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "lost_toy_013_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "lost_toy_013_c2"
       },
       {
         "content_en": "Accept the loss and move on",
@@ -1061,11 +1257,16 @@
             "stat_changes": {
               "happiness": -5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "lost_toy_013_c3_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "lost_toy_013_c3"
       }
-    ]
+    ],
+    "i18n_key": "lost_toy_013",
+    "event_type": "random"
   },
   {
     "title_en": "Drawing Competition",
@@ -1090,7 +1291,9 @@
               "happiness": 10,
               "money": 5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "drawing_competition_014_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 45,
@@ -1099,9 +1302,12 @@
             "stat_changes": {
               "happiness": 5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "drawing_competition_014_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "drawing_competition_014_c1"
       },
       {
         "content_en": "Copy a drawing from a book",
@@ -1115,7 +1321,9 @@
             "stat_changes": {
               "happiness": 1
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "drawing_competition_014_c2_o1",
+            "unset_flags": []
           },
           {
             "probability": 60,
@@ -1124,9 +1332,12 @@
             "stat_changes": {
               "happiness": 6
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "drawing_competition_014_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "drawing_competition_014_c2"
       },
       {
         "content_en": "Skip the competition",
@@ -1140,11 +1351,16 @@
             "stat_changes": {
               "happiness": -3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "drawing_competition_014_c3_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "drawing_competition_014_c3"
       }
-    ]
+    ],
+    "i18n_key": "drawing_competition_014",
+    "event_type": "random"
   },
   {
     "title_en": "Stray Puppy",
@@ -1171,7 +1387,9 @@
             },
             "set_flags": {
               "has_pet": true
-            }
+            },
+            "i18n_key": "stray_puppy_015_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 50,
@@ -1180,9 +1398,12 @@
             "stat_changes": {
               "happiness": -15
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "stray_puppy_015_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "stray_puppy_015_c1"
       },
       {
         "content_en": "Find the owner by asking around",
@@ -1197,7 +1418,9 @@
               "happiness": 8,
               "money": 5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "stray_puppy_015_c2_o1",
+            "unset_flags": []
           },
           {
             "probability": 30,
@@ -1206,9 +1429,12 @@
             "stat_changes": {
               "happiness": -8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "stray_puppy_015_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "stray_puppy_015_c2"
       },
       {
         "content_en": "Walk past and ignore it",
@@ -1222,11 +1448,16 @@
             "stat_changes": {
               "happiness": -8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "stray_puppy_015_c3_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "stray_puppy_015_c3"
       }
-    ]
+    ],
+    "i18n_key": "stray_puppy_015",
+    "event_type": "random"
   },
   {
     "title_en": "Pocket Money Decision",
@@ -1253,7 +1484,9 @@
               "happiness": 8,
               "money": -15
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "pocket_money_decision_016_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 20,
@@ -1263,9 +1496,12 @@
               "happiness": -5,
               "money": -15
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "pocket_money_decision_016_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "pocket_money_decision_016_c1"
       },
       {
         "content_en": "Buy the book ($10)",
@@ -1282,9 +1518,12 @@
               "happiness": 5,
               "money": -10
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "pocket_money_decision_016_c2_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "pocket_money_decision_016_c2"
       },
       {
         "content_en": "Save all of it",
@@ -1299,11 +1538,16 @@
               "happiness": 2,
               "money": 15
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "pocket_money_decision_016_c3_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "pocket_money_decision_016_c3"
       }
-    ]
+    ],
+    "i18n_key": "pocket_money_decision_016",
+    "event_type": "random"
   },
   {
     "title_en": "School Play Audition",
@@ -1327,7 +1571,9 @@
             "stat_changes": {
               "happiness": 11
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "school_play_audition_017_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 45,
@@ -1336,9 +1582,12 @@
             "stat_changes": {
               "happiness": 5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "school_play_audition_017_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "school_play_audition_017_c1"
       },
       {
         "content_en": "Help with backstage props and decorations",
@@ -1352,9 +1601,12 @@
             "stat_changes": {
               "happiness": 6
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "school_play_audition_017_c2_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "school_play_audition_017_c2"
       },
       {
         "content_en": "Skip it entirely",
@@ -1368,11 +1620,16 @@
             "stat_changes": {
               "happiness": -5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "school_play_audition_017_c3_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "school_play_audition_017_c3"
       }
-    ]
+    ],
+    "i18n_key": "school_play_audition_017",
+    "event_type": "random"
   },
   {
     "title_en": "Grandparents Visit",
@@ -1396,7 +1653,9 @@
             "stat_changes": {
               "happiness": 8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "grandparents_visit_018_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 20,
@@ -1405,9 +1664,12 @@
             "stat_changes": {
               "happiness": 3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "grandparents_visit_018_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "grandparents_visit_018_c1"
       },
       {
         "content_en": "Play with them in the garden",
@@ -1422,9 +1684,12 @@
               "happiness": 9,
               "health": 5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "grandparents_visit_018_c2_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "grandparents_visit_018_c2"
       },
       {
         "content_en": "Stay in your room playing games",
@@ -1438,11 +1703,16 @@
             "stat_changes": {
               "happiness": -8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "grandparents_visit_018_c3_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "grandparents_visit_018_c3"
       }
-    ]
+    ],
+    "i18n_key": "grandparents_visit_018",
+    "event_type": "random"
   },
   {
     "title_en": "Peer Pressure",
@@ -1467,7 +1737,9 @@
               "happiness": 8,
               "money": -10
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "peer_pressure_019_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 50,
@@ -1476,9 +1748,12 @@
             "stat_changes": {
               "happiness": -27
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "peer_pressure_019_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "peer_pressure_019_c1"
       },
       {
         "content_en": "Decline and go to class",
@@ -1486,24 +1761,29 @@
         "display_conditions": null,
         "outcomes": [
           {
-            "probability": 70,
+            "probability": 64,
             "message_en": "They respected you for it. Real friends stick around.",
             "message_vi": "Họ nể bạn vì điều đó. Bạn bè thật sẽ ở lại.",
             "stat_changes": {
               "happiness": 4
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "peer_pressure_019_c2_o1",
+            "unset_flags": []
           },
           {
-            "probability": 30,
+            "probability": 36,
             "message_en": "They called you a nerd. Left you out for a while.",
             "message_vi": "Họ gọi bạn là mọt sách. Cô lập bạn một thời gian.",
             "stat_changes": {
               "happiness": -12
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "peer_pressure_019_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "peer_pressure_019_c2"
       },
       {
         "content_en": "Compromise: join them after school",
@@ -1518,11 +1798,16 @@
               "happiness": 5,
               "money": -8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "peer_pressure_019_c3_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "peer_pressure_019_c3"
       }
-    ]
+    ],
+    "i18n_key": "peer_pressure_019",
+    "event_type": "random"
   },
   {
     "title_en": "Class President Election",
@@ -1548,7 +1833,9 @@
             },
             "set_flags": {
               "is_class_president": true
-            }
+            },
+            "i18n_key": "class_president_election_020_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 40,
@@ -1557,9 +1844,12 @@
             "stat_changes": {
               "happiness": -8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "class_president_election_020_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "class_president_election_020_c1"
       },
       {
         "content_en": "Nominate a close friend instead",
@@ -1573,7 +1863,9 @@
             "stat_changes": {
               "happiness": 6
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "class_president_election_020_c2_o1",
+            "unset_flags": []
           },
           {
             "probability": 30,
@@ -1582,9 +1874,12 @@
             "stat_changes": {
               "happiness": -8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "class_president_election_020_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "class_president_election_020_c2"
       },
       {
         "content_en": "Decline, too much pressure",
@@ -1598,11 +1893,16 @@
             "stat_changes": {
               "happiness": 1
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "class_president_election_020_c3_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "class_president_election_020_c3"
       }
-    ]
+    ],
+    "i18n_key": "class_president_election_020",
+    "event_type": "random"
   },
   {
     "title_en": "Bad Grades Warning",
@@ -1620,25 +1920,30 @@
         "display_conditions": null,
         "outcomes": [
           {
-            "probability": 75,
+            "probability": 68,
             "message_en": "Grades recovered. Semester saved!",
             "message_vi": "Điểm cải thiện. Kỳ học được cứu vãn!",
             "stat_changes": {
               "happiness": 8,
               "health": -5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "bad_grades_warning_021_c1_o1",
+            "unset_flags": []
           },
           {
-            "probability": 25,
+            "probability": 32,
             "message_en": "Still failed one subject. Had to retake it.",
             "message_vi": "Vẫn trượt một môn. Phải học lại.",
             "stat_changes": {
               "happiness": -15
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "bad_grades_warning_021_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "bad_grades_warning_021_c1"
       },
       {
         "content_en": "Ask a tutor for help",
@@ -1648,26 +1953,31 @@
         },
         "outcomes": [
           {
-            "probability": 85,
+            "probability": 82,
             "message_en": "Tutor made it click! Passed with flying colors.",
             "message_vi": "Gia sư giúp bạn hiểu bài! Qua môn xuất sắc.",
             "stat_changes": {
               "happiness": 9,
               "money": -20
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "bad_grades_warning_021_c2_o1",
+            "unset_flags": []
           },
           {
-            "probability": 15,
+            "probability": 18,
             "message_en": "Some improvement, but barely passed.",
             "message_vi": "Cải thiện một chút nhưng chỉ vừa qua.",
             "stat_changes": {
               "happiness": 3,
               "money": -20
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "bad_grades_warning_021_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "bad_grades_warning_021_c2"
       },
       {
         "content_en": "Give up and accept the fail",
@@ -1681,11 +1991,16 @@
             "stat_changes": {
               "happiness": -30
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "bad_grades_warning_021_c3_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "bad_grades_warning_021_c3"
       }
-    ]
+    ],
+    "i18n_key": "bad_grades_warning_021",
+    "event_type": "random"
   },
   {
     "title_en": "Online Gaming Addiction",
@@ -1710,7 +2025,9 @@
               "happiness": 8,
               "health": -12
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "online_gaming_addiction_022_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 60,
@@ -1720,9 +2037,12 @@
               "happiness": 3,
               "health": -15
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "online_gaming_addiction_022_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "online_gaming_addiction_022_c1"
       },
       {
         "content_en": "Play only on weekends",
@@ -1737,9 +2057,12 @@
               "happiness": 6,
               "health": 3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "online_gaming_addiction_022_c2_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "online_gaming_addiction_022_c2"
       },
       {
         "content_en": "Focus on studying and skip the game",
@@ -1754,7 +2077,9 @@
               "happiness": 4,
               "health": 5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "online_gaming_addiction_022_c3_o1",
+            "unset_flags": []
           },
           {
             "probability": 20,
@@ -1764,11 +2089,16 @@
               "happiness": -8,
               "health": 5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "online_gaming_addiction_022_c3_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "online_gaming_addiction_022_c3"
       }
-    ]
+    ],
+    "i18n_key": "online_gaming_addiction_022",
+    "event_type": "random"
   },
   {
     "title_en": "First Heartbreak",
@@ -1786,24 +2116,29 @@
         "display_conditions": null,
         "outcomes": [
           {
-            "probability": 80,
+            "probability": 73,
             "message_en": "Best friend stayed up all night with you. You feel better.",
             "message_vi": "Bạn thân thức cùng bạn suốt đêm. Bạn cảm thấy khá hơn.",
             "stat_changes": {
               "happiness": -8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "first_heartbreak_023_c1_o1",
+            "unset_flags": []
           },
           {
-            "probability": 20,
+            "probability": 27,
             "message_en": "Even your friend couldn't help. Raw grief for days.",
             "message_vi": "Ngay cả bạn thân cũng không giúp được. Đau khổ nhiều ngày.",
             "stat_changes": {
               "happiness": -23
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "first_heartbreak_023_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "first_heartbreak_023_c1"
       },
       {
         "content_en": "Throw yourself into hobbies and studies",
@@ -1818,9 +2153,12 @@
               "happiness": -5,
               "health": 5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "first_heartbreak_023_c2_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "first_heartbreak_023_c2"
       },
       {
         "content_en": "Try to win them back",
@@ -1834,7 +2172,9 @@
             "stat_changes": {
               "happiness": 10
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "first_heartbreak_023_c3_o1",
+            "unset_flags": []
           },
           {
             "probability": 75,
@@ -1843,11 +2183,16 @@
             "stat_changes": {
               "happiness": -30
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "first_heartbreak_023_c3_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "first_heartbreak_023_c3"
       }
-    ]
+    ],
+    "i18n_key": "first_heartbreak_023",
+    "event_type": "random"
   },
   {
     "title_en": "Social Media Drama",
@@ -1871,7 +2216,9 @@
             "stat_changes": {
               "happiness": 5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "social_media_drama_024_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 40,
@@ -1880,9 +2227,12 @@
             "stat_changes": {
               "happiness": -23
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "social_media_drama_024_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "social_media_drama_024_c1"
       },
       {
         "content_en": "Report the post and ask for adult help",
@@ -1890,24 +2240,29 @@
         "display_conditions": null,
         "outcomes": [
           {
-            "probability": 80,
+            "probability": 73,
             "message_en": "Post removed. Parents helped handle it maturely.",
             "message_vi": "Bài đăng bị xóa. Ba mẹ giúp xử lý một cách chín chắn.",
             "stat_changes": {
               "happiness": 4
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "social_media_drama_024_c2_o1",
+            "unset_flags": []
           },
           {
-            "probability": 20,
+            "probability": 27,
             "message_en": "Took days to remove. The damage was already done.",
             "message_vi": "Mất vài ngày mới xóa được. Thiệt hại đã xảy ra.",
             "stat_changes": {
               "happiness": -12
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "social_media_drama_024_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "social_media_drama_024_c2"
       },
       {
         "content_en": "Ignore it and wait for it to die down",
@@ -1921,7 +2276,9 @@
             "stat_changes": {
               "happiness": -5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "social_media_drama_024_c3_o1",
+            "unset_flags": []
           },
           {
             "probability": 50,
@@ -1930,11 +2287,16 @@
             "stat_changes": {
               "happiness": -30
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "social_media_drama_024_c3_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "social_media_drama_024_c3"
       }
-    ]
+    ],
+    "i18n_key": "social_media_drama_024",
+    "event_type": "random"
   },
   {
     "title_en": "Career Interest Discovery",
@@ -1952,24 +2314,29 @@
         "display_conditions": null,
         "outcomes": [
           {
-            "probability": 70,
+            "probability": 65,
             "message_en": "You found a career path that excites you! Goals set.",
             "message_vi": "Bạn tìm thấy định hướng nghề nghiệp khiến bạn hứng thú! Đặt mục tiêu rồi.",
             "stat_changes": {
               "happiness": 9
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "career_interest_discovery_025_c1_o1",
+            "unset_flags": []
           },
           {
-            "probability": 30,
+            "probability": 35,
             "message_en": "Still unsure, but more informed about options.",
             "message_vi": "Vẫn chưa chắc, nhưng hiểu rõ hơn về các lựa chọn.",
             "stat_changes": {
               "happiness": 3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "career_interest_discovery_025_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "career_interest_discovery_025_c1"
       },
       {
         "content_en": "Go to a few sessions then hang out with friends",
@@ -1983,9 +2350,12 @@
             "stat_changes": {
               "happiness": 4
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "career_interest_discovery_025_c2_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "career_interest_discovery_025_c2"
       },
       {
         "content_en": "Skip it, you already know what you want",
@@ -1999,7 +2369,9 @@
             "stat_changes": {
               "happiness": 5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "career_interest_discovery_025_c3_o1",
+            "unset_flags": []
           },
           {
             "probability": 40,
@@ -2008,11 +2380,16 @@
             "stat_changes": {
               "happiness": -5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "career_interest_discovery_025_c3_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "career_interest_discovery_025_c3"
       }
-    ]
+    ],
+    "i18n_key": "career_interest_discovery_025",
+    "event_type": "random"
   },
   {
     "title_en": "School Trip Disaster",
@@ -2037,7 +2414,9 @@
               "happiness": 5,
               "health": -3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "school_trip_disaster_026_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 25,
@@ -2047,9 +2426,12 @@
               "happiness": 3,
               "health": -8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "school_trip_disaster_026_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "school_trip_disaster_026_c1"
       },
       {
         "content_en": "Panic and yell for help",
@@ -2057,26 +2439,31 @@
         "display_conditions": null,
         "outcomes": [
           {
-            "probability": 80,
+            "probability": 73,
             "message_en": "A park ranger heard and guided you back. Embarrassing but safe.",
             "message_vi": "Kiểm lâm nghe thấy và dẫn bạn về. Xấu hổ nhưng an toàn.",
             "stat_changes": {
               "happiness": -8,
               "health": 5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "school_trip_disaster_026_c2_o1",
+            "unset_flags": []
           },
           {
-            "probability": 20,
+            "probability": 27,
             "message_en": "No one came. You wandered further and got more lost.",
             "message_vi": "Không ai đến. Bạn tiếp tục lạc sâu hơn.",
             "stat_changes": {
               "happiness": -23,
               "health": -10
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "school_trip_disaster_026_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "school_trip_disaster_026_c2"
       },
       {
         "content_en": "Lead the group confidently to find the trail",
@@ -2091,7 +2478,9 @@
               "happiness": 10,
               "health": -3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "school_trip_disaster_026_c3_o1",
+            "unset_flags": []
           },
           {
             "probability": 45,
@@ -2101,11 +2490,16 @@
               "happiness": -8,
               "health": -5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "school_trip_disaster_026_c3_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "school_trip_disaster_026_c3"
       }
-    ]
+    ],
+    "i18n_key": "school_trip_disaster_026",
+    "event_type": "random"
   },
   {
     "title_en": "First Part-Time Job Interview",
@@ -2123,7 +2517,7 @@
         "display_conditions": null,
         "outcomes": [
           {
-            "probability": 70,
+            "probability": 65,
             "message_en": "Got the job! First real paycheck incoming.",
             "message_vi": "Được nhận! Tiền lương thật đầu tiên sắp đến.",
             "stat_changes": {
@@ -2132,18 +2526,23 @@
             },
             "set_flags": {
               "had_parttime_job": true
-            }
+            },
+            "i18n_key": "first_part_time_job_interview_027_c1_o1",
+            "unset_flags": []
           },
           {
-            "probability": 30,
+            "probability": 35,
             "message_en": "Didn't get it this time. Good interview experience though.",
             "message_vi": "Lần này không được. Nhưng là kinh nghiệm phỏng vấn tốt.",
             "stat_changes": {
               "happiness": -5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "first_part_time_job_interview_027_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "first_part_time_job_interview_027_c1"
       },
       {
         "content_en": "Walk in casually without preparation",
@@ -2160,7 +2559,9 @@
             },
             "set_flags": {
               "had_parttime_job": true
-            }
+            },
+            "i18n_key": "first_part_time_job_interview_027_c2_o1",
+            "unset_flags": []
           },
           {
             "probability": 70,
@@ -2169,9 +2570,12 @@
             "stat_changes": {
               "happiness": -12
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "first_part_time_job_interview_027_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "first_part_time_job_interview_027_c2"
       },
       {
         "content_en": "Decide you're too young for this",
@@ -2185,11 +2589,16 @@
             "stat_changes": {
               "happiness": 1
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "first_part_time_job_interview_027_c3_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "first_part_time_job_interview_027_c3"
       }
-    ]
+    ],
+    "i18n_key": "first_part_time_job_interview_027",
+    "event_type": "random"
   },
   {
     "title_en": "Surprise Test",
@@ -2213,7 +2622,9 @@
             "stat_changes": {
               "happiness": 6
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "surprise_test_028_c1_o1",
+            "unset_flags": []
           },
           {
             "probability": 35,
@@ -2222,9 +2633,12 @@
             "stat_changes": {
               "happiness": -8
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "surprise_test_028_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "surprise_test_028_c1"
       },
       {
         "content_en": "Peek at a classmate's paper",
@@ -2238,7 +2652,9 @@
             "stat_changes": {
               "happiness": 3
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "surprise_test_028_c2_o1",
+            "unset_flags": []
           },
           {
             "probability": 60,
@@ -2247,9 +2663,12 @@
             "stat_changes": {
               "happiness": -33
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "surprise_test_028_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "surprise_test_028_c2"
       },
       {
         "content_en": "Ask to go to the bathroom and look it up on your phone",
@@ -2263,7 +2682,9 @@
             "stat_changes": {
               "happiness": 5
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "surprise_test_028_c3_o1",
+            "unset_flags": []
           },
           {
             "probability": 65,
@@ -2272,11 +2693,16 @@
             "stat_changes": {
               "happiness": -27
             },
-            "set_flags": {}
+            "set_flags": {},
+            "i18n_key": "surprise_test_028_c3_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "surprise_test_028_c3"
       }
-    ]
+    ],
+    "i18n_key": "surprise_test_028",
+    "event_type": "random"
   },
   {
     "title_en": "High School Graduation: The Big Choice",
@@ -2289,10 +2715,10 @@
     },
     "choices": [
       {
-        "content_en": "Apply for Public University ($50 registration fee)",
-        "content_vi": "Thi vào Đại Học Công ($50 lệ phí)",
+        "content_en": "Apply for Public University ($80 registration fee)",
+        "content_vi": "Thi vào Đại Học Công ($80 lệ phí)",
         "display_conditions": {
-          "min_money": 50
+          "min_money": 80
         },
         "outcomes": [
           {
@@ -2300,65 +2726,75 @@
             "message_en": "You passed the entrance exam! You are now a college student.",
             "message_vi": "Bạn vượt qua kỳ thi tuyển sinh! Bạn giờ là sinh viên đại học công.",
             "stat_changes": {
-              "money": -50,
+              "money": -80,
               "happiness": 10
             },
             "set_flags": {
               "path_college_public": true,
               "is_student": true
             },
-            "next_event_title_en": "College Orientation"
+            "next_event_title_en": "College Orientation",
+            "i18n_key": "high_school_graduation_the_big_choice_029_c1_o1",
+            "unset_flags": [],
+            "next_event_key": "college_orientation_030"
           },
           {
             "probability": 40,
             "message_en": "You failed the entrance exam. Public university is out for now.",
-            "message_vi": "Bạn trượt kỳ thi. Đại học công không còn là lựa chọn nữa.",
+            "message_vi": "Bạn trượt kỳ thi. Phí xét tuyển đã mất. Đại học công không còn là lựa chọn nữa.",
             "stat_changes": {
-              "money": -50,
+              "money": -40,
               "happiness": -23
             },
             "set_flags": {
               "path_work_early": true
             },
-            "next_event_title_en": "First Job Hunt"
+            "i18n_key": "high_school_graduation_the_big_choice_029_c1_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "high_school_graduation_the_big_choice_029_c1"
       },
       {
-        "content_en": "Apply for Private University ($120 tuition deposit)",
-        "content_vi": "Vào Đại Học Tư ($120 học phí cọc)",
+        "content_en": "Apply for Private University ($200 tuition deposit)",
+        "content_vi": "Vào Đại Học Tư ($200 học phí cọc)",
         "display_conditions": {
-          "min_money": 120
+          "min_money": 200
         },
         "outcomes": [
           {
-            "probability": 90,
+            "probability": 82,
             "message_en": "Private university accepted you! It's expensive, but worth it.",
             "message_vi": "Đại học tư nhận bạn! Đắt tiền, nhưng xứng đáng.",
             "stat_changes": {
-              "money": -120,
+              "money": -200,
               "happiness": 8
             },
             "set_flags": {
               "path_college_private": true,
               "is_student": true
             },
-            "next_event_title_en": "College Orientation"
+            "next_event_title_en": "College Orientation",
+            "i18n_key": "high_school_graduation_the_big_choice_029_c2_o1",
+            "unset_flags": [],
+            "next_event_key": "college_orientation_030"
           },
           {
-            "probability": 10,
+            "probability": 18,
             "message_en": "Even private university rejected you. Back to square one.",
-            "message_vi": "Ngay cả đại học tư cũng từ chối bạn. Phải làm lại từ đầu.",
+            "message_vi": "Ngay cả đại học tư cũng từ chối bạn. Phí xét tuyển đã mất. Phải làm lại từ đầu.",
             "stat_changes": {
-              "money": -120,
+              "money": -60,
               "happiness": -30
             },
             "set_flags": {
               "path_work_early": true
             },
-            "next_event_title_en": "First Job Hunt"
+            "i18n_key": "high_school_graduation_the_big_choice_029_c2_o2",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "high_school_graduation_the_big_choice_029_c2"
       },
       {
         "content_en": "Skip college and start working right away",
@@ -2375,10 +2811,14 @@
             "set_flags": {
               "path_work_early": true
             },
-            "next_event_title_en": "First Job Hunt"
+            "i18n_key": "high_school_graduation_the_big_choice_029_c3_o1",
+            "unset_flags": []
           }
-        ]
+        ],
+        "i18n_key": "high_school_graduation_the_big_choice_029_c3"
       }
-    ]
+    ],
+    "i18n_key": "high_school_graduation_the_big_choice_029",
+    "event_type": "milestone"
   }
 ]

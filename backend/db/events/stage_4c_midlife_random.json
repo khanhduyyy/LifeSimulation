@@ -1,0 +1,131 @@
+[
+  {
+    "title_en": "Networking Conference Invitation",
+    "title_vi": "Lời Mời Hội Nghị Networking",
+    "description_en": "You received an invitation to an industry conference. It could open new opportunities but costs time and money.",
+    "description_vi": "Bạn nhận được lời mời tham dự hội nghị ngành. Có thể mở ra cơ hội mới nhưng tốn thời gian và tiền bạc.",
+    "conditions": {
+      "min_age": 25,
+      "max_age": 55,
+      "requires_flags": [
+        "is_employed"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Attend and network actively ($80)",
+        "content_vi": "Tham dự và networking tích cực ($80)",
+        "display_conditions": {
+          "min_money": 80
+        },
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "Made valuable connections! A recruiter approached you with a better offer.",
+            "message_vi": "Tạo được mối quan hệ quý giá! Một nhà tuyển dụng tiếp cận với đề nghị tốt hơn.",
+            "stat_changes": {
+              "money": -80,
+              "happiness": 15
+            },
+            "set_flags": {
+              "networking_success": true
+            },
+            "i18n_key": "networking_conference_001_c1_o1",
+            "unset_flags": []
+          },
+          {
+            "probability": 30,
+            "message_en": "Good experience but no immediate results. Still worth it.",
+            "message_vi": "Trải nghiệm tốt nhưng chưa có kết quả ngay. Vẫn đáng giá.",
+            "stat_changes": {
+              "money": -80,
+              "happiness": 5
+            },
+            "set_flags": {},
+            "i18n_key": "networking_conference_001_c1_o2",
+            "unset_flags": []
+          },
+          {
+            "probability": 10,
+            "message_en": "Wasted time and money. The conference was poorly organized.",
+            "message_vi": "Lãng phí thời gian và tiền bạc. Hội nghị tổ chức kém.",
+            "stat_changes": {
+              "money": -80,
+              "happiness": -10
+            },
+            "set_flags": {},
+            "i18n_key": "networking_conference_001_c1_o3",
+            "unset_flags": []
+          }
+        ],
+        "i18n_key": "networking_conference_001_c1"
+      },
+      {
+        "content_en": "Attend but keep it low-key ($80)",
+        "content_vi": "Tham dự nhưng giữ thái độ kín đáo ($80)",
+        "display_conditions": {
+          "min_money": 80
+        },
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Learned some new trends. Decent investment of time.",
+            "message_vi": "Học được vài xu hướng mới. Đầu tư thời gian hợp lý.",
+            "stat_changes": {
+              "money": -80,
+              "happiness": 8
+            },
+            "set_flags": {},
+            "i18n_key": "networking_conference_001_c2_o1",
+            "unset_flags": []
+          },
+          {
+            "probability": 30,
+            "message_en": "Nothing special. Should have networked more actively.",
+            "message_vi": "Không có gì đặc biệt. Nên networking tích cực hơn.",
+            "stat_changes": {
+              "money": -80,
+              "happiness": -5
+            },
+            "set_flags": {},
+            "i18n_key": "networking_conference_001_c2_o2",
+            "unset_flags": []
+          }
+        ],
+        "i18n_key": "networking_conference_001_c2"
+      },
+      {
+        "content_en": "Skip it - too busy",
+        "content_vi": "Bỏ qua - quá bận",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "Focused on current work instead. Productivity increased.",
+            "message_vi": "Tập trung vào công việc hiện tại. Năng suất tăng lên.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "set_flags": {},
+            "i18n_key": "networking_conference_001_c3_o1",
+            "unset_flags": []
+          },
+          {
+            "probability": 40,
+            "message_en": "Heard colleagues made great connections. You feel left behind.",
+            "message_vi": "Nghe đồng nghiệp tạo được mối quan hệ tốt. Bạn cảm thấy bị bỏ lại phía sau.",
+            "stat_changes": {
+              "happiness": -8
+            },
+            "set_flags": {},
+            "i18n_key": "networking_conference_001_c3_o2",
+            "unset_flags": []
+          }
+        ],
+        "i18n_key": "networking_conference_001_c3"
+      }
+    ],
+    "i18n_key": "networking_conference_001",
+    "event_type": "random"
+  }
+]

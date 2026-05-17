@@ -1,0 +1,336 @@
+[
+  {
+    "title_en": "Marriage on the Rocks",
+    "title_vi": "Hôn Nhân Rạn Nứt",
+    "description_en": "Your spouse seems distant lately. The relationship quality has dropped significantly.",
+    "description_vi": "Vợ/chồng bạn có vẻ xa cách gần đây. Chất lượng mối quan hệ đã giảm đáng kể.",
+    "conditions": {
+      "min_age": 28,
+      "max_age": 55,
+      "requires_flags": [
+        "is_married"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Suggest couples counseling immediately",
+        "content_vi": "Đề nghị tư vấn cặp đôi ngay lập tức",
+        "display_conditions": {
+          "min_money": 80
+        },
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Therapy helped you both communicate better. Crisis averted!",
+            "message_vi": "Tư vấn giúp cả hai giao tiếp tốt hơn. Khủng hoảng được giải quyết!",
+            "stat_changes": {
+              "money": -80,
+              "happiness": 15
+            },
+            "set_flags": {
+              "relationship_crisis_resolved": true
+            },
+            "i18n_key": "marriage_on_the_rocks_001_c1_o1",
+            "unset_flags": []
+          },
+          {
+            "probability": 30,
+            "message_en": "Counseling revealed deeper issues. This will take time.",
+            "message_vi": "Tư vấn tiết lộ vấn đề sâu xa hơn. Cần thời gian.",
+            "stat_changes": {
+              "money": -80,
+              "happiness": -10
+            },
+            "set_flags": {},
+            "i18n_key": "marriage_on_the_rocks_001_c1_o2",
+            "unset_flags": []
+          }
+        ],
+        "i18n_key": "marriage_on_the_rocks_001_c1"
+      },
+      {
+        "content_en": "Plan a romantic getaway to reconnect",
+        "content_vi": "Lên kế hoạch kỳ nghỉ lãng mạn để kết nối lại",
+        "display_conditions": {
+          "min_money": 120
+        },
+        "outcomes": [
+          {
+            "probability": 65,
+            "message_en": "The trip reminded you why you fell in love. Relationship restored!",
+            "message_vi": "Chuyến đi nhắc nhở tại sao hai người yêu nhau. Mối quan hệ được phục hồi!",
+            "stat_changes": {
+              "money": -120,
+              "happiness": 20,
+              "health": 5
+            },
+            "set_flags": {
+              "relationship_crisis_resolved": true
+            },
+            "i18n_key": "marriage_on_the_rocks_001_c2_o1",
+            "unset_flags": []
+          },
+          {
+            "probability": 35,
+            "message_en": "The trip was awkward. You both need more than a vacation.",
+            "message_vi": "Chuyến đi kỳ cục. Cả hai cần nhiều hơn một kỳ nghỉ.",
+            "stat_changes": {
+              "money": -120,
+              "happiness": -5
+            },
+            "set_flags": {},
+            "i18n_key": "marriage_on_the_rocks_001_c2_o2",
+            "unset_flags": []
+          }
+        ],
+        "i18n_key": "marriage_on_the_rocks_001_c2"
+      },
+      {
+        "content_en": "Ignore it and hope things improve",
+        "content_vi": "Bỏ qua và hy vọng mọi thứ cải thiện",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 20,
+            "message_en": "Somehow things got better on their own. Lucky.",
+            "message_vi": "Bằng cách nào đó mọi thứ tự khắc phục. May mắn.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "set_flags": {},
+            "i18n_key": "marriage_on_the_rocks_001_c3_o1",
+            "unset_flags": []
+          },
+          {
+            "probability": 80,
+            "message_en": "Things got much worse. Your spouse is considering separation.",
+            "message_vi": "Mọi thứ tệ hơn nhiều. Vợ/chồng đang cân nhắc ly thân.",
+            "stat_changes": {
+              "happiness": -30,
+              "health": -10
+            },
+            "set_flags": {
+              "marriage_in_danger": true
+            },
+            "i18n_key": "marriage_on_the_rocks_001_c3_o2",
+            "unset_flags": []
+          }
+        ],
+        "i18n_key": "marriage_on_the_rocks_001_c3"
+      }
+    ],
+    "i18n_key": "marriage_on_the_rocks_001",
+    "event_type": "random"
+  },
+  {
+    "title_en": "Teenage Rebellion",
+    "title_vi": "Con Cái Nổi Loạn",
+    "description_en": "Your teenager is acting out. They refuse to listen and your relationship is strained.",
+    "description_vi": "Con tuổi teen của bạn đang nổi loạn. Chúng từ chối nghe lời và mối quan hệ căng thẳng.",
+    "conditions": {
+      "min_age": 35,
+      "max_age": 60,
+      "requires_flags": [
+        "has_child"
+      ],
+      "min_child_age": 13,
+      "max_child_age": 19
+    },
+    "choices": [
+      {
+        "content_en": "Set strict boundaries and rules",
+        "content_vi": "Đặt ra ranh giới và quy tắc nghiêm ngặt",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 40,
+            "message_en": "They respect the structure. Relationship improving.",
+            "message_vi": "Chúng tôn trọng kỷ luật. Mối quan hệ cải thiện.",
+            "stat_changes": {
+              "happiness": 8
+            },
+            "set_flags": {},
+            "i18n_key": "teenage_rebellion_002_c1_o1",
+            "unset_flags": []
+          },
+          {
+            "probability": 60,
+            "message_en": "They rebelled harder. Now they barely speak to you.",
+            "message_vi": "Chúng nổi loạn mạnh hơn. Giờ chúng hầu như không nói chuyện với bạn.",
+            "stat_changes": {
+              "happiness": -20
+            },
+            "set_flags": {},
+            "i18n_key": "teenage_rebellion_002_c1_o2",
+            "unset_flags": []
+          }
+        ],
+        "i18n_key": "teenage_rebellion_002_c1"
+      },
+      {
+        "content_en": "Have an honest heart-to-heart conversation",
+        "content_vi": "Trò chuyện thẳng thắn từ trái tim",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "They opened up about their struggles. You understand each other better now.",
+            "message_vi": "Chúng chia sẻ về khó khăn. Giờ hai bên hiểu nhau hơn.",
+            "stat_changes": {
+              "happiness": 15
+            },
+            "set_flags": {},
+            "i18n_key": "teenage_rebellion_002_c2_o1",
+            "unset_flags": []
+          },
+          {
+            "probability": 30,
+            "message_en": "They shut down and walked away. Not ready to talk yet.",
+            "message_vi": "Chúng im lặng và bỏ đi. Chưa sẵn sàng nói chuyện.",
+            "stat_changes": {
+              "happiness": -5
+            },
+            "set_flags": {},
+            "i18n_key": "teenage_rebellion_002_c2_o2",
+            "unset_flags": []
+          }
+        ],
+        "i18n_key": "teenage_rebellion_002_c2"
+      },
+      {
+        "content_en": "Hire a family therapist ($60)",
+        "content_vi": "Thuê chuyên gia tư vấn gia đình ($60)",
+        "display_conditions": {
+          "min_money": 60
+        },
+        "outcomes": [
+          {
+            "probability": 80,
+            "message_en": "Professional help made all the difference. Family bonds restored.",
+            "message_vi": "Sự giúp đỡ chuyên nghiệp tạo ra sự khác biệt. Mối quan hệ gia đình được phục hồi.",
+            "stat_changes": {
+              "money": -60,
+              "happiness": 20
+            },
+            "set_flags": {},
+            "i18n_key": "teenage_rebellion_002_c3_o1",
+            "unset_flags": []
+          },
+          {
+            "probability": 20,
+            "message_en": "Therapy helped a bit, but this will take more time.",
+            "message_vi": "Tư vấn giúp một chút, nhưng cần nhiều thời gian hơn.",
+            "stat_changes": {
+              "money": -60,
+              "happiness": 5
+            },
+            "set_flags": {},
+            "i18n_key": "teenage_rebellion_002_c3_o2",
+            "unset_flags": []
+          }
+        ],
+        "i18n_key": "teenage_rebellion_002_c3"
+      }
+    ],
+    "i18n_key": "teenage_rebellion_002",
+    "event_type": "random"
+  },
+  {
+    "title_en": "Parents Growing Old",
+    "title_vi": "Bố Mẹ Già Đi",
+    "description_en": "Your parents are getting older and need more support. How will you balance your own family?",
+    "description_vi": "Bố mẹ bạn đang già đi và cần nhiều hỗ trợ hơn. Bạn sẽ cân bằng gia đình mình như thế nào?",
+    "conditions": {
+      "min_age": 40,
+      "max_age": 65,
+      "requires_any_flag": [
+        "father_alive",
+        "mother_alive"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Visit them regularly and help with expenses ($50/year commitment)",
+        "content_vi": "Thăm họ thường xuyên và hỗ trợ chi phí ($50/năm)",
+        "display_conditions": {
+          "min_money": 50
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Your parents are grateful. Family bonds strengthened.",
+            "message_vi": "Bố mẹ rất biết ơn. Mối quan hệ gia đình được củng cố.",
+            "stat_changes": {
+              "money": -50,
+              "happiness": 12
+            },
+            "set_flags": {
+              "supporting_parents": true
+            },
+            "i18n_key": "parents_growing_old_003_c1_o1",
+            "unset_flags": []
+          }
+        ],
+        "i18n_key": "parents_growing_old_003_c1"
+      },
+      {
+        "content_en": "Move them in with you",
+        "content_vi": "Đón bố mẹ về ở cùng",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 55,
+            "message_en": "Multi-generational living works well. Everyone is happier.",
+            "message_vi": "Sống nhiều thế hệ hoạt động tốt. Mọi người đều hạnh phúc hơn.",
+            "stat_changes": {
+              "happiness": 15,
+              "money": -30
+            },
+            "set_flags": {
+              "parents_living_with_you": true
+            },
+            "i18n_key": "parents_growing_old_003_c2_o1",
+            "unset_flags": []
+          },
+          {
+            "probability": 45,
+            "message_en": "Constant tension in the house. Too many opinions clash.",
+            "message_vi": "Căng thẳng liên tục trong nhà. Quá nhiều ý kiến xung đột.",
+            "stat_changes": {
+              "happiness": -15,
+              "money": -30
+            },
+            "set_flags": {
+              "parents_living_with_you": true
+            },
+            "i18n_key": "parents_growing_old_003_c2_o2",
+            "unset_flags": []
+          }
+        ],
+        "i18n_key": "parents_growing_old_003_c2"
+      },
+      {
+        "content_en": "Can only help occasionally",
+        "content_vi": "Chỉ có thể giúp thỉnh thoảng",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "You do what you can. Guilt lingers but you're managing.",
+            "message_vi": "Bạn làm những gì có thể. Cảm giác tội lỗi vẫn còn nhưng bạn đang xoay sở.",
+            "stat_changes": {
+              "happiness": -8,
+              "money": -20
+            },
+            "set_flags": {},
+            "i18n_key": "parents_growing_old_003_c3_o1",
+            "unset_flags": []
+          }
+        ],
+        "i18n_key": "parents_growing_old_003_c3"
+      }
+    ],
+    "i18n_key": "parents_growing_old_003",
+    "event_type": "random"
+  }
+]

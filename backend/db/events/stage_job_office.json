@@ -1,0 +1,798 @@
+[
+  {
+    "title_en": "Office Politics Drama",
+    "title_vi": "Chính Trị Văn Phòng",
+    "description_en": "Two managers are fighting for control of your department. You're caught in the middle.",
+    "description_vi": "Hai quản lý đang tranh giành quyền kiểm soát phòng ban. Bạn bị kẹt giữa.",
+    "i18n_key": "office_politics_drama_201",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 25,
+      "max_age": 55,
+      "requires_flags": [
+        "is_employed",
+        "job_office"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Side with the senior manager",
+        "content_vi": "Về phe quản lý cấp cao",
+        "i18n_key": "office_politics_drama_201_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "Your manager wins the power struggle. You're rewarded for loyalty.",
+            "message_vi": "Quản lý của bạn thắng cuộc đấu tranh quyền lực. Bạn được thưởng vì lòng trung thành.",
+            "i18n_key": "office_politics_drama_201_c1_o1",
+            "stat_changes": {
+              "happiness": 15,
+              "money": 50
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 40,
+            "message_en": "You backed the wrong horse. The other manager won and now dislikes you.",
+            "message_vi": "Bạn chọn sai phe. Quản lý kia thắng và giờ không ưa bạn.",
+            "i18n_key": "office_politics_drama_201_c1_o2",
+            "stat_changes": {
+              "happiness": -20,
+              "health": -8
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Stay neutral and focus on work",
+        "content_vi": "Giữ trung lập và tập trung vào công việc",
+        "i18n_key": "office_politics_drama_201_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Smart move. Both managers respect your professionalism.",
+            "message_vi": "Nước đi thông minh. Cả hai quản lý tôn trọng sự chuyên nghiệp của bạn.",
+            "i18n_key": "office_politics_drama_201_c2_o1",
+            "stat_changes": {
+              "happiness": 10
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 30,
+            "message_en": "Both sides see you as unhelpful. You're sidelined from decisions.",
+            "message_vi": "Cả hai phe thấy bạn không giúp đỡ. Bạn bị gạt ra khỏi các quyết định.",
+            "i18n_key": "office_politics_drama_201_c2_o2",
+            "stat_changes": {
+              "happiness": -12
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Report the conflict to HR",
+        "content_vi": "Báo cáo xung đột lên phòng nhân sự",
+        "i18n_key": "office_politics_drama_201_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 45,
+            "message_en": "HR mediates successfully. Workplace harmony restored.",
+            "message_vi": "Nhân sự hòa giải thành công. Hòa khí nơi làm việc được khôi phục.",
+            "i18n_key": "office_politics_drama_201_c3_o1",
+            "stat_changes": {
+              "happiness": 12
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 55,
+            "message_en": "Both managers now see you as a snitch. Career damaged.",
+            "message_vi": "Cả hai quản lý giờ thấy bạn là kẻ tố cáo. Sự nghiệp bị ảnh hưởng.",
+            "i18n_key": "office_politics_drama_201_c3_o2",
+            "stat_changes": {
+              "happiness": -25,
+              "health": -10
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Deadline Crunch",
+    "title_vi": "Áp Lực Deadline",
+    "description_en": "A major project is due tomorrow and your team is behind schedule. Everyone's stressed.",
+    "description_vi": "Một dự án lớn đến hạn ngày mai và nhóm của bạn đang chậm tiến độ. Mọi người đều căng thẳng.",
+    "i18n_key": "deadline_crunch_202",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 23,
+      "max_age": 55,
+      "requires_flags": [
+        "is_employed",
+        "job_office"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Pull an all-nighter to finish",
+        "content_vi": "Thức trắng đêm để hoàn thành",
+        "i18n_key": "deadline_crunch_202_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 65,
+            "message_en": "Project delivered on time! Boss is impressed. You're exhausted.",
+            "message_vi": "Dự án giao đúng hạn! Sếp ấn tượng. Bạn kiệt sức.",
+            "i18n_key": "deadline_crunch_202_c1_o1",
+            "stat_changes": {
+              "happiness": 10,
+              "health": -15,
+              "money": 30
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 35,
+            "message_en": "You made mistakes from exhaustion. Project has errors. Boss unhappy.",
+            "message_vi": "Bạn mắc lỗi vì kiệt sức. Dự án có sai sót. Sếp không hài lòng.",
+            "i18n_key": "deadline_crunch_202_c1_o2",
+            "stat_changes": {
+              "happiness": -20,
+              "health": -18
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Negotiate a deadline extension",
+        "content_vi": "Thương lượng gia hạn deadline",
+        "i18n_key": "deadline_crunch_202_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 55,
+            "message_en": "Extension granted! Team delivers quality work without burnout.",
+            "message_vi": "Gia hạn được chấp nhận! Nhóm giao công việc chất lượng không bị kiệt sức.",
+            "i18n_key": "deadline_crunch_202_c2_o1",
+            "stat_changes": {
+              "happiness": 15,
+              "health": 5
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 45,
+            "message_en": "Client refuses extension. You look unprofessional. Reputation damaged.",
+            "message_vi": "Khách hàng từ chối gia hạn. Bạn trông không chuyên nghiệp. Danh tiếng bị ảnh hưởng.",
+            "i18n_key": "deadline_crunch_202_c2_o2",
+            "stat_changes": {
+              "happiness": -18
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Delegate tasks and manage efficiently",
+        "content_vi": "Phân công nhiệm vụ và quản lý hiệu quả",
+        "i18n_key": "deadline_crunch_202_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Great leadership! Team finishes on time with balanced workload.",
+            "message_vi": "Lãnh đạo tuyệt vời! Nhóm hoàn thành đúng hạn với khối lượng công việc cân bằng.",
+            "i18n_key": "deadline_crunch_202_c3_o1",
+            "stat_changes": {
+              "happiness": 18,
+              "money": 40
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 30,
+            "message_en": "Team members resent being pushed. Morale drops. Project barely done.",
+            "message_vi": "Thành viên nhóm bực bội vì bị thúc ép. Tinh thần giảm. Dự án vừa vặn xong.",
+            "i18n_key": "deadline_crunch_202_c3_o2",
+            "stat_changes": {
+              "happiness": -10,
+              "health": -5
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Automation Threat",
+    "title_vi": "Đe Dọa Tự Động Hóa",
+    "description_en": "Company is implementing new software that could automate half your job. Your role is at risk.",
+    "description_vi": "Công ty đang triển khai phần mềm mới có thể tự động hóa nửa công việc của bạn. Vai trò của bạn đang bị đe dọa.",
+    "i18n_key": "automation_threat_203",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 28,
+      "max_age": 55,
+      "requires_flags": [
+        "is_employed",
+        "job_office"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Learn the new software and become the expert",
+        "content_vi": "Học phần mềm mới và trở thành chuyên gia",
+        "i18n_key": "automation_threat_203_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 75,
+            "message_en": "You're now the go-to person for the new system. Job secured, even promoted!",
+            "message_vi": "Bạn giờ là người am hiểu hệ thống mới. Công việc được đảm bảo, thậm chí thăng chức!",
+            "i18n_key": "automation_threat_203_c1_o1",
+            "stat_changes": {
+              "happiness": 20,
+              "money": 60
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 25,
+            "message_en": "The software is too complex. You struggle while others adapt faster.",
+            "message_vi": "Phần mềm quá phức tạp. Bạn vật lộn trong khi người khác thích nghi nhanh hơn.",
+            "i18n_key": "automation_threat_203_c1_o2",
+            "stat_changes": {
+              "happiness": -15,
+              "health": -10
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Pivot to tasks that require human judgment",
+        "content_vi": "Chuyển sang công việc cần phán đoán con người",
+        "i18n_key": "automation_threat_203_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 65,
+            "message_en": "Smart pivot! You focus on strategy and client relations. More valuable than ever.",
+            "message_vi": "Chuyển hướng thông minh! Bạn tập trung vào chiến lược và quan hệ khách hàng. Có giá trị hơn bao giờ hết.",
+            "i18n_key": "automation_threat_203_c2_o1",
+            "stat_changes": {
+              "happiness": 18,
+              "money": 50
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 35,
+            "message_en": "Company doesn't value soft skills. Your position is still at risk.",
+            "message_vi": "Công ty không coi trọng kỹ năng mềm. Vị trí của bạn vẫn bị đe dọa.",
+            "i18n_key": "automation_threat_203_c2_o2",
+            "stat_changes": {
+              "happiness": -12
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Start looking for a new job now",
+        "content_vi": "Bắt đầu tìm việc mới ngay",
+        "i18n_key": "automation_threat_203_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "Found a better position at a competitor! Higher pay, more security.",
+            "message_vi": "Tìm được vị trí tốt hơn ở đối thủ! Lương cao hơn, an toàn hơn.",
+            "i18n_key": "automation_threat_203_c3_o1",
+            "stat_changes": {
+              "happiness": 22,
+              "money": 80
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 40,
+            "message_en": "Job search takes months. Meanwhile, you're stressed and distracted at work.",
+            "message_vi": "Tìm việc mất nhiều tháng. Trong khi đó, bạn căng thẳng và mất tập trung ở công việc.",
+            "i18n_key": "automation_threat_203_c3_o2",
+            "stat_changes": {
+              "happiness": -18,
+              "health": -12
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Toxic Coworker",
+    "title_vi": "Đồng Nghiệp Độc Hại",
+    "description_en": "A colleague constantly takes credit for your work and undermines you in meetings.",
+    "description_vi": "Một đồng nghiệp liên tục chiếm công lao của bạn và hạ thấp bạn trong các cuộc họp.",
+    "i18n_key": "toxic_coworker_204",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 24,
+      "max_age": 55,
+      "requires_flags": [
+        "is_employed",
+        "job_office"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Confront them directly and professionally",
+        "content_vi": "Đối chất trực tiếp và chuyên nghiệp",
+        "i18n_key": "toxic_coworker_204_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 55,
+            "message_en": "They back down after being called out. Others notice your assertiveness.",
+            "message_vi": "Họ lùi bước sau khi bị vạch trần. Người khác chú ý đến sự quyết đoán của bạn.",
+            "i18n_key": "toxic_coworker_204_c1_o1",
+            "stat_changes": {
+              "happiness": 15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 45,
+            "message_en": "They escalate the conflict. Now it's a full workplace war. Exhausting.",
+            "message_vi": "Họ leo thang xung đột. Giờ là cuộc chiến toàn diện nơi làm việc. Kiệt sức.",
+            "i18n_key": "toxic_coworker_204_c1_o2",
+            "stat_changes": {
+              "happiness": -22,
+              "health": -12
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Document everything and report to management",
+        "content_vi": "Ghi chép mọi thứ và báo cáo lên quản lý",
+        "i18n_key": "toxic_coworker_204_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 65,
+            "message_en": "Management takes action. Coworker is warned. Workplace improves.",
+            "message_vi": "Quản lý hành động. Đồng nghiệp bị cảnh cáo. Môi trường làm việc cải thiện.",
+            "i18n_key": "toxic_coworker_204_c2_o1",
+            "stat_changes": {
+              "happiness": 18
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 35,
+            "message_en": "Management does nothing. You're seen as a complainer. Situation worsens.",
+            "message_vi": "Quản lý không làm gì. Bạn bị xem là người hay phàn nàn. Tình hình tệ hơn.",
+            "i18n_key": "toxic_coworker_204_c2_o2",
+            "stat_changes": {
+              "happiness": -20,
+              "health": -10
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Focus on your own work and ignore them",
+        "content_vi": "Tập trung vào công việc riêng và phớt lờ họ",
+        "i18n_key": "toxic_coworker_204_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 40,
+            "message_en": "Your excellent work speaks for itself. Boss sees through their lies.",
+            "message_vi": "Công việc xuất sắc của bạn tự nói lên. Sếp nhìn thấu lời nói dối của họ.",
+            "i18n_key": "toxic_coworker_204_c3_o1",
+            "stat_changes": {
+              "happiness": 12,
+              "money": 30
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 60,
+            "message_en": "They continue stealing credit. Your contributions go unrecognized. Frustrating.",
+            "message_vi": "Họ tiếp tục chiếm công lao. Đóng góp của bạn không được công nhận. Thất vọng.",
+            "i18n_key": "toxic_coworker_204_c3_o2",
+            "stat_changes": {
+              "happiness": -25,
+              "health": -8
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Remote Work Opportunity",
+    "title_vi": "Cơ Hội Làm Việc Từ Xa",
+    "description_en": "Company is offering permanent remote work. Better work-life balance but less visibility.",
+    "description_vi": "Công ty đang cung cấp làm việc từ xa vĩnh viễn. Cân bằng công việc-cuộc sống tốt hơn nhưng ít được chú ý.",
+    "i18n_key": "remote_work_opportunity_205",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 25,
+      "max_age": 55,
+      "requires_flags": [
+        "is_employed",
+        "job_office"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Go fully remote",
+        "content_vi": "Chuyển hoàn toàn sang làm từ xa",
+        "i18n_key": "remote_work_opportunity_205_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Work-life balance improves dramatically! Happier and more productive.",
+            "message_vi": "Cân bằng công việc-cuộc sống cải thiện đáng kể! Hạnh phúc và năng suất hơn.",
+            "i18n_key": "remote_work_opportunity_205_c1_o1",
+            "stat_changes": {
+              "happiness": 20,
+              "health": 10,
+              "money": 20
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 30,
+            "message_en": "You feel isolated and disconnected. Missed out on promotions. Out of sight, out of mind.",
+            "message_vi": "Bạn cảm thấy cô lập và mất kết nối. Bỏ lỡ thăng chức. Xa mặt cách lòng.",
+            "i18n_key": "remote_work_opportunity_205_c1_o2",
+            "stat_changes": {
+              "happiness": -15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Choose hybrid (3 days office, 2 days home)",
+        "content_vi": "Chọn hybrid (3 ngày văn phòng, 2 ngày nhà)",
+        "i18n_key": "remote_work_opportunity_205_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 80,
+            "message_en": "Perfect balance! Flexibility plus face time. Best of both worlds.",
+            "message_vi": "Cân bằng hoàn hảo! Linh hoạt cộng với gặp mặt trực tiếp. Tốt nhất cả hai bên.",
+            "i18n_key": "remote_work_opportunity_205_c2_o1",
+            "stat_changes": {
+              "happiness": 18,
+              "health": 8,
+              "money": 15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 20,
+            "message_en": "Commuting 3 days is still exhausting. Not much better than before.",
+            "message_vi": "Đi lại 3 ngày vẫn kiệt sức. Không tốt hơn nhiều so với trước.",
+            "i18n_key": "remote_work_opportunity_205_c2_o2",
+            "stat_changes": {
+              "happiness": 5,
+              "health": -3
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Stay in office full-time for career visibility",
+        "content_vi": "Ở văn phòng toàn thời gian để được chú ý trong sự nghiệp",
+        "i18n_key": "remote_work_opportunity_205_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "Boss notices your dedication. Promoted ahead of remote workers!",
+            "message_vi": "Sếp chú ý đến sự tận tụy của bạn. Được thăng chức trước những người làm từ xa!",
+            "i18n_key": "remote_work_opportunity_205_c3_o1",
+            "stat_changes": {
+              "happiness": 12,
+              "money": 70
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 40,
+            "message_en": "Commute drains you. Remote colleagues seem happier. You feel stuck.",
+            "message_vi": "Đi lại làm bạn kiệt sức. Đồng nghiệp từ xa có vẻ hạnh phúc hơn. Bạn cảm thấy bế tắc.",
+            "i18n_key": "remote_work_opportunity_205_c3_o2",
+            "stat_changes": {
+              "happiness": -12,
+              "health": -10
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Training Budget Opportunity",
+    "title_vi": "Cơ Hội Ngân Sách Đào Tạo",
+    "description_en": "Company offers $100 training budget. You can upskill but it takes time away from work.",
+    "description_vi": "Công ty cung cấp ngân sách đào tạo $100. Bạn có thể nâng cao kỹ năng nhưng mất thời gian làm việc.",
+    "i18n_key": "training_budget_207",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 24,
+      "max_age": 50,
+      "requires_flags": [
+        "is_employed",
+        "job_office"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Take advanced technical certification",
+        "content_vi": "Lấy chứng chỉ kỹ thuật nâng cao",
+        "i18n_key": "training_budget_207_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 75,
+            "message_en": "Certification earned! You're now qualified for senior roles. Career boost!",
+            "message_vi": "Chứng chỉ đạt được! Giờ bạn đủ điều kiện cho vai trò cấp cao. Sự nghiệp thăng tiến!",
+            "i18n_key": "training_budget_207_c1_o1",
+            "stat_changes": {
+              "happiness": 20,
+              "money": 60
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 25,
+            "message_en": "Failed the certification exam. Time and money wasted. Embarrassing.",
+            "message_vi": "Trượt kỳ thi chứng chỉ. Lãng phí thời gian và tiền bạc. Xấu hổ.",
+            "i18n_key": "training_budget_207_c1_o2",
+            "stat_changes": {
+              "happiness": -18,
+              "health": -8
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Attend leadership and management workshop",
+        "content_vi": "Tham dự hội thảo lãnh đạo và quản lý",
+        "i18n_key": "training_budget_207_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Great insights! You apply new skills immediately. Boss notices your growth.",
+            "message_vi": "Hiểu biết tuyệt vời! Bạn áp dụng kỹ năng mới ngay lập tức. Sếp chú ý đến sự phát triển của bạn.",
+            "i18n_key": "training_budget_207_c2_o1",
+            "stat_changes": {
+              "happiness": 15,
+              "money": 40
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 30,
+            "message_en": "Workshop was generic corporate fluff. Nothing practical learned.",
+            "message_vi": "Hội thảo chỉ là lý thuyết chung chung. Không học được gì thực tế.",
+            "i18n_key": "training_budget_207_c2_o2",
+            "stat_changes": {
+              "happiness": -8
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Skip training, focus on current projects",
+        "content_vi": "Bỏ qua đào tạo, tập trung vào dự án hiện tại",
+        "i18n_key": "training_budget_207_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Projects go well. But you fall behind on skills compared to colleagues.",
+            "message_vi": "Dự án diễn ra tốt. Nhưng bạn tụt hậu về kỹ năng so với đồng nghiệp.",
+            "i18n_key": "training_budget_207_c3_o1",
+            "stat_changes": {
+              "happiness": -5
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 50,
+            "message_en": "Your dedication to work is noticed. Promoted based on results, not certificates!",
+            "message_vi": "Sự tận tụy với công việc được chú ý. Thăng chức dựa trên kết quả, không phải chứng chỉ!",
+            "i18n_key": "training_budget_207_c3_o2",
+            "stat_changes": {
+              "happiness": 12,
+              "money": 50
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Burnout Warning Signs",
+    "title_vi": "Dấu Hiệu Cảnh Báo Kiệt Sức",
+    "description_en": "You've been working 60-hour weeks for months. Your health and relationships are suffering.",
+    "description_vi": "Bạn đã làm việc 60 giờ mỗi tuần trong nhiều tháng. Sức khỏe và các mối quan hệ đang chịu ảnh hưởng.",
+    "i18n_key": "burnout_warning_208",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 26,
+      "max_age": 55,
+      "requires_flags": [
+        "is_employed",
+        "job_office"
+      ],
+      "min_work_experience": 3
+    },
+    "choices": [
+      {
+        "content_en": "Take a month of unpaid leave to recover",
+        "content_vi": "Nghỉ một tháng không lương để hồi phục",
+        "i18n_key": "burnout_warning_208_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Rest restored you completely. Return refreshed and more productive than ever!",
+            "message_vi": "Nghỉ ngơi phục hồi bạn hoàn toàn. Trở lại sảng khoái và năng suất hơn bao giờ hết!",
+            "i18n_key": "burnout_warning_208_c1_o1",
+            "stat_changes": {
+              "happiness": 25,
+              "health": 20,
+              "money": -80
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 30,
+            "message_en": "While away, you were replaced on key projects. Career momentum lost.",
+            "message_vi": "Khi đi vắng, bạn bị thay thế trong các dự án chính. Mất đà sự nghiệp.",
+            "i18n_key": "burnout_warning_208_c1_o2",
+            "stat_changes": {
+              "happiness": -10,
+              "health": 15,
+              "money": -80
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Set strict boundaries and work normal hours",
+        "content_vi": "Đặt ranh giới nghiêm ngặt và làm giờ bình thường",
+        "i18n_key": "burnout_warning_208_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 65,
+            "message_en": "Boundaries respected. You're healthier and still productive. Sustainable pace achieved!",
+            "message_vi": "Ranh giới được tôn trọng. Bạn khỏe mạnh hơn và vẫn năng suất. Đạt được nhịp độ bền vững!",
+            "i18n_key": "burnout_warning_208_c2_o1",
+            "stat_changes": {
+              "happiness": 20,
+              "health": 15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 35,
+            "message_en": "Boss sees you as less committed. Passed over for promotion. Work-life balance has a cost.",
+            "message_vi": "Sếp thấy bạn kém cam kết. Bị bỏ qua thăng chức. Cân bằng công việc-cuộc sống có cái giá.",
+            "i18n_key": "burnout_warning_208_c2_o2",
+            "stat_changes": {
+              "happiness": -8,
+              "health": 10
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Push through",
+        "content_vi": "Cố gắng vượt qua",
+        "i18n_key": "burnout_warning_208_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "The sacrifice paid off. But at what cost to your health?",
+            "message_vi": "Sự hy sinh đã được đền đáp. Nhưng với cái giá nào cho sức khỏe?",
+            "i18n_key": "burnout_warning_208_c3_o1",
+            "stat_changes": {
+              "happiness": 10,
+              "health": -5,
+              "money": 200
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 40,
+            "message_en": "You collapse from exhaustion. Hospitalized. Career and health ruined.",
+            "message_vi": "Bạn ngã quỵ vì kiệt sức. Nhập viện. Sự nghiệp và sức khỏe bị hủy hoại.",
+            "i18n_key": "burnout_warning_208_c3_o2",
+            "stat_changes": {
+              "happiness": -35,
+              "health": -30,
+              "money": -120
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  }
+]

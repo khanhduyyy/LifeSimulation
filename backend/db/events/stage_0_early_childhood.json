@@ -1,0 +1,816 @@
+[
+  {
+    "title_en": "First Steps",
+    "title_vi": "Bước đi đầu tiên",
+    "description_en": "Your parents watch with excitement as you begin to stand and take your very first steps across the living room floor.",
+    "description_vi": "Bố mẹ bạn háo hức theo dõi khi bạn bắt đầu đứng lên và bước những bước đi đầu tiên qua phòng khách.",
+    "event_type": "milestone",
+    "conditions": {
+      "min_age": 1,
+      "max_age": 2
+    },
+    "choices": [
+      {
+        "content_en": "Toddle towards mom with open arms",
+        "content_vi": "Lẫm chẫm chạy về phía mẹ với đôi tay mở rộng",
+        "outcomes": [
+          {
+            "message_en": "You stumble into your mother's arms! She lifts you up, laughing with pure joy.",
+            "message_vi": "Bạn lẫm chẫm vào vòng tay mẹ! Mẹ bế bạn lên, cười vui sướng.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "probability": 70
+          },
+          {
+            "message_en": "You trip and fall, but your mom catches you just in time. Her warm embrace makes you giggle.",
+            "message_vi": "Bạn vấp ngã, nhưng mẹ đỡ kịp. Vòng tay ấm áp của mẹ khiến bạn cười khúc khích.",
+            "stat_changes": {
+              "happiness": 3,
+              "health": -1
+            },
+            "probability": 30
+          }
+        ]
+      },
+      {
+        "content_en": "Try to reach the colorful toy on the table",
+        "content_vi": "Cố gắng với lấy món đồ chơi nhiều màu sắc trên bàn",
+        "outcomes": [
+          {
+            "message_en": "You grab the toy triumphantly! Your parents cheer and clap for you.",
+            "message_vi": "Bạn nắm được đồ chơi! Bố mẹ reo hò và vỗ tay cho bạn.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "probability": 60
+          },
+          {
+            "message_en": "The toy falls off the table and you start crying, but dad quickly picks it up for you.",
+            "message_vi": "Đồ chơi rơi khỏi bàn và bạn bắt đầu khóc, nhưng bố nhanh chóng nhặt lên cho bạn.",
+            "stat_changes": {
+              "happiness": 1
+            },
+            "probability": 40
+          }
+        ]
+      },
+      {
+        "content_en": "Stand still and look around curiously",
+        "content_vi": "Đứng yên và nhìn xung quanh tò mò",
+        "outcomes": [
+          {
+            "message_en": "You stand perfectly balanced, taking in the world around you. Your parents snap a photo of this proud moment.",
+            "message_vi": "Bạn đứng thăng bằng hoàn hảo, ngắm nhìn thế giới xung quanh. Bố mẹ chụp ảnh khoảnh khắc tự hào này.",
+            "stat_changes": {
+              "happiness": 4
+            },
+            "probability": 65
+          },
+          {
+            "message_en": "You wobble and plop down on your bottom. Everyone laughs, including you!",
+            "message_vi": "Bạn lắc lư và ngồi phịch xuống. Mọi người cười, kể cả bạn!",
+            "stat_changes": {
+              "happiness": 3
+            },
+            "probability": 35
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "First Words",
+    "title_vi": "Những từ đầu tiên",
+    "description_en": "You're starting to make sounds that sound like real words. Your parents lean in eagerly every time you open your mouth.",
+    "description_vi": "Bạn bắt đầu phát ra những âm thanh giống từ ngữ thật sự. Bố mẹ háo hức mỗi khi bạn mở miệng.",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 1,
+      "max_age": 2
+    },
+    "choices": [
+      {
+        "content_en": "Try to say \"mama\"",
+        "content_vi": "Cố gọi \"mama\"",
+        "outcomes": [
+          {
+            "message_en": "\"Ma...ma!\" Your mother's eyes fill with happy tears. She hugs you tight.",
+            "message_vi": "\"Ma...ma!\" Mắt mẹ đầy nước mắt hạnh phúc. Mẹ ôm chặt bạn.",
+            "stat_changes": {
+              "happiness": 6
+            },
+            "probability": 65
+          },
+          {
+            "message_en": "It comes out as \"baba\" instead! Dad is thrilled, mom pretends to be jealous.",
+            "message_vi": "Nó thành \"baba\" thay vì \"mama\"! Bố rất vui, mẹ giả vờ ghen tị.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "probability": 35
+          }
+        ]
+      },
+      {
+        "content_en": "Point at things and babble",
+        "content_vi": "Chỉ vào mọi thứ và bập bẹ",
+        "outcomes": [
+          {
+            "message_en": "You point at the family cat and say something that sounds like its name! Everyone is amazed.",
+            "message_vi": "Bạn chỉ vào con mèo và nói gì đó giống tên nó! Mọi người đều ngạc nhiên.",
+            "stat_changes": {
+              "happiness": 4
+            },
+            "probability": 50
+          },
+          {
+            "message_en": "Your babbling entertains the whole family during dinner. You love being the center of attention.",
+            "message_vi": "Tiếng bập bẹ của bạn giải trí cho cả nhà trong bữa tối. Bạn thích được mọi người chú ý.",
+            "stat_changes": {
+              "happiness": 3
+            },
+            "probability": 50
+          }
+        ]
+      },
+      {
+        "content_en": "Stay quiet and observe everything",
+        "content_vi": "Im lặng và quan sát mọi thứ",
+        "outcomes": [
+          {
+            "message_en": "You may be quiet, but your parents notice you understand a lot. You respond to your name perfectly.",
+            "message_vi": "Bạn có thể im lặng, nhưng bố mẹ nhận ra bạn hiểu rất nhiều. Bạn phản hồi tên mình hoàn hảo.",
+            "stat_changes": {
+              "happiness": 3,
+              "health": 2
+            },
+            "probability": 60
+          },
+          {
+            "message_en": "Your parents worry a little about your quietness, but the doctor says you're perfectly fine.",
+            "message_vi": "Bố mẹ hơi lo lắng về sự im lặng, nhưng bác sĩ nói bạn hoàn toàn ổn.",
+            "stat_changes": {
+              "happiness": 1
+            },
+            "probability": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Playground Adventure",
+    "title_vi": "Phiêu lưu sân chơi",
+    "description_en": "Your parents take you to the neighborhood playground for the first time. There are swings, slides, and other kids running around!",
+    "description_vi": "Bố mẹ đưa bạn đến sân chơi khu phố lần đầu tiên. Có xích đu, cầu trượt, và những đứa trẻ khác chạy nhảy!",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 2,
+      "max_age": 4
+    },
+    "choices": [
+      {
+        "content_en": "Run straight to the slide",
+        "content_vi": "Chạy thẳng đến cầu trượt",
+        "outcomes": [
+          {
+            "message_en": "Wheee! You slide down with your arms up. So much fun! You want to do it again and again.",
+            "message_vi": "Wiii! Bạn trượt xuống với hai tay giơ cao. Vui quá! Bạn muốn chơi lại hoài.",
+            "stat_changes": {
+              "happiness": 5,
+              "health": 2
+            },
+            "probability": 70
+          },
+          {
+            "message_en": "You go down too fast and bump your knee at the bottom. Ouch! But you're brave and don't cry.",
+            "message_vi": "Bạn trượt quá nhanh và đụng đầu gối ở cuối. Ái! Nhưng bạn dũng cảm không khóc.",
+            "stat_changes": {
+              "happiness": 1,
+              "health": -3
+            },
+            "probability": 30
+          }
+        ]
+      },
+      {
+        "content_en": "Try to make friends with other kids",
+        "content_vi": "Cố kết bạn với những đứa trẻ khác",
+        "outcomes": [
+          {
+            "message_en": "You share your snack with a shy kid! You two become instant best friends and play together all afternoon.",
+            "message_vi": "Bạn chia đồ ăn vặt với một bé nhút nhát! Hai đứa trở thành bạn thân ngay và chơi cả buổi chiều.",
+            "stat_changes": {
+              "happiness": 7
+            },
+            "probability": 55
+          },
+          {
+            "message_en": "The other kids are older and ignore you. You feel a little sad but your dad plays with you instead.",
+            "message_vi": "Những đứa trẻ khác lớn hơn và không để ý bạn. Bạn hơi buồn nhưng bố chơi cùng thay.",
+            "stat_changes": {
+              "happiness": 2
+            },
+            "probability": 45
+          }
+        ]
+      },
+      {
+        "content_en": "Stay close to mom and watch from the bench",
+        "content_vi": "Ở gần mẹ và ngồi xem từ ghế đá",
+        "outcomes": [
+          {
+            "message_en": "You enjoy watching the other kids play while eating ice cream with mom. A peaceful afternoon.",
+            "message_vi": "Bạn thích ngắm trẻ con chơi trong khi ăn kem cùng mẹ. Một buổi chiều yên bình.",
+            "stat_changes": {
+              "happiness": 3
+            },
+            "probability": 60
+          },
+          {
+            "message_en": "Another kid comes over and invites you to play! You cautiously join and end up having a great time.",
+            "message_vi": "Một bé khác đến rủ bạn chơi! Bạn rụt rè tham gia và cuối cùng rất vui.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "probability": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Preschool",
+    "title_vi": "Mẫu giáo",
+    "description_en": "It's your first day at preschool! Your parents drop you off at a bright, colorful classroom full of toys and other children.",
+    "description_vi": "Ngày đầu tiên đi mẫu giáo! Bố mẹ đưa bạn đến lớp học đầy màu sắc với đồ chơi và bạn bè.",
+    "event_type": "milestone",
+    "conditions": {
+      "min_age": 3,
+      "max_age": 4
+    },
+    "choices": [
+      {
+        "content_en": "Eagerly join the other kids",
+        "content_vi": "Háo hức tham gia cùng các bạn",
+        "outcomes": [
+          {
+            "message_en": "You dive right in! By lunchtime you've already made three friends and learned a new song.",
+            "message_vi": "Bạn hòa nhập ngay! Đến giờ ăn trưa bạn đã có ba người bạn mới và học được bài hát mới.",
+            "stat_changes": {
+              "happiness": 6
+            },
+            "probability": 65
+          },
+          {
+            "message_en": "You're so excited that you accidentally knock over the blocks another kid was building. They cry, but you say sorry.",
+            "message_vi": "Bạn phấn khích đến nỗi vô tình làm đổ khối xếp hình bạn khác đang xây. Bạn ấy khóc, nhưng bạn xin lỗi.",
+            "stat_changes": {
+              "happiness": 2
+            },
+            "probability": 35
+          }
+        ]
+      },
+      {
+        "content_en": "Cry and cling to mom",
+        "content_vi": "Khóc và bám mẹ",
+        "outcomes": [
+          {
+            "message_en": "The teacher brings you a stuffed bear. You calm down, and by afternoon, you don't want to leave!",
+            "message_vi": "Cô giáo mang cho bạn con gấu bông. Bạn bình tĩnh lại, và đến chiều, bạn không muốn về!",
+            "stat_changes": {
+              "happiness": 4
+            },
+            "probability": 60
+          },
+          {
+            "message_en": "You cry most of the morning, but a kind kid shares their crayons with you. You start drawing together.",
+            "message_vi": "Bạn khóc suốt buổi sáng, nhưng một bạn tốt chia sẻ bút màu. Hai đứa bắt đầu vẽ cùng nhau.",
+            "stat_changes": {
+              "happiness": 3
+            },
+            "probability": 40
+          }
+        ]
+      },
+      {
+        "content_en": "Go straight to the art corner",
+        "content_vi": "Đi thẳng đến góc vẽ",
+        "outcomes": [
+          {
+            "message_en": "You create an amazing finger painting! The teacher hangs it on the wall and other kids are impressed.",
+            "message_vi": "Bạn tạo ra bức tranh tay tuyệt vời! Cô giáo treo lên tường và các bạn khác rất ấn tượng.",
+            "stat_changes": {
+              "happiness": 6,
+              "money": 5
+            },
+            "probability": 55
+          },
+          {
+            "message_en": "You get paint all over your new clothes. Mom isn't happy when she picks you up, but your drawing is beautiful.",
+            "message_vi": "Bạn làm dính sơn khắp quần áo mới. Mẹ không vui khi đón, nhưng bức vẽ rất đẹp.",
+            "stat_changes": {
+              "happiness": 3,
+              "money": -3
+            },
+            "probability": 45
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Birthday Party",
+    "title_vi": "Tiệc sinh nhật",
+    "description_en": "Your parents throw you a birthday party! There are balloons, cake, and presents. All your friends from preschool are invited.",
+    "description_vi": "Bố mẹ tổ chức tiệc sinh nhật cho bạn! Có bóng bay, bánh kem, và quà. Tất cả bạn bè mẫu giáo được mời.",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 3,
+      "max_age": 5
+    },
+    "choices": [
+      {
+        "content_en": "Blow out candles and make a wish",
+        "content_vi": "Thổi nến và ước một điều",
+        "outcomes": [
+          {
+            "message_en": "You blow out all the candles in one breath! Everyone cheers. You wish for a puppy... will it come true?",
+            "message_vi": "Bạn thổi tắt tất cả nến trong một hơi! Mọi người reo hò. Bạn ước có chú cún... liệu có thành sự thật?",
+            "stat_changes": {
+              "happiness": 8
+            },
+            "probability": 60
+          },
+          {
+            "message_en": "You can't blow them all out and need help from dad. Still a wonderful birthday!",
+            "message_vi": "Bạn không thổi hết nến và cần bố giúp. Vẫn là một sinh nhật tuyệt vời!",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "probability": 40
+          }
+        ]
+      },
+      {
+        "content_en": "Open presents first!",
+        "content_vi": "Mở quà trước!",
+        "outcomes": [
+          {
+            "message_en": "You get a toy you've been dreaming about! You scream with joy and hug your parents.",
+            "message_vi": "Bạn được món đồ chơi mơ ước! Bạn hét lên vui sướng và ôm bố mẹ.",
+            "stat_changes": {
+              "happiness": 7,
+              "money": 10
+            },
+            "probability": 55
+          },
+          {
+            "message_en": "You get clothes instead of toys... but grandma also gives you a surprise red envelope with money inside!",
+            "message_vi": "Bạn được quần áo thay vì đồ chơi... nhưng bà cũng tặng bạn bao lì xì bất ngờ!",
+            "stat_changes": {
+              "happiness": 3,
+              "money": 15
+            },
+            "probability": 45
+          }
+        ]
+      },
+      {
+        "content_en": "Play games with friends",
+        "content_vi": "Chơi trò chơi với bạn bè",
+        "outcomes": [
+          {
+            "message_en": "Musical chairs is a huge hit! You win the final round and everyone applauds.",
+            "message_vi": "Trò nhạc ghế thành công lớn! Bạn chiến thắng vòng cuối và mọi người vỗ tay.",
+            "stat_changes": {
+              "happiness": 7,
+              "health": 2
+            },
+            "probability": 50
+          },
+          {
+            "message_en": "You trip during the sack race and scrape your elbow, but your friends cheer you up with cake.",
+            "message_vi": "Bạn vấp trong cuộc thi nhảy bao và trầy khuỷu tay, nhưng bạn bè an ủi bằng bánh.",
+            "stat_changes": {
+              "happiness": 4,
+              "health": -2
+            },
+            "probability": 50
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "A New Pet",
+    "title_vi": "Thú cưng mới",
+    "description_en": "Your dad comes home one day with a small box that has holes in it. Something is moving inside!",
+    "description_vi": "Một ngày bố về nhà với chiếc hộp nhỏ có lỗ thông hơi. Có gì đó đang cựa quậy bên trong!",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 3,
+      "max_age": 5
+    },
+    "choices": [
+      {
+        "content_en": "Open the box excitedly",
+        "content_vi": "Háo hức mở hộp",
+        "outcomes": [
+          {
+            "message_en": "It's a fluffy kitten! It purrs and snuggles in your arms. You name it immediately.",
+            "message_vi": "Là một chú mèo con lông xù! Nó kêu gừ gừ và cuộn trong tay bạn. Bạn đặt tên ngay.",
+            "stat_changes": {
+              "happiness": 8
+            },
+            "probability": 55
+          },
+          {
+            "message_en": "It's a hamster! It's tiny and fast. It escapes and runs under the sofa. The whole family chases it!",
+            "message_vi": "Là một chú chuột hamster! Nó nhỏ xíu và nhanh. Nó chạy trốn dưới ghế sofa. Cả nhà đuổi bắt!",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "probability": 45
+          }
+        ]
+      },
+      {
+        "content_en": "Look at it carefully first",
+        "content_vi": "Nhìn kỹ trước đã",
+        "outcomes": [
+          {
+            "message_en": "It's a goldfish in a small bowl! You stare at it for hours, mesmerized by its colors.",
+            "message_vi": "Là con cá vàng trong bể nhỏ! Bạn ngắm nó hàng giờ, mê mẩn bởi màu sắc.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "probability": 60
+          },
+          {
+            "message_en": "It's a baby turtle! It pokes its head out slowly. You decide to be its best friend.",
+            "message_vi": "Là chú rùa con! Nó thò đầu ra chậm rãi. Bạn quyết định làm bạn thân với nó.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "probability": 40
+          }
+        ]
+      },
+      {
+        "content_en": "Feel scared and hide behind mom",
+        "content_vi": "Sợ hãi và trốn sau mẹ",
+        "outcomes": [
+          {
+            "message_en": "Mom encourages you to peek. It's a tiny puppy! It licks your hand and you fall in love instantly.",
+            "message_vi": "Mẹ khuyến khích bạn nhìn. Là chú cún con! Nó liếm tay bạn và bạn yêu nó ngay.",
+            "stat_changes": {
+              "happiness": 7
+            },
+            "probability": 50
+          },
+          {
+            "message_en": "Dad shows you it's just a cute bunny. It wiggles its nose and you can't help but smile.",
+            "message_vi": "Bố cho bạn xem, chỉ là thỏ con dễ thương. Nó giật mũi và bạn không nhịn được cười.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "probability": 50
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Learning to Ride a Bike",
+    "title_vi": "Học đi xe đạp",
+    "description_en": "Dad brings home a small bicycle with training wheels. It's time to learn to ride!",
+    "description_vi": "Bố mang về chiếc xe đạp nhỏ có bánh phụ. Đã đến lúc học đi xe đạp!",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 4,
+      "max_age": 6
+    },
+    "choices": [
+      {
+        "content_en": "Ask dad to remove the training wheels right away",
+        "content_vi": "Xin bố tháo bánh phụ ngay",
+        "outcomes": [
+          {
+            "message_en": "You wobble and fall a few times, but refuse to give up. By sunset, you're riding on your own! Dad is so proud.",
+            "message_vi": "Bạn loạng choạng và ngã vài lần, nhưng không bỏ cuộc. Đến hoàng hôn, bạn tự đi được! Bố rất tự hào.",
+            "stat_changes": {
+              "happiness": 8,
+              "health": -2
+            },
+            "probability": 45
+          },
+          {
+            "message_en": "You fall hard and scrape both knees. Dad patches you up. You'll try again tomorrow.",
+            "message_vi": "Bạn ngã mạnh và trầy cả hai đầu gối. Bố băng bó cho bạn. Ngày mai sẽ thử lại.",
+            "stat_changes": {
+              "happiness": 2,
+              "health": -5
+            },
+            "probability": 55
+          }
+        ]
+      },
+      {
+        "content_en": "Practice carefully with training wheels first",
+        "content_vi": "Tập cẩn thận với bánh phụ trước",
+        "outcomes": [
+          {
+            "message_en": "You ride around the neighborhood like a pro! The neighbors wave and cheer as you zoom past.",
+            "message_vi": "Bạn đi vòng quanh khu phố như dân chuyên! Hàng xóm vẫy tay và cổ vũ khi bạn chạy qua.",
+            "stat_changes": {
+              "happiness": 6,
+              "health": 3
+            },
+            "probability": 70
+          },
+          {
+            "message_en": "You ride steadily but it starts to rain. You and dad get soaked running home but laugh about it.",
+            "message_vi": "Bạn đi ổn nhưng trời mưa. Bạn và bố chạy về nhà ướt sũng nhưng cười vui.",
+            "stat_changes": {
+              "happiness": 4,
+              "health": -1
+            },
+            "probability": 30
+          }
+        ]
+      },
+      {
+        "content_en": "Feel nervous and don't want to try yet",
+        "content_vi": "Lo lắng và chưa muốn thử",
+        "outcomes": [
+          {
+            "message_en": "Mom sits with you and tells you stories of when she learned to ride. You feel braver and give it a try!",
+            "message_vi": "Mẹ ngồi cùng và kể chuyện mẹ học đi xe. Bạn can đảm hơn và thử!",
+            "stat_changes": {
+              "happiness": 4,
+              "health": 2
+            },
+            "probability": 55
+          },
+          {
+            "message_en": "You watch the other kids ride through the window. Maybe next week. Dad puts the bike in the garage.",
+            "message_vi": "Bạn ngắm trẻ con đi xe qua cửa sổ. Có lẽ tuần sau. Bố cất xe vào garage.",
+            "stat_changes": {
+              "happiness": 1
+            },
+            "probability": 45
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Rainy Day at Home",
+    "title_vi": "Ngày mưa ở nhà",
+    "description_en": "It's raining heavily outside. You're stuck at home with nothing to do. What will you get up to?",
+    "description_vi": "Trời mưa tầm tã. Bạn ở nhà không biết làm gì. Bạn sẽ làm gì đây?",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 2,
+      "max_age": 5
+    },
+    "choices": [
+      {
+        "content_en": "Build a blanket fort in the living room",
+        "content_vi": "Xây pháo đài bằng chăn ở phòng khách",
+        "outcomes": [
+          {
+            "message_en": "You build an amazing fort with pillows and blankets! Mom brings snacks inside and you pretend to be a knight.",
+            "message_vi": "Bạn xây pháo đài tuyệt vời bằng gối và chăn! Mẹ mang đồ ăn vào và bạn giả vờ làm hiệp sĩ.",
+            "stat_changes": {
+              "happiness": 6
+            },
+            "probability": 65
+          },
+          {
+            "message_en": "The fort collapses on you! You're not hurt, just buried in blankets. Everyone has a good laugh.",
+            "message_vi": "Pháo đài sập đè bạn! Không bị thương, chỉ bị chăn vùi. Cả nhà cười vui.",
+            "stat_changes": {
+              "happiness": 4
+            },
+            "probability": 35
+          }
+        ]
+      },
+      {
+        "content_en": "Watch cartoons with mom",
+        "content_vi": "Xem hoạt hình cùng mẹ",
+        "outcomes": [
+          {
+            "message_en": "You and mom cuddle on the couch watching your favorite show. She makes hot chocolate too!",
+            "message_vi": "Bạn và mẹ cuộn tròn trên ghế xem chương trình yêu thích. Mẹ còn pha sô-cô-la nóng!",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "probability": 55
+          },
+          {
+            "message_en": "You fall asleep in mom's lap halfway through the movie. When you wake up, the rain has stopped.",
+            "message_vi": "Bạn ngủ gục trên đùi mẹ giữa chừng phim. Khi tỉnh dậy, trời đã tạnh mưa.",
+            "stat_changes": {
+              "happiness": 4,
+              "health": 3
+            },
+            "probability": 45
+          }
+        ]
+      },
+      {
+        "content_en": "Splash in the rain puddles outside",
+        "content_vi": "Nhảy vào vũng nước mưa ngoài trời",
+        "outcomes": [
+          {
+            "message_en": "SPLASH! You jump in every puddle wearing your rain boots. It's the best day ever!",
+            "message_vi": "TÉ NƯỚC! Bạn nhảy vào mọi vũng nước với ủng mưa. Đây là ngày tuyệt nhất!",
+            "stat_changes": {
+              "happiness": 7,
+              "health": -2
+            },
+            "probability": 50
+          },
+          {
+            "message_en": "You get completely soaked and catch a little cold afterward. But it was worth it!",
+            "message_vi": "Bạn ướt sũng và bị cảm nhẹ sau đó. Nhưng đáng lắm!",
+            "stat_changes": {
+              "happiness": 4,
+              "health": -5
+            },
+            "probability": 50
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Family Dinner Drama",
+    "title_vi": "Kịch tính bữa tối gia đình",
+    "description_en": "At dinner, mom made your favorite food but also the vegetables you hate. The whole family is watching to see what you'll do.",
+    "description_vi": "Trong bữa tối, mẹ nấu món yêu thích nhưng cũng có rau mà bạn ghét. Cả nhà đang nhìn xem bạn sẽ làm gì.",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 3,
+      "max_age": 5
+    },
+    "choices": [
+      {
+        "content_en": "Eat everything like a good child",
+        "content_vi": "Ăn hết như một đứa trẻ ngoan",
+        "outcomes": [
+          {
+            "message_en": "Mom is so proud! She gives you an extra scoop of ice cream for dessert. Being good pays off!",
+            "message_vi": "Mẹ rất tự hào! Mẹ cho thêm một muỗng kem tráng miệng. Ngoan có phần thưởng!",
+            "stat_changes": {
+              "happiness": 4,
+              "health": 3
+            },
+            "probability": 65
+          },
+          {
+            "message_en": "You eat it all but your face shows how much you hate the vegetables. Dad takes a funny photo.",
+            "message_vi": "Bạn ăn hết nhưng mặt bạn lộ rõ ghét rau thế nào. Bố chụp ảnh hài hước.",
+            "stat_changes": {
+              "happiness": 2,
+              "health": 3
+            },
+            "probability": 35
+          }
+        ]
+      },
+      {
+        "content_en": "Secretly feed vegetables to the dog under the table",
+        "content_vi": "Lén cho chó ăn rau dưới gầm bàn",
+        "outcomes": [
+          {
+            "message_en": "Mission accomplished! The dog eats all the veggies and nobody notices. You feel like a genius.",
+            "message_vi": "Nhiệm vụ hoàn thành! Chó ăn hết rau và không ai phát hiện. Bạn cảm thấy mình là thiên tài.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "probability": 40
+          },
+          {
+            "message_en": "Mom catches you red-handed! She gives you THE LOOK. Extra vegetables tomorrow...",
+            "message_vi": "Mẹ bắt quả tang! Mẹ nhìn bạn BẰNG ÁNH MẮT ĐÓ. Ngày mai ăn gấp đôi rau...",
+            "stat_changes": {
+              "happiness": -2,
+              "health": -1
+            },
+            "probability": 60
+          }
+        ]
+      },
+      {
+        "content_en": "Refuse to eat and throw a tantrum",
+        "content_vi": "Từ chối ăn và ăn vạ",
+        "outcomes": [
+          {
+            "message_en": "Dad is not happy. You're sent to your room early. No dessert tonight.",
+            "message_vi": "Bố không vui. Bạn bị đuổi về phòng sớm. Tối nay không có tráng miệng.",
+            "stat_changes": {
+              "happiness": -4
+            },
+            "probability": 60
+          },
+          {
+            "message_en": "Grandma comes to the rescue! She sneaks you some cookies and tells your parents to let you be.",
+            "message_vi": "Bà nội đến giải cứu! Bà lén cho bạn bánh quy và bảo bố mẹ kệ bạn.",
+            "stat_changes": {
+              "happiness": 3
+            },
+            "probability": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Visiting Grandparents",
+    "title_vi": "Thăm ông bà",
+    "description_en": "The family is going to visit grandma and grandpa in the countryside for the weekend. It's a long drive!",
+    "description_vi": "Cả nhà đi thăm ông bà ở quê vào cuối tuần. Đường đi xa lắm!",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 2,
+      "max_age": 5
+    },
+    "choices": [
+      {
+        "content_en": "Help grandma cook in the kitchen",
+        "content_vi": "Giúp bà nấu ăn trong bếp",
+        "outcomes": [
+          {
+            "message_en": "Grandma teaches you her secret recipe! You stir the pot proudly. The food tastes amazing.",
+            "message_vi": "Bà dạy bạn công thức bí mật! Bạn tự hào khuấy nồi. Đồ ăn ngon tuyệt.",
+            "stat_changes": {
+              "happiness": 6,
+              "money": 10
+            },
+            "probability": 60
+          },
+          {
+            "message_en": "You accidentally spill flour everywhere! The kitchen is a mess but grandma just laughs and hugs you.",
+            "message_vi": "Bạn vô tình đổ bột khắp nơi! Bếp bừa bộn nhưng bà chỉ cười và ôm bạn.",
+            "stat_changes": {
+              "happiness": 4
+            },
+            "probability": 40
+          }
+        ]
+      },
+      {
+        "content_en": "Explore the garden with grandpa",
+        "content_vi": "Khám phá vườn cùng ông",
+        "outcomes": [
+          {
+            "message_en": "Grandpa shows you how to plant seeds. He says if you come back next month, flowers will bloom!",
+            "message_vi": "Ông dạy bạn trồng hạt. Ông nói nếu tháng sau về, hoa sẽ nở!",
+            "stat_changes": {
+              "happiness": 5,
+              "health": 3
+            },
+            "probability": 55
+          },
+          {
+            "message_en": "You find a cool frog in the garden! Grandpa helps you catch it. You want to bring it home but mom says no.",
+            "message_vi": "Bạn tìm thấy con ếch tuyệt trong vườn! Ông giúp bạn bắt. Bạn muốn mang về nhưng mẹ nói không.",
+            "stat_changes": {
+              "happiness": 4,
+              "health": 2
+            },
+            "probability": 45
+          }
+        ]
+      },
+      {
+        "content_en": "Play by yourself in the old house",
+        "content_vi": "Tự chơi trong ngôi nhà cũ",
+        "outcomes": [
+          {
+            "message_en": "You find a box of old photos and toys from when your parents were kids. So cool!",
+            "message_vi": "Bạn tìm thấy hộp ảnh cũ và đồ chơi từ thời bố mẹ còn nhỏ. Thú vị quá!",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "probability": 50
+          },
+          {
+            "message_en": "The old house creaks at night. You get scared and sleep between mom and dad. They don't mind at all.",
+            "message_vi": "Nhà cũ kêu cọt kẹt ban đêm. Bạn sợ và ngủ giữa bố mẹ. Họ không phiền chút nào.",
+            "stat_changes": {
+              "happiness": 3
+            },
+            "probability": 50
+          }
+        ]
+      }
+    ]
+  }
+]

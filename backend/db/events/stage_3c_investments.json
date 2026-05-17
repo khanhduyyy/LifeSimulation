@@ -1,0 +1,457 @@
+[
+  {
+    "title_en": "Stock Market Boom",
+    "title_vi": "Thị Trường Chứng Khoán Bùng Nổ",
+    "description_en": "The stock market is soaring! Everyone is talking about investing.",
+    "description_vi": "Thị trường chứng khoán đang tăng vọt! Mọi người đều nói về đầu tư.",
+    "conditions": {
+      "min_age": 25,
+      "max_age": 60
+    },
+    "choices": [
+      {
+        "content_en": "Invest heavily in stocks ($200)",
+        "content_vi": "Đầu tư mạnh vào cổ phiếu ($200)",
+        "display_conditions": {
+          "min_money": 200
+        },
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Perfect timing! Your portfolio doubled in value within a year!",
+            "message_vi": "Thời điểm hoàn hảo! Danh mục của bạn tăng gấp đôi trong một năm!",
+            "stat_changes": {
+              "money": 200,
+              "happiness": 20
+            },
+            "set_flags": {
+              "stock_boom_winner": true
+            },
+            "i18n_key": "stock_market_boom_001_c1_o1",
+            "unset_flags": []
+          },
+          {
+            "probability": 30,
+            "message_en": "You bought at the peak. Market corrected and you lost 30%.",
+            "message_vi": "Bạn mua ở đỉnh. Thị trường điều chỉnh và bạn mất 30%.",
+            "stat_changes": {
+              "money": -60,
+              "happiness": -25
+            },
+            "set_flags": {},
+            "i18n_key": "stock_market_boom_001_c1_o2",
+            "unset_flags": []
+          }
+        ],
+        "i18n_key": "stock_market_boom_001_c1"
+      },
+      {
+        "content_en": "Invest conservatively ($100)",
+        "content_vi": "Đầu tư thận trọng ($100)",
+        "display_conditions": {
+          "min_money": 100
+        },
+        "outcomes": [
+          {
+            "probability": 85,
+            "message_en": "Steady gains. Your investment grew 40%.",
+            "message_vi": "Tăng trưởng ổn định. Khoản đầu tư tăng 40%.",
+            "stat_changes": {
+              "money": 40,
+              "happiness": 10
+            },
+            "set_flags": {},
+            "i18n_key": "stock_market_boom_001_c2_o1",
+            "unset_flags": []
+          },
+          {
+            "probability": 15,
+            "message_en": "Small loss during correction, but manageable.",
+            "message_vi": "Lỗ nhỏ khi điều chỉnh, nhưng có thể chấp nhận.",
+            "stat_changes": {
+              "money": -15,
+              "happiness": -5
+            },
+            "set_flags": {},
+            "i18n_key": "stock_market_boom_001_c2_o2",
+            "unset_flags": []
+          }
+        ],
+        "i18n_key": "stock_market_boom_001_c2"
+      },
+      {
+        "content_en": "Stay out of the market - too risky",
+        "content_vi": "Tránh xa thị trường - quá rủi ro",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "You missed the gains, but also avoided the risk. Safe choice.",
+            "message_vi": "Bạn bỏ lỡ lợi nhuận, nhưng cũng tránh được rủi ro. Lựa chọn an toàn.",
+            "stat_changes": {
+              "happiness": -5
+            },
+            "set_flags": {},
+            "i18n_key": "stock_market_boom_001_c3_o1",
+            "unset_flags": []
+          }
+        ],
+        "i18n_key": "stock_market_boom_001_c3"
+      }
+    ],
+    "i18n_key": "stock_market_boom_001",
+    "event_type": "random"
+  },
+  {
+    "title_en": "Business Opportunity",
+    "title_vi": "Cơ Hội Kinh Doanh",
+    "description_en": "A friend offers you a partnership in their startup. High risk, high reward.",
+    "description_vi": "Một người bạn mời bạn hợp tác trong startup của họ. Rủi ro cao, lợi nhuận cao.",
+    "conditions": {
+      "min_age": 28,
+      "max_age": 50
+    },
+    "choices": [
+      {
+        "content_en": "Invest as a partner ($300)",
+        "content_vi": "Đầu tư với tư cách đối tác ($300)",
+        "display_conditions": {
+          "min_money": 300
+        },
+        "outcomes": [
+          {
+            "probability": 40,
+            "message_en": "The startup succeeded! You're now earning $80/year passive income!",
+            "message_vi": "Startup thành công! Bạn đang kiếm $80/năm thu nhập thụ động!",
+            "stat_changes": {
+              "money": -300,
+              "happiness": 25
+            },
+            "set_flags": {
+              "startup_partner": true,
+              "startup_income": 80
+            },
+            "i18n_key": "business_opportunity_002_c1_o1",
+            "unset_flags": []
+          },
+          {
+            "probability": 60,
+            "message_en": "The startup failed. You lost your entire investment.",
+            "message_vi": "Startup thất bại. Bạn mất toàn bộ khoản đầu tư.",
+            "stat_changes": {
+              "money": -300,
+              "happiness": -30
+            },
+            "set_flags": {},
+            "i18n_key": "business_opportunity_002_c1_o2",
+            "unset_flags": []
+          }
+        ],
+        "i18n_key": "business_opportunity_002_c1"
+      },
+      {
+        "content_en": "Invest a small amount ($100)",
+        "content_vi": "Đầu tư số tiền nhỏ ($100)",
+        "display_conditions": {
+          "min_money": 100
+        },
+        "outcomes": [
+          {
+            "probability": 40,
+            "message_en": "Small stake, but still earning $25/year from the success!",
+            "message_vi": "Cổ phần nhỏ, nhưng vẫn kiếm $25/năm từ thành công!",
+            "stat_changes": {
+              "money": -100,
+              "happiness": 15
+            },
+            "set_flags": {
+              "startup_partner": true,
+              "startup_income": 25
+            },
+            "i18n_key": "business_opportunity_002_c2_o1",
+            "unset_flags": []
+          },
+          {
+            "probability": 60,
+            "message_en": "Lost your investment, but at least it wasn't much.",
+            "message_vi": "Mất khoản đầu tư, nhưng ít nhất không nhiều.",
+            "stat_changes": {
+              "money": -100,
+              "happiness": -10
+            },
+            "set_flags": {},
+            "i18n_key": "business_opportunity_002_c2_o2",
+            "unset_flags": []
+          }
+        ],
+        "i18n_key": "business_opportunity_002_c2"
+      },
+      {
+        "content_en": "Decline - too risky",
+        "content_vi": "Từ chối - quá rủi ro",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Good call - the startup failed. You saved your money.",
+            "message_vi": "Quyết định đúng - startup thất bại. Bạn giữ được tiền.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "set_flags": {},
+            "i18n_key": "business_opportunity_002_c3_o1",
+            "unset_flags": []
+          },
+          {
+            "probability": 50,
+            "message_en": "The startup became huge. You missed out on a fortune.",
+            "message_vi": "Startup trở nên khổng lồ. Bạn bỏ lỡ cơ hội làm giàu.",
+            "stat_changes": {
+              "happiness": -20
+            },
+            "set_flags": {},
+            "i18n_key": "business_opportunity_002_c3_o2",
+            "unset_flags": []
+          }
+        ],
+        "i18n_key": "business_opportunity_002_c3"
+      }
+    ],
+    "i18n_key": "business_opportunity_002",
+    "event_type": "random"
+  },
+  {
+    "title_en": "Real Estate Investment",
+    "title_vi": "Đầu Tư Bất Động Sản",
+    "description_en": "A property in an up-and-coming neighborhood is for sale. Could be a great investment.",
+    "description_vi": "Một bất động sản ở khu vực đang phát triển đang được bán. Có thể là khoản đầu tư tuyệt vời.",
+    "conditions": {
+      "min_age": 30,
+      "max_age": 55
+    },
+    "choices": [
+      {
+        "content_en": "Buy the property as investment ($400)",
+        "content_vi": "Mua bất động sản để đầu tư ($400)",
+        "display_conditions": {
+          "min_money": 400
+        },
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "The neighborhood boomed! Property value increased 50%. Earning $40/year in rent!",
+            "message_vi": "Khu vực phát triển mạnh! Giá trị tăng 50%. Kiếm $40/năm từ tiền thuê!",
+            "stat_changes": {
+              "money": -400,
+              "happiness": 20
+            },
+            "set_flags": {
+              "investment_property": true,
+              "rental_income": 40
+            },
+            "i18n_key": "real_estate_investment_003_c1_o1",
+            "unset_flags": []
+          },
+          {
+            "probability": 40,
+            "message_en": "Development plans fell through. Property value stagnant.",
+            "message_vi": "Kế hoạch phát triển thất bại. Giá trị bất động sản đình trệ.",
+            "stat_changes": {
+              "money": -400,
+              "happiness": -15
+            },
+            "set_flags": {
+              "investment_property": true,
+              "rental_income": 15
+            },
+            "i18n_key": "real_estate_investment_003_c1_o2",
+            "unset_flags": []
+          }
+        ],
+        "i18n_key": "real_estate_investment_003_c1"
+      },
+      {
+        "content_en": "Wait for a better opportunity",
+        "content_vi": "Chờ cơ hội tốt hơn",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Prices dropped! You can buy cheaper next year.",
+            "message_vi": "Giá giảm! Bạn có thể mua rẻ hơn năm sau.",
+            "stat_changes": {
+              "happiness": 5
+            },
+            "set_flags": {},
+            "i18n_key": "real_estate_investment_003_c2_o1",
+            "unset_flags": []
+          },
+          {
+            "probability": 50,
+            "message_en": "Prices skyrocketed. You missed the opportunity.",
+            "message_vi": "Giá tăng vọt. Bạn bỏ lỡ cơ hội.",
+            "stat_changes": {
+              "happiness": -10
+            },
+            "set_flags": {},
+            "i18n_key": "real_estate_investment_003_c2_o2",
+            "unset_flags": []
+          }
+        ],
+        "i18n_key": "real_estate_investment_003_c2"
+      },
+      {
+        "content_en": "Invest in REITs instead ($150)",
+        "content_vi": "Đầu tư vào quỹ bất động sản ($150)",
+        "display_conditions": {
+          "min_money": 150
+        },
+        "outcomes": [
+          {
+            "probability": 80,
+            "message_en": "Diversified real estate exposure. Steady 8% annual returns.",
+            "message_vi": "Đa dạng hóa bất động sản. Lợi nhuận ổn định 8%/năm.",
+            "stat_changes": {
+              "money": -150,
+              "happiness": 8
+            },
+            "set_flags": {
+              "reit_investor": true
+            },
+            "i18n_key": "real_estate_investment_003_c3_o1",
+            "unset_flags": []
+          },
+          {
+            "probability": 20,
+            "message_en": "Market downturn affected REITs. Small loss.",
+            "message_vi": "Suy thoái thị trường ảnh hưởng quỹ. Lỗ nhỏ.",
+            "stat_changes": {
+              "money": -165,
+              "happiness": -5
+            },
+            "set_flags": {},
+            "i18n_key": "real_estate_investment_003_c3_o2",
+            "unset_flags": []
+          }
+        ],
+        "i18n_key": "real_estate_investment_003_c3"
+      }
+    ],
+    "i18n_key": "real_estate_investment_003",
+    "event_type": "random"
+  },
+  {
+    "title_en": "Cryptocurrency Craze",
+    "title_vi": "Cơn Sốt Tiền Điện Tử",
+    "description_en": "Everyone is talking about cryptocurrency. Your coworker made a fortune. Should you invest?",
+    "description_vi": "Mọi người đang nói về tiền điện tử. Đồng nghiệp của bạn kiếm được nhiều tiền. Bạn có nên đầu tư?",
+    "conditions": {
+      "min_age": 25,
+      "max_age": 50
+    },
+    "choices": [
+      {
+        "content_en": "Go all in on crypto ($250)",
+        "content_vi": "Đầu tư mạnh vào crypto ($250)",
+        "display_conditions": {
+          "min_money": 250
+        },
+        "outcomes": [
+          {
+            "probability": 30,
+            "message_en": "Incredible gains! Your investment 5x in value!",
+            "message_vi": "Lợi nhuận khủng! Khoản đầu tư tăng gấp 5!",
+            "stat_changes": {
+              "money": 1000,
+              "happiness": 35
+            },
+            "set_flags": {
+              "crypto_millionaire": true
+            },
+            "i18n_key": "cryptocurrency_craze_004_c1_o1",
+            "unset_flags": []
+          },
+          {
+            "probability": 70,
+            "message_en": "Market crashed. You lost 80% of your investment.",
+            "message_vi": "Thị trường sụp đổ. Bạn mất 80% khoản đầu tư.",
+            "stat_changes": {
+              "money": -200,
+              "happiness": -40
+            },
+            "set_flags": {},
+            "i18n_key": "cryptocurrency_craze_004_c1_o2",
+            "unset_flags": []
+          }
+        ],
+        "i18n_key": "cryptocurrency_craze_004_c1"
+      },
+      {
+        "content_en": "Invest a small amount to learn ($50)",
+        "content_vi": "Đầu tư nhỏ để học hỏi ($50)",
+        "display_conditions": {
+          "min_money": 50
+        },
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Good learning experience. Made a small profit.",
+            "message_vi": "Kinh nghiệm học hỏi tốt. Lãi nhỏ.",
+            "stat_changes": {
+              "money": 30,
+              "happiness": 8
+            },
+            "set_flags": {},
+            "i18n_key": "cryptocurrency_craze_004_c2_o1",
+            "unset_flags": []
+          },
+          {
+            "probability": 50,
+            "message_en": "Lost most of it, but at least you learned the risks.",
+            "message_vi": "Mất hầu hết, nhưng ít nhất bạn học được rủi ro.",
+            "stat_changes": {
+              "money": -40,
+              "happiness": -5
+            },
+            "set_flags": {},
+            "i18n_key": "cryptocurrency_craze_004_c2_o2",
+            "unset_flags": []
+          }
+        ],
+        "i18n_key": "cryptocurrency_craze_004_c2"
+      },
+      {
+        "content_en": "Stay away - it's a bubble",
+        "content_vi": "Tránh xa - đó là bong bóng",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "Smart move. The bubble burst and many lost everything.",
+            "message_vi": "Quyết định thông minh. Bong bóng vỡ và nhiều người mất tất cả.",
+            "stat_changes": {
+              "happiness": 10
+            },
+            "set_flags": {},
+            "i18n_key": "cryptocurrency_craze_004_c3_o1",
+            "unset_flags": []
+          },
+          {
+            "probability": 40,
+            "message_en": "It kept going up. You missed massive gains.",
+            "message_vi": "Nó tiếp tục tăng. Bạn bỏ lỡ lợi nhuận khổng lồ.",
+            "stat_changes": {
+              "happiness": -15
+            },
+            "set_flags": {},
+            "i18n_key": "cryptocurrency_craze_004_c3_o2",
+            "unset_flags": []
+          }
+        ],
+        "i18n_key": "cryptocurrency_craze_004_c3"
+      }
+    ],
+    "i18n_key": "cryptocurrency_craze_004",
+    "event_type": "random"
+  }
+]

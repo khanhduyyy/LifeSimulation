@@ -1,0 +1,887 @@
+[
+  {
+    "title_en": "Cash Flow Crisis",
+    "title_vi": "Khủng Hoảng Dòng Tiền",
+    "description_en": "Your business has a major cash flow problem. Clients are late paying and expenses are due.",
+    "description_vi": "Doanh nghiệp của bạn có vấn đề dòng tiền lớn. Khách hàng trả chậm và chi phí đến hạn.",
+    "i18n_key": "cash_flow_crisis_301",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 25,
+      "max_age": 55,
+      "requires_flags": [
+        "is_employed",
+        "job_business"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Take out a business loan ($150)",
+        "content_vi": "Vay vốn kinh doanh ($150)",
+        "i18n_key": "cash_flow_crisis_301_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Loan keeps you afloat. Business stabilizes and grows. Debt manageable.",
+            "message_vi": "Khoản vay giúp bạn tồn tại. Doanh nghiệp ổn định và phát triển. Nợ có thể quản lý.",
+            "i18n_key": "cash_flow_crisis_301_c1_o1",
+            "stat_changes": {
+              "money": 150,
+              "happiness": 10
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 30,
+            "message_en": "Loan interest is crushing. Business struggles to repay. Debt spiral begins.",
+            "message_vi": "Lãi vay đè nặng. Doanh nghiệp khó trả nợ. Vòng xoáy nợ nần bắt đầu.",
+            "i18n_key": "cash_flow_crisis_301_c1_o2",
+            "stat_changes": {
+              "money": 100,
+              "happiness": -20,
+              "health": -10
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Negotiate payment plans with creditors",
+        "content_vi": "Thương lượng kế hoạch thanh toán với chủ nợ",
+        "i18n_key": "cash_flow_crisis_301_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "Creditors agree to extensions. You survive without debt. Relationships intact.",
+            "message_vi": "Chủ nợ đồng ý gia hạn. Bạn sống sót không có nợ. Mối quan hệ còn nguyên.",
+            "i18n_key": "cash_flow_crisis_301_c2_o1",
+            "stat_changes": {
+              "happiness": 15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 40,
+            "message_en": "Some creditors refuse. Your credit rating drops. Reputation damaged.",
+            "message_vi": "Một số chủ nợ từ chối. Xếp hạng tín dụng giảm. Danh tiếng bị ảnh hưởng.",
+            "i18n_key": "cash_flow_crisis_301_c2_o2",
+            "stat_changes": {
+              "happiness": -18,
+              "money": -50
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Sell personal assets to cover expenses",
+        "content_vi": "Bán tài sản cá nhân để trang trải chi phí",
+        "i18n_key": "cash_flow_crisis_301_c3",
+        "display_conditions": {
+          "min_money": 100
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Business saved with your personal sacrifice. No debt, but painful loss.",
+            "message_vi": "Doanh nghiệp được cứu bằng sự hy sinh cá nhân. Không nợ, nhưng mất mát đau đớn.",
+            "i18n_key": "cash_flow_crisis_301_c3_o1",
+            "stat_changes": {
+              "money": -100,
+              "happiness": -15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Major Client Opportunity",
+    "title_vi": "Cơ Hội Khách Hàng Lớn",
+    "description_en": "A big corporation wants to work with you. Contract worth $200 but requires upfront investment.",
+    "description_vi": "Một tập đoàn lớn muốn làm việc với bạn. Hợp đồng trị giá $200 nhưng cần đầu tư trước.",
+    "i18n_key": "major_client_opportunity_302",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 28,
+      "max_age": 55,
+      "requires_flags": [
+        "is_employed",
+        "job_business"
+      ],
+      "min_work_experience": 3
+    },
+    "choices": [
+      {
+        "content_en": "Invest $80 to scale up and take the contract",
+        "content_vi": "Đầu tư $80 để mở rộng và nhận hợp đồng",
+        "i18n_key": "major_client_opportunity_302_c1",
+        "display_conditions": {
+          "min_money": 80
+        },
+        "outcomes": [
+          {
+            "probability": 75,
+            "message_en": "Contract is a huge success! Business grows significantly. Best decision ever!",
+            "message_vi": "Hợp đồng thành công lớn! Doanh nghiệp phát triển đáng kể. Quyết định tốt nhất!",
+            "i18n_key": "major_client_opportunity_302_c1_o1",
+            "stat_changes": {
+              "money": 120,
+              "happiness": 25
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 25,
+            "message_en": "Client cancels last minute. Investment wasted. Devastating loss.",
+            "message_vi": "Khách hàng hủy phút chót. Đầu tư lãng phí. Mất mát tàn khốc.",
+            "i18n_key": "major_client_opportunity_302_c1_o2",
+            "stat_changes": {
+              "money": -80,
+              "happiness": -30,
+              "health": -15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Negotiate for client to cover upfront costs",
+        "content_vi": "Thương lượng để khách hàng chi trả chi phí trước",
+        "i18n_key": "major_client_opportunity_302_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "They agree! Zero-risk contract. Profit without investment!",
+            "message_vi": "Họ đồng ý! Hợp đồng không rủi ro. Lợi nhuận không cần đầu tư!",
+            "i18n_key": "major_client_opportunity_302_c2_o1",
+            "stat_changes": {
+              "money": 200,
+              "happiness": 30
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 50,
+            "message_en": "They walk away. Competitor gets the contract. Opportunity lost.",
+            "message_vi": "Họ rút lui. Đối thủ nhận hợp đồng. Cơ hội bị mất.",
+            "i18n_key": "major_client_opportunity_302_c2_o2",
+            "stat_changes": {
+              "happiness": -20
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Decline, too risky for your business",
+        "content_vi": "Từ chối, quá rủi ro cho doanh nghiệp",
+        "i18n_key": "major_client_opportunity_302_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Safe choice. Business stays stable. But you wonder what could have been.",
+            "message_vi": "Lựa chọn an toàn. Doanh nghiệp ổn định. Nhưng bạn tự hỏi điều gì có thể xảy ra.",
+            "i18n_key": "major_client_opportunity_302_c3_o1",
+            "stat_changes": {
+              "happiness": -8
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Employee Theft Discovered",
+    "title_vi": "Phát Hiện Nhân Viên Trộm Cắp",
+    "description_en": "You discover an employee has been stealing from the business. $50 is missing.",
+    "description_vi": "Bạn phát hiện một nhân viên đã trộm cắp từ doanh nghiệp. Mất $50.",
+    "i18n_key": "employee_theft_303",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 30,
+      "max_age": 55,
+      "requires_flags": [
+        "is_employed",
+        "job_business"
+      ],
+      "min_work_experience": 5
+    },
+    "choices": [
+      {
+        "content_en": "Fire them and report to police",
+        "content_vi": "Sa thải và báo cáo cảnh sát",
+        "i18n_key": "employee_theft_303_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "Justice served. Money recovered. Other employees respect your firmness.",
+            "message_vi": "Công lý được thực thi. Tiền được thu hồi. Nhân viên khác tôn trọng sự cứng rắn của bạn.",
+            "i18n_key": "employee_theft_303_c1_o1",
+            "stat_changes": {
+              "money": 30,
+              "happiness": 10
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 40,
+            "message_en": "Legal process is expensive and time-consuming. More loss than gain.",
+            "message_vi": "Quy trình pháp lý tốn kém và mất thời gian. Mất nhiều hơn được.",
+            "i18n_key": "employee_theft_303_c1_o2",
+            "stat_changes": {
+              "money": -30,
+              "happiness": -15,
+              "health": -8
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Fire them but handle it privately",
+        "content_vi": "Sa thải nhưng xử lý riêng tư",
+        "i18n_key": "employee_theft_303_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Clean resolution. No drama. Business continues smoothly.",
+            "message_vi": "Giải quyết sạch sẽ. Không ồn ào. Doanh nghiệp tiếp tục suôn sẻ.",
+            "i18n_key": "employee_theft_303_c2_o1",
+            "stat_changes": {
+              "money": -50,
+              "happiness": 5
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 30,
+            "message_en": "They spread lies about you. Reputation damaged in the community.",
+            "message_vi": "Họ tung tin đồn về bạn. Danh tiếng bị ảnh hưởng trong cộng đồng.",
+            "i18n_key": "employee_theft_303_c2_o2",
+            "stat_changes": {
+              "money": -50,
+              "happiness": -20
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Give them a second chance with repayment plan",
+        "content_vi": "Cho cơ hội thứ hai với kế hoạch hoàn trả",
+        "i18n_key": "employee_theft_303_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 45,
+            "message_en": "They're grateful and become your most loyal employee. Redemption story!",
+            "message_vi": "Họ biết ơn và trở thành nhân viên trung thành nhất. Câu chuyện cứu chuộc!",
+            "i18n_key": "employee_theft_303_c3_o1",
+            "stat_changes": {
+              "money": -20,
+              "happiness": 15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 55,
+            "message_en": "They steal again. You look weak. Other employees lose respect.",
+            "message_vi": "Họ trộm lại. Bạn trông yếu đuối. Nhân viên khác mất tôn trọng.",
+            "i18n_key": "employee_theft_303_c3_o2",
+            "stat_changes": {
+              "money": -80,
+              "happiness": -25
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Competitor Undercutting Prices",
+    "title_vi": "Đối Thủ Cạnh Tranh Giá",
+    "description_en": "A new competitor is offering similar services at 40% lower prices. You're losing customers.",
+    "description_vi": "Đối thủ mới đang cung cấp dịch vụ tương tự với giá thấp hơn 40%. Bạn đang mất khách hàng.",
+    "i18n_key": "competitor_undercutting_304",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 27,
+      "max_age": 55,
+      "requires_flags": [
+        "is_employed",
+        "job_business"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Match their prices to stay competitive",
+        "content_vi": "Giảm giá để cạnh tranh",
+        "i18n_key": "competitor_undercutting_304_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "Customers stay. Market share maintained. But profit margins are razor-thin.",
+            "message_vi": "Khách hàng ở lại. Thị phần được duy trì. Nhưng lợi nhuận rất mỏng.",
+            "i18n_key": "competitor_undercutting_304_c1_o1",
+            "stat_changes": {
+              "money": -40,
+              "happiness": -10
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 50,
+            "message_en": "Price war destroys both businesses. Unsustainable. You're bleeding money.",
+            "message_vi": "Chiến tranh giá phá hủy cả hai doanh nghiệp. Không bền vững. Bạn đang chảy máu tiền.",
+            "i18n_key": "competitor_undercutting_304_c1_o2",
+            "stat_changes": {
+              "money": -80,
+              "happiness": -25,
+              "health": -12
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Focus on premium quality and service",
+        "content_vi": "Tập trung vào chất lượng và dịch vụ cao cấp",
+        "i18n_key": "competitor_undercutting_304_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Smart pivot! Quality-focused customers stay. Higher margins, loyal base.",
+            "message_vi": "Chuyển hướng thông minh! Khách hàng chú trọng chất lượng ở lại. Lợi nhuận cao, khách trung thành.",
+            "i18n_key": "competitor_undercutting_304_c2_o1",
+            "stat_changes": {
+              "money": 60,
+              "happiness": 20
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 30,
+            "message_en": "Most customers just want cheap. You lose market share. Niche is too small.",
+            "message_vi": "Hầu hết khách hàng chỉ muốn rẻ. Bạn mất thị phần. Thị trường ngách quá nhỏ.",
+            "i18n_key": "competitor_undercutting_304_c2_o2",
+            "stat_changes": {
+              "money": -60,
+              "happiness": -20
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Innovate with new products/services",
+        "content_vi": "Đổi mới với sản phẩm/dịch vụ mới",
+        "i18n_key": "competitor_undercutting_304_c3",
+        "display_conditions": {
+          "min_money": 60
+        },
+        "outcomes": [
+          {
+            "probability": 65,
+            "message_en": "Innovation wins! New offerings attract different market. Competitor irrelevant.",
+            "message_vi": "Đổi mới thắng! Sản phẩm mới thu hút thị trường khác. Đối thủ không còn liên quan.",
+            "i18n_key": "competitor_undercutting_304_c3_o1",
+            "stat_changes": {
+              "money": 40,
+              "happiness": 25
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 35,
+            "message_en": "Innovation flops. Investment wasted. Still losing to competitor.",
+            "message_vi": "Đổi mới thất bại. Đầu tư lãng phí. Vẫn thua đối thủ.",
+            "i18n_key": "competitor_undercutting_304_c3_o2",
+            "stat_changes": {
+              "money": -60,
+              "happiness": -22
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Partnership Proposal",
+    "title_vi": "Đề Nghị Hợp Tác",
+    "description_en": "Another business owner wants to merge operations. Could double your reach or complicate everything.",
+    "description_vi": "Chủ doanh nghiệp khác muốn sáp nhập hoạt động. Có thể tăng gấp đôi phạm vi hoặc làm phức tạp mọi thứ.",
+    "i18n_key": "partnership_proposal_305",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 32,
+      "max_age": 55,
+      "requires_flags": [
+        "is_employed",
+        "job_business"
+      ],
+      "min_work_experience": 7
+    },
+    "choices": [
+      {
+        "content_en": "Accept 50/50 partnership",
+        "content_vi": "Chấp nhận hợp tác 50/50",
+        "i18n_key": "partnership_proposal_305_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 60,
+            "message_en": "Partnership thrives! Combined strengths create powerhouse. Revenue doubles!",
+            "message_vi": "Hợp tác phát triển! Sức mạnh kết hợp tạo ra đế chế. Doanh thu tăng gấp đôi!",
+            "i18n_key": "partnership_proposal_305_c1_o1",
+            "stat_changes": {
+              "money": 150,
+              "happiness": 25
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 40,
+            "message_en": "Constant disagreements. Partner is difficult. You lost control of your own business.",
+            "message_vi": "Bất đồng liên tục. Đối tác khó tính. Bạn mất quyền kiểm soát doanh nghiệp riêng.",
+            "i18n_key": "partnership_proposal_305_c1_o2",
+            "stat_changes": {
+              "happiness": -30,
+              "health": -15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Negotiate to keep 60% control",
+        "content_vi": "Thương lượng giữ 60% quyền kiểm soát",
+        "i18n_key": "partnership_proposal_305_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 50,
+            "message_en": "They agree! You maintain control while gaining resources. Perfect deal!",
+            "message_vi": "Họ đồng ý! Bạn giữ quyền kiểm soát trong khi có thêm nguồn lực. Thỏa thuận hoàn hảo!",
+            "i18n_key": "partnership_proposal_305_c2_o1",
+            "stat_changes": {
+              "money": 120,
+              "happiness": 28
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 50,
+            "message_en": "They walk away offended. Opportunity lost. You stay solo.",
+            "message_vi": "Họ rút lui vì bị xúc phạm. Cơ hội bị mất. Bạn vẫn một mình.",
+            "i18n_key": "partnership_proposal_305_c2_o2",
+            "stat_changes": {
+              "happiness": -12
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Decline, stay independent",
+        "content_vi": "Từ chối, giữ độc lập",
+        "i18n_key": "partnership_proposal_305_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "You maintain full control. Growth is slower but it's all yours.",
+            "message_vi": "Bạn giữ toàn quyền kiểm soát. Tăng trưởng chậm hơn nhưng tất cả là của bạn.",
+            "i18n_key": "partnership_proposal_305_c3_o1",
+            "stat_changes": {
+              "happiness": 8
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Economic Downturn Impact",
+    "title_vi": "Ảnh Hưởng Suy Thoái Kinh Tế",
+    "description_en": "The economy is in recession. Customer spending is down 50%. Your business is struggling.",
+    "description_vi": "Nền kinh tế đang suy thoái. Chi tiêu khách hàng giảm 50%. Doanh nghiệp của bạn đang gặp khó khăn.",
+    "i18n_key": "economic_downturn_306",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 28,
+      "max_age": 55,
+      "requires_flags": [
+        "is_employed",
+        "job_business"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Cut costs and weather the storm",
+        "content_vi": "Cắt giảm chi phí và vượt qua bão",
+        "i18n_key": "economic_downturn_306_c1",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 65,
+            "message_en": "Lean operations survive. When economy recovers, you're positioned to thrive!",
+            "message_vi": "Hoạt động tinh gọn sống sót. Khi kinh tế phục hồi, bạn sẵn sàng phát triển!",
+            "i18n_key": "economic_downturn_306_c1_o1",
+            "stat_changes": {
+              "money": -40,
+              "happiness": 10
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 35,
+            "message_en": "Cuts too deep. Quality suffers. Customers leave permanently.",
+            "message_vi": "Cắt giảm quá sâu. Chất lượng giảm. Khách hàng rời đi vĩnh viễn.",
+            "i18n_key": "economic_downturn_306_c1_o2",
+            "stat_changes": {
+              "money": -100,
+              "happiness": -25
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Pivot to recession-proof services",
+        "content_vi": "Chuyển sang dịch vụ chống suy thoái",
+        "i18n_key": "economic_downturn_306_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Brilliant pivot! New services in high demand. You're thriving while others fail!",
+            "message_vi": "Chuyển hướng xuất sắc! Dịch vụ mới có nhu cầu cao. Bạn phát triển trong khi người khác thất bại!",
+            "i18n_key": "economic_downturn_306_c2_o1",
+            "stat_changes": {
+              "money": 80,
+              "happiness": 30
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 30,
+            "message_en": "Pivot fails. Lost your core business and new one doesn't work. Disaster.",
+            "message_vi": "Chuyển hướng thất bại. Mất doanh nghiệp cốt lõi và cái mới không hiệu quả. Thảm họa.",
+            "i18n_key": "economic_downturn_306_c2_o2",
+            "stat_changes": {
+              "money": -120,
+              "happiness": -35,
+              "health": -18
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Close business and get a job",
+        "content_vi": "Đóng cửa doanh nghiệp và đi làm công",
+        "i18n_key": "economic_downturn_306_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Stable paycheck feels good after the stress. Entrepreneurship dream ends.",
+            "message_vi": "Lương ổn định cảm thấy tốt sau căng thẳng. Giấc mơ kinh doanh kết thúc.",
+            "i18n_key": "economic_downturn_306_c3_o1",
+            "stat_changes": {
+              "money": -50,
+              "happiness": -15,
+              "health": 10
+            },
+            "set_flags": {
+              "job_office": true
+            },
+            "unset_flags": [
+              "job_business"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Viral Marketing Success",
+    "title_vi": "Thành Công Marketing Lan Truyền",
+    "description_en": "Your business went viral on social media! Sudden surge of customers. Can you handle it?",
+    "description_vi": "Doanh nghiệp của bạn lan truyền trên mạng xã hội! Đột ngột tăng khách hàng. Bạn có xử lý được không?",
+    "i18n_key": "viral_marketing_307",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 26,
+      "max_age": 50,
+      "requires_flags": [
+        "is_employed",
+        "job_business"
+      ]
+    },
+    "choices": [
+      {
+        "content_en": "Scale up quickly to meet demand ($100)",
+        "content_vi": "Mở rộng nhanh để đáp ứng nhu cầu ($100)",
+        "i18n_key": "viral_marketing_307_c1",
+        "display_conditions": {
+          "min_money": 100
+        },
+        "outcomes": [
+          {
+            "probability": 75,
+            "message_en": "Perfect execution! Captured the moment. Business permanently larger!",
+            "message_vi": "Thực hiện hoàn hảo! Nắm bắt thời cơ. Doanh nghiệp lớn hơn vĩnh viễn!",
+            "i18n_key": "viral_marketing_307_c1_o1",
+            "stat_changes": {
+              "money": 150,
+              "happiness": 35,
+              "health": -10
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 25,
+            "message_en": "Scaled too fast. Quality dropped. Viral moment turned into PR disaster.",
+            "message_vi": "Mở rộng quá nhanh. Chất lượng giảm. Thời khắc lan truyền thành thảm họa PR.",
+            "i18n_key": "viral_marketing_307_c1_o2",
+            "stat_changes": {
+              "money": -50,
+              "happiness": -30,
+              "health": -15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Maintain quality, turn away excess customers",
+        "content_vi": "Duy trì chất lượng, từ chối khách hàng dư thừa",
+        "i18n_key": "viral_marketing_307_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Exclusivity creates mystique. Premium brand established. Sustainable growth!",
+            "message_vi": "Độc quyền tạo bí ẩn. Thương hiệu cao cấp được thiết lập. Tăng trưởng bền vững!",
+            "i18n_key": "viral_marketing_307_c2_o1",
+            "stat_changes": {
+              "money": 100,
+              "happiness": 25
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 30,
+            "message_en": "Turned away customers go to competitors. Missed golden opportunity.",
+            "message_vi": "Khách hàng bị từ chối chuyển sang đối thủ. Bỏ lỡ cơ hội vàng.",
+            "i18n_key": "viral_marketing_307_c2_o2",
+            "stat_changes": {
+              "money": 30,
+              "happiness": -15
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Hire temporary help to handle surge",
+        "content_vi": "Thuê nhân viên tạm thời để xử lý tăng đột biến",
+        "i18n_key": "viral_marketing_307_c3",
+        "display_conditions": {
+          "min_money": 50
+        },
+        "outcomes": [
+          {
+            "probability": 65,
+            "message_en": "Flexible solution works! Handled surge without overcommitting. Smart!",
+            "message_vi": "Giải pháp linh hoạt hiệu quả! Xử lý tăng đột biến không cam kết quá mức. Thông minh!",
+            "i18n_key": "viral_marketing_307_c3_o1",
+            "stat_changes": {
+              "money": 70,
+              "happiness": 20
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 35,
+            "message_en": "Temp workers untrained. Service quality inconsistent. Brand damaged.",
+            "message_vi": "Nhân viên tạm chưa được đào tạo. Chất lượng dịch vụ không đồng đều. Thương hiệu bị ảnh hưởng.",
+            "i18n_key": "viral_marketing_307_c3_o2",
+            "stat_changes": {
+              "money": -20,
+              "happiness": -18
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title_en": "Burnout as Business Owner",
+    "title_vi": "Kiệt Sức Với Vai Trò Chủ Doanh Nghiệp",
+    "description_en": "You're working 80-hour weeks. No vacation in 3 years. Your health is deteriorating rapidly.",
+    "description_vi": "Bạn làm việc 80 giờ mỗi tuần. Không nghỉ phép trong 3 năm. Sức khỏe đang giảm nhanh chóng.",
+    "i18n_key": "business_burnout_308",
+    "event_type": "random",
+    "conditions": {
+      "min_age": 30,
+      "max_age": 55,
+      "requires_flags": [
+        "is_employed",
+        "job_business"
+      ],
+      "min_work_experience": 5
+    },
+    "choices": [
+      {
+        "content_en": "Hire a manager to run daily operations ($120)",
+        "content_vi": "Thuê quản lý điều hành hàng ngày ($120)",
+        "i18n_key": "business_burnout_308_c1",
+        "display_conditions": {
+          "min_money": 120
+        },
+        "outcomes": [
+          {
+            "probability": 70,
+            "message_en": "Great hire! You focus on strategy. Health recovers. Business thrives!",
+            "message_vi": "Tuyển dụng tốt! Bạn tập trung vào chiến lược. Sức khỏe phục hồi. Doanh nghiệp phát triển!",
+            "i18n_key": "business_burnout_308_c1_o1",
+            "stat_changes": {
+              "money": -120,
+              "happiness": 30,
+              "health": 25
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 30,
+            "message_en": "Manager is incompetent. More problems than before. Wasted money.",
+            "message_vi": "Quản lý kém năng lực. Nhiều vấn đề hơn trước. Lãng phí tiền.",
+            "i18n_key": "business_burnout_308_c1_o2",
+            "stat_changes": {
+              "money": -120,
+              "happiness": -20,
+              "health": -10
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      },
+      {
+        "content_en": "Sell the business and retire early",
+        "content_vi": "Bán doanh nghiệp và nghỉ hưu sớm",
+        "i18n_key": "business_burnout_308_c2",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Sold for good price. Freedom at last! Health recovers. New chapter begins.",
+            "message_vi": "Bán được giá tốt. Cuối cùng cũng tự do! Sức khỏe phục hồi. Chương mới bắt đầu.",
+            "i18n_key": "business_burnout_308_c2_o1",
+            "stat_changes": {
+              "money": 200,
+              "happiness": 25,
+              "health": 30
+            },
+            "set_flags": {
+              "is_retired": true
+            },
+            "unset_flags": [
+              "job_business",
+              "is_employed"
+            ]
+          }
+        ]
+      },
+      {
+        "content_en": "Push through, business needs you",
+        "content_vi": "Cố gắng vượt qua, doanh nghiệp cần bạn",
+        "i18n_key": "business_burnout_308_c3",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 30,
+            "message_en": "Somehow you find second wind. Business grows. But at what cost?",
+            "message_vi": "Bằng cách nào đó bạn tìm thấy nguồn năng lượng thứ hai. Doanh nghiệp phát triển. Nhưng với cái giá nào?",
+            "i18n_key": "business_burnout_308_c3_o1",
+            "stat_changes": {
+              "money": 80,
+              "happiness": -10,
+              "health": -20
+            },
+            "set_flags": {},
+            "unset_flags": []
+          },
+          {
+            "probability": 70,
+            "message_en": "You collapse. Hospitalized. Business suffers without you. Everything falls apart.",
+            "message_vi": "Bạn ngã quỵ. Nhập viện. Doanh nghiệp chịu ảnh hưởng không có bạn. Mọi thứ sụp đổ.",
+            "i18n_key": "business_burnout_308_c3_o2",
+            "stat_changes": {
+              "money": -150,
+              "happiness": -40,
+              "health": -35
+            },
+            "set_flags": {},
+            "unset_flags": []
+          }
+        ]
+      }
+    ]
+  }
+]

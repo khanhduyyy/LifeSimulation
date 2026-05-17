@@ -1,0 +1,157 @@
+[
+  {
+    "title_en": "Medical Emergency",
+    "title_vi": "Cấp Cứu Y Tế",
+    "description_en": "You suddenly experience severe chest pain and need immediate medical attention.",
+    "description_vi": "Bạn đột ngột cảm thấy đau ngực dữ dội và cần chăm sóc y tế ngay lập tức.",
+    "conditions": {
+      "min_age": 25,
+      "max_age": 79
+    },
+    "choices": [
+      {
+        "content_en": "Go to the emergency room (with insurance) 🛡️",
+        "content_vi": "Đi cấp cứu (có bảo hiểm) 🛡️",
+        "display_conditions": {
+          "requires_flags": [
+            "insurance_valid"
+          ]
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Insurance covered most of the cost. You only paid $40 out of pocket.",
+            "message_vi": "Bảo hiểm chi trả phần lớn chi phí. Bạn chỉ trả $40.",
+            "stat_changes": {
+              "money": -40,
+              "health": 15
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Go to the emergency room (no insurance)",
+        "content_vi": "Đi cấp cứu (không bảo hiểm)",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "The hospital bill was $350. Your savings are nearly gone.",
+            "message_vi": "Hóa đơn bệnh viện là $350. Tiền tiết kiệm của bạn gần như hết.",
+            "stat_changes": {
+              "money": -350,
+              "health": 15,
+              "happiness": -15
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Try to tough it out at home",
+        "content_vi": "Cố gắng chịu đựng ở nhà",
+        "outcomes": [
+          {
+            "probability": 30,
+            "message_en": "It was just indigestion. You saved money but were terrified.",
+            "message_vi": "Chỉ là khó tiêu. Bạn tiết kiệm tiền nhưng rất sợ hãi.",
+            "stat_changes": {
+              "happiness": -15
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 70,
+            "message_en": "Your condition worsened. You had to go to the ER anyway, and it cost $400.",
+            "message_vi": "Tình trạng của bạn xấu đi. Bạn vẫn phải đi cấp cứu, và tốn $400.",
+            "stat_changes": {
+              "money": -400,
+              "health": 5,
+              "happiness": -25
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ],
+    "event_type": "random"
+  },
+  {
+    "title_en": "Serious Illness",
+    "title_vi": "Bệnh Nghiêm Trọng",
+    "description_en": "You've been diagnosed with a serious condition that requires expensive treatment.",
+    "description_vi": "Bạn được chẩn đoán mắc bệnh nghiêm trọng cần điều trị tốn kém.",
+    "conditions": {
+      "min_age": 30,
+      "max_age": 79
+    },
+    "choices": [
+      {
+        "content_en": "Get treatment (with insurance) 🛡️",
+        "content_vi": "Điều trị (có bảo hiểm) 🛡️",
+        "display_conditions": {
+          "requires_flags": [
+            "insurance_valid"
+          ]
+        },
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "Insurance covered 80% of the treatment. You paid $50 copay.",
+            "message_vi": "Bảo hiểm chi trả 80% chi phí điều trị. Bạn đóng góp $50.",
+            "stat_changes": {
+              "money": -50,
+              "health": 20
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Get treatment (no insurance)",
+        "content_vi": "Điều trị (không bảo hiểm)",
+        "display_conditions": null,
+        "outcomes": [
+          {
+            "probability": 100,
+            "message_en": "The full treatment cost $380. You're nearly bankrupt.",
+            "message_vi": "Chi phí điều trị đầy đủ là $380. Bạn gần như phá sản.",
+            "stat_changes": {
+              "money": -380,
+              "health": 20,
+              "happiness": -20
+            },
+            "set_flags": {}
+          }
+        ]
+      },
+      {
+        "content_en": "Skip treatment and hope it gets better",
+        "content_vi": "Bỏ qua điều trị và hy vọng nó tự khỏi",
+        "outcomes": [
+          {
+            "probability": 20,
+            "message_en": "Miraculously, your body fought it off on its own.",
+            "message_vi": "Kỳ diệu thay, cơ thể bạn tự chống lại được.",
+            "stat_changes": {
+              "health": 5
+            },
+            "set_flags": {}
+          },
+          {
+            "probability": 80,
+            "message_en": "Your condition deteriorated significantly. You're much worse now.",
+            "message_vi": "Tình trạng của bạn xấu đi đáng kể. Bạn tệ hơn nhiều bây giờ.",
+            "stat_changes": {
+              "health": -40,
+              "happiness": -30
+            },
+            "set_flags": {}
+          }
+        ]
+      }
+    ],
+    "event_type": "random"
+  }
+]
